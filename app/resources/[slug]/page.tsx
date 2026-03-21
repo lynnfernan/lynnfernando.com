@@ -13,6 +13,7 @@ import UseCaseFramework from "@/content/resources/use-case-prioritization-framew
 import VendorChecklist from "@/content/resources/vendor-evaluation-checklist.mdx";
 import ROITemplate from "@/content/resources/genai-roi-business-case.mdx";
 import SpeakingMenu from "@/content/resources/speaking-workshop-menu.mdx";
+import AngelInvesting from "@/content/resources/beginners-guide-to-angel-investing.mdx";
 
 const contentMap: Record<string, React.ComponentType> = {
   "executive-guide-to-genai": ExecutiveGuide,
@@ -22,6 +23,7 @@ const contentMap: Record<string, React.ComponentType> = {
   "vendor-evaluation-checklist": VendorChecklist,
   "genai-roi-business-case": ROITemplate,
   "speaking-workshop-menu": SpeakingMenu,
+  "beginners-guide-to-angel-investing": AngelInvesting,
 };
 
 export async function generateStaticParams() {

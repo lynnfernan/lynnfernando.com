@@ -84,6 +84,17 @@ export const resources: Resource[] = [
     ctaHref: "/resources/genai-roi-business-case",
   },
   {
+    slug: "beginners-guide-to-angel-investing",
+    title: "A Beginner's Guide to Angel Investing in Startups",
+    description:
+      "Thinking about writing your first angel check? This guide covers how startup funding works, deal structures (SAFEs, convertible notes), what to look for in founders and markets, and how to build a diversified angel portfolio.",
+    format: "Article",
+    audience: "Executives & Business Professionals",
+    gated: false,
+    ctaLabel: "Let's Talk Investing",
+    ctaHref: "mailto:lynn@revglobalinc.com?subject=Angel Investing Inquiry",
+  },
+  {
     slug: "speaking-workshop-menu",
     title: "Speaking & Workshop Menu",
     description:
