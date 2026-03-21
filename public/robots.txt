@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://revglobalinc.com
+Host: https://lynnfernando.com
 
 # Sitemaps
-Sitemap: https://revglobalinc.com/sitemap.xml
+Sitemap: https://lynnfernando.com/sitemap.xml
