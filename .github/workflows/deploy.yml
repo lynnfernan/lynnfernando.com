@@ -1,0 +1,27 @@
+name: Deploy to Lightsail
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy via rsync
+        env:
+          SSH_KEY: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+        run: |
+          echo "$SSH_KEY" > /tmp/lightsail-key.pem
+          chmod 600 /tmp/lightsail-key.pem
+          rsync -avz --progress \
+            --exclude='*.sh' \
+            --exclude='.DS_Store' \
+            --exclude='*.md' \
+            --exclude='.github/' \
+            --exclude='content-agent/' \
+            -e "ssh -i /tmp/lightsail-key.pem -o StrictHostKeyChecking=no" \
+            ./ \
+            admin@35.80.180.230:/usr/share/nginx/html/
