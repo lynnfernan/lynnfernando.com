@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Kit — Lynn Fernando</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/lf-logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/lf-logo.png" />
+  <link rel="apple-touch-icon" href="images/lf-logo.png" />
+  <style>
+    .mk-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding: 160px 0 100px;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .mk-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(52px, 7vw, 90px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .mk-hero h1 em { font-style: italic; color: var(--gold); }
+    .mk-hero p {
+      font-size: 18px;
+      color: var(--text-light);
+      max-width: 600px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .bio-section {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .bio-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 48px;
+    }
+    .bio-tab {
+      padding: 16px 32px;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+      background: none;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+    }
+    .bio-tab.active {
+      color: var(--gold);
+      border-bottom: 2px solid var(--gold);
+    }
+    .bio-content { display: none; }
+    .bio-content.active { display: block; }
+    .bio-content p {
+      font-size: 17px;
+      color: var(--text-light);
+      line-height: 1.9;
+      max-width: 840px;
+      margin-bottom: 20px;
+    }
+    .copy-btn {
+      margin-top: 28px;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 12px 24px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .copy-btn:hover { background: var(--dark-2); }
+    .mk-grid-section {
+      padding: var(--section-pad) 0;
+      background: var(--dark-2);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .mk-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .mk-col h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+    .mk-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .mk-list li {
+      display: flex;
+      gap: 12px;
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.6;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .mk-list li:last-child { border-bottom: none; }
+    .mk-list li::before {
+      content: '▸';
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .mk-cred-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .mk-cred-item {
+      padding: 24px;
+      background: var(--dark-3);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+    .mk-cred-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .contact-mk {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      text-align: center;
+    }
+    .contact-mk h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 4vw, 60px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .contact-mk h2 em { font-style: italic; color: var(--gold); }
+    .contact-mk p {
+      font-size: 17px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+    }
+    .contact-mk-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      max-width: 400px;
+      margin: 0 auto 48px;
+    }
+    .contact-mk-item {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      padding: 16px 24px;
+      background: var(--dark-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: 2px;
+      font-size: 14px;
+      color: var(--text-light);
+    }
+    .contact-mk-item strong { color: var(--gold); min-width: 80px; }
+    @media (max-width: 768px) {
+      .mk-two-col { grid-template-columns: 1fr; }
+      .mk-cred-grid { grid-template-columns: 1fr; }
+      .bio-tabs { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/lf-logo.png" alt="Lynn Fernando" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#platform">Platform</a></li>
+        <li><a href="index.html#investments">Invest</a></li>
+        <li><a href="index.html#speaking">Speaking</a></li>
+        <li><a href="index.html#manifesto">Manifesto</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Partner With Lynn</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="mk-hero">
+    <div class="container">
+      <span class="label">Media Kit</span>
+      <h1>Everything You Need<br /><em>in One Place.</em></h1>
+      <p>Bios, topics, credentials, and booking info for press, podcasts, conferences, and media collaborations.</p>
+      <a href="index.html#contact" class="btn btn-primary">Book Lynn to Speak</a>
+    </div>
+  </section>
+
+  <!-- BIOS -->
+  <section class="bio-section">
+    <div class="container">
+      <span class="label">Speaker Bios</span>
+      <h2 style="font-family: var(--font-serif); font-size: clamp(32px,4vw,52px); font-weight:300; color:var(--off-white); margin-bottom:40px;">
+        Choose the Right Bio<br /><em style="color:var(--gold);">for Your Context.</em>
+      </h2>
+      <div class="bio-tabs">
+        <button class="bio-tab active" data-tab="short">Short Bio</button>
+        <button class="bio-tab" data-tab="medium">Medium Bio</button>
+        <button class="bio-tab" data-tab="long">Long Bio</button>
+      </div>
+      <div class="bio-content active" id="bio-short">
+        <p>
+          Lynn Fernando is a global entrepreneur, investor, and advisor building a multi-industry platform across private equity, AI, real estate, and wellness. A former Disney and Amazon operator, she now leads REV Global, where she helps companies scale and deploy capital into high-growth opportunities. She is also the founder of the Ayana Foundation, supporting women entrepreneurs worldwide.
+        </p>
+        <button class="copy-btn" onclick="copyBio('bio-short')">Copy Bio</button>
+      </div>
+      <div class="bio-content" id="bio-medium">
+        <p>
+          Lynn Fernando is a global entrepreneur, investor, and strategic advisor known for building and scaling businesses at the intersection of capital, technology, and growth.
+        </p>
+        <p>
+          With a background at Fortune 100 companies including Disney and Amazon, Lynn brings deep expertise in marketing, digital transformation, and strategic partnerships. She is now the CEO and Principal of REV Global, a platform that combines advisory, capital, and community to help companies grow and investors access high-quality opportunities.
+        </p>
+        <p>
+          In addition to her investment work across private equity, real estate, and AI-driven ventures, Lynn is the Co-Founder of the Ayana Foundation, which empowers women founders through funding, mentorship, and global community.
+        </p>
+        <p>
+          Her work focuses on one core mission: creating wealth, access, and impact at scale.
+        </p>
+        <button class="copy-btn" onclick="copyBio('bio-medium')">Copy Bio</button>
+      </div>
+      <div class="bio-content" id="bio-long">
+        <p>
+          Lynn Fernando is a global entrepreneur, investor, and empire builder redefining how wealth, business, and impact intersect.
+        </p>
+        <p>
+          After building her foundation inside Fortune 100 companies like Disney and Amazon, she transitioned into entrepreneurship, where she now leads REV Global—a multi-platform ecosystem spanning advisory, capital formation, and investor communities.
+        </p>
+        <p>
+          Lynn works with high-growth companies and investors to unlock scale through AI transformation, strategic growth, and capital deployment. Her investment portfolio spans private equity, real estate, defense manufacturing, and wellness, with a focus on high-leverage, tax-advantaged strategies.
+        </p>
+        <p>
+          She is also the Co-Founder of the Ayana Foundation, a global initiative dedicated to empowering women founders through capital, mentorship, and access.
+        </p>
+        <p>
+          As a speaker, Lynn is known for her bold, actionable insights on building wealth, scaling businesses, and stepping into leadership with clarity and conviction.
+        </p>
+        <button class="copy-btn" onclick="copyBio('bio-long')">Copy Bio</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS + CREDENTIALS -->
+  <section class="mk-grid-section">
+    <div class="container">
+      <div class="mk-two-col">
+        <div class="mk-col">
+          <span class="label">Key Topics</span>
+          <h2>What Lynn Speaks On</h2>
+          <ul class="mk-list">
+            <li>Building a Nine-Figure Empire from Scratch</li>
+            <li>How to Think Like an Investor</li>
+            <li>AI + Business Transformation</li>
+            <li>Women, Wealth, and Access</li>
+            <li>From Operator to Owner</li>
+            <li>Real Estate + Private Equity Wealth Strategies</li>
+          </ul>
+        </div>
+        <div class="mk-col">
+          <span class="label">Signature Talks</span>
+          <h2>Keynote Programs</h2>
+          <ul class="mk-list">
+            <li>
+              <div>
+                <strong style="color:var(--white); font-size:15px; display:block; margin-bottom:6px;">Empire Building 101</strong>
+                From income to ownership and scalable wealth—the mindset, mechanics, and moves behind building a nine-figure ecosystem.
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong style="color:var(--white); font-size:15px; display:block; margin-bottom:6px;">The Power of Leverage</strong>
+                Using capital, systems, and partnerships to accelerate growth. Why leverage is the only path to real scale.
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong style="color:var(--white); font-size:15px; display:block; margin-bottom:6px;">AI Transformation for Founders & Operators</strong>
+                How to stay competitive in the next decade using AI to unlock efficiency, growth, and market advantage.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section style="padding: var(--section-pad) 0; background: var(--dark); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Credentials</span>
+        <h2 style="font-family:var(--font-serif);font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--off-white);margin-bottom:20px;">
+          The Track Record<br /><em style="color:var(--gold);">Behind the Platform.</em>
+        </h2>
+      </div>
+      <div class="mk-cred-grid">
+        <div class="mk-cred-item">
+          <strong>Background</strong>
+          Former Fortune 100 operator at Disney and Amazon — deep expertise in brand, marketing, and digital transformation.
+        </div>
+        <div class="mk-cred-item">
+          <strong>Current Role</strong>
+          CEO & Principal at REV Global — advisory, AI transformation, and growth acceleration platform.
+        </div>
+        <div class="mk-cred-item">
+          <strong>Investments</strong>
+          Active investor across real estate (STR/MTR/development), private equity, AI infrastructure, and defense.
+        </div>
+        <div class="mk-cred-item">
+          <strong>Philanthropy</strong>
+          Co-Founder of the Ayana Foundation — empowering women founders globally through capital and mentorship.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / BOOKING -->
+  <section class="contact-mk">
+    <div class="container">
+      <span class="label">Booking</span>
+      <h2>Ready to Feature<br /><em>Lynn?</em></h2>
+      <p>For speaking requests, podcast appearances, press, and media partnerships.</p>
+      <div class="contact-mk-items">
+        <div class="contact-mk-item">
+          <strong>Speaking</strong> Book for conferences, summits, and corporate events
+        </div>
+        <div class="contact-mk-item">
+          <strong>Media</strong> Press inquiries, podcast appearances, interviews
+        </div>
+        <div class="contact-mk-item">
+          <strong>Partners</strong> Strategic partnerships and co-ventures
+        </div>
+      </div>
+      <a href="index.html#contact" class="btn btn-primary">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">LYNN FERNANDO</span>
+          <p>Entrepreneur · Investor · Operator · Philanthropist</p>
+          <p class="footer-tagline">Building Empires. Creating Access. Redefining Wealth.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="index.html#platform">REV Global</a></li>
+            <li><a href="index.html#platform">REV Capital</a></li>
+            <li><a href="index.html#platform">Ayana Foundation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#investments">Investments</a></li>
+            <li><a href="index.html#speaking">Speaking</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lynnfernando/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/lynnfernandoofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Bio tabs
+    document.querySelectorAll('.bio-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.bio-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.bio-content').forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('bio-' + tab.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Copy bio text
+    function copyBio(id) {
+      const el = document.getElementById(id);
+      const text = Array.from(el.querySelectorAll('p')).map(p => p.textContent).join('\n\n');
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = el.querySelector('.copy-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy Bio', 2000);
+      });
+    }
+  </script>
+</body>
+</html>

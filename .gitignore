@@ -1,0 +1,16 @@
+# Dependencies
+content-agent/node_modules/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude internals
+.agents/
+
+# Logs
+*.log
+
+# Sensitive
+*.pem

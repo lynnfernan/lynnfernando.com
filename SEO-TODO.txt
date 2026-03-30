@@ -1,0 +1,124 @@
+=============================================
+SEO & GEO TO-DO LIST — lynnfernando.com
+Last updated: March 24, 2026
+=============================================
+
+Legend: [ ] = not started  [~] = in progress  [x] = done
+
+
+==============================================
+1. TECHNICAL SEO
+==============================================
+
+  [ ] Add <meta name="description"> to every page (unique, 150–160 chars)
+  [ ] Add Open Graph tags to every page (og:title, og:description, og:image, og:url)
+  [ ] Add Twitter/X Card meta tags to every page
+  [ ] Create sitemap.xml and host at lynnfernando.com/sitemap.xml
+  [ ] Create robots.txt at lynnfernando.com/robots.txt
+  [ ] Add canonical <link rel="canonical" href="..."> to every page
+  [ ] Verify all 5 keynote pages have canonical URLs set correctly
+  [ ] Run Google PageSpeed Insights — fix any Core Web Vitals issues
+  [ ] Compress all images (use WebP format where possible)
+  [ ] Add alt text to every image across the site
+  [ ] Minify CSS and JS for faster load times
+  [ ] Confirm HTTPS / SSL is working on all pages and subpaths
+  [ ] Fix any broken internal links (404s)
+  [ ] Submit site to Google Search Console
+  [ ] Submit sitemap.xml in Google Search Console
+
+
+==============================================
+2. KEYWORD STRATEGY
+==============================================
+
+  [ ] Identify 3–5 primary keywords per page (homepage, speaking, advisory, articles)
+  [ ] Homepage → target: "AI business consultant for entrepreneurs",
+        "keynote speaker for women in business", "Lynn Fernando"
+  [ ] Advisory page → target: "AI revenue growth consultant",
+        "digital transformation for small business", "AI marketing strategy"
+  [ ] Speaking pages → target keynote topic + audience keyword per page
+        e.g. "women's empowerment keynote speaker", "financial literacy keynote"
+  [ ] Articles → target long-tail keyword in title, H1, first paragraph, meta description
+  [ ] Add keyword-rich H2s and H3s to existing pages
+  [ ] Audit all page titles (<title> tags) — must be unique and keyword-targeted
+  [ ] Run Google Keyword Planner or Ahrefs for volume/competition data
+  [ ] Build a keyword tracking spreadsheet (page → target keyword → current rank)
+
+
+==============================================
+3. CONTENT
+==============================================
+
+  [ ] Write 1 article per week minimum (already in place — maintain cadence)
+  [ ] Add 500–800 word intro section to each keynote page (more indexable content)
+  [ ] Build a dedicated /speaking landing page (separate from workshop menu)
+  [ ] Build a dedicated /advisory or /work-with-me landing page
+  [ ] Build category hub pages (/articles/business, /articles/money, etc.)
+  [ ] Add internal links: cross-link articles to each other and to keynote pages
+  [ ] Add internal links: link from keynote pages to relevant articles
+  [ ] Add a Press / Media page (logos, coverage, podcast appearances)
+  [ ] Add testimonials / social proof to homepage and advisory section
+  [ ] Create an FAQ section on speaking and advisory pages (targets People Also Ask)
+  [ ] Write a strong About page bio optimized for brand keyword searches
+
+
+==============================================
+4. GEO — AI SEARCH OPTIMIZATION
+==============================================
+
+  [ ] Add Event schema markup to all 5 keynote pages (already partially done — verify)
+  [ ] Add Person schema markup to homepage (name, jobTitle, url, sameAs social links)
+  [ ] Add Organization schema markup (if applicable)
+  [ ] Add Article schema markup to all blog/resource articles
+  [ ] Add BreadcrumbList schema markup to inner pages
+  [ ] Add FAQPage schema markup to speaking and advisory pages
+  [ ] Add WebPage schema markup to homepage
+  [ ] Test all schema with Google's Rich Results Test tool
+  [ ] Write content in direct Q&A format (answer questions AI assistants ask)
+        e.g. "Who is Lynn Fernando?", "What keynotes does Lynn Fernando offer?"
+  [ ] Use first-person credibility statements throughout the site
+        ("I help...", "I've worked with...", "Clients have seen...")
+  [ ] Publish 3rd-party mentions: podcast guest spots, guest articles, interviews
+  [ ] Get listed on speaker bureau directories (SpeakerHub, eSpeakers, AllAmerican)
+  [ ] Get listed on consultant directories (Clarity.fm, GrowthMentor)
+
+
+==============================================
+5. AUTHORITY & BACKLINKS
+==============================================
+
+  [ ] Claim and complete Google Business Profile (if applicable)
+  [ ] Claim LinkedIn company page for lynnfernando.com
+  [ ] Submit to Crunchbase or AngelList (investor/entrepreneur profiles)
+  [ ] Guest post on 2–3 relevant industry blogs or publications
+  [ ] Pitch 3 podcasts for guest appearances (link back to site in show notes)
+  [ ] Get featured in a roundup article or "experts share" piece
+  [ ] Cross-link from REV Global site to lynnfernando.com (bio/team page)
+  [ ] Add social profile links to every page footer (LinkedIn, Instagram)
+  [ ] Ensure all social bios link back to lynnfernando.com
+
+
+==============================================
+6. GOOGLE BUSINESS PROFILE
+==============================================
+
+  [ ] Create or claim Google Business Profile for Lynn Fernando
+  [ ] Set category: Public Speaker / Business Consultant
+  [ ] Add website URL, phone (if public), location (city at minimum)
+  [ ] Upload profile photo and cover image
+  [ ] Write keyword-rich business description
+  [ ] Add services: Keynote Speaking, AI Consulting, Business Advisory
+  [ ] Request reviews from past clients and event organizers
+  [ ] Post updates regularly (events, articles, speaking dates)
+
+
+==============================================
+7. TRACKING & MEASUREMENT
+==============================================
+
+  [ ] Install Google Analytics 4 on all pages (HIGH PRIORITY — already in backlog)
+  [ ] Set up GA4 conversion events: form submit, calendar click, CTA click
+  [ ] Connect Google Search Console to GA4
+  [ ] Set up monthly rank tracking for target keywords
+  [ ] Review Search Console for impressions/clicks after 30 days of indexing
+  [ ] Set up Bing Webmaster Tools (secondary but worthwhile)

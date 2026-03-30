@@ -1,0 +1,142 @@
+LYNNFERNANDO.COM — CONTENT AGENT GUIDE
+=======================================
+
+
+WHAT IT DOES
+------------
+The content agent automatically writes articles in your voice and publishes
+them to the Resources section of lynnfernando.com. It runs every Monday at
+8:03am without you having to do anything — as long as your Mac is on.
+
+
+HOW IT WORKS
+------------
+1. You add article topics to the queue file (articles-queue.txt)
+2. Every Monday morning the agent picks the next topic, writes a 400–500 word
+   article using Claude AI, and deploys it live to your website
+3. The Resources hub page (lynnfernando.com/resources) updates automatically
+4. Everything gets logged to publish.log so you can see what ran
+
+
+FILES & WHAT THEY DO
+--------------------
+articles-queue.txt       Add new article topics here
+articles-manifest.json   Master list of all published articles (auto-updated)
+voice-guide.md           Lynn's writing style and tone rules fed to the AI
+publish.sh               The script that runs automatically every Monday
+agent.js                 The AI writing engine (powered by Claude API)
+publish.log              Log of every run — check this if something looks wrong
+
+
+ADDING ARTICLES TO THE QUEUE
+-----------------------------
+Open articles-queue.txt and add new topics at the bottom using this format:
+
+    TOPIC: Your Article Title Here
+    CATEGORY: Women in Business
+    ANGLE: The specific argument or angle you want the article to take
+
+    ---
+
+Available categories:
+  - Women in Business
+  - Starting or Acquiring a Business
+  - Philanthropy & Social Impact
+  - GenAI & Business
+  - Empire Building
+  - Investing
+
+ANGLE is optional but recommended — it gives the AI a clear direction and
+makes the article sharper and more specific to your point of view.
+
+Always separate articles with three dashes on their own line:  ---
+
+
+AUTOMATIC SCHEDULE
+------------------
+Runs:    Every Monday at 8:03am
+Requires: Your Mac to be on and awake at that time
+
+If your Mac is asleep on Monday morning, the job will be skipped for that week.
+It will NOT catch up — it simply waits until the following Monday.
+
+Queue check: When only 2 articles remain in the queue, a warning appears in
+publish.log. That's your signal to add more topics.
+
+
+RUNNING IT MANUALLY
+-------------------
+To write and publish the next article right now (without waiting for Monday):
+
+    cd "/Users/lynnfernan/Lynn Priorities/Personal Brand/content-agent"
+    bash publish.sh
+
+To write all remaining articles in the queue at once:
+
+    cd "/Users/lynnfernan/Lynn Priorities/Personal Brand/content-agent"
+    node agent.js --all
+    bash ../deploy.sh lynnfernando.com 35.80.180.230 ~/Downloads/LightsailDefaultKey-us-west-2.pem
+
+To regenerate the Resources hub page without writing a new article:
+
+    cd "/Users/lynnfernan/Lynn Priorities/Personal Brand/content-agent"
+    node agent.js --index
+    bash ../deploy.sh lynnfernando.com 35.80.180.230 ~/Downloads/LightsailDefaultKey-us-west-2.pem
+
+
+CHECKING WHAT RAN
+-----------------
+Open publish.log in any text editor. Each run shows:
+  - Date and time it ran
+  - How many articles were in the queue
+  - Whether the article was written successfully
+  - Whether the deploy succeeded
+  - A warning if the queue is getting low
+
+
+IF SOMETHING GOES WRONG
+------------------------
+Article failed to generate:
+  → Check publish.log for the error message
+  → Make sure your Mac has internet access
+  → Your API key may have expired — generate a new one at console.anthropic.com
+    and update it in ~/.zshrc (replace the ANTHROPIC_API_KEY line)
+
+Deploy failed (article written but not live):
+  → Make sure the file ~/Downloads/LightsailDefaultKey-us-west-2.pem exists
+  → Run the deploy manually:
+    bash "/Users/lynnfernan/Lynn Priorities/Personal Brand/deploy.sh" lynnfernando.com 35.80.180.230 ~/Downloads/LightsailDefaultKey-us-west-2.pem
+
+Queue is empty:
+  → Add new topics to articles-queue.txt and save — the next Monday run
+    will pick them up automatically
+
+
+API KEY
+-------
+Your Anthropic API key is stored in ~/.zshrc
+If it ever stops working, generate a new one at: console.anthropic.com
+Then open ~/.zshrc and replace the ANTHROPIC_API_KEY line with the new key.
+Never paste your API key into a chat, email, or document.
+
+
+WHERE ARTICLES LIVE
+-------------------
+Local files:  /Users/lynnfernan/Lynn Priorities/Personal Brand/resources/
+Live website: https://lynnfernando.com/resources/
+Hub page:     https://lynnfernando.com/resources/index.html
+
+
+WEEKLY MAINTENANCE (5 MINUTES)
+-------------------------------
+1. Check publish.log on Monday to confirm the article went live
+2. Visit lynnfernando.com/resources to see it on the site
+3. When the queue warning appears, spend 10 minutes adding new topics
+   to articles-queue.txt — aim to keep at least 4 weeks ahead
+
+
+QUEUE CAPACITY GUIDE
+--------------------
+  4 topics  = 1 month of content
+  8 topics  = 2 months of content
+  12 topics = 3 months of content (recommended minimum to maintain)

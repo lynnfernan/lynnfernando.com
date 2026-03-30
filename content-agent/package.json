@@ -1,0 +1,13 @@
+{
+  "name": "lynn-content-agent",
+  "version": "1.0.0",
+  "description": "AI content agent that writes articles for lynnfernando.com",
+  "type": "module",
+  "scripts": {
+    "write": "node agent.js",
+    "write:all": "node agent.js --all"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}

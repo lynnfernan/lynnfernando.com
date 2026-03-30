@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startup Fundraising Strategy Simulator | Lynn Fernando</title>
+  <meta name="description" content="Stress-test your traction against real-world benchmarks. Define your capital raising strategy and optimize your round for maximum investor alignment." />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/resources/startup-fundraising" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Startup Fundraising Strategy Simulator | Lynn Fernando" />
+  <meta property="og:description" content="Stress-test your traction against real-world benchmarks. Define your capital raising strategy and optimize your round for maximum investor alignment." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/startup-fundraising" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Startup Fundraising Strategy Simulator | Lynn Fernando" />
+  <meta name="twitter:description" content="Stress-test your traction against real-world benchmarks. Define your capital raising strategy and optimize your round for maximum investor alignment." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./resources.css" />
+  <style>
+    /* ── Base overrides ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body { background: #0a0a0a; color: #f5f0eb; font-family: Inter, sans-serif; margin: 0; }
+
+    /* ── Nav ── */
+    .res-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 64px;
+      background: rgba(10,10,10,0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+    }
+    .res-nav__back {
+      display: flex; align-items: center; gap: 8px;
+      font-family: Montserrat; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #555; text-decoration: none; transition: color 0.2s;
+    }
+    .res-nav__back:hover { color: #c9a84c; }
+    .res-nav__back svg { width: 14px; height: 14px; }
+    .res-nav__brand {
+      font-family: Montserrat; font-size: 13px; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: #f5f0eb; text-decoration: none;
+      position: absolute; left: 50%; transform: translateX(-50%);
+    }
+    .res-nav__right {
+      font-family: Montserrat; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #555; text-decoration: none; transition: color 0.2s;
+    }
+    .res-nav__right:hover { color: #c9a84c; }
+
+    /* ── Hero ── */
+    .res-hero {
+      padding: 100px 40px 48px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .res-hero__meta {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .res-hero__tag {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #8a8a8a;
+    }
+    .res-hero__badge {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: #3ecf8e; border: 1px solid rgba(62,207,142,0.35);
+      padding: 3px 10px; border-radius: 2px;
+    }
+    .res-hero__title {
+      font-family: "Cormorant Garamond", serif; font-size: clamp(36px, 5vw, 54px);
+      font-weight: 300; color: #f5f0eb; line-height: 1.1; margin: 0 0 20px;
+    }
+    .res-hero__title em { font-style: italic; color: #c9a84c; }
+    .res-hero__desc {
+      font-size: 16px; line-height: 1.7; color: #8a8a8a;
+      max-width: 640px; margin: 0 0 20px;
+    }
+    .res-hero__pills { display: flex; align-items: center; flex-wrap: wrap; gap: 0; }
+    .res-hero__pill {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: #c9a84c; border: 1px solid rgba(201,168,76,0.3);
+      padding: 4px 12px; border-radius: 2px; margin-right: 10px; margin-bottom: 4px;
+    }
+
+    /* ── Simulator layout ── */
+    .sim-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 40px 100px;
+    }
+
+    /* ── Panels ── */
+    .sim-panel {
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px; margin-bottom: 12px; overflow: hidden;
+    }
+    .sim-panel__header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 24px; cursor: pointer; background: #111; transition: background 0.2s;
+    }
+    .sim-panel__header:hover { background: #161616; }
+    .sim-panel__header.active { background: #1a1a1a; border-bottom: 1px solid rgba(201,168,76,0.2); }
+    .sim-panel__num {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: #c9a84c; margin-right: 14px;
+    }
+    .sim-panel__title {
+      font-family: Montserrat; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; color: #f5f0eb; flex: 1;
+    }
+    .sim-panel__arrow { color: #555; transition: transform 0.3s; font-size: 12px; }
+    .sim-panel__header.active .sim-panel__arrow { transform: rotate(180deg); color: #c9a84c; }
+    .sim-panel__body { padding: 24px; background: #111; display: none; }
+    .sim-panel__body.open { display: block; }
+
+    /* ── Input elements ── */
+    .sim-label {
+      display: block; font-family: Montserrat; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; color: #8a8a8a;
+      margin-bottom: 6px; margin-top: 16px;
+    }
+    .sim-label:first-of-type { margin-top: 0; }
+    .sim-hint { font-size: 12px; color: #555; margin-bottom: 8px; line-height: 1.4; }
+    .sim-input {
+      width: 100%; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 2px;
+      padding: 12px 14px; font-family: Inter; font-size: 15px; color: #f5f0eb;
+      outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+      appearance: none;
+    }
+    .sim-input:focus { border-color: rgba(201,168,76,0.5); }
+    .sim-select {
+      width: 100%; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1); border-radius: 2px;
+      padding: 12px 14px; font-family: Inter; font-size: 15px; color: #f5f0eb;
+      outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+      appearance: none; cursor: pointer;
+    }
+    .sim-select:focus { border-color: rgba(201,168,76,0.5); }
+    .sim-select option { background: #1a1a1a; color: #f5f0eb; }
+    .sim-prefix-wrap { position: relative; }
+    .sim-prefix-wrap .sim-prefix {
+      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+      color: #555; font-size: 15px; pointer-events: none;
+    }
+    .sim-prefix-wrap .sim-input { padding-left: 26px; }
+
+    /* ── Section intro text ── */
+    .sim-intro { font-size: 13px; color: #555; line-height: 1.6; margin-bottom: 16px; }
+
+    /* ── Checkboxes ── */
+    .sim-check {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 16px; background: #0a0a0a;
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 2px;
+      margin-bottom: 8px; cursor: pointer; transition: border-color 0.2s;
+      user-select: none;
+    }
+    .sim-check:hover { border-color: rgba(201,168,76,0.3); }
+    .sim-check input[type=checkbox] { display: none; }
+    .sim-check__label { font-size: 14px; color: #c0b9b0; }
+    .sim-check__score {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.12em; color: #555;
+    }
+    .sim-check.checked { border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.04); }
+    .sim-check.checked .sim-check__score { color: #c9a84c; }
+
+    /* ── Radio cards ── */
+    .sim-radio-card {
+      padding: 14px 16px; border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 2px; margin-bottom: 8px; cursor: pointer;
+      transition: all 0.2s; background: #0a0a0a;
+      display: flex; align-items: center; justify-content: space-between;
+      user-select: none;
+    }
+    .sim-radio-card.selected { border-color: rgba(201,168,76,0.5); background: rgba(201,168,76,0.05); }
+    .sim-radio-card__name { font-size: 14px; color: #c0b9b0; font-weight: 500; }
+    .sim-radio-card.selected .sim-radio-card__name { color: #f5f0eb; }
+    .sim-radio-card__range {
+      font-family: Montserrat; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.1em; color: #555;
+    }
+    .sim-radio-card.selected .sim-radio-card__range { color: #c9a84c; }
+
+    /* ── Instrument grid ── */
+    .sim-instrument-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .sim-instrument {
+      padding: 20px 16px; border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px; cursor: pointer; transition: all 0.2s;
+      text-align: center; background: #0a0a0a; user-select: none;
+    }
+    .sim-instrument:hover { border-color: rgba(201,168,76,0.3); }
+    .sim-instrument.selected { border-color: #c9a84c; background: rgba(201,168,76,0.06); }
+    .sim-instrument__icon { font-size: 22px; margin-bottom: 10px; }
+    .sim-instrument__name {
+      font-family: Montserrat; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; color: #f5f0eb; margin-bottom: 6px;
+    }
+    .sim-instrument__desc { font-size: 12px; color: #555; line-height: 1.4; }
+    .sim-instrument.selected .sim-instrument__desc { color: #8a8a8a; }
+
+    /* ── Results panel ── */
+    .sim-results-col { position: sticky; top: 88px; }
+    .sim-results {
+      background: #111; border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px; padding: 32px 28px;
+    }
+    .sim-results__header {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #8a8a8a;
+      margin-bottom: 24px; padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* ── Metrics grid ── */
+    .sim-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .sim-metric {
+      padding: 16px; background: #0a0a0a;
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 3px;
+    }
+    .sim-metric__label {
+      font-family: Montserrat; font-size: 9px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: #555; margin-bottom: 8px;
+    }
+    .sim-metric__value {
+      font-family: "Cormorant Garamond", serif; font-size: 28px;
+      font-weight: 300; color: #f5f0eb; line-height: 1;
+    }
+    .sim-metric__sub { font-size: 11px; color: #555; margin-top: 4px; }
+
+    /* ── Fundability bar ── */
+    .sim-fundability-bar-wrap { margin-bottom: 24px; }
+    .sim-fundability-bar-label {
+      display: flex; justify-content: space-between; margin-bottom: 8px;
+    }
+    .sim-fundability-bar-label span {
+      font-family: Montserrat; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase; color: #555;
+    }
+    .sim-fundability-bar-label strong { color: #c9a84c; }
+    .sim-bar-track {
+      height: 4px; background: rgba(255,255,255,0.07); border-radius: 2px; overflow: hidden;
+    }
+    .sim-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #9e7e32, #c9a84c, #e2c47a);
+      border-radius: 2px; transition: width 0.5s ease; width: 0%;
+    }
+
+    /* ── Strategic thesis ── */
+    .sim-thesis {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 20px; margin-top: 4px;
+    }
+    .sim-thesis__title {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: #8a8a8a; margin-bottom: 16px;
+    }
+
+    /* ── Launch cost box ── */
+    .sim-launch-cost {
+      background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 3px; padding: 16px; margin-bottom: 16px;
+    }
+    .sim-launch-cost__label {
+      font-family: Montserrat; font-size: 9px; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: #c9a84c; margin-bottom: 6px;
+    }
+    .sim-launch-cost__value {
+      font-family: "Cormorant Garamond", serif; font-size: 32px;
+      font-weight: 300; color: #f5f0eb;
+    }
+    .sim-launch-cost__sub { font-size: 12px; color: #555; margin-top: 4px; }
+
+    /* ── Tactical steps ── */
+    .sim-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+    .sim-step {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 14px; background: #0a0a0a;
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 2px;
+      font-size: 13px; color: #c0b9b0; line-height: 1.5;
+    }
+    .sim-step__num {
+      font-family: Montserrat; font-size: 10px; font-weight: 700;
+      color: #c9a84c; flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ── Button ── */
+    .btn-primary {
+      display: inline-block; font-family: Montserrat; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      background: #c9a84c; color: #0a0a0a;
+      border: none; border-radius: 2px; padding: 14px 28px; cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: #e2c47a; transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+
+    /* ── Footer ── */
+    .res-footer {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding: 40px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .res-footer__copy {
+      font-size: 13px; color: #555;
+      font-family: Montserrat; letter-spacing: 0.05em;
+    }
+    .res-footer__links { display: flex; gap: 24px; }
+    .res-footer__links a {
+      font-family: Montserrat; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: #555; text-decoration: none; transition: color 0.2s;
+    }
+    .res-footer__links a:hover { color: #c9a84c; }
+
+    /* ── Mobile responsive ── */
+    @media (max-width: 900px) {
+      .sim-layout {
+        grid-template-columns: 1fr;
+        padding: 32px 20px 80px;
+        gap: 32px;
+      }
+      .sim-results-col { position: static; }
+      .res-hero { padding: 88px 20px 36px; }
+      .res-nav { padding: 0 20px; }
+      .res-footer { padding: 32px 20px; }
+    }
+    @media (max-width: 600px) {
+      .sim-instrument-grid { grid-template-columns: 1fr; }
+      .sim-metrics { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 420px) {
+      .sim-metrics { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="res-nav">
+    <a href="../index.html#resources" class="res-nav__back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+      Back
+    </a>
+    <a href="../index.html" class="res-nav__brand">Lynn Fernando</a>
+    <a href="../index.html#resources" class="res-nav__right">All Resources</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="res-hero">
+    <div class="res-hero__meta">
+      <span class="res-hero__tag">Tool</span>
+      <span class="res-hero__badge">Free</span>
+    </div>
+    <h1 class="res-hero__title">Fundraising Strategy <em>Simulator</em></h1>
+    <p class="res-hero__desc">Stress-test your traction against real-world benchmarks. Define your capital raising strategy, navigate valuation, and optimize your round for maximum investor alignment.</p>
+    <div class="res-hero__pills">
+      <span class="res-hero__pill">Accuracy: 94.2%</span>
+      <span class="res-hero__pill">Dataset: 2026.Q1</span>
+    </div>
+  </section>
+
+  <!-- SIMULATOR -->
+  <div class="sim-layout">
+
+    <!-- LEFT: Input panels -->
+    <div class="sim-inputs">
+
+      <!-- SECTION 01: Capital Allocation -->
+      <div class="sim-panel">
+        <div class="sim-panel__header">
+          <span class="sim-panel__num">01</span>
+          <span class="sim-panel__title">Capital Allocation</span>
+          <span class="sim-panel__arrow">&#9660;</span>
+        </div>
+        <div class="sim-panel__body">
+          <label class="sim-label" for="targetRaise">Target Raise (USD)</label>
+          <p class="sim-hint">Total capital needed to reach your next major value-inflection milestone.</p>
+          <div class="sim-prefix-wrap">
+            <span class="sim-prefix">$</span>
+            <input class="sim-input" type="number" id="targetRaise" step="10000" value="500000" min="0" />
+          </div>
+
+          <label class="sim-label" for="valuationCap">Valuation Cap (USD)</label>
+          <p class="sim-hint">The maximum price at which your instrument will convert to equity.</p>
+          <div class="sim-prefix-wrap">
+            <span class="sim-prefix">$</span>
+            <input class="sim-input" type="number" id="valuationCap" step="100000" value="5000000" min="0" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 02: Market Intelligence -->
+      <div class="sim-panel">
+        <div class="sim-panel__header">
+          <span class="sim-panel__num">02</span>
+          <span class="sim-panel__title">Market Intelligence</span>
+          <span class="sim-panel__arrow">&#9660;</span>
+        </div>
+        <div class="sim-panel__body">
+          <label class="sim-label" for="vertical">Vertical Focus</label>
+          <select class="sim-select" id="vertical">
+            <option value="B2B SaaS">B2B SaaS</option>
+            <option value="Consumer">Consumer</option>
+            <option value="DeepTech">DeepTech</option>
+            <option value="FinTech">FinTech</option>
+          </select>
+
+          <label class="sim-label" for="macroOutlook" style="margin-top:16px;">Macro Outlook</label>
+          <select class="sim-select" id="macroOutlook">
+            <option value="bullish">Bullish (Growth Focused)</option>
+            <option value="neutral" selected>Neutral (Standard Market)</option>
+            <option value="bearish">Bearish (Risk Averse)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- SECTION 03: Momentum Matrix -->
+      <div class="sim-panel">
+        <div class="sim-panel__header">
+          <span class="sim-panel__num">03</span>
+          <span class="sim-panel__title">Momentum Matrix</span>
+          <span class="sim-panel__arrow">&#9660;</span>
+        </div>
+        <div class="sim-panel__body">
+          <p class="sim-intro">Check each milestone your company has achieved. Each item contributes to your Fundability Index.</p>
+
+          <div class="sim-check" data-points="25">
+            <input type="checkbox" />
+            <span class="sim-check__label">Proven Revenue Stream</span>
+            <span class="sim-check__score">+25 PTS</span>
+          </div>
+          <div class="sim-check" data-points="20">
+            <input type="checkbox" />
+            <span class="sim-check__label">Technical MVP Live</span>
+            <span class="sim-check__score">+20 PTS</span>
+          </div>
+          <div class="sim-check" data-points="15">
+            <input type="checkbox" />
+            <span class="sim-check__label">Binding LOIs / Partnerships</span>
+            <span class="sim-check__score">+15 PTS</span>
+          </div>
+          <div class="sim-check" data-points="10">
+            <input type="checkbox" />
+            <span class="sim-check__label">Waitlist &gt; 1,000 Users</span>
+            <span class="sim-check__score">+10 PTS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 04: Network Reach -->
+      <div class="sim-panel">
+        <div class="sim-panel__header">
+          <span class="sim-panel__num">04</span>
+          <span class="sim-panel__title">Network Reach</span>
+          <span class="sim-panel__arrow">&#9660;</span>
+        </div>
+        <div class="sim-panel__body">
+          <div class="sim-radio-card" data-points="0">
+            <span class="sim-radio-card__name">Stealth</span>
+            <span class="sim-radio-card__range">0–500 FOLLOWERS</span>
+          </div>
+          <div class="sim-radio-card selected" data-points="5">
+            <span class="sim-radio-card__name">Emerging</span>
+            <span class="sim-radio-card__range">500–5K FOLLOWERS</span>
+          </div>
+          <div class="sim-radio-card" data-points="15">
+            <span class="sim-radio-card__name">Established</span>
+            <span class="sim-radio-card__range">5K–20K FOLLOWERS</span>
+          </div>
+          <div class="sim-radio-card" data-points="25">
+            <span class="sim-radio-card__name">Authority</span>
+            <span class="sim-radio-card__range">20K+ FOLLOWERS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 05: Efficiency Audit -->
+      <div class="sim-panel">
+        <div class="sim-panel__header">
+          <span class="sim-panel__num">05</span>
+          <span class="sim-panel__title">Efficiency Audit</span>
+          <span class="sim-panel__arrow">&#9660;</span>
+        </div>
+        <div class="sim-panel__body">
+          <label class="sim-label" for="monthlyBurn">Monthly Operating Burn (USD)</label>
+          <div class="sim-prefix-wrap">
+            <span class="sim-prefix">$</span>
+            <input class="sim-input" type="number" id="monthlyBurn" step="1000" value="25000" min="0" />
+          </div>
+
+          <label class="sim-label" for="launchCash">Round Launch Cash (USD)</label>
+          <p class="sim-hint">Cash on hand when you plan to launch the round.</p>
+          <div class="sim-prefix-wrap">
+            <span class="sim-prefix">$</span>
+            <input class="sim-input" type="number" id="launchCash" step="1000" value="50000" min="0" />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 06: Deal Structure -->
+      <div class="sim-panel">
+        <div class="sim-panel__header">
+          <span class="sim-panel__num">06</span>
+          <span class="sim-panel__title">Deal Structure</span>
+          <span class="sim-panel__arrow">&#9660;</span>
+        </div>
+        <div class="sim-panel__body">
+          <div class="sim-instrument-grid">
+            <div class="sim-instrument selected" data-legal="5000">
+              <div class="sim-instrument__icon">⚡</div>
+              <div class="sim-instrument__name">SAFE Agreement</div>
+              <div class="sim-instrument__desc">Fast, low-cost, deferred valuation.</div>
+            </div>
+            <div class="sim-instrument" data-legal="8000">
+              <div class="sim-instrument__icon">📜</div>
+              <div class="sim-instrument__name">Convertible Debt</div>
+              <div class="sim-instrument__desc">Interest-bearing, fixed maturity dates.</div>
+            </div>
+            <div class="sim-instrument" data-legal="15000">
+              <div class="sim-instrument__icon">💎</div>
+              <div class="sim-instrument__name">Priced Round</div>
+              <div class="sim-instrument__desc">Direct equity issuance, fixed price today.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END LEFT COLUMN -->
+
+    <!-- RIGHT: Results panel -->
+    <div class="sim-results-col">
+      <div class="sim-results">
+        <div class="sim-results__header">Strategy Output</div>
+
+        <!-- 2x2 Metrics -->
+        <div class="sim-metrics">
+          <div class="sim-metric">
+            <div class="sim-metric__label">Fundability Index</div>
+            <div class="sim-metric__value" id="metricFundability">0%</div>
+            <div class="sim-metric__sub">Investor Readiness</div>
+          </div>
+          <div class="sim-metric">
+            <div class="sim-metric__label">Efficiency Ratio</div>
+            <div class="sim-metric__value" id="metricEfficiency">0.0x</div>
+            <div class="sim-metric__sub">Runway Multiple</div>
+          </div>
+          <div class="sim-metric">
+            <div class="sim-metric__label">Post-Money Val</div>
+            <div class="sim-metric__value" id="metricPostMoney">$0</div>
+            <div class="sim-metric__sub">Estimated Valuation</div>
+          </div>
+          <div class="sim-metric">
+            <div class="sim-metric__label">Market Fit</div>
+            <div class="sim-metric__value" id="metricMarketFit" style="font-size:22px;">—</div>
+            <div class="sim-metric__sub">Traction Signal</div>
+          </div>
+        </div>
+
+        <!-- Fundability bar -->
+        <div class="sim-fundability-bar-wrap">
+          <div class="sim-fundability-bar-label">
+            <span>Fundability Index</span>
+            <strong>0%</strong>
+          </div>
+          <div class="sim-bar-track">
+            <div class="sim-bar-fill"></div>
+          </div>
+        </div>
+
+        <!-- Strategic Thesis -->
+        <div class="sim-thesis">
+          <div class="sim-thesis__title">Strategic Thesis</div>
+
+          <div class="sim-launch-cost">
+            <div class="sim-launch-cost__label">Required Launch Capital</div>
+            <div class="sim-launch-cost__value" id="launchCostValue">$0</div>
+            <div class="sim-launch-cost__sub">Estimated upfront capital to launch your round</div>
+          </div>
+
+          <ul class="sim-steps" id="tacticalSteps">
+            <!-- populated by JS -->
+          </ul>
+
+          <button class="btn-primary" style="width:100%; margin-top: 20px;" onclick="downloadReport()">Download Strategic Report</button>
+        </div>
+      </div>
+    </div>
+    <!-- END RIGHT COLUMN -->
+
+  </div>
+  <!-- END SIMULATOR -->
+
+  <!-- FOOTER -->
+  <footer class="res-footer">
+    <span class="res-footer__copy">&copy; 2025 Lynn Fernando</span>
+    <div class="res-footer__links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#resources">Resources</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    // ── Recalculate ──────────────────────────────────────────────────────────
+    function recalculate() {
+      const targetRaise  = parseFloat(document.getElementById('targetRaise').value)  || 0;
+      const valuationCap = parseFloat(document.getElementById('valuationCap').value) || 0;
+      const monthlyBurn  = parseFloat(document.getElementById('monthlyBurn').value)  || 0;
+      const launchCash   = parseFloat(document.getElementById('launchCash').value)   || 0;
+      const vertical     = document.getElementById('vertical').value;
+      const macro        = document.getElementById('macroOutlook').value;
+
+      // Momentum score (max 70)
+      let momentum = 0;
+      document.querySelectorAll('.sim-check.checked').forEach(function(el) {
+        momentum += parseInt(el.dataset.points, 10);
+      });
+
+      // Network reach score (max 25)
+      const networkEl  = document.querySelector('.sim-radio-card.selected');
+      const networkPts = networkEl ? parseInt(networkEl.dataset.points, 10) : 0;
+
+      // Macro multiplier
+      const macroMult = macro === 'bullish' ? 1.1 : macro === 'bearish' ? 0.85 : 1.0;
+
+      // Fundability Index (0–100)
+      const rawScore   = (momentum + networkPts) / 95 * 100;
+      const fundability = Math.min(Math.round(rawScore * macroMult), 100);
+
+      // Efficiency ratio
+      const efficiencyRatio = monthlyBurn > 0
+        ? (targetRaise / (monthlyBurn * 12)).toFixed(1)
+        : '—';
+
+      // Post-money valuation
+      const postMoney = valuationCap + targetRaise;
+
+      // Market fit
+      let marketFit = '—';
+      if      (momentum >= 60) marketFit = 'Exceptional';
+      else if (momentum >= 40) marketFit = 'Strong';
+      else if (momentum >= 20) marketFit = 'Average';
+      else if (momentum >   0) marketFit = 'Early';
+
+      // Launch cost
+      const instrumentEl  = document.querySelector('.sim-instrument.selected');
+      const legalCost     = instrumentEl ? parseInt(instrumentEl.dataset.legal, 10) : 5000;
+      const marketingCost = Math.round(targetRaise * 0.08);
+      const launchTotal   = legalCost + marketingCost + 2500; // portal/admin fees
+
+      // ── Update metrics ──
+      document.getElementById('metricFundability').textContent =
+        fundability + '%';
+      document.getElementById('metricEfficiency').textContent =
+        efficiencyRatio === '—' ? '—' : efficiencyRatio + 'x';
+      document.getElementById('metricPostMoney').textContent =
+        postMoney > 0 ? '$' + formatNum(postMoney) : '$0';
+      document.getElementById('metricMarketFit').textContent = marketFit;
+
+      // Bar
+      document.querySelector('.sim-bar-fill').style.width = fundability + '%';
+      document.querySelector('.sim-fundability-bar-label strong').textContent =
+        fundability + '%';
+
+      // Launch cost box
+      document.getElementById('launchCostValue').textContent =
+        '$' + formatNum(launchTotal);
+
+      // Tactical steps
+      generateTacticalSteps(
+        fundability, targetRaise, vertical, macro,
+        momentum, networkPts, launchCash, launchTotal
+      );
+    }
+
+    function formatNum(n) {
+      if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+      if (n >= 1000)    return (n / 1000).toFixed(0)    + 'K';
+      return n.toLocaleString();
+    }
+
+    function generateTacticalSteps(
+      fundability, raise, vertical, macro,
+      momentum, network, cash, launchCost
+    ) {
+      var steps = [];
+
+      if (fundability < 30) {
+        steps.push('Build your Momentum Matrix before approaching investors — focus on revenue, MVP, or strong LOIs first.');
+      }
+      if (fundability >= 30 && fundability < 60) {
+        steps.push("You're fundable — lead with traction data and a sharp narrative. Target angels and Reg D before Reg CF.");
+      }
+      if (fundability >= 60) {
+        steps.push('Strong fundability — run a compressed, time-boxed raise process to create real investor FOMO.');
+      }
+
+      if (cash < launchCost) {
+        steps.push(
+          'Launch capital is tight. Secure at least $' + formatNum(launchCost) +
+          ' before going live — legal, marketing, and portal fees add up fast.'
+        );
+      } else {
+        steps.push('You have sufficient launch capital. Allocate at least 8% of your target raise to campaign marketing.');
+      }
+
+      if (network === 0) {
+        steps.push('Build your audience before launch — spend 60 days growing a warm list. Cold campaigns significantly underperform.');
+      } else if (network <= 5) {
+        steps.push('Leverage your emerging network early. Email your list 4–6 weeks before launch to gauge intent and build waitlist.');
+      } else {
+        steps.push('Your network is your competitive advantage — activate it early. Aim for 20–30% of goal from warm contacts in the first week.');
+      }
+
+      var macroStep = {
+        bullish: 'Macro tailwinds are in your favor. Price your round with confidence and move quickly while sentiment holds.',
+        neutral: 'Neutral macro environment — lean on traction and team quality. Avoid over-complicating your terms.',
+        bearish: 'In a risk-averse market, lead with capital efficiency metrics and clear paths to profitability or next milestone.'
+      };
+      steps.push(macroStep[macro] || macroStep.neutral);
+
+      if (vertical === 'DeepTech') {
+        steps.push('DeepTech raises take longer — plan for a 6–9 month process and prioritize angels with deep domain expertise.');
+      } else if (vertical === 'FinTech') {
+        steps.push('FinTech investors want to see regulatory clarity early. Prepare a compliance overview for your data room.');
+      } else if (vertical === 'Consumer') {
+        steps.push('Consumer raises are driven by growth metrics — DAU, retention, and NPS. Lead with those in your opening slide.');
+      } else {
+        steps.push('B2B SaaS: center your story on ARR, NDR, and CAC payback period. These are the metrics seed VCs benchmark.');
+      }
+
+      var html = steps.map(function(s, i) {
+        var num = i + 1 < 10 ? '0' + (i + 1) : (i + 1);
+        return '<li class="sim-step"><span class="sim-step__num">' + num + '</span>' + s + '</li>';
+      }).join('');
+
+      document.getElementById('tacticalSteps').innerHTML = html;
+    }
+
+    // ── Download report ──────────────────────────────────────────────────────
+    function downloadReport() {
+      var fundability = document.getElementById('metricFundability').textContent;
+      var postMoney   = document.getElementById('metricPostMoney').textContent;
+      var marketFit   = document.getElementById('metricMarketFit').textContent;
+      var efficiency  = document.getElementById('metricEfficiency').textContent;
+
+      var steps = Array.from(document.querySelectorAll('.sim-step')).map(function(el, i) {
+        return (i + 1) + '. ' + el.textContent.trim();
+      }).join('\n');
+
+      var report =
+        'LYNN FERNANDO \u2014 FUNDRAISING STRATEGY REPORT\n' +
+        'Generated: ' + new Date().toLocaleDateString() + '\n' +
+        '============================================\n\n' +
+        'FUNDABILITY INDEX: ' + fundability + '\n' +
+        'POST-MONEY VALUATION: ' + postMoney + '\n' +
+        'MARKET FIT: ' + marketFit + '\n' +
+        'EFFICIENCY RATIO: ' + efficiency + '\n\n' +
+        'TACTICAL STEPS:\n' + steps + '\n\n' +
+        '---\n' +
+        'This report is generated by the Lynn Fernando Fundraising Strategy Simulator.\n' +
+        'For advisory support, visit lynnfernando.com or email lynn@revglobalinc.com\n';
+
+      var blob = new Blob([report], { type: 'text/plain' });
+      var url  = URL.createObjectURL(blob);
+      var a    = document.createElement('a');
+      a.href     = url;
+      a.download = 'fundraising-strategy-report.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // ── Panel accordion ──────────────────────────────────────────────────────
+    document.querySelectorAll('.sim-panel__header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var body   = header.nextElementSibling;
+        var isOpen = body.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.sim-panel__body').forEach(function(b) {
+          b.classList.remove('open');
+        });
+        document.querySelectorAll('.sim-panel__header').forEach(function(h) {
+          h.classList.remove('active');
+        });
+        // Open clicked if it was closed
+        if (!isOpen) {
+          body.classList.add('open');
+          header.classList.add('active');
+        }
+      });
+    });
+
+    // Open first panel by default
+    document.querySelector('.sim-panel__header').click();
+
+    // ── Momentum checkboxes ──────────────────────────────────────────────────
+    document.querySelectorAll('.sim-check').forEach(function(card) {
+      card.addEventListener('click', function() {
+        card.classList.toggle('checked');
+        recalculate();
+      });
+    });
+
+    // ── Network reach cards ──────────────────────────────────────────────────
+    document.querySelectorAll('.sim-radio-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        document.querySelectorAll('.sim-radio-card').forEach(function(c) {
+          c.classList.remove('selected');
+        });
+        card.classList.add('selected');
+        recalculate();
+      });
+    });
+
+    // ── Instrument cards ─────────────────────────────────────────────────────
+    document.querySelectorAll('.sim-instrument').forEach(function(card) {
+      card.addEventListener('click', function() {
+        document.querySelectorAll('.sim-instrument').forEach(function(c) {
+          c.classList.remove('selected');
+        });
+        card.classList.add('selected');
+        recalculate();
+      });
+    });
+
+    // ── All numeric/select inputs ────────────────────────────────────────────
+    document.querySelectorAll('.sim-input, .sim-select').forEach(function(el) {
+      el.addEventListener('input',  recalculate);
+      el.addEventListener('change', recalculate);
+    });
+
+    // ── Init ─────────────────────────────────────────────────────────────────
+    recalculate();
+  </script>
+
+</body>
+</html>

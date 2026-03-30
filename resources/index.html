@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — Lynn Fernando</title>
+  <meta name="description" content="Guides, articles, frameworks, and tools for leaders building at scale across business, investing, and impact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./resources.css" />
+  <style>
+    .idx-hero {
+      padding: 80px 24px 64px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .idx-hero__eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 16px;
+    }
+    .idx-hero__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 300;
+      color: #f5f0eb;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .idx-hero__title em { font-style: italic; }
+    .idx-hero__desc {
+      font-size: 16px;
+      color: #8a8a8a;
+      line-height: 1.75;
+      max-width: 560px;
+    }
+    .idx-featured {
+      display: block;
+      padding: 40px 44px;
+      background: #111;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+      margin-bottom: 0;
+    }
+    .idx-featured:hover { border-color: rgba(201,168,76,0.35); }
+    .idx-featured__meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .idx-featured__new {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      background: #c9a84c;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+    .idx-featured__cat {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c9a84c;
+    }
+    .idx-featured__date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      color: #444;
+    }
+    .idx-featured__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(26px, 3.5vw, 38px);
+      font-weight: 300;
+      color: #f5f0eb;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .idx-featured__title em { font-style: italic; }
+    .idx-featured__desc {
+      font-size: 15px;
+      color: #8a8a8a;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 24px;
+    }
+    .idx-featured__cta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c9a84c;
+    }
+    .idx-newsletter {
+      margin-top: 40px;
+      padding: 32px 36px;
+      background: #111;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 4px;
+      max-width: 560px;
+    }
+    .idx-newsletter__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 8px;
+    }
+    .idx-newsletter__title {
+      font-size: 18px;
+      color: #f5f0eb;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+    .idx-newsletter__sub {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .idx-newsletter__form {
+      display: flex;
+      gap: 10px;
+    }
+    .idx-newsletter__input {
+      flex: 1;
+      padding: 11px 16px;
+      background: #0a0a0a;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 3px;
+      color: #f5f0eb;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .idx-newsletter__input::placeholder { color: #444; }
+    .idx-newsletter__input:focus { border-color: rgba(201,168,76,0.4); }
+    .idx-newsletter__btn {
+      padding: 11px 22px;
+      background: #c9a84c;
+      color: #0a0a0a;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .idx-newsletter__btn:hover { background: #d4b55a; }
+    .idx-body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .idx-section { margin-bottom: 0; }
+    .idx-section__header { margin-bottom: 32px; }
+    .idx-section__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 8px;
+    }
+    .idx-section__title em { font-style: italic; }
+    .idx-section__sub {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .idx-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .idx-card {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 22px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .idx-card:hover {
+      border-color: rgba(201,168,76,0.25);
+      background: #131313;
+    }
+    .idx-card__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      gap: 8px;
+    }
+    .idx-card__tag {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #c9a84c;
+    }
+    .idx-card__type {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #444;
+    }
+    .idx-card__date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      color: #444;
+    }
+    .idx-card__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #f5f0eb;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .idx-card__title em { font-style: italic; }
+    .idx-card__desc {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .idx-card__cta {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-top: auto;
+    }
+    .idx-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin: 56px 0;
+    }
+    @media (max-width: 640px) {
+      .idx-newsletter__form { flex-direction: column; }
+      .idx-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="res-nav">
+    <div class="res-nav__inner">
+      <a href="../index.html" class="res-nav__back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Home
+      </a>
+      <a href="../index.html" class="res-nav__logo">Lynn Fernando</a>
+      <a href="../index.html#contact" class="res-nav__resources">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="idx-hero">
+    <p class="idx-hero__eyebrow">Knowledge Library</p>
+    <h1 class="idx-hero__title">Resources for <em>Serious Leaders.</em></h1>
+    <p class="idx-hero__desc">Guides, articles, frameworks, and tools for leaders building at scale — across business, investing, and impact. All free. No fluff.</p>
+
+    <!-- Newsletter signup -->
+    <div class="idx-newsletter">
+      <p class="idx-newsletter__label">Newsletter</p>
+      <p class="idx-newsletter__title">New resources, straight to your inbox.</p>
+      <p class="idx-newsletter__sub">When a new article or guide drops, you'll be the first to know.</p>
+      <form class="idx-newsletter__form" action="https://formspree.io/f/mnjgydbk" method="POST">
+        <input type="email" name="email" class="idx-newsletter__input" placeholder="your@email.com" required />
+        <button type="submit" class="idx-newsletter__btn">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="idx-body">
+
+    
+    <!-- Featured latest article -->
+    
+    <a href="./what-i-wish-i-knew-before-my-first-acquisition.html" class="idx-featured">
+      <div class="idx-featured__inner">
+        <div class="idx-featured__meta">
+          <span class="idx-featured__new">New</span>
+          <span class="idx-featured__cat">Starting or Acquiring a Business</span>
+          <span class="idx-featured__date">March 30, 2026</span>
+        </div>
+        <h2 class="idx-featured__title">What I Wish I Knew Before My First <em>Acquisition</em></h2>
+        <p class="idx-featured__desc">The deal room doesn't prepare you for everything. Here are the honest lessons about due diligence, culture, and emotion that first-time acquirers need to hear.</p>
+        <span class="idx-featured__cta">Read Now →</span>
+      </div>
+    </a>
+
+    
+    <!-- Older articles grid -->
+    <section class="idx-section" style="margin-top: 48px;">
+      <div class="idx-section__header">
+        <h2 class="idx-section__title">More <em>Articles</em></h2>
+      </div>
+      <div class="idx-grid">
+        
+          <a href="./stop-waiting-to-be-invited-how-to-enter-any-room-you-want.html" class="idx-card idx-card--article">
+            <div class="idx-card__top"><span class="idx-card__tag">Women in Business</span><div class="idx-card__date">March 23, 2026</div></div>
+            <h3 class="idx-card__title">Stop Waiting to Be Invited: How to Enter Any <em>Room You Want</em></h3>
+            <p class="idx-card__desc">Practical tactics for women to access networks, tables, and opportunities that weren't designed with them in mind. No inspiration — just strategy.</p>
+            <span class="idx-card__cta">Read →</span>
+          </a>
+          <a href="./stop-writing-checks-start-creating-real-change.html" class="idx-card idx-card--article">
+            <div class="idx-card__top"><span class="idx-card__tag">Philanthropy & Social Impact</span><div class="idx-card__date">March 22, 2026</div></div>
+            <h3 class="idx-card__title">Stop Writing Checks. Start Creating <em>Real Change</em></h3>
+            <p class="idx-card__desc">Strategic philanthropy creates systems-level change. Here's how to move beyond reactive giving and make your generosity actually work.</p>
+            <span class="idx-card__cta">Read →</span>
+          </a>
+          <a href="./the-fastest-path-to-business-ownership-nobody-talks-about.html" class="idx-card idx-card--article">
+            <div class="idx-card__top"><span class="idx-card__tag">Starting or Acquiring a Business</span><div class="idx-card__date">March 22, 2026</div></div>
+            <h3 class="idx-card__title">The Fastest Path to Business Ownership Nobody <em>Talks About</em></h3>
+            <p class="idx-card__desc">Starting a business isn't the only path to ownership. Acquiring an existing business is faster, lower risk, and underused by women who could afford to buy.</p>
+            <span class="idx-card__cta">Read →</span>
+          </a>
+          <a href="./why-women-led-businesses-win-when-markets-get-hard.html" class="idx-card idx-card--article">
+            <div class="idx-card__top"><span class="idx-card__tag">Women in Business</span><div class="idx-card__date">March 22, 2026</div></div>
+            <h3 class="idx-card__title">Why Women-Led Businesses Win When Markets <em>Get Hard</em></h3>
+            <p class="idx-card__desc">The traits dismissed as soft—empathy, caution, collaboration—are exactly what make women-led businesses more resilient when the economy turns.</p>
+            <span class="idx-card__cta">Read →</span>
+          </a>
+      </div>
+    </section>
+
+    <div class="idx-divider"></div>
+
+    <!-- Guides & Resources -->
+    <section class="idx-section">
+      <div class="idx-section__header">
+        <h2 class="idx-section__title">Guides, Tools <em>&amp; Templates</em></h2>
+        <p class="idx-section__sub">In-depth frameworks and working tools for operators and leaders.</p>
+      </div>
+      <div class="idx-grid">
+        
+          <a href="./executive-guide-to-genai.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">GenAI & Business</span><span class="idx-card__type">Guide</span></div>
+            <h3 class="idx-card__title">The Executive's Guide to <em>Generative AI</em></h3>
+            <p class="idx-card__desc">What every C-suite leader needs to understand about GenAI — without the hype, without the jargon, and without wasting your time.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./beginners-guide-to-angel-investing.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">Investing</span><span class="idx-card__type">Guide</span></div>
+            <h3 class="idx-card__title">The Beginner's Guide to <em>Angel Investing</em></h3>
+            <p class="idx-card__desc">How startup funding actually works, what angels do that VCs don't, and how to build a disciplined portfolio — for operators ready to become investors.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./empire-building-in-corporate.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">Empire Building</span><span class="idx-card__type">Guide</span></div>
+            <h3 class="idx-card__title">Empire Building <em>in Corporate</em></h3>
+            <p class="idx-card__desc">How to build influence, leverage, and lasting impact inside large organizations — while building your empire on the outside.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./buying-a-business.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">Empire Building</span><span class="idx-card__type">Guide</span></div>
+            <h3 class="idx-card__title">Buying <em>a Business</em></h3>
+            <p class="idx-card__desc">A practical framework for finding, evaluating, and acquiring a business — for operators ready to own instead of build from scratch.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./fundraising-resources.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">Fundraising & Investment</span><span class="idx-card__type">Guide</span></div>
+            <h3 class="idx-card__title">Startup Fundraising <em>Resources</em></h3>
+            <p class="idx-card__desc">The documents, frameworks, and playbooks founders need to navigate the fundraising process with confidence.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./prompt-engineering-playbook.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">GenAI & Business</span><span class="idx-card__type">Guide</span></div>
+            <h3 class="idx-card__title">Prompt Engineering <em>Playbook</em></h3>
+            <p class="idx-card__desc">Practical prompt engineering techniques for business leaders — no technical background required.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./speaking-workshop-menu.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">Speaking & Workshops</span><span class="idx-card__type">Guide</span></div>
+            <h3 class="idx-card__title">Speaking & Workshop <em>Menu</em></h3>
+            <p class="idx-card__desc">Keynotes, workshops, and advisory engagements available for teams and events — topics, formats, and booking information.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./startup-fundraising.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">Fundraising & Investment</span><span class="idx-card__type">Tool</span></div>
+            <h3 class="idx-card__title">Startup Fundraising <em>Toolkit</em></h3>
+            <p class="idx-card__desc">An interactive tool to help founders structure their fundraising strategy, messaging, and investor outreach.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./genai-readiness-assessment.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">GenAI & Business</span><span class="idx-card__type">Tool</span></div>
+            <h3 class="idx-card__title">GenAI Readiness <em>Assessment</em></h3>
+            <p class="idx-card__desc">Benchmark your organization's readiness for generative AI adoption — across strategy, data, talent, and governance.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./vendor-evaluation-checklist.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">GenAI & Business</span><span class="idx-card__type">Template</span></div>
+            <h3 class="idx-card__title">Vendor Evaluation <em>Checklist</em></h3>
+            <p class="idx-card__desc">A structured checklist for evaluating AI and technology vendors — built for leaders who need to move fast without making expensive mistakes.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./use-case-prioritization-framework.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">GenAI & Business</span><span class="idx-card__type">Template</span></div>
+            <h3 class="idx-card__title">Use Case Prioritization <em>Framework</em></h3>
+            <p class="idx-card__desc">A scoring framework for identifying and prioritizing the highest-value AI use cases for your organization.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+          <a href="./genai-roi-business-case.html" class="idx-card idx-card--resource">
+            <div class="idx-card__top"><span class="idx-card__tag">GenAI & Business</span><span class="idx-card__type">Template</span></div>
+            <h3 class="idx-card__title">GenAI ROI <em>Business Case</em></h3>
+            <p class="idx-card__desc">A template for building a compelling internal business case for generative AI investment — with financial modeling guidance.</p>
+            <span class="idx-card__cta">Open →</span>
+          </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="res-footer">
+    <div class="res-footer__inner">
+      <p class="res-footer__copy">&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      <div class="res-footer__links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../media-kit.html">Media Kit</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+LYNNFERNANDO.COM — PROJECT LOG
+================================
+Site: https://lynnfernando.com
+Server: AWS Lightsail — 35.80.180.230 (us-west-2)
+Last updated: March 22, 2026
+
+
+==============================================
+PHASE 1 — WEBSITE FOUNDATION
+==============================================
+
+  [DONE] Main website built (index.html)
+         Sections: Hero, About, Services, Investments, Resources, Contact
+         Dark luxury aesthetic — black, gold (#c9a84c), Cormorant Garamond + Montserrat
+
+  [DONE] Global stylesheet (styles.css)
+         Responsive design, mobile-optimized
+
+  [DONE] AWS Lightsail server provisioned
+         Nginx configured as web server
+         SSL/HTTPS enabled via Let's Encrypt
+         Domain: lynnfernando.com → 35.80.180.230
+
+  [DONE] Deploy script (deploy.sh)
+         rsync-based — only uploads changed files
+         Usage: bash deploy.sh lynnfernando.com 35.80.180.230 ~/Downloads/LightsailDefaultKey-us-west-2.pem
+
+  [DONE] Deployment instructions (HOW-TO-DEPLOY.txt)
+
+  [DONE] robots.txt and sitemap.xml for SEO
+
+  [DONE] Structured data / JSON-LD schema (Person, WebSite, FAQ)
+         For Google Knowledge Panel and AI search visibility
+
+  [DONE] Open Graph and Twitter Card meta tags
+         For LinkedIn, Instagram, and iMessage link previews
+
+  [DONE] Media Kit page (media-kit.html)
+
+  [DONE] Brand Style Guide page (brand-style-guide.html)
+
+
+==============================================
+PHASE 2 — RESOURCES LIBRARY
+==============================================
+
+  Resource pages stylesheet (resources/resources.css)
+  All resource pages share nav, hero, body, footer, and author bio structure.
+
+  --- GenAI & Business ---
+
+  [DONE] The Executive's Guide to Generative AI
+         resources/executive-guide-to-genai.html
+
+  [DONE] GenAI Readiness Assessment (interactive tool)
+         resources/genai-readiness-assessment.html
+
+  [DONE] Vendor Evaluation Checklist
+         resources/vendor-evaluation-checklist.html
+
+  [DONE] Prompt Engineering Playbook
+         resources/prompt-engineering-playbook.html
+
+  [DONE] Use Case Prioritization Framework
+         resources/use-case-prioritization-framework.html
+
+  [DONE] GenAI ROI Business Case Template
+         resources/genai-roi-business-case.html
+
+  --- Investing & Fundraising ---
+
+  [DONE] The Beginner's Guide to Angel Investing
+         resources/beginners-guide-to-angel-investing.html
+
+  [DONE] Fundraising Resources
+         resources/fundraising-resources.html
+
+  [DONE] Startup Fundraising Toolkit (interactive)
+         resources/startup-fundraising.html
+
+  --- Empire Building ---
+
+  [DONE] Empire Building in Corporate
+         resources/empire-building-in-corporate.html
+
+  [DONE] Buying a Business
+         resources/buying-a-business.html
+
+  --- Speaking ---
+
+  [DONE] Speaking & Workshop Menu
+         resources/speaking-workshop-menu.html
+
+  --- Resources Hub ---
+
+  [DONE] Resources index page (resources/index.html)
+         Hub page listing all articles, guides, tools, and templates
+         Includes newsletter signup form (Formspree: mnjgydbk)
+         Auto-regenerated each time a new article is published
+
+
+==============================================
+PHASE 3 — CONTENT AGENT
+==============================================
+  Location: Personal Brand/content-agent/
+  All files and instructions: HOW-TO-USE-CONTENT-AGENT.txt
+
+  [DONE] Claude API-powered article writer (agent.js)
+         Model: claude-sonnet-4-6
+         Output: 400–500 word articles in Lynn's voice
+         Auto-saves to resources/, updates manifest, regenerates index
+
+  [DONE] Voice & style guide (voice-guide.md)
+         Covers tone, category-specific guidance, what to avoid,
+         article structure, sample phrases
+
+  [DONE] Article queue file (articles-queue.txt)
+         10 topics pre-loaded across 6 categories
+         Categories: Women in Business, Starting or Acquiring a Business,
+         Philanthropy & Social Impact, GenAI & Business, Empire Building, Investing
+
+  [DONE] Articles manifest (articles-manifest.json)
+         Master index of all resources — seeded with all 12 existing pages
+         Auto-updated each time a new article is published
+
+  [DONE] Auto-publish script (publish.sh)
+         Writes article → deploys to server → generates social posts → logs everything
+
+  [DONE] Weekly cron job configured
+         Schedule: Every Monday at 8:03am
+         Command: bash publish.sh (runs from content-agent/)
+
+  [DONE] Publish log (publish.log)
+         Created automatically on first run
+         Records every run: article written, deploy status, social post status,
+         queue warnings
+
+  [DONE] Content agent guide (HOW-TO-USE-CONTENT-AGENT.txt)
+
+  --- Articles Published by Agent ---
+
+  [DONE] Why Women-Led Businesses Win When Markets Get Hard
+         resources/why-women-led-businesses-win-when-markets-get-hard.html
+         Category: Women in Business | Published: March 22, 2026
+
+  [DONE] Philanthropy That Actually Works (Stop Writing Checks. Start Creating Real Change)
+         resources/stop-writing-checks-start-creating-real-change.html
+         Category: Philanthropy & Social Impact | Published: March 22, 2026
+
+  [DONE] The Fastest Path to Business Ownership Nobody Talks About
+         resources/the-fastest-path-to-business-ownership-nobody-talks-about.html
+         Category: Starting or Acquiring a Business | Published: March 22, 2026
+
+
+==============================================
+PHASE 4 — SOCIAL MEDIA AGENT
+==============================================
+  Location: Personal Brand/content-agent/
+  All files and instructions: HOW-TO-USE-SOCIAL-AGENT.txt
+
+  [DONE] Social media post generator (social-agent.js)
+         Model: claude-sonnet-4-6
+         Generates 4 posts per article: 2 LinkedIn + 2 Instagram
+         Output saved to content-agent/social-posts/ as dated .txt files
+
+  [DONE] Brand guide (brand-guide.md)
+         LinkedIn and Instagram account handles
+         Core hashtags (every post)
+         Category-specific hashtag sets
+         Platform-specific voice notes
+
+  [DONE] Social posts output folder (content-agent/social-posts/)
+         Each file named: YYYY-MM-DD-article-slug-posts.txt
+
+  [DONE] Social agent integrated into publish.sh
+         Runs automatically after every article deploys on Monday
+
+  [DONE] Social media agent guide (HOW-TO-USE-SOCIAL-AGENT.txt)
+
+  Status: Copy-paste workflow (manual review before posting)
+  Next: LinkedIn and Instagram API auto-posting when ready
+        LinkedIn credentials already configured in environment
+
+
+==============================================
+PHASE 5 — ADVISORY SECTION, SPEAKING REFRESH & KEYNOTE PAGES
+==============================================
+  Date: March 24, 2026
+
+  [DONE] Advisory / Consulting section — index.html (#advisory)
+         3 service cards: AI-Driven Revenue Growth, Marketing Intelligence
+         & Automation, Digital Transformation & Modernization
+         2 case studies with result metrics
+         CTA → https://calendar.app.google/b2CjMMHJAjoiyUkZ6
+         Full CSS appended to styles.css (.advisory-* classes)
+
+  [DONE] Speaking section refresh — index.html
+         Replaced old talk cards with 5 new keynote topics
+         Featured card spans full grid width (.talk-card--featured)
+         All cards link to speaking-workshop-menu.html
+
+  [DONE] Speaking workshop menu updated — resources/speaking-workshop-menu.html
+         5 new keynote cards with full descriptions + "Best For" audience chips
+         "View Full Details →" link on each card to dedicated keynote page
+
+  [DONE] 5 dedicated keynote pages (resources/)
+         from-employee-to-empire-builder.html    (45–60 min Keynote)
+         the-reinvention.html                    (45–60 min Keynote)
+         her-money-her-rules.html                (45–60 min Keynote)
+         own-the-room.html                       (30–45 min Keynote)
+         the-curriculum-they-left-out.html       (45–60 min Keynote & Workshop)
+         Each page: SEO meta, canonical URL, Event schema markup, hero,
+         synopsis, 5 takeaways, Best For chips, Format & Logistics,
+         3 related keynote teasers, Book CTA
+
+  [DONE] All changes deployed live to lynnfernando.com
+
+
+==============================================
+QUEUE STATUS (as of March 22, 2026)
+==============================================
+  Articles remaining in queue: 7
+  At 1 per week: approximately 7 weeks of content
+  Recommended minimum: keep 12 topics in queue at all times
+
+
+==============================================
+INTEGRATIONS & CREDENTIALS
+==============================================
+  Formspree (opt-in forms)     Form ID: mnjgydbk
+                                Dashboard: formspree.io/forms/mnjgydbk/submissions
+  Anthropic API                Stored in ~/.zshrc as ANTHROPIC_API_KEY
+  LinkedIn API                 Stored in ~/.zshrc (LINKEDIN_ACCESS_TOKEN,
+                                LINKEDIN_ORG_ID, LINKEDIN_MEMBER_ID)
+  AWS Lightsail SSH Key        ~/Downloads/LightsailDefaultKey-us-west-2.pem
+
+
+==============================================
+RECOMMENDATIONS BACKLOG
+==============================================
+
+  HIGH PRIORITY
+  -------------
+  [ ] Analytics — Google Analytics 4 on all pages (IN PROGRESS)
+  [ ] Booking / Intake Form — "Work With Lynn" page with intake form
+  [ ] Custom 404 Page — branded, redirects to useful content
+  [ ] Email Platform — migrate from Formspree to ConvertKit or Beehiiv
+
+  MEDIUM PRIORITY
+  ---------------
+  [ ] Press / Media Section — logos, coverage, podcast appearances
+  [ ] Speaking Page — dedicated /speaking with reel, topics, booking CTA
+  [ ] Category Pages — per-category article hubs for SEO
+  [ ] Internal Linking — cross-link articles and resources to each other
+
+  LOWER PRIORITY
+  --------------
+  [ ] Investment Portfolio Page — companies backed, sectors, brief notes
+  [ ] Testimonials / Social Proof — quotes on homepage from clients/founders
+  [ ] Video / Speaking Reel — keynote clip or talking-head piece
+  [ ] Search / Filter on Resources Hub — live filter by category
+
+  AUTOMATION
+  ----------
+  [ ] LinkedIn auto-posting via API (credentials ready in ~/.zshrc)
+  [ ] Instagram auto-posting via Meta Graph API
+  [ ] Newsletter database — subscriber management and storage
+  [ ] Automated email digest — weekly roundup linking to new articles
+  [ ] Paid/gated content tier for premium resources

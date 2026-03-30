@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Executive's Guide to Generative AI — Lynn Fernando</title>
+  <meta name="description" content="What every C-suite leader needs to understand about GenAI — without the hype, without the jargon, and without wasting your time." />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/resources/executive-guide-to-genai" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Executive&#39;s Guide to Generative AI — Lynn Fernando" />
+  <meta property="og:description" content="What every C-suite leader needs to understand about GenAI — without the hype, without the jargon, and without wasting your time." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/executive-guide-to-genai" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Executive&#39;s Guide to Generative AI — Lynn Fernando" />
+  <meta name="twitter:description" content="What every C-suite leader needs to understand about GenAI — without the hype, without the jargon, and without wasting your time." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./resources.css" />
+  <style>
+    .res-author-bio {
+      margin-top: 56px;
+      padding: 32px 36px;
+      background: #111;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .res-author-bio__dot {
+      width: 4px;
+      flex-shrink: 0;
+      background: #c9a84c;
+      border-radius: 2px;
+      align-self: stretch;
+    }
+    .res-author-bio__text p {
+      font-size: 14px;
+      color: #8a8a8a;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .res-content__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 48px 0;
+    }
+    .res-can-cannot {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 24px 0;
+    }
+    .res-can-cannot__col {
+      padding: 24px 22px;
+      border-radius: 3px;
+    }
+    .res-can-cannot__col--can {
+      background: rgba(74,222,128,0.04);
+      border: 1px solid rgba(74,222,128,0.12);
+    }
+    .res-can-cannot__col--cannot {
+      background: rgba(248,113,113,0.04);
+      border: 1px solid rgba(248,113,113,0.12);
+    }
+    .res-can-cannot__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .res-can-cannot__col--can .res-can-cannot__label { color: #4ade80; }
+    .res-can-cannot__col--cannot .res-can-cannot__label { color: #f87171; }
+    .res-can-cannot__list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .res-can-cannot__list li {
+      font-size: 13px;
+      color: #c0b9b0;
+      line-height: 1.55;
+      padding-left: 16px;
+      position: relative;
+    }
+    .res-can-cannot__col--can .res-can-cannot__list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #4ade80;
+      font-size: 11px;
+    }
+    .res-can-cannot__col--cannot .res-can-cannot__list li::before {
+      content: '✗';
+      position: absolute;
+      left: 0;
+      color: #f87171;
+      font-size: 11px;
+    }
+    .res-three-moves {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .res-move-card {
+      display: flex;
+      gap: 20px;
+      padding: 20px 24px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      align-items: flex-start;
+    }
+    .res-move-card__number {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: #c9a84c;
+      line-height: 1;
+      flex-shrink: 0;
+      margin-top: 2px;
+      min-width: 24px;
+    }
+    .res-move-card__content h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f5f0eb;
+      margin-bottom: 6px;
+    }
+    .res-move-card__content p {
+      font-size: 14px;
+      color: #8a8a8a;
+      line-height: 1.7;
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .res-can-cannot { grid-template-columns: 1fr; }
+      .res-author-bio { flex-direction: column; gap: 16px; }
+      .res-author-bio__dot { width: 48px; height: 4px; align-self: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="res-nav">
+    <div class="res-nav__inner">
+      <a href="../index.html#resources" class="res-nav__back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Resources
+      </a>
+      <a href="../index.html" class="res-nav__logo">Lynn Fernando</a>
+      <a href="../index.html#resources" class="res-nav__resources">All Resources</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="res-hero">
+    <div class="res-hero__inner">
+      <div class="res-hero__meta">
+        <span class="res-hero__tag">Article</span>
+        <span class="res-hero__access res-hero__access--free">Free</span>
+      </div>
+      <h1 class="res-hero__title">The Executive's Guide to <em>Generative AI</em></h1>
+      <p class="res-hero__desc">What every C-suite leader needs to understand about GenAI — without the hype, without the jargon, and without wasting your time.</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <main class="res-body">
+    <div class="res-content">
+
+      <!-- Section 1 -->
+      <div class="res-content__section">
+        <h2>What GenAI Actually Is</h2>
+        <p>Generative AI refers to a class of machine learning systems — specifically large language models (LLMs) — trained on vast amounts of text, code, and media. These models learn statistical patterns across billions of data points, and they use those patterns to generate new content: text, images, code, audio, and more. When you type a question into ChatGPT or Claude and receive a coherent, articulate response, that is a large language model completing a sequence based on what it learned during training.</p>
+        <p>It is not magic. It is not sentient. It does not "know" things the way a human expert does. It is, at its core, a sophisticated pattern-recognition and generation system — one that has been trained on more data than any human could read in a thousand lifetimes, and that produces outputs indistinguishable from human-written text in many contexts.</p>
+        <p>Understanding this distinction matters because it shapes how you use it. Traditional software follows rules: if X, then Y. Classical machine learning identifies patterns in data to make predictions (think recommendation engines or fraud detection). Generative AI goes a step further — it generates novel output based on learned patterns, without a fixed rule set. That's both its power and its limitation.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 2 -->
+      <div class="res-content__section">
+        <h2>Why This Moment Is Different</h2>
+        <p>The underlying technology behind large language models is not new. Researchers have been building toward this for decades. What changed in 2022 and 2023 was the cost curve — and cost curve collapses always change everything.</p>
+        <p>What previously required a dedicated team of ML engineers, petabytes of infrastructure, and millions in compute costs can now be done with a $20-per-month subscription and a clear prompt. GPT-4, Claude, Gemini, and their competitors are now accessible to any employee at any company. The barrier to entry dropped from institutional to individual.</p>
+        <p>This is not an incremental improvement in existing software. This is a platform shift — comparable in significance to the move from desktop to mobile, or from physical to digital. Every platform shift in history has created a new set of winners and a new set of companies that failed to adapt. The executives who led through the mobile shift built durable advantages. Those who waited lost ground they never recovered.</p>
+
+        <div class="res-content__pull">
+          <p>"The executives who will lead the next decade aren't the ones who understand AI best. They're the ones who move first."</p>
+        </div>
+
+        <p>The companies building AI-native workflows today are not smarter than their competitors. They are simply faster to accept that the rules have changed — and disciplined enough to act on that acceptance before comfort returns them to the status quo.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 3 -->
+      <div class="res-content__section">
+        <h2>What It Can and Cannot Do</h2>
+        <p>Every senior leader should have a clear, unsentimental picture of GenAI's capabilities and limitations. Overestimating leads to misuse and disappointment. Underestimating leads to missed opportunity. Here is the honest accounting:</p>
+
+        <div class="res-can-cannot">
+          <div class="res-can-cannot__col res-can-cannot__col--can">
+            <span class="res-can-cannot__label">GenAI Can</span>
+            <ul class="res-can-cannot__list">
+              <li>Draft, rewrite, and refine documents</li>
+              <li>Summarize long reports and meetings</li>
+              <li>Explain complex topics in plain language</li>
+              <li>Analyze structured and unstructured data</li>
+              <li>Transform content across formats and tones</li>
+              <li>Translate across languages with high fluency</li>
+              <li>Generate code, scripts, and automations</li>
+              <li>Brainstorm, ideate, and expand thinking</li>
+            </ul>
+          </div>
+          <div class="res-can-cannot__col res-can-cannot__col--cannot">
+            <span class="res-can-cannot__label">GenAI Cannot</span>
+            <ul class="res-can-cannot__list">
+              <li>Reason with true causal understanding</li>
+              <li>Guarantee factual accuracy at all times</li>
+              <li>Replace human judgment in high-stakes decisions</li>
+              <li>Access real-time data without integrations</li>
+              <li>Understand your business context automatically</li>
+              <li>Maintain memory between sessions by default</li>
+              <li>Verify its own outputs reliably</li>
+              <li>Replicate genuine human relationships</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>The most important limitation to understand is hallucination: GenAI models sometimes generate confident, coherent, and entirely false information. The model does not know the difference between what it knows and what it is fabricating — it is completing a pattern, not retrieving a verified fact. This is manageable with the right workflows, but it must be managed. Executives who deploy GenAI without building in human verification for consequential outputs will eventually have a problem.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 4 -->
+      <div class="res-content__section">
+        <h2>The Real Risk: Moving Too Slowly</h2>
+        <p>Most executives I speak with have the risk calculus backwards. They spend significant time worrying about what could go wrong if they adopt AI — data breaches, bad outputs, employee resistance, regulatory exposure. These are real considerations, but they are all manageable. They are the risks of action.</p>
+        <p>What rarely gets the same attention is the risk of inaction. Your competitors are running AI-assisted workflows. Your top talent expects AI tools as part of a modern working environment — and the candidates you most want to hire are evaluating you on whether you have them. Your customers will eventually notice the gap between organizations that operate with AI leverage and those that do not.</p>
+        <p>The companies that dominated the post-mobile era were not the ones that waited for mobile technology to be perfect before engaging. They were the ones who treated the imperfect early version as an advantage over competitors who were still deliberating. The calculus is identical today. Imperfect adoption at speed beats perfect inaction every time — especially in a market where speed of learning compounds.</p>
+        <p>The conversation to have internally is not "should we adopt AI?" That decision has already been made by the market. The conversation is: "Where do we start, and how do we build the organizational muscle to keep learning?"</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 5 -->
+      <div class="res-content__section">
+        <h2>Where to Start: Three Moves</h2>
+        <p>Most organizations overcomplicate the entry point. You do not need an AI strategy document, a new department, or a six-figure vendor contract to begin. You need three moves, executed with intention.</p>
+
+        <div class="res-three-moves">
+          <div class="res-move-card">
+            <div class="res-move-card__number">1</div>
+            <div class="res-move-card__content">
+              <h4>Run an Internal Audit of Repetitive, High-Volume Tasks</h4>
+              <p>Survey your department heads. Ask one question: what are the tasks your team does daily or weekly that are high-volume, time-consuming, and relatively low in unique human judgment? Documents, emails, reports, research summaries, data formatting, first-draft communication. These are your starting inventory. GenAI delivers its fastest, clearest ROI on exactly these tasks.</p>
+            </div>
+          </div>
+          <div class="res-move-card">
+            <div class="res-move-card__number">2</div>
+            <div class="res-move-card__content">
+              <h4>Pick One Function and Run a 30-Day Pilot</h4>
+              <p>Choose one function — marketing, legal, operations, finance — and run a structured 30-day pilot with a defined scope and a clear measurement framework. Track three things: time saved per person per week, quality change (better, same, or worse outputs), and employee sentiment. This gives you real data instead of vendor claims, and it builds internal proof of concept that makes the next conversation much easier.</p>
+            </div>
+          </div>
+          <div class="res-move-card">
+            <div class="res-move-card__number">3</div>
+            <div class="res-move-card__content">
+              <h4>Designate an AI Champion Internally</h4>
+              <p>Not a new title, not a new headcount — a mandate. Find one person in each department who is naturally curious about AI and give them explicit permission and time to explore, experiment, and teach. Internal champions drive adoption faster than any vendor training program because they understand your context and your people. They become your organization's distributed learning engine.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 6 -->
+      <div class="res-content__section">
+        <h2>What to Watch For</h2>
+        <p>None of these considerations are reasons to delay. They are things to manage — actively, deliberately, and without pretending the issues do not exist.</p>
+        <p><strong style="color: #f5f0eb;">Data privacy.</strong> Know what you are sending into any AI system. Most enterprise-grade platforms offer data processing agreements that prevent your inputs from being used in model training. Require these. Brief your teams on what categories of data should never go into a consumer AI tool without proper enterprise controls. This is a policy conversation, not a technology conversation.</p>
+        <p><strong style="color: #f5f0eb;">Vendor lock-in.</strong> The AI vendor landscape is moving fast. Build workflows that are model-agnostic where possible. If your entire operation is dependent on a single API that doubles its pricing or changes its terms, you have created a fragility. Treat AI vendors like any other critical infrastructure vendor: with healthy skepticism and an exit plan.</p>
+        <p><strong style="color: #f5f0eb;">Over-automation of human relationships.</strong> AI is exceptional at high-volume, low-context communication. It is a liability when used to automate the interactions that define your brand's trust with customers, partners, or top talent. Draw a clear line between tasks where automation adds speed and tasks where the human touch is the product.</p>
+        <p><strong style="color: #f5f0eb;">Internal resistance.</strong> It will come. Some of it is fear. Some of it is legitimate concern about job security. Address it directly, honestly, and early. The organizations that navigate AI adoption smoothly are transparent about where they are going and what the transition means for their people. Silence breeds the worst-case assumptions.</p>
+      </div>
+
+      <!-- Author Bio -->
+      <div class="res-author-bio">
+        <div class="res-author-bio__dot"></div>
+        <div class="res-author-bio__text">
+          <p>Lynn Fernando is CEO of REV Global and an AI transformation advisor to founders and executives. She helps organizations build practical AI strategies that drive measurable results — moving from uncertainty to action with speed and precision.</p>
+          <a href="../index.html#contact" class="btn btn-primary" style="width: auto; display: inline-flex;">Work With Lynn</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="res-footer">
+    <div class="res-footer__inner">
+      <p class="res-footer__copy">&copy; 2025 Lynn Fernando. All rights reserved.</p>
+      <div class="res-footer__links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#resources">Resources</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../media-kit.html">Media Kit</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

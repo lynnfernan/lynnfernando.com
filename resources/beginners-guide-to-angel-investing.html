@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Beginner's Guide to Angel Investing — Lynn Fernando</title>
+  <meta name="description" content="How startup funding actually works, what angels do that VCs don't, and how to build a disciplined portfolio — for operators ready to become investors." />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/resources/beginners-guide-to-angel-investing" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="The Beginner&#39;s Guide to Angel Investing — Lynn Fernando" />
+  <meta property="og:description" content="How startup funding actually works, what angels do that VCs don&#39;t, and how to build a disciplined portfolio — for operators ready to become investors." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/beginners-guide-to-angel-investing" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Beginner&#39;s Guide to Angel Investing — Lynn Fernando" />
+  <meta name="twitter:description" content="How startup funding actually works, what angels do that VCs don&#39;t, and how to build a disciplined portfolio — for operators ready to become investors." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./resources.css" />
+  <style>
+    .res-author-bio {
+      margin-top: 56px;
+      padding: 32px 36px;
+      background: #111;
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .res-author-bio__dot {
+      width: 4px;
+      flex-shrink: 0;
+      background: #c9a84c;
+      border-radius: 2px;
+      align-self: stretch;
+    }
+    .res-author-bio__text p {
+      font-size: 14px;
+      color: #8a8a8a;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .res-content__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 48px 0;
+    }
+    .res-funding-stages {
+      display: flex;
+      gap: 0;
+      margin: 24px 0;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+    .res-stage {
+      flex: 1;
+      min-width: 100px;
+      padding: 16px 14px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.07);
+      background: #111;
+      position: relative;
+    }
+    .res-stage + .res-stage {
+      border-left: none;
+    }
+    .res-stage--active {
+      background: rgba(201,168,76,0.06);
+      border-color: rgba(201,168,76,0.2);
+    }
+    .res-stage__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .res-stage--active .res-stage__label { color: #c9a84c; }
+    .res-stage__name {
+      font-size: 13px;
+      color: #c0b9b0;
+      font-weight: 500;
+    }
+    .res-stage--active .res-stage__name { color: #f5f0eb; }
+    .res-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .res-stat-card {
+      padding: 20px 18px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      text-align: center;
+    }
+    .res-stat-card__number {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: #c9a84c;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .res-stat-card__label {
+      font-size: 12px;
+      color: #8a8a8a;
+      line-height: 1.5;
+    }
+    .res-ten-questions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 20px 0;
+    }
+    .res-ten-q {
+      display: flex;
+      gap: 14px;
+      padding: 14px 18px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 3px;
+      align-items: flex-start;
+    }
+    .res-ten-q__num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #c9a84c;
+      flex-shrink: 0;
+      margin-top: 1px;
+      min-width: 20px;
+    }
+    .res-ten-q__text {
+      font-size: 14px;
+      color: #c0b9b0;
+      line-height: 1.55;
+    }
+    .res-first-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .res-first-step {
+      display: flex;
+      gap: 16px;
+      padding: 18px 20px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      align-items: flex-start;
+    }
+    .res-first-step__icon {
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .res-first-step__content h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f5f0eb;
+      margin-bottom: 5px;
+    }
+    .res-first-step__content p {
+      font-size: 13px;
+      color: #8a8a8a;
+      line-height: 1.65;
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .res-stat-row { grid-template-columns: repeat(2, 1fr); }
+      .res-author-bio { flex-direction: column; gap: 16px; }
+      .res-author-bio__dot { width: 48px; height: 4px; align-self: auto; }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Beginner's Guide to Angel Investing",
+    "description": "How startup funding actually works, what angels do that VCs don't, and how to build a disciplined portfolio — for operators ready to become investors.",
+    "url": "https://lynnfernando.com/resources/beginners-guide-to-angel-investing",
+    "image": "https://lynnfernando.com/images/lynn-fernando.jpg",
+    "datePublished": "2025-01-01",
+    "author": {
+      "@type": "Person",
+      "name": "Lynn Fernando",
+      "url": "https://lynnfernando.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Lynn Fernando",
+      "url": "https://lynnfernando.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://lynnfernando.com/resources/beginners-guide-to-angel-investing"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="res-nav">
+    <div class="res-nav__inner">
+      <a href="../index.html#resources" class="res-nav__back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Resources
+      </a>
+      <a href="../index.html" class="res-nav__logo">Lynn Fernando</a>
+      <a href="../index.html#resources" class="res-nav__resources">All Resources</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="res-hero">
+    <div class="res-hero__inner">
+      <div class="res-hero__meta">
+        <span class="res-hero__tag">Article</span>
+        <span class="res-hero__access res-hero__access--free">Free</span>
+      </div>
+      <h1 class="res-hero__title">The Beginner's Guide to <em>Angel Investing</em></h1>
+      <p class="res-hero__desc">How startup funding actually works, what angels do that VCs don't, and how to build a disciplined portfolio — for operators ready to become investors.</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <main class="res-body">
+    <div class="res-content">
+
+      <!-- Section 1 -->
+      <div class="res-content__section">
+        <h2>What Angel Investing Actually Is</h2>
+        <p>An angel investor is an individual who invests their own personal capital — not a fund's capital — into early-stage startups in exchange for equity. Angels typically invest at the pre-seed or seed stage, before a startup has meaningful revenue, before they have a full team, and often before they have fully validated their core product idea. You are betting on potential, on the founder, and on a vision of what could exist.</p>
+        <p>Ticket sizes range widely: individual angels write checks from $5,000 to $250,000 or more, depending on their financial position and conviction level. In exchange, you receive a percentage of the company — ownership that has no guaranteed value and may take seven to ten years to become liquid, if it ever does.</p>
+        <p>Here is the honest version of what angel investing is: you may never see that money again. Some companies fail completely. Some get acqui-hired for a fraction of their valuation. Some simply stagnate for years before quietly dying. Or you may 10x, 50x, or 100x your investment in a company that becomes something significant. Both outcomes are possible on every check you write, and the discipline of angel investing lies in building a portfolio that accounts for both with clear eyes — not optimism, not pessimism, but mathematical honesty.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 2 -->
+      <div class="res-content__section">
+        <h2>How Startup Funding Works</h2>
+        <p>Understanding the funding lifecycle is essential before you write your first check. Here is the arc of a typical venture-backed startup:</p>
+
+        <div class="res-funding-stages">
+          <div class="res-stage res-stage--active">
+            <span class="res-stage__label">Stage 1</span>
+            <span class="res-stage__name">Pre-Seed</span>
+          </div>
+          <div class="res-stage res-stage--active">
+            <span class="res-stage__label">Stage 2</span>
+            <span class="res-stage__name">Seed</span>
+          </div>
+          <div class="res-stage">
+            <span class="res-stage__label">Stage 3</span>
+            <span class="res-stage__name">Series A</span>
+          </div>
+          <div class="res-stage">
+            <span class="res-stage__label">Stage 4</span>
+            <span class="res-stage__name">Series B</span>
+          </div>
+          <div class="res-stage">
+            <span class="res-stage__label">Stage 5</span>
+            <span class="res-stage__name">Series C+</span>
+          </div>
+          <div class="res-stage">
+            <span class="res-stage__label">Stage 6</span>
+            <span class="res-stage__name">Exit</span>
+          </div>
+        </div>
+
+        <p>Angels play at pre-seed and seed. This is where the risk is highest, the ownership percentage is most meaningful, and the outcome uncertainty is most extreme. At pre-seed, a company may have nothing more than an idea and a compelling founder. At seed, they typically have a prototype, early users, and some evidence of demand.</p>
+        <p>Rather than completing a full priced round at these early stages — which requires agreeing on a valuation, legal documentation, and a complex capitalization table — most early-stage deals use simpler instruments. The two most common are SAFEs (Simple Agreements for Future Equity) and convertible notes. Both allow you to invest money today in exchange for equity at a future priced round, avoiding the complexity of determining an exact valuation at the earliest stages.</p>
+        <p>SAFEs and convertible notes typically include two protective terms for early investors: a valuation cap (the maximum valuation at which your SAFE converts to equity — protecting you from dilution if the company raises at a high valuation) and a discount rate (a percentage discount on the price of the next round, rewarding you for your early risk). A typical structure might be a $10M cap with a 20% discount. These are the terms worth understanding in every deal you evaluate.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 3 -->
+      <div class="res-content__section">
+        <h2>Why Operators Make Great Angels</h2>
+        <p>Venture capital firms are staffed by pattern-recognition machines — analysts and partners who have seen thousands of decks and can spot the markers of a fundable deal. But there is something they often lack: operational depth. The ability to look at a founder's go-to-market plan and immediately understand whether it is credible. The ability to spot culture red flags in a thirty-minute conversation. The ability to recognize when a product is technically sound but commercially delusional.</p>
+        <p>Operators know what good looks like — because they have built it, struggled with it, and survived the parts no pitch deck ever includes. You understand hiring timelines, unit economics pressure, the difference between a sales process that works and one that just feels like it works. That pattern recognition is genuinely valuable in early-stage investing.</p>
+        <p>Beyond judgment, your network and your time have real value to the founders you back. An introduction to a potential enterprise customer, a recommendation for a VP of Sales hire, a single conversation that reframes a product decision — these contributions compound over the life of an investment. The best angels are not passive capital allocators. They are active, accessible, and generous with what they know. And that generosity is exactly how the best deal flow finds them.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 4 -->
+      <div class="res-content__section">
+        <h2>Portfolio Strategy: The Math That Matters</h2>
+        <p>Angel investing is a power law business. The returns in a venture portfolio are not normally distributed — they are concentrated in a small number of outlier outcomes. One company returning 50x can more than cover the losses of every other investment in a well-constructed portfolio. This is not speculation; it is the documented math of early-stage investing over decades of data.</p>
+
+        <div class="res-stat-row">
+          <div class="res-stat-card">
+            <div class="res-stat-card__number">50–60%</div>
+            <div class="res-stat-card__label">of investments typically return zero or minimal capital</div>
+          </div>
+          <div class="res-stat-card">
+            <div class="res-stat-card__number">1–2</div>
+            <div class="res-stat-card__label">breakout winners make the entire portfolio's returns</div>
+          </div>
+          <div class="res-stat-card">
+            <div class="res-stat-card__number">15–25</div>
+            <div class="res-stat-card__label">minimum companies to deploy across before expecting meaningful returns</div>
+          </div>
+        </div>
+
+        <p>Diversification is not optional in angel investing — it is the strategy. An angel who writes five checks and concentrates on "the best" opportunities is not being disciplined; they are eliminating their ability to participate in the power law. The math requires volume. Without volume, the inevitable losses dominate the outcome before the winners have time to compound.</p>
+        <p>The most important rule in angel investing is one that does not require any financial modeling: never invest money you cannot afford to lose entirely. Not partially. Entirely. Every dollar you deploy into an early-stage startup should be treated as illiquid for a minimum of five years and potentially lost permanently. If that framing changes the check you were planning to write, let it. Your financial foundation matters more than any single investment opportunity.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 5 -->
+      <div class="res-content__section">
+        <h2>How to Find Deal Flow</h2>
+        <p>Deal flow — the consistent stream of investment opportunities — is the lifeblood of an angel portfolio. Poor investors wait for deal flow to find them. Great investors build the reputation that makes it inevitable.</p>
+        <p>Practically speaking, you can access deal flow through several channels:</p>
+        <ul>
+          <li><strong style="color: #f5f0eb;">AngelList syndicates</strong> — curated deals led by experienced angels, open to smaller checks ($1K–$5K). Excellent for learning while deploying small amounts of capital.</li>
+          <li><strong style="color: #f5f0eb;">Accelerator demo days</strong> — Y Combinator, Techstars, and their regional peers run twice-yearly batch presentations where hundreds of vetted startups pitch simultaneously. Attending gives you concentrated exposure to early-stage companies in a compressed format.</li>
+          <li><strong style="color: #f5f0eb;">Founder networks</strong> — your existing professional network almost certainly includes founders or people one step away from them. Being known as someone who takes meetings, gives useful feedback, and makes decisions without unnecessary friction is how founders start sending you deals unprompted.</li>
+          <li><strong style="color: #f5f0eb;">Local startup ecosystems</strong> — every major city has an active startup community with events, meetups, and coworking spaces. Physical presence in these spaces accelerates relationship-building with founders earlier than institutional capital reaches them.</li>
+          <li><strong style="color: #f5f0eb;">Angel groups</strong> — organized networks of angels who share deal sourcing, due diligence, and syndication. Many require accredited investor status and a minimum deployment commitment.</li>
+        </ul>
+        <p>The principle underlying all of these channels is the same: give before you expect to receive. Take the meeting. Make the introduction. Write the feedback email when you pass on a deal. Be the angel that founders want to talk to regardless of whether you are writing a check — and the deal flow will follow.</p>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 6 -->
+      <div class="res-content__section">
+        <h2>Due Diligence Without a Team</h2>
+        <p>Institutional venture firms have analysts, investment committees, and months to evaluate a single deal. As an angel, you typically have days or weeks, a few conversations, and your own judgment. Here is what to focus on when you do not have the luxury of a full diligence process.</p>
+        <p>The four dimensions that matter most at the early stage are founder quality, market size, early traction, and the cap table.</p>
+        <p><strong style="color: #f5f0eb;">Founder quality</strong> is the variable that matters most when everything else is still uncertain. Look for resilience (have they been tested, and how did they respond?), coachability (do they absorb feedback without defensiveness?), and genuine domain expertise. A founder who has lived the problem they are solving is worth twice one who has merely researched it.</p>
+        <p><strong style="color: #f5f0eb;">Market size</strong> is the ceiling that determines whether a great outcome is possible. A well-executed product in a small market will never return an angel portfolio. You need a founder who is going after a large and growing market — and who can explain credibly why they are the right team to capture meaningful share of it.</p>
+        <p><strong style="color: #f5f0eb;">Early traction</strong> is relative to stage. A pre-seed company should show customer conversations and clear problem validation. A seed company should have paying customers, active users, or measurable evidence of demand. The question is not whether the numbers are large — they won't be — but whether they are directionally compelling.</p>
+        <p><strong style="color: #f5f0eb;">The cap table</strong> tells you who else is invested, on what terms, and what the founder's ownership looks like. A cap table with strong institutional co-investors is a signal of quality. An overly diluted founder at the seed stage is a warning sign for future rounds.</p>
+
+        <p style="color: #c9a84c; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 32px; margin-bottom: 16px;">10 Questions to Ask Every Founder Before Writing a Check</p>
+
+        <div class="res-ten-questions">
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">01</span>
+            <span class="res-ten-q__text">What specific problem are you solving, and how do you know it is real and painful enough that people will pay to solve it?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">02</span>
+            <span class="res-ten-q__text">Who have you already sold to, and what did that conversation actually look like from first contact to close?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">03</span>
+            <span class="res-ten-q__text">What is the one thing you have learned in the last 90 days that surprised you most?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">04</span>
+            <span class="res-ten-q__text">Who are the two or three competitors closest to what you are building, and what is your durable advantage over them?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">05</span>
+            <span class="res-ten-q__text">What does the market look like in ten years if you win — and what is your path to owning meaningful share of it?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">06</span>
+            <span class="res-ten-q__text">Tell me about a time this company was close to failing and how you responded.</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">07</span>
+            <span class="res-ten-q__text">What is this round for specifically — what milestones will it get you to, and what is the next round predicated on?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">08</span>
+            <span class="res-ten-q__text">Who is on your cap table, and what were the terms of their investment?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">09</span>
+            <span class="res-ten-q__text">What would make you a great fit for angel support specifically — what kind of value beyond capital would be most useful to you?</span>
+          </div>
+          <div class="res-ten-q">
+            <span class="res-ten-q__num">10</span>
+            <span class="res-ten-q__text">What is your worst-case scenario, and how are you thinking about protecting against it?</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="res-content__divider"></div>
+
+      <!-- Section 7 -->
+      <div class="res-content__section">
+        <h2>Getting Started: Practical First Steps</h2>
+        <p>Before you write your first check, there are a few practical prerequisites worth addressing directly.</p>
+        <p><strong style="color: #f5f0eb;">Accredited investor status.</strong> In the United States, most direct angel investments are limited to accredited investors — individuals with annual income exceeding $200,000 ($300,000 with a spouse) or a net worth over $1 million excluding primary residence. There are also qualifications based on certain professional certifications. Verify your status before pursuing direct investments; SEC regulations govern this designation and violations carry meaningful consequences.</p>
+
+        <div class="res-content__pull">
+          <p>"The best angel investors aren't trying to predict the future. They're betting on founders who will figure it out regardless."</p>
+        </div>
+
+        <div class="res-first-steps">
+          <div class="res-first-step">
+            <div class="res-first-step__icon" style="color: #c9a84c;">◆</div>
+            <div class="res-first-step__content">
+              <h4>Start with Syndicates</h4>
+              <p>AngelList and Republic allow you to invest $1,000–$5,000 alongside experienced lead angels. This lets you learn deal structure, evaluation frameworks, and portfolio building in real time — with real stakes that keep you engaged, at amounts that keep your exposure manageable while you develop your judgment.</p>
+            </div>
+          </div>
+          <div class="res-first-step">
+            <div class="res-first-step__icon" style="color: #c9a84c;">◆</div>
+            <div class="res-first-step__content">
+              <h4>Join an Angel Group</h4>
+              <p>Organized angel groups such as the Angel Capital Association network, 37 Angels, or regional equivalents provide deal flow, co-diligence opportunities, and community with experienced investors. Many first-time angels learn more from their first year in an angel group than from a library of books on venture investing.</p>
+            </div>
+          </div>
+          <div class="res-first-step">
+            <div class="res-first-step__icon" style="color: #c9a84c;">◆</div>
+            <div class="res-first-step__content">
+              <h4>Track Everything with a Simple System</h4>
+              <p>A spreadsheet is sufficient to start. Track company name, sector, check size, stage, instrument type (SAFE/note/equity), valuation cap, date, and updates. Add a notes column with your investment thesis for each deal. You will reference these notes when assessing follow-on decisions — and they will teach you more about your own judgment than any retrospective analysis could.</p>
+            </div>
+          </div>
+          <div class="res-first-step">
+            <div class="res-first-step__icon" style="color: #c9a84c;">◆</div>
+            <div class="res-first-step__content">
+              <h4>Set an Annual Deployment Budget</h4>
+              <p>Decide at the beginning of each year how much capital you are allocating to angel investing — and treat that number as a constraint, not a target. Your annual budget should be money you are financially prepared to lose entirely without affecting your lifestyle, obligations, or other investment strategies. Discipline here is more important than conviction in any individual deal.</p>
+            </div>
+          </div>
+        </div>
+
+        <p>Angel investing done well is one of the most intellectually engaging, financially meaningful, and personally rewarding uses of capital available to an operator-turned-investor. Done poorly, it is an expensive lesson. The difference between the two is almost always process — not access, not connections, not luck. Build the process first, then let the opportunities come to it.</p>
+      </div>
+
+      <!-- Author Bio -->
+      <div class="res-author-bio">
+        <div class="res-author-bio__dot"></div>
+        <div class="res-author-bio__text">
+          <p>Lynn Fernando is an investor and advisor with a portfolio spanning private equity, real estate, and early-stage ventures. She works with operators ready to make the transition from earning capital to deploying it — building portfolios that compound over time.</p>
+          <a href="../index.html#investments" class="btn btn-primary" style="width: auto; display: inline-flex;">Explore Opportunities</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="res-footer">
+    <div class="res-footer__inner">
+      <p class="res-footer__copy">&copy; 2025 Lynn Fernando. All rights reserved.</p>
+      <div class="res-footer__links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#resources">Resources</a>
+        <a href="../index.html#contact">Contact</a>
+        <a href="../media-kit.html">Media Kit</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

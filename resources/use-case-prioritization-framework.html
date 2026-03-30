@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAI Use Case Prioritization Framework — Lynn Fernando</title>
+  <meta name="description" content="A structured methodology to identify, score, and sequence your highest-value AI opportunities — built for executive decision-making.">
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/resources/use-case-prioritization-framework" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GenAI Use Case Prioritization Framework — Lynn Fernando" />
+  <meta property="og:description" content="A structured methodology to identify, score, and sequence your highest-value AI opportunities — built for executive decision-making." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/use-case-prioritization-framework" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GenAI Use Case Prioritization Framework — Lynn Fernando" />
+  <meta name="twitter:description" content="A structured methodology to identify, score, and sequence your highest-value AI opportunities — built for executive decision-making." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./resources.css">
+  <style>
+    /* Framework-specific styles */
+    .framework-content { display: none; margin-top: 56px; }
+    .framework-content.visible { display: block; }
+
+    .framework-section {
+      margin-bottom: 64px;
+    }
+    .framework-section__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .framework-section__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .framework-section__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #c0b9b0;
+      line-height: 1.75;
+      max-width: 640px;
+      margin-bottom: 36px;
+    }
+    .framework-section__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin-bottom: 36px;
+    }
+
+    /* 2x2 Matrix */
+    .matrix-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      aspect-ratio: 2 / 1;
+    }
+    .matrix-cell {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 160px;
+    }
+    .matrix-cell--q1 { background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.2); } /* Quick Wins */
+    .matrix-cell--q2 { background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.15); } /* Strategic Bets */
+    .matrix-cell--q3 { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); } /* Fill-Ins */
+    .matrix-cell--q4 { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.1); } /* Avoid */
+
+    .matrix-cell__badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      display: inline-block;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+    .matrix-cell--q1 .matrix-cell__badge { background: rgba(201,168,76,0.2); color: #c9a84c; }
+    .matrix-cell--q2 .matrix-cell__badge { background: rgba(99,102,241,0.15); color: #818cf8; }
+    .matrix-cell--q3 .matrix-cell__badge { background: rgba(255,255,255,0.06); color: #8a8a8a; }
+    .matrix-cell--q4 .matrix-cell__badge { background: rgba(239,68,68,0.1); color: #f87171; }
+
+    .matrix-cell__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .matrix-cell--q1 .matrix-cell__title { color: #f5f0eb; }
+    .matrix-cell--q2 .matrix-cell__title { color: #f5f0eb; }
+    .matrix-cell--q3 .matrix-cell__title { color: #8a8a8a; }
+    .matrix-cell--q4 .matrix-cell__title { color: #8a8a8a; }
+
+    .matrix-cell__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      line-height: 1.65;
+      margin-top: auto;
+      padding-top: 10px;
+    }
+    .matrix-cell--q1 .matrix-cell__desc { color: #c0b9b0; }
+    .matrix-cell--q2 .matrix-cell__desc { color: #c0b9b0; }
+    .matrix-cell--q3 .matrix-cell__desc { color: #555; }
+    .matrix-cell--q4 .matrix-cell__desc { color: #555; }
+
+    .matrix-axis {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .matrix-axis-y {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 12px;
+      min-width: 80px;
+    }
+    .matrix-axis-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #555;
+    }
+    .matrix-container {
+      display: flex;
+      gap: 0;
+    }
+    .matrix-y-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .matrix-x-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Scoring Rubric */
+    .rubric-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .rubric-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .rubric-table td {
+      padding: 14px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #c0b9b0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .rubric-table tr:last-child td { border-bottom: none; }
+    .rubric-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .rubric-table td:first-child { color: #f5f0eb; font-weight: 500; }
+    .rubric-table td.score-cell {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: #c9a84c;
+      white-space: nowrap;
+      width: 80px;
+    }
+    .table-wrap {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+
+    /* Examples table */
+    .examples-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+    .examples-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.02);
+    }
+    .examples-table td {
+      padding: 13px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #c0b9b0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      vertical-align: middle;
+    }
+    .examples-table tr:last-child td { border-bottom: none; }
+    .examples-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .examples-table td:first-child { color: #f5f0eb; font-size: 13px; }
+    .examples-table td.score-total {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #c9a84c;
+    }
+    .tier-badge {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .tier-badge--high { background: rgba(201,168,76,0.15); color: #c9a84c; }
+    .tier-badge--med { background: rgba(99,102,241,0.12); color: #818cf8; }
+    .tier-badge--low { background: rgba(255,255,255,0.05); color: #555; }
+
+    /* Sequencing guide */
+    .sequence-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .sequence-step {
+      display: flex;
+      gap: 20px;
+      padding: 24px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      align-items: flex-start;
+    }
+    .sequence-step__num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: #c9a84c;
+      line-height: 1;
+      flex-shrink: 0;
+      min-width: 40px;
+    }
+    .sequence-step__content {}
+    .sequence-step__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #f5f0eb;
+      margin-bottom: 8px;
+    }
+    .sequence-step__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #c0b9b0;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 640px) {
+      .matrix-wrap { aspect-ratio: auto; }
+      .matrix-cell { min-height: 120px; padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="res-nav">
+  <div class="res-nav__inner">
+    <a href="../index.html#resources" class="res-nav__back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+    <a href="../index.html" class="res-nav__logo">Lynn Fernando</a>
+    <a href="../index.html#resources" class="res-nav__resources">All Resources</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="res-hero">
+  <div class="res-hero__inner">
+    <div class="res-hero__meta">
+      <span class="res-hero__tag">Template</span>
+      <span class="res-hero__access res-hero__access--gated">Gated</span>
+    </div>
+    <h1 class="res-hero__title">GenAI Use Case <em>Prioritization</em> Framework</h1>
+    <p class="res-hero__desc">A structured methodology to identify, score, and sequence your highest-value AI opportunities — built for executive decision-making.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<main class="res-body">
+  <div class="res-gate">
+
+    <!-- FORM COLUMN -->
+    <div class="res-gate__form-col">
+      <div class="res-gate__form-box">
+
+        <div id="gateFormWrap" class="res-gate__form-wrap">
+          <h2 class="res-gate__form-title">Get the Framework</h2>
+          <p class="res-gate__form-sub">Enter your details to unlock the full framework.</p>
+
+          <form id="gateForm" class="res-form" action="https://formspree.io/f/mnjgydbk" method="POST">
+            <input type="hidden" name="resource" value="GenAI Use Case Prioritization Framework">
+
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="companySize">Company Size</label>
+              <select id="companySize" name="companySize" required>
+                <option value="" disabled selected>Select company size</option>
+                <option value="1-10">1 – 10 employees</option>
+                <option value="11-50">11 – 50 employees</option>
+                <option value="51-200">51 – 200 employees</option>
+                <option value="201-1000">201 – 1,000 employees</option>
+                <option value="1000+">1,000+ employees</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select id="role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="Founder/CEO">Founder / CEO</option>
+                <option value="Executive/VP">Executive / VP</option>
+                <option value="Operator/Manager">Operator / Manager</option>
+                <option value="Consultant/Advisor">Consultant / Advisor</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" id="gateSubmit" class="btn btn-primary">Get Access</button>
+          </form>
+          <p class="res-privacy">No spam. Your data is never sold.</p>
+        </div>
+
+        <div id="gateSuccess" class="res-gate__success">
+          <div class="res-gate__success-icon">✓</div>
+          <h3>Framework Unlocked</h3>
+          <p>Scroll down to access the prioritization matrix, scoring rubric, and example use cases.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PREVIEW COLUMN -->
+    <div class="res-gate__preview-col">
+
+      <div class="res-preview__what">
+        <h3>What's Inside</h3>
+        <div class="res-preview__items">
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text"><strong>The 2×2 Impact vs. Effort</strong> prioritization matrix</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text"><strong>A 10-point scoring rubric</strong> for evaluating use cases</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">15 pre-filled example use cases across industries</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">A sequencing guide for building your AI roadmap</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">Executive presentation template</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GATED FRAMEWORK CONTENT -->
+      <div id="gatedContent" class="framework-content" style="filter: blur(6px); opacity: 0.3;">
+
+        <!-- 2x2 Matrix -->
+        <div class="framework-section">
+          <span class="framework-section__label">Tool 01</span>
+          <h2 class="framework-section__title">The 2×2 Prioritization Matrix</h2>
+          <p class="framework-section__desc">Map every candidate AI use case onto two axes: Business Impact (revenue uplift, cost savings, competitive advantage) and Implementation Effort (data readiness, complexity, time to value). Where a use case lands determines its strategic priority.</p>
+
+          <div style="display:flex;gap:0;align-items:stretch;margin-bottom:8px;">
+            <div class="matrix-y-label">Business Impact</div>
+            <div style="flex:1;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:4px;padding:0 4px;">
+                <span class="matrix-axis-label">High</span>
+              </div>
+              <div class="matrix-wrap">
+                <div class="matrix-cell matrix-cell--q1">
+                  <div>
+                    <span class="matrix-cell__badge">Priority 1</span>
+                    <h3 class="matrix-cell__title">Quick Wins</h3>
+                  </div>
+                  <p class="matrix-cell__desc">High impact, low effort. Pursue immediately. These are your proof-of-concept projects that build momentum and demonstrate ROI quickly.</p>
+                </div>
+                <div class="matrix-cell matrix-cell--q2">
+                  <div>
+                    <span class="matrix-cell__badge">Priority 2</span>
+                    <h3 class="matrix-cell__title">Strategic Bets</h3>
+                  </div>
+                  <p class="matrix-cell__desc">High impact, high effort. Plan carefully and resource adequately. These define your long-term AI differentiation — worth the investment.</p>
+                </div>
+                <div class="matrix-cell matrix-cell--q3">
+                  <div>
+                    <span class="matrix-cell__badge">Priority 3</span>
+                    <h3 class="matrix-cell__title">Fill-Ins</h3>
+                  </div>
+                  <p class="matrix-cell__desc">Low impact, low effort. Implement when capacity allows. Useful for building team capability and confidence with AI tools.</p>
+                </div>
+                <div class="matrix-cell matrix-cell--q4">
+                  <div>
+                    <span class="matrix-cell__badge">Deprioritize</span>
+                    <h3 class="matrix-cell__title">Avoid</h3>
+                  </div>
+                  <p class="matrix-cell__desc">Low impact, high effort. Remove from the roadmap. These consume resources without meaningful return. Revisit only if circumstances change.</p>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:4px;padding:0 4px;">
+                <span class="matrix-axis-label">Low Impact</span>
+                <span class="matrix-axis-label">High Impact</span>
+              </div>
+            </div>
+          </div>
+          <div class="matrix-x-label" style="padding-left:90px;">Implementation Effort &rarr;</div>
+        </div>
+
+        <!-- Scoring Rubric -->
+        <div class="framework-section">
+          <span class="framework-section__label">Tool 02</span>
+          <h2 class="framework-section__title">The 10-Point Scoring Rubric</h2>
+          <p class="framework-section__desc">Score each potential use case against five criteria, each on a 1–5 scale (1 = poor, 5 = excellent). Total scores determine matrix placement and comparative ranking across your use case portfolio.</p>
+
+          <div class="table-wrap">
+            <table class="rubric-table">
+              <thead>
+                <tr>
+                  <th>Criterion</th>
+                  <th>What to Evaluate</th>
+                  <th>Score 1</th>
+                  <th>Score 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Business Value</td>
+                  <td>Revenue impact, cost savings, or strategic differentiation potential. Includes both direct financial return and competitive positioning.</td>
+                  <td>Minimal measurable impact</td>
+                  <td>Significant, quantifiable ROI</td>
+                </tr>
+                <tr>
+                  <td>Implementation Complexity</td>
+                  <td>Technical difficulty, integration requirements, number of systems affected, and dependency on external partners or vendors.</td>
+                  <td>Requires major infrastructure overhaul</td>
+                  <td>Uses existing stack, low integration</td>
+                </tr>
+                <tr>
+                  <td>Data Availability</td>
+                  <td>Quality, volume, and accessibility of data required. Includes whether data is already structured, governed, and accessible to AI systems.</td>
+                  <td>Data doesn't exist or is inaccessible</td>
+                  <td>Clean, governed data readily available</td>
+                </tr>
+                <tr>
+                  <td>Risk Level</td>
+                  <td>Regulatory exposure, reputational risk, accuracy requirements, and consequences of failure. Higher risk scores = lower actual risk.</td>
+                  <td>High regulatory / reputational risk</td>
+                  <td>Low risk, well-understood failure modes</td>
+                </tr>
+                <tr>
+                  <td>Time to Value</td>
+                  <td>How quickly results can be demonstrated post-launch. Includes internal adoption time and change management requirements.</td>
+                  <td>12+ months to measurable value</td>
+                  <td>Value visible within 60 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Example Use Cases -->
+        <div class="framework-section">
+          <span class="framework-section__label">Tool 03</span>
+          <h2 class="framework-section__title">Example Use Cases — Scored</h2>
+          <p class="framework-section__desc">Ten representative AI use cases scored across all five criteria. Use these as reference points when evaluating your own portfolio.</p>
+
+          <div class="table-wrap">
+            <table class="examples-table">
+              <thead>
+                <tr>
+                  <th>Use Case</th>
+                  <th>Function</th>
+                  <th>Value</th>
+                  <th>Complexity</th>
+                  <th>Data</th>
+                  <th>Risk</th>
+                  <th>Speed</th>
+                  <th>Total</th>
+                  <th>Priority</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AI meeting summaries & action items</td>
+                  <td>Operations</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">5</td>
+                  <td class="score-total">23</td>
+                  <td><span class="tier-badge tier-badge--high">Quick Win</span></td>
+                </tr>
+                <tr>
+                  <td>Automated customer support triage</td>
+                  <td>Customer Success</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">4</td>
+                  <td class="score-total">19</td>
+                  <td><span class="tier-badge tier-badge--high">Quick Win</span></td>
+                </tr>
+                <tr>
+                  <td>AI-assisted proposal generation</td>
+                  <td>Sales</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">3</td>
+                  <td class="score-total">19</td>
+                  <td><span class="tier-badge tier-badge--high">Quick Win</span></td>
+                </tr>
+                <tr>
+                  <td>Predictive churn modeling</td>
+                  <td>Customer Success</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">2</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">2</td>
+                  <td class="score-total">16</td>
+                  <td><span class="tier-badge tier-badge--med">Strategic</span></td>
+                </tr>
+                <tr>
+                  <td>AI-driven demand forecasting</td>
+                  <td>Operations / Finance</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">2</td>
+                  <td style="text-align:center;">2</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">2</td>
+                  <td class="score-total">14</td>
+                  <td><span class="tier-badge tier-badge--med">Strategic</span></td>
+                </tr>
+                <tr>
+                  <td>Personalized marketing content at scale</td>
+                  <td>Marketing</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">4</td>
+                  <td class="score-total">19</td>
+                  <td><span class="tier-badge tier-badge--high">Quick Win</span></td>
+                </tr>
+                <tr>
+                  <td>AI contract review & extraction</td>
+                  <td>Legal / Finance</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">2</td>
+                  <td style="text-align:center;">3</td>
+                  <td class="score-total">15</td>
+                  <td><span class="tier-badge tier-badge--med">Strategic</span></td>
+                </tr>
+                <tr>
+                  <td>Autonomous financial close reporting</td>
+                  <td>Finance</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">1</td>
+                  <td style="text-align:center;">2</td>
+                  <td style="text-align:center;">1</td>
+                  <td style="text-align:center;">1</td>
+                  <td class="score-total">10</td>
+                  <td><span class="tier-badge tier-badge--low">Avoid</span></td>
+                </tr>
+                <tr>
+                  <td>AI HR policy Q&amp;A chatbot</td>
+                  <td>HR</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">5</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">4</td>
+                  <td class="score-total">20</td>
+                  <td><span class="tier-badge tier-badge--high">Quick Win</span></td>
+                </tr>
+                <tr>
+                  <td>AI-generated board reporting</td>
+                  <td>Executive / Finance</td>
+                  <td style="text-align:center;">4</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">3</td>
+                  <td style="text-align:center;">3</td>
+                  <td class="score-total">16</td>
+                  <td><span class="tier-badge tier-badge--med">Strategic</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Sequencing Guidance -->
+        <div class="framework-section">
+          <span class="framework-section__label">Tool 04</span>
+          <h2 class="framework-section__title">Sequencing Your AI Roadmap</h2>
+          <p class="framework-section__desc">Once use cases are scored and plotted, follow this four-step sequencing protocol to build a roadmap that delivers early wins while building toward long-term capability.</p>
+
+          <div class="sequence-steps">
+            <div class="sequence-step">
+              <div class="sequence-step__num">01</div>
+              <div class="sequence-step__content">
+                <div class="sequence-step__title">Start with Quick Wins (Months 1–3)</div>
+                <div class="sequence-step__desc">Select 2–3 high-scoring Quick Wins to pilot first. These build organizational confidence, demonstrate value to leadership, and fund further investment. Choose use cases where you already have clean data and a willing business owner. Success here creates the political capital for larger bets.</div>
+              </div>
+            </div>
+            <div class="sequence-step">
+              <div class="sequence-step__num">02</div>
+              <div class="sequence-step__content">
+                <div class="sequence-step__title">Plan Strategic Bets in Parallel (Months 2–6)</div>
+                <div class="sequence-step__desc">While Quick Wins are in flight, begin scoping your top Strategic Bet. Assign an executive sponsor, conduct vendor assessments, and define the success metrics. Strategic Bets require foundational investment in data pipelines, governance frameworks, and cross-functional alignment — start this work early even if the build doesn't begin until Month 4 or 5.</div>
+              </div>
+            </div>
+            <div class="sequence-step">
+              <div class="sequence-step__num">03</div>
+              <div class="sequence-step__content">
+                <div class="sequence-step__title">Measure, Learn, and Iterate (Months 3–9)</div>
+                <div class="sequence-step__desc">Establish a consistent review cadence for active pilots. Track the KPIs you defined at project kick-off. Be willing to kill initiatives that aren't performing — this discipline is what separates AI-mature organizations from those stuck in perpetual piloting. Document learnings and feed them back into your scoring model.</div>
+              </div>
+            </div>
+            <div class="sequence-step">
+              <div class="sequence-step__num">04</div>
+              <div class="sequence-step__content">
+                <div class="sequence-step__title">Re-Score Quarterly</div>
+                <div class="sequence-step__desc">The AI landscape evolves fast. A use case that was a "Strategic Bet" in Q1 may become a "Quick Win" by Q3 as tooling matures and your data infrastructure improves. Re-score your entire use case portfolio every 90 days and update your roadmap accordingly. This living document is your most powerful AI governance artifact.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /gatedContent -->
+
+    </div><!-- /preview-col -->
+  </div><!-- /res-gate -->
+</main>
+
+<!-- FOOTER -->
+<footer class="res-footer">
+  <div class="res-footer__inner">
+    <p class="res-footer__copy">&copy; 2025 Lynn Fernando. All rights reserved.</p>
+    <nav class="res-footer__links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#resources">Resources</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('gateForm');
+  const formWrap = document.getElementById('gateFormWrap');
+  const success = document.getElementById('gateSuccess');
+  const content = document.getElementById('gatedContent');
+  const submitBtn = document.getElementById('gateSubmit');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending\u2026';
+    try {
+      const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} });
+      if(res.ok){
+        formWrap.classList.add('hidden');
+        success.classList.add('visible');
+        if(content) { content.style.filter='none'; content.style.opacity='1'; content.classList.add('visible'); }
+        const overlay = document.getElementById('blurOverlay');
+        if(overlay) overlay.style.display='none';
+      } else {
+        alert('Something went wrong. Please try again.');
+        submitBtn.disabled=false; submitBtn.textContent='Get Access';
+      }
+    } catch { alert('Network error.'); submitBtn.disabled=false; submitBtn.textContent='Get Access'; }
+  });
+})();
+</script>
+
+</body>
+</html>

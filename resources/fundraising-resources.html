@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder's Fundraising Guide — Angel, Reg CF, Reg D, Reg A+ &amp; Seed VC | Lynn Fernando</title>
+  <meta name="description" content="A practical, founder-focused resource on angels, online fundraising paths, seed VCs, cap tables, dilution, and campaign execution." />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/resources/fundraising-resources" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Founder&#39;s Fundraising Guide — Angel, Reg CF, Reg D, Reg A+ &amp; Seed VC | Lynn Fernando" />
+  <meta property="og:description" content="A practical, founder-focused resource on angels, online fundraising paths, seed VCs, cap tables, dilution, and campaign execution." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/fundraising-resources" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Founder&#39;s Fundraising Guide — Angel, Reg CF, Reg D, Reg A+ &amp; Seed VC | Lynn Fernando" />
+  <meta name="twitter:description" content="A practical, founder-focused resource on angels, online fundraising paths, seed VCs, cap tables, dilution, and campaign execution." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./resources.css" />
+
+  <style>
+    /* ======= PAGE-SPECIFIC STYLES ======= */
+
+    /* Layout: sidebar + content */
+    .res-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 64px;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* TOC Sidebar */
+    .res-toc-sidebar {
+      position: sticky;
+      top: 88px;
+    }
+    .res-toc-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .res-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .res-toc li a {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+      text-decoration: none;
+      padding: 6px 0;
+      border-left: 2px solid transparent;
+      padding-left: 12px;
+      transition: all 0.2s;
+      line-height: 1.4;
+    }
+    .res-toc li a:hover,
+    .res-toc li a.active {
+      color: #c9a84c;
+      border-left-color: #c9a84c;
+    }
+
+    /* Section headings overrides */
+    .res-content__section h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 36px;
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    .res-content__section h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+    .res-content__section p {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      color: #c0b9b0;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    /* Callout box */
+    .res-callout {
+      background: #1a1a1a;
+      border-left: 3px solid #c9a84c;
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 0 3px 3px 0;
+    }
+    .res-callout p {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #c0b9b0;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Path cards grid */
+    .res-paths-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .res-path-card {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 3px;
+      padding: 28px;
+      transition: border-color 0.3s;
+    }
+    .res-path-card:hover {
+      border-color: rgba(201,168,76,0.25);
+    }
+    .res-path-card__num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #c9a84c;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .res-path-card__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #f5f0eb;
+      margin-bottom: 10px;
+    }
+    .res-path-card__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #8a8a8a;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Comparison table */
+    .res-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: 3px;
+    }
+    .res-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 600px;
+    }
+    .res-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: #111;
+    }
+    .res-table td {
+      padding: 12px 16px;
+      color: #c0b9b0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top;
+      line-height: 1.5;
+      background: #0a0a0a;
+    }
+    .res-table tr:last-child td {
+      border-bottom: none;
+    }
+    .res-table tr:hover td {
+      background: rgba(255,255,255,0.02);
+    }
+    .res-table td:first-child {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      white-space: nowrap;
+    }
+
+    /* Small 3-col table */
+    .res-table-sm {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .res-table-sm th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      background: #111;
+    }
+    .res-table-sm td {
+      padding: 10px 14px;
+      color: #c0b9b0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      vertical-align: top;
+      line-height: 1.5;
+      background: #0a0a0a;
+    }
+    .res-table-sm tr:last-child td { border-bottom: none; }
+    .res-table-sm td:first-child {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      white-space: nowrap;
+    }
+
+    /* Reg D two-box row */
+    .res-regd-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .res-regd-box {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      padding: 24px;
+    }
+    .res-regd-box__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .res-regd-box__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #f5f0eb;
+      margin-bottom: 14px;
+    }
+    .res-regd-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .res-regd-box ul li {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #8a8a8a;
+      line-height: 1.6;
+      padding-left: 16px;
+      position: relative;
+    }
+    .res-regd-box ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #c9a84c;
+      font-size: 11px;
+      top: 2px;
+    }
+
+    /* Seed VC judgment cards */
+    .res-judge-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .res-judge-card {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 3px;
+      padding: 20px;
+    }
+    .res-judge-card__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .res-judge-card p {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #8a8a8a;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Key concepts cards */
+    .res-concepts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .res-concept-card {
+      background: #0a0a0a;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      padding: 24px 20px;
+    }
+    .res-concept-card__term {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .res-concept-card p {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #8a8a8a;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Platform cards */
+    .res-platform-card {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 3px;
+      padding: 18px 20px;
+      margin-bottom: 10px;
+    }
+    .res-platform-card__name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #f5f0eb;
+      margin-bottom: 5px;
+    }
+    .res-platform-card__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #8a8a8a;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Stat boxes */
+    .res-stat-row {
+      display: flex;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .res-stat-box {
+      flex: 1;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .res-stat-box__num {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: #c9a84c;
+      display: block;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .res-stat-box__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    /* FAQ accordion */
+    .res-faq-list {
+      margin: 24px 0;
+    }
+    .res-faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .res-faq-item:first-child {
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .res-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+    }
+    .res-faq-q::-webkit-details-marker { display: none; }
+    .res-faq-q__text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f5f0eb;
+      line-height: 1.4;
+    }
+    .res-faq-q__icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #c9a84c;
+      line-height: 1;
+      transition: transform 0.25s;
+    }
+    .res-faq-item.open .res-faq-q__icon {
+      transform: rotate(45deg);
+    }
+    .res-faq-body {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s ease;
+    }
+    .res-faq-body__inner {
+      padding: 0 0 20px;
+    }
+    .res-faq-body__inner p {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #8a8a8a;
+      line-height: 1.75;
+      margin: 0;
+    }
+
+    /* Tip cards */
+    .res-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .res-tip-card {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 3px;
+      padding: 28px;
+      transition: border-color 0.3s;
+    }
+    .res-tip-card:hover {
+      border-color: rgba(201,168,76,0.25);
+    }
+    .res-tip-card__num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #c9a84c;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .res-tip-card__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #f5f0eb;
+      margin-bottom: 10px;
+    }
+    .res-tip-card p {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #8a8a8a;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Advisors red-flag list */
+    .res-content__section ul.red-flags li::before {
+      color: #e05252;
+    }
+
+    /* Disclaimer box */
+    .res-disclaimer {
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 3px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+      margin-top: 16px;
+    }
+
+    /* CTA section */
+    .res-cta {
+      text-align: center;
+      padding: 64px 40px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin-top: 0;
+    }
+    .res-cta__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 32px;
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 12px;
+    }
+    .res-cta__sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #8a8a8a;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .res-cta__buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .res-cta__buttons .btn {
+      width: auto;
+    }
+
+    /* Subtitle in hero */
+    .res-hero__subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      color: #8a8a8a;
+      margin-bottom: 20px;
+    }
+
+    /* Section divider */
+    .res-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin: 48px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .res-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .res-toc-sidebar {
+        position: static;
+        background: #111;
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 3px;
+        padding: 20px 24px;
+      }
+      .res-paths-grid,
+      .res-regd-grid,
+      .res-judge-grid,
+      .res-concepts-grid,
+      .res-tips-grid {
+        grid-template-columns: 1fr;
+      }
+      .res-stat-row {
+        flex-direction: column;
+      }
+    }
+    @media (max-width: 768px) {
+      .res-cta { padding: 48px 20px; }
+      .res-cta__buttons { flex-direction: column; align-items: center; }
+      .res-cta__buttons .btn { width: 100%; max-width: 320px; }
+    }
+  </style>
+
+  <!-- Structured Data: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Founder's Fundraising Guide — Angel, Reg CF, Reg D, Reg A+ & Seed VC",
+    "description": "A practical, founder-focused resource on angels, online fundraising paths, seed VCs, cap tables, dilution, and campaign execution.",
+    "url": "https://lynnfernando.com/resources/fundraising-resources",
+    "image": "https://lynnfernando.com/images/lynn-fernando.jpg",
+    "datePublished": "2025-01-01",
+    "author": {
+      "@type": "Person",
+      "name": "Lynn Fernando",
+      "url": "https://lynnfernando.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Lynn Fernando",
+      "url": "https://lynnfernando.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://lynnfernando.com/resources/fundraising-resources"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="res-nav">
+    <div class="res-nav__inner">
+      <a href="../index.html#resources" class="res-nav__back">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Resources
+      </a>
+      <a href="../index.html" class="res-nav__logo">Lynn Fernando</a>
+      <a href="../index.html#resources" class="res-nav__resources">All Resources</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="res-hero">
+    <div class="res-hero__inner">
+      <div class="res-hero__meta">
+        <span class="res-hero__tag">Guide</span>
+        <span class="res-hero__access res-hero__access--free">Free</span>
+      </div>
+      <h1 class="res-hero__title">Founder's <em>Fundraising</em> Guide</h1>
+      <p class="res-hero__subtitle">Angel, Reg CF, Reg D, Reg A+ &amp; Seed VC</p>
+      <p class="res-hero__desc">A practical, founder-focused resource on angels, online fundraising paths, seed VCs, cap tables, dilution, and campaign execution. No fluff — built for operators who move with intention.</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <div class="res-body" style="max-width: 1100px;">
+    <div class="res-layout">
+
+      <!-- SIDEBAR TOC -->
+      <aside class="res-toc-sidebar">
+        <span class="res-toc-label">Contents</span>
+        <ul class="res-toc" id="toc">
+          <li><a href="#quick-take">Quick Take</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#comparison">Comparison Table</a></li>
+          <li><a href="#angel-investing">Angel Investing</a></li>
+          <li><a href="#reg-cf-reg-a">Reg CF vs Reg A+</a></li>
+          <li><a href="#reg-d">Reg D</a></li>
+          <li><a href="#seed-vc">Seed VC</a></li>
+          <li><a href="#key-concepts">Key Concepts</a></li>
+          <li><a href="#platforms">Platforms</a></li>
+          <li><a href="#launch-checklist">Launch Checklist</a></li>
+          <li><a href="#cap-table">Cap Table &amp; Dilution</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+          <li><a href="#campaign-tips">Campaign Tips</a></li>
+          <li><a href="#advisors">Advisors &amp; Firms</a></li>
+          <li><a href="#disclaimer">Disclaimer</a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="res-content">
+
+        <!-- 1. QUICK TAKE -->
+        <section class="res-content__section" id="quick-take">
+          <h2>Quick Take</h2>
+          <div class="res-content__pull">
+            <p>"For most early-stage founders, a blend of angel investing, a well-planned Reg CF community round, selective Reg D private placements, and a focused seed VC raise is the most practical path."</p>
+          </div>
+          <div class="res-callout">
+            <p>Your job is not just "raising money" — it is sequencing these paths to protect your cap table, be intentional about dilution, and align each round with the milestones that unlock the next.</p>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 2. HOW IT WORKS -->
+        <section class="res-content__section" id="how-it-works">
+          <h2>How These Funding Paths Work</h2>
+          <div class="res-paths-grid">
+            <div class="res-path-card">
+              <span class="res-path-card__num">01</span>
+              <div class="res-path-card__title">Angels</div>
+              <p class="res-path-card__desc">Individual accredited investors or angel groups write larger checks using SAFEs, convertible notes, or priced equity under Reg D exemptions.</p>
+            </div>
+            <div class="res-path-card">
+              <span class="res-path-card__num">02</span>
+              <div class="res-path-card__title">Reg CF</div>
+              <p class="res-path-card__desc">Lets you raise up to ~$5M in 12 months from accredited and non-accredited investors through a registered portal, with a public campaign page and standardized disclosures.</p>
+            </div>
+            <div class="res-path-card">
+              <span class="res-path-card__num">03</span>
+              <div class="res-path-card__title">Reg D (506b/506c)</div>
+              <p class="res-path-card__desc">The primary private placement mechanism for raising unlimited capital from accredited investors. 506(b) is private outreach only; 506(c) allows public marketing to verified accredited investors.</p>
+            </div>
+            <div class="res-path-card">
+              <span class="res-path-card__num">04</span>
+              <div class="res-path-card__title">Reg A+</div>
+              <p class="res-path-card__desc">A "mini-IPO" style exemption enabling raises up to $20M (Tier 1) or $75M (Tier 2) from the public, with heavier SEC review, audited financials, and ongoing reporting.</p>
+            </div>
+            <div class="res-path-card" style="grid-column: 1 / -1;">
+              <span class="res-path-card__num">05</span>
+              <div class="res-path-card__title">Seed VC</div>
+              <p class="res-path-card__desc">Institutional or micro-VC funds investing for significant ownership and influence, typically targeting companies capable of returning the entire fund.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 3. COMPARISON TABLE -->
+        <section class="res-content__section" id="comparison">
+          <h2>Comparison Table</h2>
+          <div class="res-table-wrap">
+            <table class="res-table">
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Angels</th>
+                  <th>Reg CF</th>
+                  <th>Reg D</th>
+                  <th>Reg A+</th>
+                  <th>Seed VC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Typical Raise</td>
+                  <td>$25K–$500K+</td>
+                  <td>Up to $5M/yr</td>
+                  <td>Unlimited</td>
+                  <td>$20M–$75M</td>
+                  <td>$500K–$5M+</td>
+                </tr>
+                <tr>
+                  <td>Investor Type</td>
+                  <td>Accredited individuals</td>
+                  <td>Accredited + public</td>
+                  <td>Accredited (506b: up to 35 sophisticated non-acc.)</td>
+                  <td>General public</td>
+                  <td>Institutional/micro-VC</td>
+                </tr>
+                <tr>
+                  <td># of Investors</td>
+                  <td>Few to dozens</td>
+                  <td>Hundreds to thousands</td>
+                  <td>Fewer, curated</td>
+                  <td>Broad public</td>
+                  <td>1–3 lead investors</td>
+                </tr>
+                <tr>
+                  <td>Legal Burden</td>
+                  <td>Low-moderate (SAFE/note)</td>
+                  <td>Moderate (portal + Form C)</td>
+                  <td>Low-moderate (Form D)</td>
+                  <td>High (SEC review, audits)</td>
+                  <td>Moderate (term sheet, legal)</td>
+                </tr>
+                <tr>
+                  <td>General Solicitation</td>
+                  <td>No (Reg D 506b rules apply)</td>
+                  <td>Yes (public campaign)</td>
+                  <td>506b: No / 506c: Yes</td>
+                  <td>Yes</td>
+                  <td>No (warm intros)</td>
+                </tr>
+                <tr>
+                  <td>Best Use</td>
+                  <td>Early validation, lead round</td>
+                  <td>Community building, brand</td>
+                  <td>Accredited-only private round</td>
+                  <td>Scaling capital, brand</td>
+                  <td>Institutional backing, scale</td>
+                </tr>
+                <tr>
+                  <td>Speed to Launch</td>
+                  <td>Fast (2–4 weeks)</td>
+                  <td>Slow (8–12 weeks prep)</td>
+                  <td>Medium (2–6 weeks)</td>
+                  <td>Very slow (3–6 months)</td>
+                  <td>Slow (3–6 month process)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 4. ANGEL INVESTING -->
+        <section class="res-content__section" id="angel-investing">
+          <h2>Angel Investing</h2>
+
+          <h3>What Angels Look For</h3>
+          <ul>
+            <li>Strong founding team and founder-market fit</li>
+            <li>Compelling market and a clear wedge into it</li>
+            <li>Early traction or evidence of demand, even if small</li>
+            <li>Clean cap table and reasonable valuation for stage</li>
+          </ul>
+
+          <h3>Common Angel Instruments</h3>
+          <ul>
+            <li>SAFEs (e.g., YC-style) with valuation caps and discounts</li>
+            <li>Convertible notes with interest and maturity dates</li>
+            <li>Seed-stage priced equity rounds (preferred stock)</li>
+          </ul>
+
+          <h3>Using Angels with Reg CF &amp; Reg D</h3>
+          <p>Many founders secure angels or a lead investor first via Reg D, then launch Reg CF rounds with those terms as a basis and built-in early momentum.</p>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 5. REG CF VS REG A+ -->
+        <section class="res-content__section" id="reg-cf-reg-a">
+          <h2>Reg CF vs Reg A+</h2>
+
+          <h3>Side-by-Side Comparison</h3>
+          <div class="res-table-wrap">
+            <table class="res-table-sm">
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Reg CF</th>
+                  <th>Reg A+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12-Month Max Raise</td>
+                  <td>~$5M</td>
+                  <td>$20M (T1) / $75M (T2)</td>
+                </tr>
+                <tr>
+                  <td>Cost &amp; Complexity</td>
+                  <td>Moderate (portal fees + legal)</td>
+                  <td>High (SEC filing, audited financials)</td>
+                </tr>
+                <tr>
+                  <td>Typical Timing</td>
+                  <td>8–12 weeks prep + 30–60 day campaign</td>
+                  <td>3–6 months to launch</td>
+                </tr>
+                <tr>
+                  <td>Investor Base</td>
+                  <td>Accredited + non-accredited</td>
+                  <td>General public</td>
+                </tr>
+                <tr>
+                  <td>Ongoing Reporting</td>
+                  <td>Annual report (Form C-AR)</td>
+                  <td>Semi-annual (T2), state review (T1)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Rule of thumb: Reg CF for early community building and growth validation. Reg A+ once you can deploy and justify eight-figure capital with ongoing SEC reporting obligations.</p>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 6. REG D -->
+        <section class="res-content__section" id="reg-d">
+          <h2>Reg D for Founders</h2>
+
+          <div class="res-regd-grid">
+            <div class="res-regd-box">
+              <span class="res-regd-box__label">506(b)</span>
+              <div class="res-regd-box__title">No General Solicitation</div>
+              <ul>
+                <li>Unlimited capital from unlimited accredited investors + up to 35 sophisticated non-accredited investors</li>
+                <li>Cannot publicly advertise; must rely on existing relationships and private outreach</li>
+                <li>Common use: traditional seed/Series A private rounds with angels and funds</li>
+              </ul>
+            </div>
+            <div class="res-regd-box">
+              <span class="res-regd-box__label">506(c)</span>
+              <div class="res-regd-box__title">General Solicitation Allowed</div>
+              <ul>
+                <li>Lets you publicly market your round (ads, social, email, events)</li>
+                <li>Every investor must be a verified accredited investor</li>
+                <li>Must take "reasonable steps" to verify accredited status</li>
+                <li>Useful for scaling outreach to accredited investors online</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3>Founder Tips on Reg D</h3>
+          <ul>
+            <li>File Form D within 15 days of first sale and keep it updated</li>
+            <li>Be deliberate about 506(b) vs 506(c) — don't casually market a 506(b) deal on social</li>
+            <li>Pair with other paths strategically (angels first, then Reg CF)</li>
+            <li>Mind your valuation and terms — early rounds set precedents</li>
+          </ul>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 7. SEED VC -->
+        <section class="res-content__section" id="seed-vc">
+          <h2>Raising Seed Funding from VCs</h2>
+
+          <h3>What Seed Capital Is For</h3>
+          <p>Buys 18–24 months to prove — or get close to — product-market fit. The key question: "What 3–5 concrete milestones would make an obvious, high-confidence Series A story in roughly two years?"</p>
+
+          <h3>What Seed VCs Really Judge</h3>
+          <div class="res-judge-grid">
+            <div class="res-judge-card">
+              <span class="res-judge-card__label">Team</span>
+              <p>Founder-market fit, grit, ability to learn fast</p>
+            </div>
+            <div class="res-judge-card">
+              <span class="res-judge-card__label">Market</span>
+              <p>Potential for a $1B+ outcome if it works</p>
+            </div>
+            <div class="res-judge-card">
+              <span class="res-judge-card__label">Product</span>
+              <p>Sharp solution to a painful, well-defined problem</p>
+            </div>
+            <div class="res-judge-card">
+              <span class="res-judge-card__label">Traction</span>
+              <p>Signs of pull — users, revenue, retention, strong engagement</p>
+            </div>
+          </div>
+
+          <h3>How Much to Raise</h3>
+          <ul>
+            <li>Common pattern: 18–24 months of runway plus buffer</li>
+            <li>Most seed rounds dilute 15–25% of the company</li>
+            <li>If giving up far more, pause and re-examine the plan</li>
+          </ul>
+
+          <h3>SAFE vs. Priced Seed</h3>
+          <p>SAFEs and convertible notes are simpler to execute and delay valuation. Priced seed forces a valuation decision but provides clarity on ownership and governance from day one.</p>
+
+          <h3>Run a Tight Process</h3>
+          <ul>
+            <li>Don't drip-pitch over six months</li>
+            <li>Time-box: build a list of qualified funds, get warm intros, condense first meetings into a few weeks</li>
+            <li>Create real FOMO — investors move faster when they sense momentum</li>
+          </ul>
+
+          <div class="res-content__pull">
+            <p>"Treat your seed as the start of a decade-long relationship. You're not just selling stock; you're picking who sits across from you in every hard board meeting from now on."</p>
+          </div>
+
+          <h3>Data Room Basics</h3>
+          <ul>
+            <li>Deck</li>
+            <li>KPIs</li>
+            <li>Cohort/retention view</li>
+            <li>Financial model</li>
+            <li>Product demo</li>
+            <li>Customer logos</li>
+            <li>Key legal docs</li>
+          </ul>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 8. KEY CONCEPTS -->
+        <section class="res-content__section" id="key-concepts">
+          <h2>Key Concepts</h2>
+          <div class="res-concepts-grid">
+            <div class="res-concept-card">
+              <span class="res-concept-card__term">Form C (Reg CF)</span>
+              <p>SEC filing disclosing business, financials, use of proceeds, and risks for a Reg CF offering.</p>
+            </div>
+            <div class="res-concept-card">
+              <span class="res-concept-card__term">Form D (Reg D)</span>
+              <p>Short notice filed with the SEC within 15 days of first sale; contains basic details about issuer, exemption, and amount raised.</p>
+            </div>
+            <div class="res-concept-card">
+              <span class="res-concept-card__term">Tier 1 vs Tier 2 (Reg A+)</span>
+              <p>Tier 1 allows up to $20M with state review. Tier 2 allows up to $75M with SEC review and audited financials.</p>
+            </div>
+            <div class="res-concept-card">
+              <span class="res-concept-card__term">Lead Investor</span>
+              <p>Anchor investor who sets terms, provides social proof, and often enables other investors to follow.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 9. PLATFORMS -->
+        <section class="res-content__section" id="platforms">
+          <h2>Key Platforms</h2>
+
+          <h3>Reg CF Platforms</h3>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">Wefunder</div>
+            <p class="res-platform-card__desc">Large generalist platform, strong for community-driven and mission-aligned companies.</p>
+          </div>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">Republic</div>
+            <p class="res-platform-card__desc">Curated, tech-oriented platform with additional verticals including real estate and crypto.</p>
+          </div>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">SeedInvest</div>
+            <p class="res-platform-card__desc">More selective portal with deeper diligence and a higher bar for listed companies.</p>
+          </div>
+
+          <h3>Reg CF &amp; Reg A+</h3>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">StartEngine</div>
+            <p class="res-platform-card__desc">High-volume portal offering both Reg CF and Reg A+, with a large retail investor base.</p>
+          </div>
+
+          <h3>Hybrid</h3>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">Fundable</div>
+            <p class="res-platform-card__desc">Offers both rewards and equity campaigns for early-stage companies.</p>
+          </div>
+
+          <h3>Rewards &amp; Pre-Order</h3>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">Kickstarter</div>
+            <p class="res-platform-card__desc">All-or-nothing campaigns for creative projects and product launches.</p>
+          </div>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">Indiegogo</div>
+            <p class="res-platform-card__desc">Flexible funding for tech gadgets, hardware, and creative ventures.</p>
+          </div>
+          <div class="res-platform-card">
+            <div class="res-platform-card__name">GoFundMe</div>
+            <p class="res-platform-card__desc">Donation-based platform suited for local businesses and mission-driven projects.</p>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 10. LAUNCH CHECKLIST -->
+        <section class="res-content__section" id="launch-checklist">
+          <h2>Reg CF Launch Checklist</h2>
+          <p>Expect 8–12 weeks of preparation before going live. Use this checklist to sequence your work.</p>
+
+          <div class="res-checklist-category">
+            <div class="res-checklist-items">
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Define raise amount, valuation, and security type</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Clean up cap table, corporate structure, and governance docs</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Prepare financials and audits</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Select a portal and understand timelines and fees</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Craft a clear use-of-funds story tied to concrete milestones</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Build a strong campaign page: narrative, video, visuals, team, traction, and terms</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Warm up your audience 4–6 weeks before launch</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Plan your 30–60 day marketing calendar</div>
+              </div>
+              <div class="res-checklist-item">
+                <div class="res-checklist-item__box"></div>
+                <div class="res-checklist-item__text">Set post-raise investor update cadence and KPIs</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 11. CAP TABLE & DILUTION -->
+        <section class="res-content__section" id="cap-table">
+          <h2>Cap Table &amp; Dilution</h2>
+
+          <div class="res-content__pull">
+            <p>"The terms you accept in your first one or two rounds will echo all the way to exit. You can fix a weak deck or product — fixing a broken cap table is much harder."</p>
+          </div>
+
+          <h3>Think in Endgame Ownership</h3>
+          <p>Don't just ask "Can I raise this round?" Ask: "If I follow a normal funding path, what do I still own by Series B or exit?" Many founders end up under 20–25% after a few rounds. Below roughly 10% at seed is already a red flag for later investors.</p>
+
+          <div class="res-stat-row">
+            <div class="res-stat-box">
+              <span class="res-stat-box__num">15–25%</span>
+              <span class="res-stat-box__label">At Seed</span>
+            </div>
+            <div class="res-stat-box">
+              <span class="res-stat-box__num">~20%</span>
+              <span class="res-stat-box__label">At Series A</span>
+            </div>
+            <div class="res-stat-box">
+              <span class="res-stat-box__num">10–15%</span>
+              <span class="res-stat-box__label">Per Later Round</span>
+            </div>
+          </div>
+
+          <h3>Keep the Cap Table Clean</h3>
+          <ul>
+            <li>Start a real cap table from day one and keep it updated</li>
+            <li>Avoid spraying equity — cap advisors at 5–10% total</li>
+            <li>Document every grant, SAFE, note, and option grant properly</li>
+          </ul>
+
+          <h3>Plan Your Option Pool Early</h3>
+          <p>Institutional investors expect roughly 10–15% option pool before their round. Decide what caliber of hires you'll need over the next 18–24 months.</p>
+
+          <h3>Practical Dilution Rules</h3>
+          <ul>
+            <li>Raise just enough to hit the next real milestone</li>
+            <li>Model 2–3 rounds ahead before signing anything</li>
+            <li>Be intentional about valuation — early anchors persist</li>
+            <li>Understand your instruments: anti-dilution, liquidation preferences, participation rights</li>
+            <li>Avoid cap table complexity; use SPVs or nominee structures where possible</li>
+          </ul>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 12. FAQs -->
+        <section class="res-content__section" id="faqs">
+          <h2>FAQs</h2>
+
+          <div class="res-faq-list">
+
+            <div class="res-faq-item">
+              <div class="res-faq-q" onclick="toggleFaq(this)">
+                <span class="res-faq-q__text">Will VCs dislike that I did Reg CF?</span>
+                <span class="res-faq-q__icon">+</span>
+              </div>
+              <div class="res-faq-body">
+                <div class="res-faq-body__inner">
+                  <p>Some funds are cautious about crowded cap tables, but others view Reg CF as demand validation and community building. Address it proactively: prepare a one-slide summary of your investor base, percentage owned, and how you'll manage communications at scale.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="res-faq-item">
+              <div class="res-faq-q" onclick="toggleFaq(this)">
+                <span class="res-faq-q__text">How do angels and Reg D fit with Reg CF and Reg A+?</span>
+                <span class="res-faq-q__icon">+</span>
+              </div>
+              <div class="res-faq-body">
+                <div class="res-faq-body__inner">
+                  <p>Angels often provide larger accredited checks and strategic value; Reg CF/Reg A+ activate your customers and broader community. Many founders do a small Reg D angel round first, then use that momentum to launch a Reg CF round.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="res-faq-item">
+              <div class="res-faq-q" onclick="toggleFaq(this)">
+                <span class="res-faq-q__text">How much marketing budget for Reg CF or Reg A+?</span>
+                <span class="res-faq-q__icon">+</span>
+              </div>
+              <div class="res-faq-body">
+                <div class="res-faq-body__inner">
+                  <p>Plan to allocate a meaningful portion of your raise target toward marketing. Treating the campaign as an afterthought is the most common reason campaigns underperform. Think email, paid social, PR, and community activation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="res-faq-item">
+              <div class="res-faq-q" onclick="toggleFaq(this)">
+                <span class="res-faq-q__text">How long does a Reg CF raise take?</span>
+                <span class="res-faq-q__icon">+</span>
+              </div>
+              <div class="res-faq-body">
+                <div class="res-faq-body__inner">
+                  <p>Common pattern: 8–12 weeks of prep, a 30–60 day live campaign, and a short closing period. Plan for 4–6 months total from decision to funds in the bank.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="res-faq-item">
+              <div class="res-faq-q" onclick="toggleFaq(this)">
+                <span class="res-faq-q__text">What ongoing obligations come after Reg CF or Reg A+?</span>
+                <span class="res-faq-q__icon">+</span>
+              </div>
+              <div class="res-faq-body">
+                <div class="res-faq-body__inner">
+                  <p>Reg CF requires annual reports (Form C-AR) as long as you have more than $10M in assets and 2,000+ record holders. Reg A+ Tier 2 requires semi-annual and annual reporting. Build an investor communications cadence from day one.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 13. CAMPAIGN TIPS -->
+        <section class="res-content__section" id="campaign-tips">
+          <h2>Campaign Tips</h2>
+          <div class="res-tips-grid">
+            <div class="res-tip-card">
+              <span class="res-tip-card__num">01</span>
+              <div class="res-tip-card__title">Front-Load Momentum</div>
+              <p>Secure 20–30% of your goal from angels and close supporters before going public. Early commitments drive social proof and signal momentum to new investors.</p>
+            </div>
+            <div class="res-tip-card">
+              <span class="res-tip-card__num">02</span>
+              <div class="res-tip-card__title">Tell a Clear Story</div>
+              <p>Problem, solution, market, traction, team, why now — backed by specific evidence. Vague narratives lose investors in the first 30 seconds.</p>
+            </div>
+            <div class="res-tip-card">
+              <span class="res-tip-card__num">03</span>
+              <div class="res-tip-card__title">Engage Your Investor Base</div>
+              <p>Answer questions quickly, publish regular updates, and treat investors as long-term partners. Responsiveness signals how you'll run the company.</p>
+            </div>
+            <div class="res-tip-card">
+              <span class="res-tip-card__num">04</span>
+              <div class="res-tip-card__title">Manage Dilution</div>
+              <p>Model your ownership across multiple rounds before you sign anything. Be disciplined about valuation and terms — generosity now can cost you your company later.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 14. ADVISORS & FIRMS -->
+        <section class="res-content__section" id="advisors">
+          <h2>Working with Advisors &amp; Firms</h2>
+          <p>More founders are engaging investor readiness firms and fundraising advisors. When structured well, it can accelerate your process. When structured poorly, it can cost you equity and credibility.</p>
+
+          <h3>Typical Advisor Equity</h3>
+          <ul>
+            <li>Individual advisors: 0.1%–1%, median ~0.2–0.3%</li>
+            <li>If a firm wants 2–6% purely for "help fundraising," that's well outside normal ranges</li>
+          </ul>
+
+          <h3>What You're Actually Buying</h3>
+          <p>The best firms don't just edit a deck. They help clarify your story, build investor-grade materials, tune your capital strategy, and coach you through investor conversations. Ask: "If this firm disappeared tomorrow, what durable assets and learnings would my team still have?"</p>
+
+          <h3>When It Makes Sense</h3>
+          <ul>
+            <li>First-time founder with no fundraising experience</li>
+            <li>Tight internal bandwidth during a critical build phase</li>
+            <li>Clear, near-term raise goal with a defined timeline</li>
+            <li>Firm has strong, verifiable founder references</li>
+          </ul>
+
+          <h3>Red Flags</h3>
+          <ul class="red-flags">
+            <li>Asking for 2–6%+ equity upfront for vague "investor access"</li>
+            <li>Unwilling to put scope, deliverables, and timelines in writing</li>
+            <li>Refuses to share founder references</li>
+            <li>Engagement is mostly about their brand and events, not your outcomes</li>
+            <li>Insists on being your exclusive fundraising channel</li>
+          </ul>
+
+          <div class="res-content__pull">
+            <p>"If a fundraising firm wants more equity than you'd give a hands-on senior advisor who meets with you monthly for years, you're probably overpaying."</p>
+          </div>
+        </section>
+
+        <div class="res-divider"></div>
+
+        <!-- 15. DISCLAIMER -->
+        <section class="res-content__section" id="disclaimer">
+          <h2>Disclaimer</h2>
+          <div class="res-disclaimer">
+            This page is an educational summary and is not legal, tax, or investment advice. Consult qualified securities counsel before choosing an exemption or launching an offering.
+          </div>
+        </section>
+
+      </main>
+    </div><!-- end .res-layout -->
+
+    <!-- CTA -->
+    <div class="res-cta">
+      <h2 class="res-cta__title">Ready to build your fundraising strategy?</h2>
+      <p class="res-cta__sub">Work directly with Lynn to sequence your capital raise, sharpen your story, and move with intention.</p>
+      <div class="res-cta__buttons">
+        <a href="../index.html#contact" class="btn btn-primary">Work With Lynn</a>
+        <a href="../index.html#contact" class="btn btn-outline">Book a Strategy Call</a>
+      </div>
+    </div>
+
+  </div><!-- end .res-body -->
+
+  <!-- FOOTER -->
+  <footer class="res-footer">
+    <div class="res-footer__inner">
+      <span class="res-footer__copy">&copy; 2025 Lynn Fernando. All rights reserved.</span>
+      <nav class="res-footer__links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#resources">Resources</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // ── TOC active state via IntersectionObserver ──
+    (function () {
+      const tocLinks = document.querySelectorAll('.res-toc a');
+      const sections = document.querySelectorAll('.res-content__section[id]');
+
+      if (!sections.length || !tocLinks.length) return;
+
+      const setActive = (id) => {
+        tocLinks.forEach(a => {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          // Find the topmost intersecting section
+          const visible = entries
+            .filter(e => e.isIntersecting)
+            .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          if (visible.length) {
+            setActive(visible[0].target.id);
+          }
+        },
+        {
+          rootMargin: '-80px 0px -60% 0px',
+          threshold: 0
+        }
+      );
+
+      sections.forEach(s => observer.observe(s));
+
+      // Smooth scroll on click
+      tocLinks.forEach(a => {
+        a.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            const offset = 88;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+    })();
+
+    // ── FAQ accordion ──
+    function toggleFaq(qEl) {
+      const item = qEl.closest('.res-faq-item');
+      const body = item.querySelector('.res-faq-body');
+      const icon = qEl.querySelector('.res-faq-q__icon');
+      const isOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.res-faq-item.open').forEach(openItem => {
+        openItem.classList.remove('open');
+        const b = openItem.querySelector('.res-faq-body');
+        const i = openItem.querySelector('.res-faq-q__icon');
+        b.style.maxHeight = '0';
+        i.textContent = '+';
+      });
+
+      // Open clicked (unless it was already open)
+      if (!isOpen) {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        icon.textContent = '−';
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Engineering Playbook for Business Teams — Lynn Fernando</title>
+  <meta name="description" content="50+ ready-to-use prompts across 7 business functions with the CRAFT framework — get instant access to the Prompt Engineering Playbook.">
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/resources/prompt-engineering-playbook" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Prompt Engineering Playbook for Business Teams — Lynn Fernando" />
+  <meta property="og:description" content="50+ ready-to-use prompts across 7 business functions with the CRAFT framework — get instant access to the Prompt Engineering Playbook." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/prompt-engineering-playbook" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prompt Engineering Playbook for Business Teams — Lynn Fernando" />
+  <meta name="twitter:description" content="50+ ready-to-use prompts across 7 business functions with the CRAFT framework — get instant access to the Prompt Engineering Playbook." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./resources.css">
+  <style>
+    /* Playbook-specific styles */
+    .playbook-content { display: none; margin-top: 56px; }
+    .playbook-content.visible { display: block; }
+
+    .playbook-section {
+      margin-bottom: 56px;
+    }
+    .playbook-section__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .playbook-section__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 32px;
+      line-height: 1.2;
+    }
+    .playbook-section__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin-bottom: 36px;
+    }
+
+    /* CRAFT framework cards */
+    .craft-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .craft-card {
+      padding: 24px 20px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      transition: border-color 0.25s;
+    }
+    .craft-card:hover { border-color: rgba(201,168,76,0.3); }
+    .craft-card__letter {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: #c9a84c;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .craft-card__word {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      margin-bottom: 10px;
+    }
+    .craft-card__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #c0b9b0;
+      line-height: 1.65;
+    }
+
+    /* Prompt function section */
+    .prompt-function {
+      margin-bottom: 48px;
+    }
+    .prompt-function__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .prompt-function__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .prompt-function__name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: #f5f0eb;
+    }
+    .prompt-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .prompt-card {
+      padding: 24px 28px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      transition: border-color 0.25s;
+    }
+    .prompt-card:hover { border-color: rgba(201,168,76,0.2); }
+    .prompt-card__use-case {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 10px;
+    }
+    .prompt-card__text {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+      color: #c0b9b0;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-left: 2px solid rgba(201,168,76,0.4);
+      border-radius: 2px;
+      padding: 16px 20px;
+      white-space: pre-wrap;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+    }
+
+    .playbook-tip {
+      margin-top: 40px;
+      padding: 24px 28px;
+      background: rgba(201,168,76,0.04);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 3px;
+    }
+    .playbook-tip__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 8px;
+    }
+    .playbook-tip p {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #c0b9b0;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    @media (max-width: 640px) {
+      .craft-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 400px) {
+      .craft-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="res-nav">
+  <div class="res-nav__inner">
+    <a href="../index.html#resources" class="res-nav__back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+    <a href="../index.html" class="res-nav__logo">Lynn Fernando</a>
+    <a href="../index.html#resources" class="res-nav__resources">All Resources</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="res-hero">
+  <div class="res-hero__inner">
+    <div class="res-hero__meta">
+      <span class="res-hero__tag">Guide</span>
+      <span class="res-hero__access res-hero__access--gated">Gated</span>
+    </div>
+    <h1 class="res-hero__title">Prompt Engineering <em>Playbook</em> for Business Teams</h1>
+    <p class="res-hero__desc">50+ ready-to-use prompts across 7 business functions — with a repeatable framework your team can apply from day one.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<main class="res-body">
+  <div class="res-gate">
+
+    <!-- FORM COLUMN -->
+    <div class="res-gate__form-col">
+      <div class="res-gate__form-box">
+
+        <div id="gateFormWrap" class="res-gate__form-wrap">
+          <h2 class="res-gate__form-title">Download the Playbook</h2>
+          <p class="res-gate__form-sub">Enter your details to get instant access.</p>
+
+          <form id="gateForm" class="res-form" action="https://formspree.io/f/mnjgydbk" method="POST">
+            <input type="hidden" name="resource" value="Prompt Engineering Playbook for Business Teams">
+
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select id="role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="Founder/CEO">Founder / CEO</option>
+                <option value="Executive/VP">Executive / VP</option>
+                <option value="Operator/Manager">Operator / Manager</option>
+                <option value="Consultant/Advisor">Consultant / Advisor</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" id="gateSubmit" class="btn btn-primary">Get Access</button>
+          </form>
+          <p class="res-privacy">No spam. Your data is never sold.</p>
+        </div>
+
+        <div id="gateSuccess" class="res-gate__success">
+          <div class="res-gate__success-icon">✓</div>
+          <h3>Access Granted</h3>
+          <p>Your playbook is now unlocked. Scroll down to explore the CRAFT framework and all prompt libraries.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PREVIEW COLUMN -->
+    <div class="res-gate__preview-col">
+
+      <div class="res-preview__what">
+        <h3>What's Inside</h3>
+        <div class="res-preview__items">
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text"><strong>50+ prompts</strong> across Marketing, Sales, Operations, Finance, HR, Customer Success, and Executive functions</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text"><strong>The CRAFT framework:</strong> Context, Role, Action, Format, Tone</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">Prompt chaining examples for complex workflows</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">Common mistakes and how to fix them</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">A fill-in-the-blank prompt template library</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GATED PLAYBOOK CONTENT -->
+      <div id="gatedContent" class="playbook-content" style="filter: blur(6px); opacity: 0.3;">
+
+        <!-- CRAFT Framework -->
+        <div class="playbook-section">
+          <span class="playbook-section__label">Framework</span>
+          <h2 class="playbook-section__title">The CRAFT Framework</h2>
+          <div class="playbook-section__divider"></div>
+          <p style="font-family:'Inter',sans-serif;font-size:15px;color:#c0b9b0;line-height:1.75;margin-bottom:28px;">Every high-performing prompt shares five core elements. Use CRAFT as a mental checklist before submitting any prompt to an AI model. The difference between a mediocre output and a boardroom-ready one often comes down to a single missing element.</p>
+
+          <div class="craft-grid">
+            <div class="craft-card">
+              <div class="craft-card__letter">C</div>
+              <div class="craft-card__word">Context</div>
+              <div class="craft-card__desc">Provide background that the AI doesn't have. Include industry, company stage, audience, prior decisions, and constraints. The more specific, the more targeted the output.</div>
+            </div>
+            <div class="craft-card">
+              <div class="craft-card__letter">R</div>
+              <div class="craft-card__word">Role</div>
+              <div class="craft-card__desc">Assign an expert persona. "Act as a senior brand strategist" or "You are a CFO preparing for a Series B." Roles activate domain-specific reasoning and vocabulary.</div>
+            </div>
+            <div class="craft-card">
+              <div class="craft-card__letter">A</div>
+              <div class="craft-card__word">Action</div>
+              <div class="craft-card__desc">State exactly what you need produced. Use precise verbs: draft, analyze, rewrite, compare, summarize, generate. Avoid vague instructions like "help me with" or "tell me about."</div>
+            </div>
+            <div class="craft-card">
+              <div class="craft-card__letter">F</div>
+              <div class="craft-card__word">Format</div>
+              <div class="craft-card__desc">Specify the output structure. Bullet points, a numbered list, a table, an email, a slide outline, a 3-paragraph memo. Formatting guidance saves significant editing time.</div>
+            </div>
+            <div class="craft-card">
+              <div class="craft-card__letter">T</div>
+              <div class="craft-card__word">Tone</div>
+              <div class="craft-card__desc">Define the voice. Executive-level, conversational, authoritative, empathetic, direct. When in doubt, describe the reader: "Written for skeptical investors" is more useful than "professional."</div>
+            </div>
+          </div>
+
+          <div class="playbook-tip">
+            <div class="playbook-tip__label">Pro Tip: Prompt Chaining</div>
+            <p>For complex deliverables, break your goal into sequential prompts. Prompt 1: generate the outline. Prompt 2: expand each section. Prompt 3: rewrite in your brand voice. Prompt 4: create a social summary. Each step builds on the last — this is prompt chaining, and it dramatically improves output quality.</p>
+          </div>
+        </div>
+
+        <!-- Marketing Prompts -->
+        <div class="playbook-section">
+          <div class="prompt-function">
+            <div class="prompt-function__header">
+              <div class="prompt-function__icon">&#9998;</div>
+              <h3 class="prompt-function__name">Marketing</h3>
+            </div>
+            <div class="prompt-cards">
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Content Brief</div>
+                <pre class="prompt-card__text">Act as a senior content strategist for a [B2B SaaS / professional services / consumer brand] company.
+Create a detailed content brief for an article titled "[TITLE]" targeting [AUDIENCE].
+Include: target keyword, search intent, recommended structure (H2s and H3s), key messages,
+proof points to include, and a suggested CTA. Tone: [authoritative / conversational / educational].</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">SEO Copy</div>
+                <pre class="prompt-card__text">You are an SEO copywriter specializing in [INDUSTRY]. Write a [400-word] meta-optimized
+introduction for a page targeting the keyword "[KEYWORD]".
+Include: the keyword in the first 100 words, a hook that addresses the reader's core pain point,
+one data point or statistic, and a transition into the body content.
+Avoid keyword stuffing. Tone: confident and expert-led.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Email Sequence</div>
+                <pre class="prompt-card__text">Act as an email marketing strategist. Write a 5-email nurture sequence for [PRODUCT/SERVICE]
+targeting [PERSONA] who just downloaded [LEAD MAGNET].
+Email 1: Welcome + deliver the resource. Email 2: Address the #1 pain point (day 3).
+Email 3: Case study or social proof (day 6). Email 4: Objection handling (day 9).
+Email 5: Soft CTA to book a call / trial (day 12).
+Subject lines must be under 50 characters. Tone: warm, direct, no hype.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Social Captions</div>
+                <pre class="prompt-card__text">You are a social media strategist for [BRAND NAME], a [DESCRIPTION] brand.
+Repurpose the following key insight for LinkedIn: [PASTE INSIGHT OR QUOTE].
+Write 3 caption variations: (1) a data-led hook, (2) a contrarian take, (3) a personal story angle.
+Each caption should be under 200 words, include one question to drive comments,
+and end with a relevant CTA. No emojis unless specified.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Campaign Messaging</div>
+                <pre class="prompt-card__text">Act as a brand messaging consultant. Develop a campaign messaging framework for [PRODUCT/INITIATIVE]
+targeting [SEGMENT]. Include: (1) core value proposition (1 sentence), (2) three supporting messages
+with proof points, (3) the primary objection and how messaging addresses it,
+(4) a tagline option (under 8 words).
+Context: We are launching [DATE], competitive differentiation is [KEY DIFFERENTIATOR].</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sales Prompts -->
+        <div class="playbook-section">
+          <div class="prompt-function">
+            <div class="prompt-function__header">
+              <div class="prompt-function__icon">&#128200;</div>
+              <h3 class="prompt-function__name">Sales</h3>
+            </div>
+            <div class="prompt-cards">
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Prospect Research</div>
+                <pre class="prompt-card__text">Act as a sales researcher. Summarize the following information about [COMPANY NAME]
+to help a salesperson prepare for a discovery call: [PASTE COMPANY DESCRIPTION / LINKEDIN / WEBSITE TEXT].
+Output: (1) Business model in 2 sentences, (2) likely pain points this company faces in [RELEVANT AREA],
+(3) 3 tailored discovery questions, (4) a personalized opening line for the outreach email.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Objection Handling</div>
+                <pre class="prompt-card__text">You are a sales coach. I sell [PRODUCT/SERVICE] to [BUYER TYPE].
+I frequently encounter this objection: "[OBJECTION]".
+Write 3 responses I can use in a live conversation: (1) a clarifying question to uncover the real concern,
+(2) a reframe using ROI or risk language, (3) a social proof response using a hypothetical client story.
+Keep each response under 60 words. Tone: confident, consultative, not pushy.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Follow-Up Email</div>
+                <pre class="prompt-card__text">Write a follow-up email to [NAME] at [COMPANY] after a discovery call where we discussed [KEY TOPICS].
+They showed interest in [SPECIFIC FEATURE/OUTCOME] but had concerns about [CONCERN].
+The email should: recap the key takeaway in one sentence, address the concern with a concrete example,
+include a clear next step, and be under 150 words. Tone: warm, professional, no filler phrases.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Proposal Summary</div>
+                <pre class="prompt-card__text">Act as a proposal writer. Summarize the following proposal into a 1-page executive summary
+suitable for a C-suite reader: [PASTE PROPOSAL CONTENT].
+Structure: (1) The problem we're solving (2 sentences), (2) Our recommended approach (3 bullet points),
+(3) Expected outcomes and timeline, (4) Investment overview, (5) Why us (1 differentiator).
+Language should be outcome-focused, not feature-focused.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Discovery Questions</div>
+                <pre class="prompt-card__text">You are a consultative sales expert. Generate 10 discovery questions for a call with
+[JOB TITLE] at a [COMPANY TYPE] company.
+Our solution helps with [PROBLEM AREA]. Questions should uncover: current state, pain severity,
+decision-making process, budget indicators, and urgency.
+Include 2 questions that surface undiscovered pain. Format as a numbered list.
+Avoid yes/no questions.</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Operations Prompts -->
+        <div class="playbook-section">
+          <div class="prompt-function">
+            <div class="prompt-function__header">
+              <div class="prompt-function__icon">&#9881;</div>
+              <h3 class="prompt-function__name">Operations</h3>
+            </div>
+            <div class="prompt-cards">
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">SOP Creation</div>
+                <pre class="prompt-card__text">Act as an operations manager. Write a standard operating procedure (SOP) for [PROCESS NAME]
+at a [COMPANY TYPE / SIZE] company.
+Include: purpose, scope, roles responsible, step-by-step instructions (numbered),
+exception handling, and a quality check at the end.
+Assume the reader has general business knowledge but no prior experience with this process.
+Format for internal documentation. Length: 400-600 words.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Meeting Summary</div>
+                <pre class="prompt-card__text">Summarize the following meeting transcript into a structured recap: [PASTE TRANSCRIPT].
+Output format: (1) Meeting objective (1 sentence), (2) Key decisions made (bullet points),
+(3) Action items with owner and due date (table format), (4) Open questions / parking lot items,
+(5) Next meeting agenda suggestions.
+Tone: concise and factual. Remove filler and repetition.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Process Documentation</div>
+                <pre class="prompt-card__text">You are a process documentation specialist. Based on the following description of how we currently
+handle [PROCESS]: [DESCRIPTION].
+Identify: (1) inefficiencies or redundancies, (2) steps that could be automated with AI or software,
+(3) recommended revised process flow (numbered steps), (4) KPIs to track process performance.
+Output as a structured document suitable for sharing with department heads.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Vendor Comparison</div>
+                <pre class="prompt-card__text">Act as a procurement analyst. I am evaluating the following vendors for [SOLUTION CATEGORY]:
+[VENDOR A], [VENDOR B], [VENDOR C].
+Key criteria: [LIST CRITERIA — e.g., pricing, integration, support, scalability].
+Create a comparison table scoring each vendor 1-5 per criterion, a brief narrative summary
+of the recommended choice, and 3 due-diligence questions to ask each vendor before deciding.</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Executive Prompts -->
+        <div class="playbook-section">
+          <div class="prompt-function">
+            <div class="prompt-function__header">
+              <div class="prompt-function__icon">&#127775;</div>
+              <h3 class="prompt-function__name">Executive</h3>
+            </div>
+            <div class="prompt-cards">
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Board Deck Narrative</div>
+                <pre class="prompt-card__text">Act as a chief of staff preparing a board presentation. Based on the following metrics and context:
+[PASTE METRICS / QUARTER SUMMARY].
+Write the narrative for 3 key slides: (1) Business performance overview (headline + 3 bullets),
+(2) Strategic priorities for next quarter (3 initiatives with rationale),
+(3) Key risks and mitigation actions.
+Tone: confident, data-grounded, forward-looking. Each slide narrative: max 120 words.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Strategic Memo</div>
+                <pre class="prompt-card__text">You are a senior strategy advisor. Draft a 1-page strategic memo recommending [DECISION/INITIATIVE]
+to the executive team at [COMPANY CONTEXT].
+Structure: (1) The recommendation (1 sentence), (2) Context and rationale (why now, why this),
+(3) Expected impact (quantified where possible), (4) Key risks and mitigations,
+(5) Recommended next steps with owners and timeline.
+Tone: direct, analytical, concise. No passive voice.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Stakeholder Communication</div>
+                <pre class="prompt-card__text">Draft an internal communication from [EXEC TITLE] to [AUDIENCE] about [TOPIC — e.g., restructure,
+new strategy, system change].
+Key messages: [LIST 3 POINTS]. Anticipated concerns: [LIST CONCERNS].
+The message should: lead with the business rationale, acknowledge impact on the audience,
+be transparent about what's known and unknown, and close with a clear call to action.
+Length: 300-400 words. Tone: empathetic, clear, authoritative.</pre>
+              </div>
+              <div class="prompt-card">
+                <div class="prompt-card__use-case">Scenario Planning</div>
+                <pre class="prompt-card__text">Act as a strategic planning consultant. Given the following business context: [CONTEXT].
+Develop three scenarios for [TIMEFRAME — e.g., next 18 months]:
+(1) Base Case — most likely outcome, (2) Upside Case — what must go right,
+(3) Downside Case — key risks materialize.
+For each scenario: describe the conditions, key assumptions, strategic implications,
+and recommended actions. Format as a structured table followed by a 2-paragraph synthesis.</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="playbook-tip">
+          <div class="playbook-tip__label">Common Mistakes to Avoid</div>
+          <p><strong style="color:#f5f0eb;">Being too vague:</strong> "Write a marketing email" produces generic output. Always specify the audience, goal, and desired outcome.<br><br>
+          <strong style="color:#f5f0eb;">Skipping the role:</strong> Assigning an expert persona meaningfully improves output specificity and professional tone.<br><br>
+          <strong style="color:#f5f0eb;">Not iterating:</strong> Treat AI output as a first draft. The best results come from 2-3 rounds of refinement with targeted follow-up prompts.</p>
+        </div>
+
+      </div><!-- /gatedContent -->
+
+    </div><!-- /preview-col -->
+  </div><!-- /res-gate -->
+</main>
+
+<!-- FOOTER -->
+<footer class="res-footer">
+  <div class="res-footer__inner">
+    <p class="res-footer__copy">&copy; 2025 Lynn Fernando. All rights reserved.</p>
+    <nav class="res-footer__links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#resources">Resources</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('gateForm');
+  const formWrap = document.getElementById('gateFormWrap');
+  const success = document.getElementById('gateSuccess');
+  const content = document.getElementById('gatedContent');
+  const submitBtn = document.getElementById('gateSubmit');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending\u2026';
+    try {
+      const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} });
+      if(res.ok){
+        formWrap.classList.add('hidden');
+        success.classList.add('visible');
+        if(content) { content.style.filter='none'; content.style.opacity='1'; content.classList.add('visible'); }
+        const overlay = document.getElementById('blurOverlay');
+        if(overlay) overlay.style.display='none';
+      } else {
+        alert('Something went wrong. Please try again.');
+        submitBtn.disabled=false; submitBtn.textContent='Get Access';
+      }
+    } catch { alert('Network error.'); submitBtn.disabled=false; submitBtn.textContent='Get Access'; }
+  });
+})();
+</script>
+
+</body>
+</html>

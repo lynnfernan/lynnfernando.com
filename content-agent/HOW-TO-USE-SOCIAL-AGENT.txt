@@ -1,0 +1,150 @@
+LYNNFERNANDO.COM — SOCIAL MEDIA AGENT GUIDE
+============================================
+
+
+WHAT IT DOES
+------------
+The social media agent reads each published article and generates 4 ready-to-use
+social media posts — 2 for LinkedIn and 2 for Instagram. Posts are saved as .txt
+files you can open and copy from. It runs automatically after every article publishes.
+
+
+HOW IT WORKS
+------------
+1. An article publishes to your site (automatically every Monday)
+2. The social agent reads the article content
+3. Claude AI generates 4 posts tailored to the platform and category
+4. Posts are saved to content-agent/social-posts/ as a dated .txt file
+5. You open the file, review the posts, and copy-paste to LinkedIn and Instagram
+
+
+WHAT YOU GET PER ARTICLE
+-------------------------
+LinkedIn Post 1 — Launch post (150–250 words)
+  Opens with a strong hook. Thought leadership tone. Ends with the article
+  URL and 3–5 relevant hashtags.
+
+LinkedIn Post 2 — Insight angle (100–180 words)
+  A different take on the same article — a specific idea, counterintuitive
+  point, or insight. Not a repeat of Post 1.
+
+Instagram Post 1 — Launch caption (80–140 words)
+  Direct and personal tone. Ends with "Link in bio ↑" instead of a URL.
+  Followed by 15–20 hashtags and account tags.
+
+Instagram Post 2 — Pull quote (50–80 words)
+  Built around one powerful line from the article. Short and punchy —
+  designed to work as a standalone quote card post.
+
+
+WHERE TO FIND YOUR POSTS
+-------------------------
+Every time the agent runs, it creates a new file here:
+  /Users/lynnfernan/Lynn Priorities/Personal Brand/content-agent/social-posts/
+
+File naming format:  YYYY-MM-DD-article-slug-posts.txt
+Example:             2026-03-22-women-led-businesses-posts.txt
+
+Open the file in any text editor (TextEdit, Notes, VS Code) to copy your posts.
+
+
+POSTING INSTRUCTIONS
+--------------------
+LinkedIn:
+  1. Copy the post text
+  2. Paste into LinkedIn — then manually tag:
+       Lynn Fernando, REV Global (and Ayana Foundation for impact topics)
+  3. Add the article URL shown at the top of the .txt file if not already included
+  4. Publish or schedule
+
+Instagram:
+  1. Copy the caption text — handles (@lynnfernandoofficial, @revglobalinc,
+     @ayanafoundation_) are already included
+  2. Before posting, update your Instagram bio link to the article URL
+     shown at the top of the .txt file
+  3. Also tag accounts using the photo tagger (not just in the caption)
+     for better reach
+  4. Paste caption, publish or schedule
+
+
+ACCOUNTS TAGGED IN EVERY POST
+------------------------------
+LinkedIn (tag manually when pasting):
+  Lynn Fernando       linkedin.com/in/lynnfernando
+  REV Global          linkedin.com/company/revglobalinc
+  Ayana Foundation    linkedin.com/company/ayana-foundation (impact topics only)
+
+Instagram (included in caption automatically):
+  @lynnfernandoofficial
+  @revglobalinc
+  @ayanafoundation_ (philanthropy and women in business topics)
+
+
+HASHTAG STRATEGY
+----------------
+Core hashtags appear on every post:
+  #LynnFernando #REVGlobal #Leadership #EmpireBuilding #BusinessStrategy
+
+Category hashtags are added automatically based on article topic:
+  Women in Business       → #WomenInBusiness #FemaleFounders #WomenLeaders ...
+  Business Acquisition    → #Entrepreneurship #BusinessAcquisition #BuyABusiness ...
+  Philanthropy & Impact   → #SocialImpact #Philanthropy #ImpactInvesting ...
+  GenAI & Business        → #GenerativeAI #AIStrategy #FutureOfWork ...
+  Empire Building         → #EmpireBuilding #WealthBuilding #AmbitiousWomen ...
+  Investing               → #AngelInvesting #PrivateEquity #InvestorMindset ...
+
+To update hashtags or add new ones, edit:
+  content-agent/brand-guide.md
+
+
+RUNNING IT MANUALLY
+-------------------
+To generate posts for the most recent article:
+
+    cd "/Users/lynnfernan/Lynn Priorities/Personal Brand/content-agent"
+    node social-agent.js
+
+To generate posts for a specific article by slug:
+
+    cd "/Users/lynnfernan/Lynn Priorities/Personal Brand/content-agent"
+    node social-agent.js --slug article-slug-here
+
+The slug is the filename of the article without .html
+Example: why-women-led-businesses-win-when-markets-get-hard
+
+
+AUTOMATIC SCHEDULE
+------------------
+The social agent runs automatically every Monday after the article publishes.
+No action needed — just open the social-posts/ folder on Monday to find your posts.
+
+Full Monday sequence:
+  8:03am  → New article written and deployed to lynnfernando.com
+           → resources/index.html updated
+           → 4 social posts generated and saved to social-posts/
+
+
+IF SOMETHING GOES WRONG
+------------------------
+Posts didn't generate:
+  → Check publish.log for the error
+  → Run manually from the content-agent folder (see above)
+  → Make sure your API key is still valid at console.anthropic.com
+
+MODULE_NOT_FOUND error:
+  → You're running the script from the wrong folder
+  → Always cd into content-agent/ first before running node social-agent.js
+
+Posts feel off-brand:
+  → Open content-agent/voice-guide.md and update the tone or style rules
+  → Open content-agent/brand-guide.md to update hashtags or account handles
+  → Re-run the agent — it will generate fresh posts using the updated guides
+
+
+FUTURE: AUTOMATED POSTING
+--------------------------
+When you're ready to move from copy-paste to fully automated posting:
+  → LinkedIn auto-posting requires a LinkedIn Developer App and OAuth setup
+  → Instagram auto-posting requires a Meta Business Account and Graph API access
+  → Both can be added to social-agent.js when ready
+  → All current posts are structured to work with those APIs when the time comes

@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenAI Business Case &amp; ROI Template — Lynn Fernando</title>
+  <meta name="description" content="Build a compelling AI investment proposal with built-in ROI calculations designed to get buy-in from boards and stakeholders.">
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/resources/genai-roi-business-case" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GenAI Business Case &amp; ROI Template — Lynn Fernando" />
+  <meta property="og:description" content="Build a compelling AI investment proposal with built-in ROI calculations designed to get buy-in from boards and stakeholders." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/genai-roi-business-case" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GenAI Business Case &amp; ROI Template — Lynn Fernando" />
+  <meta name="twitter:description" content="Build a compelling AI investment proposal with built-in ROI calculations designed to get buy-in from boards and stakeholders." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="./resources.css">
+  <style>
+    /* ROI Template-specific styles */
+    .template-content { display: none; margin-top: 56px; }
+    .template-content.visible { display: block; }
+
+    .template-section {
+      margin-bottom: 64px;
+    }
+    .template-section__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .template-section__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 34px;
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .template-section__desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #c0b9b0;
+      line-height: 1.75;
+      max-width: 640px;
+      margin-bottom: 36px;
+    }
+    .template-section__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin-bottom: 36px;
+    }
+
+    /* Executive Summary fill-in-the-blank */
+    .exec-summary-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .exec-block {
+      padding: 24px 28px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+    }
+    .exec-block__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      margin-bottom: 10px;
+    }
+    .exec-block__text {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #c0b9b0;
+      line-height: 1.8;
+    }
+    .exec-block__fill {
+      color: #c9a84c;
+      font-style: italic;
+      border-bottom: 1px dashed rgba(201,168,76,0.4);
+      padding-bottom: 1px;
+    }
+    .exec-block__metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .exec-metric {
+      padding: 16px;
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 2px;
+      text-align: center;
+    }
+    .exec-metric__val {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: #c9a84c;
+      display: block;
+      margin-bottom: 4px;
+      font-style: italic;
+    }
+    .exec-metric__label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+    }
+
+    /* ROI Calculation Table */
+    .table-wrap {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 3px;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+    .roi-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 500px;
+    }
+    .roi-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      padding: 14px 20px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.02);
+    }
+    .roi-table td {
+      padding: 16px 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #c0b9b0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      vertical-align: middle;
+      line-height: 1.6;
+    }
+    .roi-table tr:last-child td { border-bottom: none; }
+    .roi-table tr:hover td { background: rgba(255,255,255,0.015); }
+    .roi-table td:first-child { color: #f5f0eb; font-weight: 500; }
+    .roi-table td.formula-cell {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 12px;
+      color: #c9a84c;
+      background: rgba(201,168,76,0.04);
+    }
+    .roi-table .highlight-row td {
+      background: rgba(201,168,76,0.06);
+      border-top: 1px solid rgba(201,168,76,0.15);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      color: #f5f0eb;
+      font-weight: 500;
+    }
+    .roi-table .highlight-row td:first-child { color: #c9a84c; }
+
+    /* Risk Matrix */
+    .risk-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .risk-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8a8a8a;
+      padding: 12px 18px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.02);
+    }
+    .risk-table td {
+      padding: 16px 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: #c0b9b0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      vertical-align: top;
+      line-height: 1.65;
+    }
+    .risk-table tr:last-child td { border-bottom: none; }
+    .risk-table td:first-child { color: #f5f0eb; font-weight: 500; }
+    .risk-badge {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+    .risk-badge--high { background: rgba(239,68,68,0.12); color: #f87171; }
+    .risk-badge--med { background: rgba(251,191,36,0.12); color: #fbbf24; }
+    .risk-badge--low { background: rgba(74,222,128,0.1); color: #4ade80; }
+
+    /* Implementation Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(201,168,76,0.15);
+    }
+    .timeline-phase {
+      display: flex;
+      gap: 24px;
+      padding-bottom: 32px;
+      position: relative;
+    }
+    .timeline-phase:last-child { padding-bottom: 0; }
+    .timeline-phase__dot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: #c9a84c;
+    }
+    .timeline-phase__body {
+      flex: 1;
+      padding-top: 8px;
+    }
+    .timeline-phase__weeks {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 6px;
+    }
+    .timeline-phase__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 300;
+      color: #f5f0eb;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .timeline-phase__tasks {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .timeline-task {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #c0b9b0;
+      line-height: 1.6;
+    }
+    .timeline-task::before {
+      content: '▸';
+      color: #c9a84c;
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .timeline-phase__deliverable {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(201,168,76,0.05);
+      border: 1px solid rgba(201,168,76,0.12);
+      border-radius: 2px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c9a84c;
+    }
+
+    @media (max-width: 640px) {
+      .exec-block__metric-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="res-nav">
+  <div class="res-nav__inner">
+    <a href="../index.html#resources" class="res-nav__back">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+    <a href="../index.html" class="res-nav__logo">Lynn Fernando</a>
+    <a href="../index.html#resources" class="res-nav__resources">All Resources</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="res-hero">
+  <div class="res-hero__inner">
+    <div class="res-hero__meta">
+      <span class="res-hero__tag">Template</span>
+      <span class="res-hero__access res-hero__access--gated">Gated</span>
+    </div>
+    <h1 class="res-hero__title">GenAI Business Case <em>&amp; ROI</em> Template</h1>
+    <p class="res-hero__desc">Build a compelling AI investment proposal — with built-in ROI calculations designed to get buy-in from boards and stakeholders.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<main class="res-body">
+  <div class="res-gate">
+
+    <!-- FORM COLUMN -->
+    <div class="res-gate__form-col">
+      <div class="res-gate__form-box">
+
+        <div id="gateFormWrap" class="res-gate__form-wrap">
+          <h2 class="res-gate__form-title">Get the Template</h2>
+          <p class="res-gate__form-sub">Enter your details to unlock the full template.</p>
+
+          <form id="gateForm" class="res-form" action="https://formspree.io/f/mnjgydbk" method="POST">
+            <input type="hidden" name="resource" value="GenAI Business Case & ROI Template">
+
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="role">Role</label>
+              <select id="role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="Founder/CEO">Founder / CEO</option>
+                <option value="Executive/VP">Executive / VP</option>
+                <option value="Operator/Manager">Operator / Manager</option>
+                <option value="Consultant/Advisor">Consultant / Advisor</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="industry">Industry <span style="color:#555;font-style:normal;">(optional)</span></label>
+              <input type="text" id="industry" name="industry" placeholder="e.g. Financial Services, Healthcare">
+            </div>
+
+            <button type="submit" id="gateSubmit" class="btn btn-primary">Get Access</button>
+          </form>
+          <p class="res-privacy">No spam. Your data is never sold.</p>
+        </div>
+
+        <div id="gateSuccess" class="res-gate__success">
+          <div class="res-gate__success-icon">✓</div>
+          <h3>Template Unlocked</h3>
+          <p>Scroll down to access the full business case template — executive summary, ROI model, risk matrix, and implementation timeline.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PREVIEW COLUMN -->
+    <div class="res-gate__preview-col">
+
+      <div class="res-preview__what">
+        <h3>What's Inside</h3>
+        <div class="res-preview__items">
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">Executive summary template with key metrics</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text"><strong>ROI calculation framework:</strong> cost savings, revenue uplift, efficiency gains</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">Risk &amp; mitigation section with pre-filled examples</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">Implementation timeline template (12-week rollout)</div>
+          </div>
+          <div class="res-preview__item">
+            <div class="res-preview__item-dot"></div>
+            <div class="res-preview__item-text">Stakeholder presentation structure</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- GATED TEMPLATE CONTENT -->
+      <div id="gatedContent" class="template-content" style="filter: blur(6px); opacity: 0.3;">
+
+        <!-- Section 1: Executive Summary -->
+        <div class="template-section">
+          <span class="template-section__label">Section 01</span>
+          <h2 class="template-section__title">Executive Summary</h2>
+          <p class="template-section__desc">Complete this section last. It distills your entire business case into a single page for executive readers. Fill in each highlighted placeholder with your initiative-specific data.</p>
+
+          <div class="exec-summary-blocks">
+            <div class="exec-block">
+              <div class="exec-block__label">The Opportunity</div>
+              <p class="exec-block__text">
+                <span class="exec-fill">[Company Name]</span> has an opportunity to deploy generative AI across
+                <span class="exec-fill">[function(s)]</span> to address
+                <span class="exec-fill">[core business problem]</span>.
+                Based on our analysis, this initiative is projected to deliver
+                <span class="exec-fill">[X]%</span> improvement in
+                <span class="exec-fill">[key metric]</span> within
+                <span class="exec-fill">[timeframe]</span>.
+              </p>
+            </div>
+            <div class="exec-block">
+              <div class="exec-block__label">Key Metrics at a Glance</div>
+              <div class="exec-block__metric-row">
+                <div class="exec-metric">
+                  <span class="exec-metric__val"><em class="exec-fill">$X</em></span>
+                  <span class="exec-metric__label">Projected Annual Savings</span>
+                </div>
+                <div class="exec-metric">
+                  <span class="exec-metric__val"><em class="exec-fill">X mo</em></span>
+                  <span class="exec-metric__label">Payback Period</span>
+                </div>
+                <div class="exec-metric">
+                  <span class="exec-metric__val"><em class="exec-fill">X%</em></span>
+                  <span class="exec-metric__label">3-Year ROI</span>
+                </div>
+              </div>
+            </div>
+            <div class="exec-block">
+              <div class="exec-block__label">The Recommendation</div>
+              <p class="exec-block__text">
+                We recommend proceeding with a
+                <span class="exec-fill">[12-week / phased / pilot-first]</span> implementation of
+                <span class="exec-fill">[AI solution / vendor / approach]</span>,
+                beginning with
+                <span class="exec-fill">[specific use case or department]</span>.
+                Total implementation investment is estimated at
+                <span class="exec-fill">[$X]</span>, with ongoing operational cost of
+                <span class="exec-fill">[$X per month / year]</span>.
+                We request approval to proceed and designation of
+                <span class="exec-fill">[executive sponsor name/role]</span> as the executive sponsor.
+              </p>
+            </div>
+            <div class="exec-block">
+              <div class="exec-block__label">Why Now</div>
+              <p class="exec-block__text">
+                Three factors make this the optimal time to act:
+                (1) <span class="exec-fill">[competitive pressure / market signal / internal readiness factor]</span>,
+                (2) <span class="exec-fill">[technology maturity / cost reduction in tooling]</span>, and
+                (3) <span class="exec-fill">[organizational trigger — e.g., upcoming fiscal year, system migration, headcount constraint]</span>.
+                Delaying action risks <span class="exec-fill">[specific consequence]</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: ROI Calculation -->
+        <div class="template-section">
+          <span class="template-section__label">Section 02</span>
+          <h2 class="template-section__title">ROI Calculation Framework</h2>
+          <p class="template-section__desc">Complete each row with your initiative's actual numbers. The formulas in the rightmost column are pre-built — replace only the input values. Use conservative estimates; boards trust credible numbers over optimistic projections.</p>
+
+          <div class="table-wrap">
+            <table class="roi-table">
+              <thead>
+                <tr>
+                  <th>Line Item</th>
+                  <th>Description</th>
+                  <th>Your Value</th>
+                  <th>Formula / Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Current State Cost</td>
+                  <td>Annual cost of the process or function being replaced or augmented. Include headcount, tooling, and error remediation costs.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">$[X]</td>
+                  <td class="formula-cell">FTE cost × hours/yr + error cost</td>
+                </tr>
+                <tr>
+                  <td>Projected Cost Post-AI</td>
+                  <td>Estimated cost of the same function after AI implementation. Include AI tooling subscription, oversight headcount, and maintenance.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">$[X]</td>
+                  <td class="formula-cell">AI license + residual FTE cost</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>Annual Savings</td>
+                  <td>Direct cost savings from AI automation and efficiency gains.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">$[X]</td>
+                  <td class="formula-cell">Current Cost − Post-AI Cost</td>
+                </tr>
+                <tr>
+                  <td>Revenue Uplift (if applicable)</td>
+                  <td>Incremental revenue attributable to AI — faster sales cycles, improved conversion, higher NPS driving retention.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">$[X]</td>
+                  <td class="formula-cell">Conversion lift × avg deal value</td>
+                </tr>
+                <tr>
+                  <td>Efficiency Gains</td>
+                  <td>Time saved per employee per week × average fully-loaded hourly rate × weeks per year × number of employees affected.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">$[X]</td>
+                  <td class="formula-cell">hrs saved × rate × FTEs × 52</td>
+                </tr>
+                <tr>
+                  <td>Implementation Cost</td>
+                  <td>One-time investment: vendor setup, integration, change management, training, and internal project team time.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">$[X]</td>
+                  <td class="formula-cell">Vendor + internal + training</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>Payback Period</td>
+                  <td>How many months until cumulative savings exceed implementation investment.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">[X] months</td>
+                  <td class="formula-cell">Impl. Cost ÷ (Total Savings / 12)</td>
+                </tr>
+                <tr class="highlight-row">
+                  <td>3-Year ROI</td>
+                  <td>Return on investment over a 36-month horizon, accounting for ongoing operational cost.</td>
+                  <td style="color:#c9a84c;font-family:'Montserrat',sans-serif;font-size:12px;">[X]%</td>
+                  <td class="formula-cell">((3yr savings − total cost) / total cost) × 100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section 3: Risk Matrix -->
+        <div class="template-section">
+          <span class="template-section__label">Section 03</span>
+          <h2 class="template-section__title">Risk &amp; Mitigation Matrix</h2>
+          <p class="template-section__desc">Proactively addressing risk signals executive maturity. Present this section before the board raises objections. Add rows for risks specific to your organization or use case.</p>
+
+          <div class="table-wrap">
+            <table class="risk-table">
+              <thead>
+                <tr>
+                  <th>Risk</th>
+                  <th>Description</th>
+                  <th>Likelihood</th>
+                  <th>Impact</th>
+                  <th>Mitigation Strategy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Data Privacy &amp; Compliance</td>
+                  <td>AI systems may process sensitive customer or employee data in ways that conflict with GDPR, CCPA, or sector-specific regulations. Risk increases with unmanaged third-party model usage.</td>
+                  <td><span class="risk-badge risk-badge--med">Medium</span></td>
+                  <td><span class="risk-badge risk-badge--high">High</span></td>
+                  <td>Conduct a data classification audit before deployment. Implement data residency controls. Engage legal and DPO in vendor selection. Use enterprise-tier AI contracts with data processing agreements (DPAs).</td>
+                </tr>
+                <tr>
+                  <td>Change Management &amp; Adoption</td>
+                  <td>Employees may resist AI adoption due to job security fears or inadequate training. Low adoption rates are the primary reason AI pilots fail to deliver projected ROI.</td>
+                  <td><span class="risk-badge risk-badge--high">High</span></td>
+                  <td><span class="risk-badge risk-badge--med">Medium</span></td>
+                  <td>Design a structured communication plan before launch. Identify internal champions in each affected team. Deliver role-specific training, not generic AI literacy sessions. Celebrate early wins publicly. Frame AI as capability amplification, not replacement.</td>
+                </tr>
+                <tr>
+                  <td>Vendor Lock-In</td>
+                  <td>Deep integration with a single AI vendor's proprietary stack can create switching costs that constrain future options as the market evolves. Model deprecations can also disrupt operations.</td>
+                  <td><span class="risk-badge risk-badge--med">Medium</span></td>
+                  <td><span class="risk-badge risk-badge--med">Medium</span></td>
+                  <td>Prioritize API-first integrations over embedded vendor UIs. Negotiate model continuity clauses and data portability in contracts. Maintain an internal abstraction layer where possible. Evaluate at least two vendors before committing. Review annually.</td>
+                </tr>
+                <tr>
+                  <td>Output Quality &amp; Hallucination Risk</td>
+                  <td>Generative AI models can produce plausible but incorrect outputs. In high-stakes functions (finance, legal, customer-facing), unreviewed AI output can damage trust or create liability.</td>
+                  <td><span class="risk-badge risk-badge--med">Medium</span></td>
+                  <td><span class="risk-badge risk-badge--high">High</span></td>
+                  <td>Implement human-in-the-loop review for all high-stakes outputs. Define clear escalation protocols. Establish accuracy benchmarks before production deployment. Use retrieval-augmented generation (RAG) for factual tasks to reduce hallucination rates.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section 4: 12-Week Implementation Timeline -->
+        <div class="template-section">
+          <span class="template-section__label">Section 04</span>
+          <h2 class="template-section__title">12-Week Implementation Timeline</h2>
+          <p class="template-section__desc">A phased rollout reduces risk and builds stakeholder confidence. This timeline is designed for a single-function AI deployment. Adjust durations and tasks based on your organization's size and complexity.</p>
+
+          <div class="timeline">
+            <div class="timeline-phase">
+              <div class="timeline-phase__dot">I</div>
+              <div class="timeline-phase__body">
+                <div class="timeline-phase__weeks">Weeks 1 – 4</div>
+                <h3 class="timeline-phase__title">Discovery &amp; Planning</h3>
+                <div class="timeline-phase__tasks">
+                  <div class="timeline-task">Confirm executive sponsor and core project team (2–4 people across IT, business function, and legal)</div>
+                  <div class="timeline-task">Conduct stakeholder interviews to map current-state process, pain points, and success criteria</div>
+                  <div class="timeline-task">Complete data audit: inventory available data, assess quality, identify gaps</div>
+                  <div class="timeline-task">Finalize vendor selection and execute contracts including DPA and SLA</div>
+                  <div class="timeline-task">Define success metrics, measurement methodology, and reporting cadence</div>
+                  <div class="timeline-task">Develop change management plan and internal communication strategy</div>
+                  <div class="timeline-task">Complete risk assessment and legal/compliance sign-off</div>
+                </div>
+                <div class="timeline-phase__deliverable">Deliverable: Signed Vendor Contract + Project Charter</div>
+              </div>
+            </div>
+
+            <div class="timeline-phase">
+              <div class="timeline-phase__dot">II</div>
+              <div class="timeline-phase__body">
+                <div class="timeline-phase__weeks">Weeks 5 – 8</div>
+                <h3 class="timeline-phase__title">Pilot</h3>
+                <div class="timeline-phase__tasks">
+                  <div class="timeline-task">Configure AI system with initial data, workflows, and access controls</div>
+                  <div class="timeline-task">Conduct user acceptance testing (UAT) with a 5–10 person pilot group</div>
+                  <div class="timeline-task">Deliver training sessions for pilot users — role-specific, hands-on</div>
+                  <div class="timeline-task">Run parallel process (AI alongside existing process) for 2 weeks to validate output quality</div>
+                  <div class="timeline-task">Collect quantitative metrics and qualitative feedback weekly</div>
+                  <div class="timeline-task">Identify and resolve top 3–5 friction points before broader rollout</div>
+                  <div class="timeline-task">Brief executive sponsor on pilot results and present go/no-go recommendation</div>
+                </div>
+                <div class="timeline-phase__deliverable">Deliverable: Pilot Results Report + Go/No-Go Decision</div>
+              </div>
+            </div>
+
+            <div class="timeline-phase">
+              <div class="timeline-phase__dot">III</div>
+              <div class="timeline-phase__body">
+                <div class="timeline-phase__weeks">Weeks 9 – 12</div>
+                <h3 class="timeline-phase__title">Scale &amp; Measure</h3>
+                <div class="timeline-phase__tasks">
+                  <div class="timeline-task">Roll out to full team or department with updated training materials and onboarding guides</div>
+                  <div class="timeline-task">Decommission parallel process; AI becomes system of record</div>
+                  <div class="timeline-task">Stand up ongoing performance dashboard tracking agreed KPIs</div>
+                  <div class="timeline-task">Establish AI governance committee for ongoing oversight (meets monthly)</div>
+                  <div class="timeline-task">Capture ROI actuals vs. projections and document variances</div>
+                  <div class="timeline-task">Present 30-day post-launch results to executive team</div>
+                  <div class="timeline-task">Identify next candidate use case for the roadmap</div>
+                </div>
+                <div class="timeline-phase__deliverable">Deliverable: 30-Day ROI Report + Phase 2 Roadmap Proposal</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /gatedContent -->
+
+    </div><!-- /preview-col -->
+  </div><!-- /res-gate -->
+</main>
+
+<!-- FOOTER -->
+<footer class="res-footer">
+  <div class="res-footer__inner">
+    <p class="res-footer__copy">&copy; 2025 Lynn Fernando. All rights reserved.</p>
+    <nav class="res-footer__links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#resources">Resources</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('gateForm');
+  const formWrap = document.getElementById('gateFormWrap');
+  const success = document.getElementById('gateSuccess');
+  const content = document.getElementById('gatedContent');
+  const submitBtn = document.getElementById('gateSubmit');
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending\u2026';
+    try {
+      const res = await fetch(form.action, { method:'POST', body: new FormData(form), headers:{'Accept':'application/json'} });
+      if(res.ok){
+        formWrap.classList.add('hidden');
+        success.classList.add('visible');
+        if(content) { content.style.filter='none'; content.style.opacity='1'; content.classList.add('visible'); }
+        const overlay = document.getElementById('blurOverlay');
+        if(overlay) overlay.style.display='none';
+      } else {
+        alert('Something went wrong. Please try again.');
+        submitBtn.disabled=false; submitBtn.textContent='Get Access';
+      }
+    } catch { alert('Network error.'); submitBtn.disabled=false; submitBtn.textContent='Get Access'; }
+  });
+})();
+</script>
+
+</body>
+</html>

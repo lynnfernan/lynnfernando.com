@@ -1,0 +1,40 @@
+LYNNFERNANDO.COM — HOW TO DEPLOY UPDATES
+==========================================
+
+SERVER IP:   35.80.180.230
+SSH KEY:     ~/Downloads/LightsailDefaultKey-us-west-2.pem
+SERVER USER: admin
+WEB ROOT:    /usr/share/nginx/html
+
+
+DEPLOY COMMAND
+--------------
+Run this from the Terminal, inside the "Personal Brand" folder:
+
+    bash deploy.sh lynnfernando.com 35.80.180.230 ~/Downloads/LightsailDefaultKey-us-west-2.pem
+
+
+STEP-BY-STEP
+------------
+1. Make your changes to any files in the Personal Brand folder
+2. Open Terminal
+3. Navigate to the folder:
+       cd "/Users/lynnfernan/Lynn Priorities/Personal Brand"
+4. Run the deploy command above
+5. Visit https://lynnfernando.com to confirm changes are live
+
+
+NOTES
+-----
+- The deploy script uses rsync — it only uploads files that changed, so it's fast
+- It automatically skips .sh, .DS_Store, .md, and .pdf files
+- Resource pages live in the resources/ subfolder — changes there deploy the same way
+- If you get "Permission denied", make sure the .pem file is still in your Downloads folder
+
+
+FORMSPREE (OPT-IN FORMS)
+-------------------------
+Gated resource submissions go to Formspree form: mnjgydbk
+View leads at: https://formspree.io/forms/mnjgydbk/submissions
+To use a separate form for resources, create one at formspree.io and replace
+the action URL in each resources/*.html file.

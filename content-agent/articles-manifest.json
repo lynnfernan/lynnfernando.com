@@ -1,0 +1,155 @@
+[
+  {
+    "title": "What I Wish I Knew Before My First <em>Acquisition</em>",
+    "slug": "what-i-wish-i-knew-before-my-first-acquisition",
+    "category": "Starting or Acquiring a Business",
+    "date": "2026-03-30",
+    "description": "The deal room doesn't prepare you for everything. Here are the honest lessons about due diligence, culture, and emotion that first-time acquirers need to hear.",
+    "filename": "what-i-wish-i-knew-before-my-first-acquisition.html",
+    "type": "article"
+  },
+  {
+    "title": "Stop Waiting to Be Invited: How to Enter Any <em>Room You Want</em>",
+    "slug": "stop-waiting-to-be-invited-how-to-enter-any-room-you-want",
+    "category": "Women in Business",
+    "date": "2026-03-23",
+    "description": "Practical tactics for women to access networks, tables, and opportunities that weren't designed with them in mind. No inspiration — just strategy.",
+    "filename": "stop-waiting-to-be-invited-how-to-enter-any-room-you-want.html",
+    "type": "article"
+  },
+  {
+    "title": "Stop Writing Checks. Start Creating <em>Real Change</em>",
+    "slug": "stop-writing-checks-start-creating-real-change",
+    "category": "Philanthropy & Social Impact",
+    "date": "2026-03-22",
+    "description": "Strategic philanthropy creates systems-level change. Here's how to move beyond reactive giving and make your generosity actually work.",
+    "filename": "stop-writing-checks-start-creating-real-change.html",
+    "type": "article"
+  },
+  {
+    "title": "The Fastest Path to Business Ownership Nobody <em>Talks About</em>",
+    "slug": "the-fastest-path-to-business-ownership-nobody-talks-about",
+    "category": "Starting or Acquiring a Business",
+    "date": "2026-03-22",
+    "description": "Starting a business isn't the only path to ownership. Acquiring an existing business is faster, lower risk, and underused by women who could afford to buy.",
+    "filename": "the-fastest-path-to-business-ownership-nobody-talks-about.html",
+    "type": "article"
+  },
+  {
+    "title": "Why Women-Led Businesses Win When Markets <em>Get Hard</em>",
+    "slug": "why-women-led-businesses-win-when-markets-get-hard",
+    "category": "Women in Business",
+    "date": "2026-03-22",
+    "description": "The traits dismissed as soft—empathy, caution, collaboration—are exactly what make women-led businesses more resilient when the economy turns.",
+    "filename": "why-women-led-businesses-win-when-markets-get-hard.html",
+    "type": "article"
+  },
+  {
+    "title": "The Executive's Guide to <em>Generative AI</em>",
+    "slug": "executive-guide-to-genai",
+    "category": "GenAI & Business",
+    "date": null,
+    "description": "What every C-suite leader needs to understand about GenAI — without the hype, without the jargon, and without wasting your time.",
+    "filename": "executive-guide-to-genai.html",
+    "type": "guide"
+  },
+  {
+    "title": "The Beginner's Guide to <em>Angel Investing</em>",
+    "slug": "beginners-guide-to-angel-investing",
+    "category": "Investing",
+    "date": null,
+    "description": "How startup funding actually works, what angels do that VCs don't, and how to build a disciplined portfolio — for operators ready to become investors.",
+    "filename": "beginners-guide-to-angel-investing.html",
+    "type": "guide"
+  },
+  {
+    "title": "Empire Building <em>in Corporate</em>",
+    "slug": "empire-building-in-corporate",
+    "category": "Empire Building",
+    "date": null,
+    "description": "How to build influence, leverage, and lasting impact inside large organizations — while building your empire on the outside.",
+    "filename": "empire-building-in-corporate.html",
+    "type": "guide"
+  },
+  {
+    "title": "Buying <em>a Business</em>",
+    "slug": "buying-a-business",
+    "category": "Empire Building",
+    "date": null,
+    "description": "A practical framework for finding, evaluating, and acquiring a business — for operators ready to own instead of build from scratch.",
+    "filename": "buying-a-business.html",
+    "type": "guide"
+  },
+  {
+    "title": "Startup Fundraising <em>Resources</em>",
+    "slug": "fundraising-resources",
+    "category": "Fundraising & Investment",
+    "date": null,
+    "description": "The documents, frameworks, and playbooks founders need to navigate the fundraising process with confidence.",
+    "filename": "fundraising-resources.html",
+    "type": "guide"
+  },
+  {
+    "title": "Startup Fundraising <em>Toolkit</em>",
+    "slug": "startup-fundraising",
+    "category": "Fundraising & Investment",
+    "date": null,
+    "description": "An interactive tool to help founders structure their fundraising strategy, messaging, and investor outreach.",
+    "filename": "startup-fundraising.html",
+    "type": "tool"
+  },
+  {
+    "title": "GenAI Readiness <em>Assessment</em>",
+    "slug": "genai-readiness-assessment",
+    "category": "GenAI & Business",
+    "date": null,
+    "description": "Benchmark your organization's readiness for generative AI adoption — across strategy, data, talent, and governance.",
+    "filename": "genai-readiness-assessment.html",
+    "type": "tool"
+  },
+  {
+    "title": "Vendor Evaluation <em>Checklist</em>",
+    "slug": "vendor-evaluation-checklist",
+    "category": "GenAI & Business",
+    "date": null,
+    "description": "A structured checklist for evaluating AI and technology vendors — built for leaders who need to move fast without making expensive mistakes.",
+    "filename": "vendor-evaluation-checklist.html",
+    "type": "template"
+  },
+  {
+    "title": "Prompt Engineering <em>Playbook</em>",
+    "slug": "prompt-engineering-playbook",
+    "category": "GenAI & Business",
+    "date": null,
+    "description": "Practical prompt engineering techniques for business leaders — no technical background required.",
+    "filename": "prompt-engineering-playbook.html",
+    "type": "guide"
+  },
+  {
+    "title": "Use Case Prioritization <em>Framework</em>",
+    "slug": "use-case-prioritization-framework",
+    "category": "GenAI & Business",
+    "date": null,
+    "description": "A scoring framework for identifying and prioritizing the highest-value AI use cases for your organization.",
+    "filename": "use-case-prioritization-framework.html",
+    "type": "template"
+  },
+  {
+    "title": "GenAI ROI <em>Business Case</em>",
+    "slug": "genai-roi-business-case",
+    "category": "GenAI & Business",
+    "date": null,
+    "description": "A template for building a compelling internal business case for generative AI investment — with financial modeling guidance.",
+    "filename": "genai-roi-business-case.html",
+    "type": "template"
+  },
+  {
+    "title": "Speaking & Workshop <em>Menu</em>",
+    "slug": "speaking-workshop-menu",
+    "category": "Speaking & Workshops",
+    "date": null,
+    "description": "Keynotes, workshops, and advisory engagements available for teams and events — topics, formats, and booking information.",
+    "filename": "speaking-workshop-menu.html",
+    "type": "guide"
+  }
+]

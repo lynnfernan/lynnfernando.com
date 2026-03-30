@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Build Your Personal Website from Scratch</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #1a1a2e;
+      background: #fff;
+      padding: 36px 48px;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid #e5e7eb;
+      margin: 22px 0;
+    }
+
+    h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      background: #1a1a2e;
+      padding: 8px 14px;
+      border-radius: 6px;
+      margin: 28px 0 14px;
+      letter-spacing: 0.3px;
+    }
+
+    h3 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 18px 0 8px;
+      border-left: 3px solid #4f46e5;
+      padding-left: 10px;
+    }
+
+    p { margin: 8px 0; }
+
+    ul, ol {
+      margin: 8px 0 8px 20px;
+    }
+
+    li { margin: 4px 0; }
+
+    .needs-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 12px 0 20px;
+      font-size: 13px;
+    }
+
+    .needs-box .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .needs-box .icon { color: #4f46e5; font-weight: bold; }
+
+    .overview-boxes {
+      display: flex;
+      gap: 10px;
+      margin: 12px 0 20px;
+    }
+
+    .overview-box {
+      flex: 1;
+      background: #f0f0ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 12px;
+    }
+
+    .overview-box .label {
+      font-weight: 800;
+      color: #4f46e5;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    .overview-box .title {
+      font-weight: 700;
+      font-size: 13px;
+      color: #1a1a2e;
+    }
+
+    code {
+      font-family: "SF Mono", "Fira Code", Menlo, monospace;
+      background: #f1f5f9;
+      color: #7c3aed;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    pre {
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: 7px;
+      padding: 12px 16px;
+      margin: 10px 0;
+      overflow-x: auto;
+      font-family: "SF Mono", "Fira Code", Menlo, monospace;
+      font-size: 11.5px;
+      line-height: 1.6;
+    }
+
+    pre code {
+      background: none;
+      color: #e2e8f0;
+      padding: 0;
+      font-size: 11.5px;
+    }
+
+    blockquote {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin: 10px 0;
+      font-size: 12.5px;
+      color: #78350f;
+    }
+
+    blockquote strong { color: #92400e; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: 12.5px;
+    }
+
+    th {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 8px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 7px 14px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    tr:nth-child(even) td { background: #f8fafc; }
+
+    .troubleshoot-item {
+      margin: 10px 0;
+      padding: 10px 14px;
+      background: #fafafa;
+      border: 1px solid #e5e7eb;
+      border-radius: 7px;
+    }
+
+    .troubleshoot-item .q {
+      font-weight: 700;
+      color: #dc2626;
+      margin-bottom: 3px;
+    }
+
+    .troubleshoot-item .a {
+      color: #374151;
+      font-size: 12.5px;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 10px 0;
+    }
+
+    .link-item {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .link-item .link-icon { font-size: 16px; }
+
+    .link-item a {
+      color: #15803d;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding-top: 12px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+    }
+
+    .step-num {
+      display: inline-block;
+      background: #4f46e5;
+      color: white;
+      font-weight: 700;
+      font-size: 11px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      margin-right: 6px;
+      flex-shrink: 0;
+    }
+
+    .part-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #4f46e5;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 24px;
+      margin-bottom: 4px;
+    }
+
+    .highlight-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 14px 0;
+      font-size: 12.5px;
+      color: #1e3a5f;
+    }
+
+    @media print {
+      body { padding: 20px 30px; }
+      h2 { break-before: avoid; }
+      pre, blockquote, .overview-boxes { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>How to Build Your Personal Website from Scratch</h1>
+  <div class="subtitle">A Step-by-Step Guide for Non-Technical People</div>
+
+  <hr>
+
+  <h2>What You'll Need</h2>
+  <div class="needs-box">
+    <div class="item"><span class="icon">→</span> A credit card (costs ~$75/year total)</div>
+    <div class="item"><span class="icon">→</span> A computer with internet access</div>
+    <div class="item"><span class="icon">→</span> About 2–3 hours of focused time</div>
+    <div class="item"><span class="icon">→</span> Claude Code (free to start)</div>
+  </div>
+
+  <h2>Overview: The Three Pieces</h2>
+  <p>Think of your website like a house:</p>
+  <div class="overview-boxes">
+    <div class="overview-box">
+      <div class="label">GoDaddy</div>
+      <div class="title">Your Street Address</div>
+      <div>The domain name, e.g. <code>yourname.com</code></div>
+    </div>
+    <div class="overview-box">
+      <div class="label">Amazon Lightsail</div>
+      <div class="title">The Land &amp; Building</div>
+      <div>The server that hosts your files 24/7</div>
+    </div>
+    <div class="overview-box">
+      <div class="label">Claude Code</div>
+      <div class="title">The Architect &amp; Builder</div>
+      <div>Builds the actual website for you using AI</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="part-label">Part 1</div>
+  <h2>Buy Your Domain on GoDaddy</h2>
+  <p>This reserves your website address so no one else can take it.</p>
+  <ol>
+    <li>Go to <strong>godaddy.com</strong></li>
+    <li>Search for the domain you want (e.g. <code>yourname.com</code>)</li>
+    <li>If available, click <strong>Add to Cart</strong> — <code>.com</code> is most professional</li>
+    <li><strong>Skip all upsells</strong> — you don't need website builder, email, etc.</li>
+    <li>Create an account and complete checkout (~$12–20/year)</li>
+  </ol>
+  <blockquote><strong>Tip:</strong> Save your GoDaddy login credentials somewhere safe — you'll need them in Part 5.</blockquote>
+
+  <hr>
+
+  <div class="part-label">Part 2</div>
+  <h2>Set Up Your Server on Amazon Lightsail</h2>
+  <p>This rents a small computer on the internet that will serve your website 24/7.</p>
+
+  <h3>Step 2a — Create an AWS Account</h3>
+  <ol>
+    <li>Go to <strong>aws.amazon.com</strong> and click <strong>Create an AWS Account</strong></li>
+    <li>Follow the prompts — you'll need a credit card</li>
+    <li>Once logged in, search for <strong>Lightsail</strong> in the search bar at the top</li>
+  </ol>
+
+  <h3>Step 2b — Create a Lightsail Instance (your server)</h3>
+  <ol>
+    <li>Click <strong>Create instance</strong></li>
+    <li><strong>Select a Region</strong> — choose the one closest to your audience (e.g. US East)</li>
+    <li>Under "Select a blueprint," choose <strong>OS Only → Ubuntu 22.04 LTS</strong></li>
+    <li>Choose the <strong>$5/month plan</strong> — perfect for a personal site</li>
+    <li>Name your instance something simple like <code>my-website</code></li>
+    <li>Click <strong>Create instance</strong> and wait ~1–2 minutes until a green dot appears</li>
+  </ol>
+
+  <h3>Step 2c — Assign a Static IP Address</h3>
+  <blockquote><strong>Important:</strong> Without this, your server's address can change and your domain will stop working.</blockquote>
+  <ol>
+    <li>In Lightsail, click <strong>Networking</strong> in the top menu</li>
+    <li>Click <strong>Create static IP</strong> and attach it to your instance</li>
+    <li><strong>Write down the IP address</strong> — it looks like <code>54.123.45.67</code></li>
+  </ol>
+
+  <hr>
+
+  <div class="part-label">Part 3</div>
+  <h2>Build Your Website with Claude Code</h2>
+  <p>Use AI to write your website code — no coding experience needed.</p>
+
+  <h3>Step 3a — Install Claude Code</h3>
+  <ol>
+    <li>Go to <strong>claude.ai/code</strong> and follow the installation instructions</li>
+    <li>Open Terminal (Mac: press <code>Cmd + Space</code>, type "Terminal," press Enter)</li>
+    <li>Type <code>claude</code> and press Enter to start</li>
+  </ol>
+
+  <h3>Step 3b — Describe Your Website</h3>
+  <p>In Claude Code, tell it what you want. Be specific! For example:</p>
+  <div class="highlight-box">
+    "Create a personal website for me. My name is [Name]. I'm a [your job/role]. Include a home page with a short bio, a page listing my projects, and a contact section with my LinkedIn and email. Make it look clean and professional."
+  </div>
+  <p>Claude Code will generate all the files you need. Keep asking it to make changes until you're happy — "make the font bigger," "change the color," etc.</p>
+
+  <hr>
+
+  <div class="part-label">Part 4</div>
+  <h2>Upload Your Website to the Server</h2>
+
+  <h3>Step 4a — Connect to Your Server</h3>
+  <ol>
+    <li>In Lightsail, click on your instance name</li>
+    <li>Click the <strong>Connect</strong> tab</li>
+    <li>Click <strong>Connect using SSH</strong> — a black terminal window opens in your browser</li>
+  </ol>
+
+  <h3>Step 4b — Install a Web Server (nginx)</h3>
+  <p>Paste these commands one at a time into that black terminal window:</p>
+  <pre><code>sudo apt update
+sudo apt install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx</code></pre>
+
+  <h3>Step 4c — Upload Your Files</h3>
+  <p>From your own computer's Terminal, run this command (replace the placeholders):</p>
+  <pre><code>scp -i ~/.ssh/your-key.pem /path/to/your/website/* ubuntu@YOUR.IP.ADDRESS:/var/www/html/</code></pre>
+  <blockquote><strong>Not sure about the key file?</strong> In Lightsail go to <strong>Account → SSH Keys</strong> to download it. Or ask Claude Code: "How do I upload my website files to my Lightsail server at IP [your IP]?"</blockquote>
+
+  <hr>
+
+  <div class="part-label">Part 5</div>
+  <h2>Connect Your GoDaddy Domain to Your Server</h2>
+
+  <h3>Step 5a — Update DNS Settings in GoDaddy</h3>
+  <ol>
+    <li>Log into <strong>godaddy.com</strong> → click your name → <strong>My Products</strong></li>
+    <li>Find your domain and click <strong>DNS</strong></li>
+    <li>Find the record where <strong>Type = A</strong> and <strong>Name = @</strong> and click Edit</li>
+    <li>Change the <strong>Value</strong> to your Lightsail static IP address</li>
+    <li>Save, then also add a <strong>CNAME</strong> record: Name = <code>www</code>, Value = <code>@</code></li>
+  </ol>
+
+  <h3>Step 5b — Wait for DNS to Propagate</h3>
+  <p>DNS changes take <strong>15 minutes to 48 hours</strong> to take effect. Check progress at <strong>dnschecker.org</strong>.</p>
+
+  <hr>
+
+  <div class="part-label">Part 6</div>
+  <h2>Add a Free SSL Certificate (HTTPS)</h2>
+  <p>This adds the padlock icon and makes your site secure — required for Google rankings.</p>
+  <ol>
+    <li>Connect to your server again via Lightsail's SSH terminal</li>
+    <li>Run these commands:</li>
+  </ol>
+  <pre><code>sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx -d yourname.com -d www.yourname.com</code></pre>
+  <ol start="3">
+    <li>Follow the prompts — enter your email when asked</li>
+    <li>Choose <strong>option 2 (Redirect)</strong> when asked about HTTP → HTTPS</li>
+  </ol>
+  <blockquote>The certificate renews automatically — you never need to do this again.</blockquote>
+
+  <div class="highlight-box">
+    <strong>You're Live!</strong> Visit <code>https://yourname.com</code> in your browser — your personal website is now on the internet!
+  </div>
+
+  <hr>
+
+  <h2>Making Future Updates</h2>
+  <ol>
+    <li>Open Claude Code and describe what you want to change</li>
+    <li>Claude Code updates your files</li>
+    <li>Re-upload using the <code>scp</code> command from Step 4c</li>
+  </ol>
+
+  <hr>
+
+  <h2>Quick Cost Summary</h2>
+  <table>
+    <tr><th>Service</th><th>Cost</th></tr>
+    <tr><td>GoDaddy domain</td><td>~$15/year</td></tr>
+    <tr><td>Amazon Lightsail server</td><td>$5/month (~$60/year)</td></tr>
+    <tr><td>SSL Certificate</td><td>FREE</td></tr>
+    <tr><td>Claude Code</td><td>Free tier available</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>~$75/year</strong></td></tr>
+  </table>
+
+  <hr>
+
+  <h2>Troubleshooting</h2>
+
+  <div class="troubleshoot-item">
+    <div class="q">My domain isn't working yet</div>
+    <div class="a">Wait up to 48 hours. Check dnschecker.org to see if DNS has updated.</div>
+  </div>
+  <div class="troubleshoot-item">
+    <div class="q">I see the nginx default page instead of my website</div>
+    <div class="a">Your files may not be in the right folder. They need to be in <code>/var/www/html/</code> on the server.</div>
+  </div>
+  <div class="troubleshoot-item">
+    <div class="q">I'm stuck on a step</div>
+    <div class="a">Open Claude Code and describe exactly where you're stuck — it will help you through it.</div>
+  </div>
+  <div class="troubleshoot-item">
+    <div class="q">I forgot my server IP address</div>
+    <div class="a">Log into Lightsail — it's listed on your instance dashboard under Networking.</div>
+  </div>
+
+  <hr>
+
+  <h2>Helpful Links</h2>
+  <div class="links-grid">
+    <div class="link-item"><span class="link-icon">☁️</span><div><a href="https://lightsail.aws.amazon.com">Amazon Lightsail</a><br><span style="color:#6b7280;font-size:11px">Your server dashboard</span></div></div>
+    <div class="link-item"><span class="link-icon">🌐</span><div><a href="https://www.godaddy.com/help/manage-dns-records-680">GoDaddy DNS Help</a><br><span style="color:#6b7280;font-size:11px">Official DNS guide</span></div></div>
+    <div class="link-item"><span class="link-icon">🔍</span><div><a href="https://dnschecker.org">DNS Checker</a><br><span style="color:#6b7280;font-size:11px">Check if your domain is live</span></div></div>
+    <div class="link-item"><span class="link-icon">🤖</span><div><a href="https://claude.ai/code">Claude Code</a><br><span style="color:#6b7280;font-size:11px">Build your site with AI</span></div></div>
+  </div>
+
+  <div class="footer">
+    Guide created based on the setup used for <strong>lynnfernando.com</strong>
+  </div>
+
+</body>
+</html>
