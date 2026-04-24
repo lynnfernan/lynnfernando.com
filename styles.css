@@ -2772,6 +2772,43 @@ body {
   margin-top: auto;
 }
 
+/* Collapsed / Expanded tier behavior */
+.advisory-tier__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
+}
+.advisory-tier__toggle {
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--gold);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.advisory-tier--expanded .advisory-tier__toggle {
+  transform: rotate(45deg);
+}
+.advisory-tier__details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+.advisory-tier--expanded .advisory-tier__details {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 28px;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 28px;
+}
+.advisory-tier--collapsed:hover {
+  transform: none;
+}
+
 /* Footer value props */
 .advisory-pricing__footer {
   display: grid;
