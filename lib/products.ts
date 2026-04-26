@@ -37,11 +37,11 @@ export const products: Product[] = [
   },
   {
     slug: "cargo-shorts",
-    name: "Cargo Shorts",
+    name: "Shorts",
     category: "Shorts",
     description:
       "Six-pocket utility shorts with a relaxed inseam. Durable canvas fabric, built for every season.",
-    image: "/hoodie-black.jpg",
+    image: "/grey-shorts.jpg",
     badge: "DROP 001",
   },
   {
