@@ -7,9 +7,6 @@ export interface Product {
   badge: string;
 }
 
-const u = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?w=600&h=750&fit=crop&q=80`;
-
 export const products: Product[] = [
   {
     slug: "classic-hoodie",
@@ -35,7 +32,7 @@ export const products: Product[] = [
     category: "Sweatpants",
     description:
       "Relaxed fit with tapered ankle. Elastic waistband, deep side pockets. Comfort that never compromises.",
-    image: u("1506792006827-cd291be090da"),
+    image: "/images/hoodie-grey.jpg",
     badge: "DROP 001",
   },
   {
@@ -44,7 +41,7 @@ export const products: Product[] = [
     category: "Shorts",
     description:
       "Six-pocket utility shorts with a relaxed inseam. Durable canvas fabric, built for every season.",
-    image: u("1571945153237-4929e783af4a"),
+    image: "/images/hoodie-black.jpg",
     badge: "DROP 001",
   },
   {
@@ -53,7 +50,7 @@ export const products: Product[] = [
     category: "Jeans",
     description:
       "Loose-fit denim with a low-rise waist and wide leg. Raw hem, faded wash. The statement piece of the drop.",
-    image: u("1544441893-675973e31985"),
+    image: "/images/hoodie-grey.jpg",
     badge: "DROP 001",
   },
 ];
