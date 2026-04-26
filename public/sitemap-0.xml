@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://lynnfernando.com</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/beginners-guide-to-angel-investing</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/executive-guide-to-genai</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/genai-readiness-assessment</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/genai-roi-business-case</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/prompt-engineering-playbook</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/speaking-workshop-menu</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/use-case-prioritization-framework</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://lynnfernando.com/resources/vendor-evaluation-checklist</loc><lastmod>2026-03-21T23:29:11.596Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/baggy-sweatpants</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/cargo-shorts</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/classic-hoodie</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/cropped-hoodie</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/essential-tee</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/graphic-tee</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/oversized-hoodie</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/products/wide-leg-sweats</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/beginners-guide-to-angel-investing</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/executive-guide-to-genai</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/genai-readiness-assessment</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/genai-roi-business-case</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/prompt-engineering-playbook</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/speaking-workshop-menu</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/use-case-prioritization-framework</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://lynnfernando.com/resources/vendor-evaluation-checklist</loc><lastmod>2026-04-26T04:36:36.903Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

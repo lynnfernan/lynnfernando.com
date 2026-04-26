@@ -1,113 +1,166 @@
+import Image from "next/image";
 import Link from "next/link";
-import ResourceCard from "@/components/ResourceCard";
-import { resources } from "@/lib/resources";
+import CountdownTimer from "@/components/CountdownTimer";
+import EmailSignup from "@/components/EmailSignup";
+import { products } from "@/lib/products";
 
 export default function HomePage() {
-  const featuredResources = resources.slice(0, 3);
+  const previewProducts = products.slice(0, 4);
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28">
-          <p className="text-blue-200 text-sm font-semibold uppercase tracking-widest mb-4">
-            Generative AI Consultant · Advisor · Speaker
-          </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight max-w-3xl mb-6">
-            Helping Organizations Navigate the Age of Generative AI
-          </h1>
-          <p className="text-blue-100 text-lg sm:text-xl max-w-2xl mb-10">
-            I partner with executives and teams to build practical AI strategies,
-            evaluate the right tools, and create lasting capability — not just hype.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link
-              href="/resources"
-              className="bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Free AI Resources
-            </Link>
-            <Link
-              href="mailto:lynn@revglobalinc.com"
-              className="border border-blue-300 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Work With Me →
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* ── Hero / Coming Soon ── */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+        <Image
+          src="https://picsum.photos/seed/hypedstore/1920/1080"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#FF0080]/5 pointer-events-none" />
 
-      {/* Services */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-10 text-center">
-            How I Can Help
-          </h2>
-          <div className="grid sm:grid-cols-3 gap-8">
-            {[
-              {
-                icon: "🎯",
-                title: "AI Strategy & Advisory",
-                desc: "Build a clear, actionable GenAI roadmap tailored to your organization's goals, data, and risk tolerance.",
-              },
-              {
-                icon: "🎤",
-                title: "Speaking & Keynotes",
-                desc: "Keynotes and workshops that make AI tangible and actionable — for executive teams, conferences, and company all-hands.",
-              },
-              {
-                icon: "⚡",
-                title: "Implementation Consulting",
-                desc: "Hands-on support selecting tools, designing workflows, and building internal AI capability.",
-              },
-            ].map((s) => (
-              <div key={s.title} className="bg-slate-50 rounded-xl p-6">
-                <div className="text-3xl mb-3">{s.icon}</div>
-                <h3 className="font-bold text-slate-900 text-lg mb-2">{s.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Resources */}
-      <section className="bg-slate-50 py-16 sm:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Free AI Resources
-            </h2>
-            <Link
-              href="/resources"
-              className="text-blue-600 font-medium text-sm hover:underline"
-            >
-              View all →
-            </Link>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {featuredResources.map((r) => (
-              <ResourceCard key={r.slug} resource={r} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-blue-600 text-white py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Ready to Build Your AI Strategy?
-          </h2>
-          <p className="text-blue-100 mb-8 text-lg">
-            Whether you need a keynote speaker, an advisory engagement, or hands-on implementation support — let&apos;s talk.
+        <div className="relative z-10 text-center px-4 pt-16 w-full max-w-5xl mx-auto">
+          <p className="inline-block border border-[#FF0080] text-[#FF0080] text-[10px] uppercase tracking-[0.45em] px-4 py-2 mb-10">
+            Coming Soon · Drop 001
           </p>
-          <Link
-            href="mailto:lynn@revglobalinc.com"
-            className="bg-white text-blue-700 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-block"
+
+          <h1
+            className="text-[clamp(4.5rem,20vw,17rem)] leading-none text-white mb-4"
+            style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
           >
-            Get in Touch
-          </Link>
+            hyped<span className="text-[#FF0080]">.</span>
+          </h1>
+
+          <p className="text-white/50 text-xs sm:text-sm uppercase tracking-[0.45em] mb-14">
+            Street Culture · Limited Drops · All Ages
+          </p>
+
+          <div className="mb-14">
+            <p className="text-[10px] text-gray-600 uppercase tracking-[0.35em] mb-6">
+              First drop in
+            </p>
+            <CountdownTimer />
+          </div>
+
+          <div id="signup" className="mb-4">
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-5">
+              Get first access to Drop 001
+            </p>
+            <EmailSignup />
+          </div>
+
+          <div className="mt-20 flex flex-col items-center gap-2 opacity-40">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-gray-500">Scroll</p>
+            <div className="w-px h-8 bg-white/30" />
+          </div>
+        </div>
+      </section>
+
+      {/* ── Product Teaser ── */}
+      <section className="bg-[#0a0a0a] py-24 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+            <div>
+              <p className="text-[#FF0080] text-[10px] uppercase tracking-[0.35em] mb-3">
+                Drop 001 · May 1, 2026
+              </p>
+              <h2
+                className="text-6xl sm:text-8xl text-white leading-none"
+                style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
+              >
+                The Lineup
+              </h2>
+            </div>
+            <Link
+              href="/products"
+              className="text-[10px] text-gray-500 hover:text-white uppercase tracking-[0.25em] underline underline-offset-4 transition-colors"
+            >
+              View All 8 Pieces →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {previewProducts.map((product) => (
+              <Link
+                key={product.slug}
+                href={`/products/${product.slug}`}
+                className="group relative overflow-hidden bg-[#111] aspect-[4/5] block"
+              >
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover opacity-55 transition-all duration-700 group-hover:scale-105 group-hover:opacity-65"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                <div className="absolute top-3 right-3">
+                  <span className="bg-black/70 text-gray-400 text-[9px] uppercase tracking-[0.15em] px-2 py-1">
+                    Coming Soon
+                  </span>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <p className="text-[#FF0080] text-[9px] uppercase tracking-[0.3em] mb-1">
+                    {product.badge}
+                  </p>
+                  <p
+                    className="text-white text-xl leading-tight"
+                    style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
+                  >
+                    {product.name}
+                  </p>
+                  <p className="text-gray-600 text-[9px] uppercase tracking-widest mt-1">
+                    {product.category}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/products"
+              className="inline-block border border-white/20 text-white text-[10px] uppercase tracking-[0.3em] px-8 py-4 hover:bg-white hover:text-black transition-colors"
+            >
+              View Full Lineup
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Brand Manifesto ── */}
+      <section className="bg-black py-28 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2
+            className="text-6xl sm:text-8xl lg:text-[9rem] text-white mb-8 leading-none"
+            style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
+          >
+            Wear the
+            <br />
+            <span className="text-[#FF0080]">Culture.</span>
+          </h2>
+          <p className="text-gray-500 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
+            hyped. is a new breed of lifestyle brand. We curate limited drops of
+            streetwear and modern trends — for everyone who moves through the world
+            with style. All ages. No gatekeeping. If you know, you know.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Bottom CTA ── */}
+      <section className="bg-[#FF0080] py-20 px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2
+            className="text-5xl sm:text-7xl text-white mb-2 leading-none"
+            style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
+          >
+            Don&apos;t Miss Drop 001
+          </h2>
+          <p className="text-white/75 text-[10px] uppercase tracking-[0.35em] mb-8">
+            Limited pieces · First come, first served · May 1, 2026
+          </p>
+          <EmailSignup light />
         </div>
       </section>
     </>
