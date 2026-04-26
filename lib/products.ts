@@ -14,7 +14,7 @@ export const products: Product[] = [
     category: "Hoodies",
     description:
       "Heavyweight fleece in a relaxed silhouette. Kangaroo pocket, unisex fit. The go-to piece for the whole crew.",
-    image: "/images/hoodie-grey.jpg",
+    image: "/hoodie-grey.jpg",
     badge: "DROP 001",
   },
   {
@@ -23,7 +23,7 @@ export const products: Product[] = [
     category: "Hoodies",
     description:
       "Extended length, boxy cut. Built for the streets, designed for everywhere. As seen on the block.",
-    image: "/images/hoodie-black.jpg",
+    image: "/hoodie-black.jpg",
     badge: "DROP 001",
   },
   {
@@ -32,7 +32,7 @@ export const products: Product[] = [
     category: "Sweatpants",
     description:
       "Relaxed fit with tapered ankle. Elastic waistband, deep side pockets. Comfort that never compromises.",
-    image: "/images/hoodie-grey.jpg",
+    image: "/hoodie-grey.jpg",
     badge: "DROP 001",
   },
   {
@@ -41,7 +41,7 @@ export const products: Product[] = [
     category: "Shorts",
     description:
       "Six-pocket utility shorts with a relaxed inseam. Durable canvas fabric, built for every season.",
-    image: "/images/hoodie-black.jpg",
+    image: "/hoodie-black.jpg",
     badge: "DROP 001",
   },
   {
@@ -50,7 +50,7 @@ export const products: Product[] = [
     category: "Jeans",
     description:
       "Loose-fit denim with a low-rise waist and wide leg. Raw hem, faded wash. The statement piece of the drop.",
-    image: "/images/hoodie-grey.jpg",
+    image: "/hoodie-grey.jpg",
     badge: "DROP 001",
   },
 ];
