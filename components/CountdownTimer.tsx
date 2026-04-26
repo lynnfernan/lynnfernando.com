@@ -16,18 +16,19 @@ function getTimeLeft() {
 }
 
 export default function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+  const [timeLeft, setTimeLeft] = useState<ReturnType<typeof getTimeLeft> | null>(null);
 
   useEffect(() => {
+    setTimeLeft(getTimeLeft());
     const timer = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
     return () => clearInterval(timer);
   }, []);
 
   const units = [
-    { label: "Days", value: timeLeft.days },
-    { label: "Hrs", value: timeLeft.hours },
-    { label: "Min", value: timeLeft.minutes },
-    { label: "Sec", value: timeLeft.seconds },
+    { label: "Days", value: timeLeft?.days ?? 0 },
+    { label: "Hrs", value: timeLeft?.hours ?? 0 },
+    { label: "Min", value: timeLeft?.minutes ?? 0 },
+    { label: "Sec", value: timeLeft?.seconds ?? 0 },
   ];
 
   return (
