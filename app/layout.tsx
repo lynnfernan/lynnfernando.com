@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -75,6 +76,7 @@ export default function RootLayout({
             © 2026 hyped. All rights reserved. · get-hype.store
           </p>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
