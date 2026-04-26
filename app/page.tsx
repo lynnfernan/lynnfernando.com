@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import CountdownTimer from "@/components/CountdownTimer";
 import EmailSignup from "@/components/EmailSignup";
-import { products } from "@/lib/products";
+import { getProducts } from "@/lib/products-store";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getProducts();
   const previewProducts = products.slice(0, 4);
 
   return (

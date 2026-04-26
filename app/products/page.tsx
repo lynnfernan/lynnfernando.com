@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { products } from "@/lib/products";
+import { getProducts } from "@/lib/products-store";
 import EmailSignup from "@/components/EmailSignup";
 
 export const metadata: Metadata = {
@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   description: "hyped. Drop 001 — 8 pieces dropping May 1, 2026. Hoodies, sweatpants, shorts, and tees.",
 };
 
-export default function ProductsPage() {
+export default async function ProductsPage() {
+  const products = await getProducts();
   const categories = [...new Set(products.map((p) => p.category))];
 
   return (
