@@ -12,7 +12,7 @@ export default function HomePage() {
       {/* ── Hero / Coming Soon ── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-rm6Un7ktYBc?w=1920&h=1080&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=1920&h=1080&fit=crop&q=80"
           alt=""
           fill
           className="object-cover"
