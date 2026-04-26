@@ -16,8 +16,8 @@ export const products: Product[] = [
     name: "Classic Hoodie",
     category: "Hoodies",
     description:
-      "Heavyweight fleece in an oversized silhouette. Dropped shoulders, kangaroo pocket, unisex fit. The go-to piece for the whole crew.",
-    image: u("1552374196-1ab2a1c593e8"),
+      "Heavyweight fleece in a relaxed silhouette. Kangaroo pocket, unisex fit. The go-to piece for the whole crew.",
+    image: "/images/hoodie-grey.jpg",
     badge: "DROP 001",
   },
   {
@@ -25,8 +25,8 @@ export const products: Product[] = [
     name: "Oversized Hoodie",
     category: "Hoodies",
     description:
-      "Extended length, boxy cut. Made to layer. Built for the streets, designed for everywhere.",
-    image: u("1556821840-3a63f15732ce"),
+      "Extended length, boxy cut. Built for the streets, designed for everywhere. As seen on the block.",
+    image: "/images/hoodie-black.jpg",
     badge: "DROP 001",
   },
   {
@@ -36,15 +36,6 @@ export const products: Product[] = [
     description:
       "Relaxed fit with tapered ankle. Elastic waistband, deep side pockets. Comfort that never compromises.",
     image: u("1506792006827-cd291be090da"),
-    badge: "DROP 001",
-  },
-  {
-    slug: "wide-leg-sweats",
-    name: "Wide-Leg Sweats",
-    category: "Sweatpants",
-    description:
-      "Full wide-leg cut for maximum comfort and maximum presence. Heavy French terry fabric.",
-    image: u("1515886657613-9f3515b0c78f"),
     badge: "DROP 001",
   },
   {
@@ -63,24 +54,6 @@ export const products: Product[] = [
     description:
       "Loose-fit denim with a low-rise waist and wide leg. Raw hem, faded wash. The statement piece of the drop.",
     image: u("1544441893-675973e31985"),
-    badge: "DROP 001",
-  },
-  {
-    slug: "essential-tee",
-    name: "Essential Tee",
-    category: "T-Shirts",
-    description:
-      "Premium heavyweight cotton. Oversized boxy cut. The foundational piece for any hyped. fit.",
-    image: u("1489987707025-afc232f7ea0f"),
-    badge: "DROP 001",
-  },
-  {
-    slug: "graphic-tee",
-    name: "Graphic Tee",
-    category: "T-Shirts",
-    description:
-      "Statement graphics on heavyweight cotton. Limited run only — each drop brings a different print.",
-    image: u("1523398002811-999ca8dec234"),
     badge: "DROP 001",
   },
 ];
