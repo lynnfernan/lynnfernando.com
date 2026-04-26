@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
 
@@ -8,8 +8,6 @@ export default function AdminPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [uploading, setUploading] = useState<string | null>(null);
-  const fileRefs = useRef<Record<string, HTMLInputElement | null>>({});
 
   useEffect(() => {
     fetch("/api/admin/products")
@@ -21,19 +19,6 @@ export default function AdminPage() {
     setProducts((prev) =>
       prev.map((p) => (p.slug === slug ? { ...p, [field]: value } : p))
     );
-  }
-
-  async function handleImageUpload(slug: string, file: File) {
-    setUploading(slug);
-    const form = new FormData();
-    form.append("file", file);
-    form.append("slug", slug);
-    const res = await fetch("/api/admin/upload", { method: "POST", body: form });
-    const { url } = await res.json();
-    setProducts((prev) =>
-      prev.map((p) => (p.slug === slug ? { ...p, image: url } : p))
-    );
-    setUploading(null);
   }
 
   async function handleSave() {
@@ -77,39 +62,37 @@ export default function AdminPage() {
             key={product.slug}
             className="bg-[#111] border border-white/10 overflow-hidden"
           >
-            {/* Image */}
-            <div
-              className="relative aspect-[4/5] bg-[#1a1a1a] cursor-pointer group"
-              onClick={() => fileRefs.current[product.slug]?.click()}
-            >
+            {/* Image preview */}
+            <div className="relative aspect-[4/5] bg-[#1a1a1a]">
               {product.image && (
                 <Image
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-cover opacity-70"
-                  unoptimized={product.image.startsWith("/")}
+                  unoptimized
                 />
               )}
-              <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity">
-                <p className="text-white text-xs uppercase tracking-widest font-bold">
-                  {uploading === product.slug ? "Uploading..." : "Change Photo"}
-                </p>
-              </div>
-              <input
-                type="file"
-                accept="image/*"
-                className="hidden"
-                ref={(el) => { fileRefs.current[product.slug] = el; }}
-                onChange={(e) => {
-                  const file = e.target.files?.[0];
-                  if (file) handleImageUpload(product.slug, file);
-                }}
-              />
+              {!product.image && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <p className="text-gray-600 text-xs uppercase tracking-widest">No image</p>
+                </div>
+              )}
             </div>
 
             {/* Fields */}
             <div className="p-4 flex flex-col gap-3">
+              <div>
+                <label className="text-[10px] text-gray-500 uppercase tracking-[0.3em]">
+                  Image URL
+                </label>
+                <input
+                  value={product.image}
+                  onChange={(e) => updateField(product.slug, "image", e.target.value)}
+                  placeholder="https://res.cloudinary.com/..."
+                  className="w-full bg-transparent border-b border-white/10 text-white text-xs py-1 focus:outline-none focus:border-[#FF0080] transition-colors placeholder:text-gray-700"
+                />
+              </div>
               <div>
                 <label className="text-[10px] text-gray-500 uppercase tracking-[0.3em]">
                   Name
