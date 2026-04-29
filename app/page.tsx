@@ -27,12 +27,14 @@ export default async function HomePage() {
             Coming Soon · Drop 001
           </p>
 
-          <h1
-            className="text-[clamp(4.5rem,20vw,17rem)] leading-none text-white mb-4"
-            style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
-          >
-            hyped<span className="text-[#FF0080]">.</span>
-          </h1>
+          <Image
+            src="/hYPED.png"
+            alt="hyped."
+            width={2000}
+            height={2000}
+            className="w-[clamp(18rem,60vw,50rem)] h-auto mx-auto mb-4"
+            priority
+          />
 
           <p className="text-white/50 text-xs sm:text-sm uppercase tracking-[0.45em] mb-14">
             Street Culture · Limited Drops · All Ages

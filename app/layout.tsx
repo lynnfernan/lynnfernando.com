@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 import { Analytics } from "@vercel/analytics/next";
 
 const bebasNeue = Bebas_Neue({
@@ -36,12 +37,14 @@ export default function RootLayout({
       <body className="min-h-screen bg-[#0a0a0a] text-white">
         <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-white/10">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-            <Link
-              href="/"
-              className="text-2xl tracking-tight text-white"
-              style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
-            >
-              hyped<span className="text-[#FF0080]">.</span>
+            <Link href="/" className="block">
+              <Image
+                src="/hYPED.png"
+                alt="hyped."
+                width={120}
+                height={120}
+                className="h-10 w-auto"
+              />
             </Link>
             <div className="flex items-center gap-6">
               <Link
@@ -63,12 +66,13 @@ export default function RootLayout({
         <main>{children}</main>
 
         <footer className="bg-black border-t border-white/10 py-12 text-center">
-          <p
-            className="text-5xl text-white mb-2"
-            style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
-          >
-            hyped<span className="text-[#FF0080]">.</span>
-          </p>
+          <Image
+            src="/hYPED.png"
+            alt="hyped."
+            width={200}
+            height={200}
+            className="h-16 w-auto mx-auto mb-2"
+          />
           <p className="text-xs text-gray-500 uppercase tracking-[0.3em] mb-6">
             Street Culture · Limited Drops · All Ages
           </p>
