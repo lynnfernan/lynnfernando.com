@@ -14,7 +14,7 @@ export const products: Product[] = [
     category: "Hoodies",
     description:
       "Heavyweight fleece in a relaxed silhouette. Kangaroo pocket, unisex fit. The go-to piece for the whole crew.",
-    image: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=800&h=1000&fit=crop&q=80",
+    image: "/hoodie-grey.jpg",
     badge: "DROP 001",
   },
   {
@@ -23,7 +23,7 @@ export const products: Product[] = [
     category: "Hoodies",
     description:
       "Extended length, boxy cut. Built for the streets, designed for everywhere. As seen on the block.",
-    image: "https://images.unsplash.com/photo-1578681994506-b8f463449011?w=800&h=1000&fit=crop&q=80",
+    image: "/hoodie-black.jpg",
     badge: "DROP 001",
   },
   {
@@ -41,7 +41,7 @@ export const products: Product[] = [
     category: "Shorts",
     description:
       "Six-pocket utility shorts with a relaxed inseam. Durable canvas fabric, built for every season.",
-    image: "https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=800&h=1000&fit=crop&q=80",
+    image: "/grey-shorts.jpg",
     badge: "DROP 001",
   },
   {
