@@ -32,7 +32,7 @@ export default async function HomePage() {
             alt="hyped."
             width={2000}
             height={2000}
-            className="w-[clamp(18rem,60vw,50rem)] h-auto mx-auto mb-4"
+            className="w-[clamp(10.8rem,36vw,30rem)] h-auto mx-auto mb-4"
             priority
           />
 
