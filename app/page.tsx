@@ -67,7 +67,7 @@ export default async function HomePage() {
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <div>
               <p className="text-[#FF0080] text-[10px] uppercase tracking-[0.35em] mb-3">
-                Drop 001 · May 1, 2026
+                Drop 001 · May 15, 2026
               </p>
               <h2
                 className="text-6xl sm:text-8xl text-white leading-none"
@@ -161,7 +161,7 @@ export default async function HomePage() {
             Don&apos;t Miss Drop 001
           </h2>
           <p className="text-white/75 text-[10px] uppercase tracking-[0.35em] mb-8">
-            Limited pieces · First come, first served · May 1, 2026
+            Limited pieces · First come, first served · May 15, 2026
           </p>
           <EmailSignup light />
         </div>

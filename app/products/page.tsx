@@ -6,7 +6,7 @@ import EmailSignup from "@/components/EmailSignup";
 
 export const metadata: Metadata = {
   title: "The Lineup | hyped.",
-  description: "hyped. Drop 001 — 8 pieces dropping May 1, 2026. Hoodies, sweatpants, shorts, and tees.",
+  description: "hyped. Drop 001 — 8 pieces dropping May 15, 2026. Hoodies, sweatpants, shorts, and tees.",
 };
 
 export default async function ProductsPage() {
@@ -19,7 +19,7 @@ export default async function ProductsPage() {
       <section className="bg-black pt-28 pb-10 px-4 sm:px-6 border-b border-white/10">
         <div className="max-w-7xl mx-auto">
           <p className="text-[#FF0080] text-[10px] uppercase tracking-[0.45em] mb-3">
-            Drop 001 · May 1, 2026
+            Drop 001 · May 15, 2026
           </p>
           <h1
             className="text-7xl sm:text-9xl text-white leading-none mb-4"
@@ -28,7 +28,7 @@ export default async function ProductsPage() {
             The Lineup
           </h1>
           <p className="text-gray-500 text-sm max-w-md leading-relaxed">
-            8 pieces. Limited quantities. All dropping May 1.{" "}
+            8 pieces. Limited quantities. All dropping May 15.{" "}
             <Link href="/#signup" className="text-[#FF0080] hover:underline">
               Sign up
             </Link>{" "}
@@ -110,7 +110,7 @@ export default async function ProductsPage() {
           Be First for Drop 001
         </h2>
         <p className="text-gray-600 text-[10px] uppercase tracking-[0.35em] mb-8">
-          May 1, 2026 · Limited Pieces · All Ages
+          May 15, 2026 · Limited Pieces · All Ages
         </p>
         <EmailSignup />
       </section>

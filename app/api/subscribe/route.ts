@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       try {
         const client = twilio(accountSid, authToken);
         await client.messages.create({
-          body: "You're on the hyped. list. Drop 001 drops May 1. Stay ready. 🔥 get-hype.store",
+          body: "You're on the hyped. list. Drop 001 drops May 15. Stay ready. 🔥 get-hype.store",
           from: fromNumber,
           to: phone,
         });

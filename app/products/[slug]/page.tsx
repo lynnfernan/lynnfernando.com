@@ -101,7 +101,7 @@ export default async function ProductPage({
                 className="text-[#FF0080] text-3xl leading-none"
                 style={{ fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif" }}
               >
-                May 1, 2026
+                May 15, 2026
               </p>
             </div>
 
