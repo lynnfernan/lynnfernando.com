@@ -84,6 +84,17 @@ export const resources: Resource[] = [
     ctaHref: "/resources/genai-roi-business-case",
   },
   {
+    slug: "ai-marketing-revenue-stack",
+    title: "My AI Stack for Marketing, Sales, and Revenue",
+    description:
+      "A practical walkthrough of the AI tools I use every week to generate leads, write content, run outreach, accelerate sales, and measure what's working. Organized by business outcome, not by category, so you can pick the one thing that moves your number this quarter.",
+    format: "Article",
+    audience: "Founders, Operators & Marketing Leaders",
+    gated: false,
+    ctaLabel: "Book a Stack Walkthrough",
+    ctaHref: "mailto:lynn@revglobalinc.com?subject=AI Stack Walkthrough Inquiry",
+  },
+  {
     slug: "beginners-guide-to-angel-investing",
     title: "A Beginner's Guide to Angel Investing in Startups",
     description:

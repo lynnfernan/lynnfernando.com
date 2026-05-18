@@ -14,6 +14,7 @@ import VendorChecklist from "@/content/resources/vendor-evaluation-checklist.mdx
 import ROITemplate from "@/content/resources/genai-roi-business-case.mdx";
 import SpeakingMenu from "@/content/resources/speaking-workshop-menu.mdx";
 import AngelInvesting from "@/content/resources/beginners-guide-to-angel-investing.mdx";
+import AIMarketingStack from "@/content/resources/ai-marketing-revenue-stack.mdx";
 
 const contentMap: Record<string, React.ComponentType> = {
   "executive-guide-to-genai": ExecutiveGuide,
@@ -24,6 +25,7 @@ const contentMap: Record<string, React.ComponentType> = {
   "genai-roi-business-case": ROITemplate,
   "speaking-workshop-menu": SpeakingMenu,
   "beginners-guide-to-angel-investing": AngelInvesting,
+  "ai-marketing-revenue-stack": AIMarketingStack,
 };
 
 export async function generateStaticParams() {
