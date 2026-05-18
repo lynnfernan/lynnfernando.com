@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GSKJ25Q4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K1GSKJ25Q4');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Invest with Lynn Fernando | REV Capital</title>
+  <meta name="description" content="Lynn Fernando deploys capital through REV Capital across SPVs, Qualified Opportunity Zone Funds, Oil & Gas direct participation, angel investing, real estate, and private credit. Deal flow by warm introduction only." />
+  <meta name="author" content="Lynn Fernando" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/invest.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Invest with Lynn Fernando | REV Capital" />
+  <meta property="og:description" content="Lynn Fernando deploys capital through REV Capital across SPVs, QOZFs, Oil & Gas, angel investing, real estate, and private credit. Deal flow by warm introduction only." />
+  <meta property="og:url" content="https://lynnfernando.com/invest.html" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Invest with Lynn Fernando | REV Capital" />
+  <meta name="twitter:description" content="Capital deployment across SPVs, QOZFs, Oil & Gas, angel, real estate, and private credit. Warm introductions only." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/lf-logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/lf-logo.png" />
+  <link rel="apple-touch-icon" href="images/lf-logo.png" />
+
+  <style>
+    /* ---- INVEST PAGE SPECIFIC ---- */
+
+    .invest-hero {
+      padding: 160px 0 100px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .invest-hero .label { display: block; margin-bottom: 20px; }
+    .invest-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 5vw, 68px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--off-white);
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+    .invest-hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .invest-hero p {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 620px;
+      line-height: 1.85;
+    }
+
+    /* ---- VERTICALS ---- */
+    .invest-verticals {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .verticals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .vertical-card {
+      background: var(--dark-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 40px;
+    }
+    .vertical-card-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .vertical-card h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 28px;
+      line-height: 1.25;
+    }
+    .vertical-items { display: flex; flex-direction: column; gap: 0; }
+    .vertical-item {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .vertical-item:last-child { border-bottom: none; }
+    .vertical-item h4 {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+    .vertical-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ---- CRITERIA ---- */
+    .invest-criteria {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .criteria-intro {
+      max-width: 640px;
+      margin-bottom: 48px;
+    }
+    .criteria-intro h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 3.5vw, 48px);
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 16px;
+    }
+    .criteria-intro p {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    .criteria-grid { display: flex; flex-direction: column; gap: 0; }
+    .criteria-row {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      align-items: start;
+    }
+    .criteria-row:first-child { border-top: 1px solid var(--border-subtle); }
+    .criteria-key {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-top: 2px;
+    }
+    .criteria-value {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+    .criteria-close {
+      margin-top: 40px;
+      font-size: 15px;
+      color: var(--text-light);
+      font-style: italic;
+      line-height: 1.75;
+      border-left: 2px solid var(--gold);
+      padding-left: 20px;
+    }
+
+    /* ---- FRICTION BLOCK ---- */
+    .invest-friction {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .friction-card {
+      max-width: 760px;
+      border-left: 3px solid var(--gold);
+      padding: 40px 48px;
+      background: var(--dark-2);
+      border-radius: 0 4px 4px 0;
+    }
+    .friction-card h2 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 28px;
+    }
+    .friction-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .friction-list li {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.75;
+      padding-left: 20px;
+      position: relative;
+    }
+    .friction-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 300;
+    }
+
+    /* ---- HOW IT WORKS ---- */
+    .invest-how {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .how-header {
+      max-width: 560px;
+      margin-bottom: 60px;
+    }
+    .how-header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 3.5vw, 48px);
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 12px;
+    }
+    .how-header p {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .step {
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+      position: relative;
+    }
+    .step::before {
+      content: attr(data-step);
+      position: absolute;
+      top: -16px;
+      left: 0;
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--black);
+      padding-right: 12px;
+    }
+    .step h3 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.03em;
+      margin-bottom: 12px;
+    }
+    .step p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* ---- DEAL FORM ---- */
+    .invest-form-section {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .form-wrapper { max-width: 720px; }
+    .form-header { margin-bottom: 36px; }
+    .form-header h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 12px;
+    }
+    .form-header p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .form-note {
+      font-size: 12px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    #dealForm { display: flex; flex-direction: column; gap: 24px; }
+    .form-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+    .form-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px;
+      background: var(--dark-3);
+      border: 1px solid var(--border-subtle);
+      border-radius: 2px;
+    }
+    .form-checkbox input[type="checkbox"] {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold);
+      margin-top: 2px;
+      cursor: pointer;
+    }
+    .form-checkbox label {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.6;
+      cursor: pointer;
+    }
+    .form-error {
+      display: none;
+      background: rgba(201, 76, 76, 0.1);
+      border: 1px solid rgba(201, 76, 76, 0.3);
+      border-radius: 2px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: #e07070;
+      line-height: 1.6;
+    }
+    .form-success {
+      display: none;
+      background: rgba(76, 201, 130, 0.08);
+      border: 1px solid rgba(76, 201, 130, 0.25);
+      border-radius: 4px;
+      padding: 40px;
+      text-align: center;
+    }
+    .form-success h3 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 16px;
+    }
+    .form-success p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* ---- OFF-RAMP ---- */
+    .invest-offramp {
+      padding: 80px 0;
+      background: var(--dark-2);
+    }
+    .offramp-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 800px;
+      padding: 40px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      background: var(--dark-3);
+    }
+    .offramp-text h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 8px;
+    }
+    .offramp-text p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      max-width: 480px;
+    }
+    .offramp-card a.btn { flex-shrink: 0; }
+
+    @media (max-width: 900px) {
+      .verticals-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; gap: 48px; }
+      .criteria-row { grid-template-columns: 1fr; gap: 8px; }
+      .form-two-col { grid-template-columns: 1fr; }
+      .offramp-card { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 640px) {
+      .invest-hero { padding: 120px 0 72px; }
+      .vertical-card { padding: 28px 24px; }
+      .friction-card { padding: 28px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="images/lf-logo.png" alt="Lynn Fernando" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#advisory">Brand Architect</a></li>
+        <li><a href="/#speaking">Speaking</a></li>
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/invest.html" class="nav-active">Invest</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/#manifesto">Manifesto</a></li>
+        <li><a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="nav-cta" target="_blank" rel="noopener">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="invest-hero">
+    <div class="container">
+      <span class="label">Capital & Investments · REV Capital</span>
+      <h1>I deploy capital.<br />I don't take <em>cold pitches.</em></h1>
+      <p>Lynn deploys capital across two tracks: institutional structures through REV Capital — SPVs, Qualified Opportunity Zone Funds, and Oil & Gas direct participation — and a personal portfolio spanning angel investing, real estate, and private credit. Deals reach her through introductions, not inboxes.</p>
+    </div>
+  </section>
+
+  <!-- INVESTMENT VERTICALS -->
+  <section class="invest-verticals">
+    <div class="container">
+      <div class="verticals-grid">
+
+        <div class="vertical-card reveal">
+          <div class="vertical-card-label">Institutional · REV Capital</div>
+          <h3>Structured Capital for Qualified Opportunities</h3>
+          <div class="vertical-items">
+            <div class="vertical-item">
+              <h4>Special Purpose Vehicles (SPVs)</h4>
+              <p>Co-investment vehicles and syndication structures for accredited investors entering high-conviction deals alongside REV Capital.</p>
+            </div>
+            <div class="vertical-item">
+              <h4>Qualified Opportunity Zone Funds (QOZFs)</h4>
+              <p>Real estate development and operating businesses in federally designated Opportunity Zones. Tax-advantaged structures under IRC § 1400Z-2. Active across real estate and business QOZ investments.</p>
+            </div>
+            <div class="vertical-item">
+              <h4>Oil & Gas Direct Participation</h4>
+              <p>Direct participation programs with intangible drilling cost (IDC) deductions for accredited investors. Qualified sponsors only — programs are reviewed by the REV Capital team before any capital conversation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="vertical-card reveal reveal-delay-1">
+          <div class="vertical-card-label">Personal Portfolio</div>
+          <h3>Direct Investing Across Three Verticals</h3>
+          <div class="vertical-items">
+            <div class="vertical-item">
+              <h4>Angel Investing</h4>
+              <p>Early-stage equity at pre-seed and seed. Focus on operators building in sectors where Lynn brings domain expertise — AI, healthcare, real estate technology, and commerce infrastructure.</p>
+            </div>
+            <div class="vertical-item">
+              <h4>Real Estate</h4>
+              <p>Short-term rentals, mid-term rentals, ground-up development, and Opportunity Zone plays. Active across multiple markets with a long-term, cash-flow and appreciation focus.</p>
+            </div>
+            <div class="vertical-item">
+              <h4>Private Credit</h4>
+              <p>Structured lending, bridge financing, and preferred equity instruments. Selective and relationship-driven.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I EVALUATE -->
+  <section class="invest-criteria">
+    <div class="container">
+      <div class="criteria-intro reveal">
+        <span class="label">What I Evaluate</span>
+        <h2>Investment Criteria</h2>
+        <p>These are the filters I apply before any capital conversation begins. If your deal clears them, there is a path forward. If it doesn't, I'd rather tell you now.</p>
+      </div>
+
+      <div class="criteria-grid">
+        <div class="criteria-row reveal">
+          <div class="criteria-key">Deal Source</div>
+          <div class="criteria-value">Warm introductions only. If we haven't been introduced through a mutual contact, this isn't the right path. REV Global's network spans private equity, real estate, and venture — most qualified sources already have a route in.</div>
+        </div>
+        <div class="criteria-row reveal">
+          <div class="criteria-key">Sponsor / Operator Track Record</div>
+          <div class="criteria-value">History, fund structure, and alignment are reviewed before the underlying asset. For institutional deals, REV Capital evaluates the sponsor before evaluating the opportunity.</div>
+        </div>
+        <div class="criteria-row reveal">
+          <div class="criteria-key">Asset Class</div>
+          <div class="criteria-value">Deals must fall within the six categories listed above: SPVs, QOZFs, Oil & Gas, angel equity, real estate, or private credit. Adjacent categories are not considered.</div>
+        </div>
+        <div class="criteria-row reveal">
+          <div class="criteria-key">Stage (Angel)</div>
+          <div class="criteria-value">Pre-seed and seed only. Series A and beyond are not in scope for personal angel allocation.</div>
+        </div>
+        <div class="criteria-row reveal">
+          <div class="criteria-key">Geography</div>
+          <div class="criteria-value">U.S.-domiciled structures by default. Opportunity Zone investments are U.S. only by statute.</div>
+        </div>
+        <div class="criteria-row reveal">
+          <div class="criteria-key">Check Size</div>
+          <div class="criteria-value">Not publicly disclosed. That conversation comes after qualification — not before.</div>
+        </div>
+      </div>
+
+      <p class="criteria-close">If your deal clears these filters, there is a path forward. If it doesn't, I'd rather tell you now than let you invest time in the wrong direction.</p>
+    </div>
+  </section>
+
+  <!-- WHAT THIS PAGE IS NOT -->
+  <section class="invest-friction">
+    <div class="container">
+      <div class="friction-card reveal">
+        <h2>Before you reach out</h2>
+        <ul class="friction-list">
+          <li>This page has no generic "pitch me" link. That's intentional.</li>
+          <li>Unsolicited decks sent to my contact address are not reviewed.</li>
+          <li>This page is not for advisors, consultants, or vendors seeking introductions to the REV Global network.</li>
+          <li>Oil & Gas and Opportunity Zone programs must come through qualified sponsors. Unsponsored deals are not considered.</li>
+          <li>If you're a founder pitching at a conference, on LinkedIn, or via cold email — the answer is no. The path is always through my network, and my network knows that.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW DEALS REACH ME -->
+  <section class="invest-how">
+    <div class="container">
+      <div class="how-header reveal">
+        <span class="label">How This Works</span>
+        <h2>How Deals Reach Me</h2>
+        <p>There is no cold path. There is a warm path — and it works.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step reveal" data-step="Step 01">
+          <h3>Warm Introduction</h3>
+          <p>A mutual contact makes an introduction. REV Global's network spans private equity, real estate, and venture. If you have a deal that fits the criteria, someone in that network already knows how to reach me.</p>
+        </div>
+        <div class="step reveal reveal-delay-1" data-step="Step 02">
+          <h3>Structured Intake</h3>
+          <p>After an introduction is made, deal sources complete the form below. It is not a pitch — it is the prerequisite for a conversation. The form asks qualifying questions that take about five minutes to answer honestly.</p>
+        </div>
+        <div class="step reveal reveal-delay-2" data-step="Step 03">
+          <h3>Review</h3>
+          <p>Institutional deals are reviewed by the REV Capital team. Personal investments are reviewed directly by Lynn. A substantive conversation happens before any capital discussion — and only after the intake clears.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEAL INTAKE FORM -->
+  <!--
+    SETUP REQUIRED: Formspree integration
+    1. Go to https://formspree.io and create a free account
+    2. Create a new form and set the notification email to lynn@revglobalinc.com
+    3. Copy your form endpoint (format: https://formspree.io/f/XXXXXXXX)
+    4. Replace the action attribute in the <form> below with your endpoint
+    5. Remove or update the data-formspree-pending attribute
+  -->
+  <section class="invest-form-section" id="deal-intake">
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="form-header reveal">
+          <p class="form-note">Qualified Deal Sources Only</p>
+          <h2>Submit a Deal for Review</h2>
+          <p>This form is for deal sources who have been introduced to Lynn through her network. Completing it does not guarantee a response. All submissions are reviewed by the REV Capital team.</p>
+        </div>
+
+        <div id="formSuccess" class="form-success">
+          <h3>Submission Received</h3>
+          <p>Your submission has been received. If your deal meets REV Capital's criteria and your introduction checks out, someone from the team will be in touch. This process typically takes 2 to 3 weeks.</p>
+        </div>
+
+        <div id="formError" class="form-error">
+          Please fill in all required fields. The "Who introduced you?" field cannot be skipped — submissions without a warm introduction are not reviewed.
+        </div>
+
+        <form
+          id="dealForm"
+          action="https://formspree.io/f/xwvyyknj"
+          method="POST"
+          novalidate
+        >
+          <input type="hidden" name="_subject" value="New Deal Submission — lynnfernando.com" />
+
+          <div class="form-two-col">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="organization">Organization / Fund Name</label>
+            <input type="text" id="organization" name="organization" placeholder="Company, fund, or firm name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="introduction">Who introduced you?</label>
+            <input
+              type="text"
+              id="introduction"
+              name="introduction"
+              placeholder="Full name of the person who introduced us"
+              required
+            />
+            <p class="form-group-note">This field is required. Submissions without a warm introduction are not reviewed.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="dealCategory">Deal Category</label>
+            <select id="dealCategory" name="dealCategory" required>
+              <option value="">Select a category</option>
+              <option value="SPV">Special Purpose Vehicle (SPV)</option>
+              <option value="QOZF">Qualified Opportunity Zone Fund (QOZF)</option>
+              <option value="Oil & Gas">Oil & Gas Direct Participation</option>
+              <option value="Angel">Angel / Early-Stage Equity</option>
+              <option value="Real Estate">Real Estate (STR / MTR / Development)</option>
+              <option value="Private Credit">Private Credit</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="raiseStatus">Stage / Raise Status</label>
+            <input
+              type="text"
+              id="raiseStatus"
+              name="raiseStatus"
+              placeholder="Where are you in the raise? How much is committed so far?"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="trackRecord">Sponsor or Founder Track Record</label>
+            <textarea
+              id="trackRecord"
+              name="trackRecord"
+              rows="4"
+              placeholder="Brief description of the sponsor's or founder's relevant history. Prior exits, funds, or operating track record. 300 characters max."
+              maxlength="300"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="whatYouNeed">What are you looking for from Lynn?</label>
+            <textarea
+              id="whatYouNeed"
+              name="whatYouNeed"
+              rows="4"
+              placeholder="Be specific — check size range, co-investor, advisory, or something else."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="criteriaReviewed" name="criteriaReviewed" value="yes" required />
+            <label for="criteriaReviewed">I have read and reviewed the investment criteria on this page, and I believe this deal meets the stated requirements.</label>
+          </div>
+
+          <div>
+            <button type="submit" class="btn btn-primary btn-full" id="dealSubmitBtn">Submit for Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFF-RAMP -->
+  <section class="invest-offramp">
+    <div class="container">
+      <div class="offramp-card reveal">
+        <div class="offramp-text">
+          <h3>New to alternative investing?</h3>
+          <p>The Beginner's Guide to Angel Investing covers how startup funding works, what instruments angels use, and how to build a diversified portfolio from scratch. A good place to start before you're in the room.</p>
+        </div>
+        <a href="/resources/beginners-guide-to-angel-investing.html" class="btn btn-outline">Read the Guide →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">LYNN FERNANDO</span>
+          <p>Brand & Commercialization Architect · Investor · Philanthropist</p>
+          <p class="footer-tagline">Building Empires. Creating Access. Redefining Wealth.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/#platform">REV Global</a></li>
+            <li><a href="/#platform">REV Capital</a></li>
+            <li><a href="/#platform">Maliguna</a></li>
+            <li><a href="/#platform">Ayana Foundation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#speaking">Speaking</a></li>
+            <li><a href="/invest.html">Investments</a></li>
+            <li><a href="/#manifesto">Manifesto</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lynnfernando/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/lynnfernandoofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Observe all .reveal elements on this page (script.js only knows index.html selectors)
+    const investObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            investObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach(el => investObserver.observe(el));
+
+    // Deal form submission
+    const dealForm = document.getElementById('dealForm');
+    const dealSubmitBtn = document.getElementById('dealSubmitBtn');
+    const formSuccess = document.getElementById('formSuccess');
+    const formError = document.getElementById('formError');
+
+    dealForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      formError.style.display = 'none';
+
+      // Validate required fields
+      const required = ['fullName', 'email', 'organization', 'introduction', 'dealCategory', 'raiseStatus', 'trackRecord', 'whatYouNeed'];
+      const criteriaChecked = document.getElementById('criteriaReviewed').checked;
+      let valid = true;
+
+      required.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) valid = false;
+      });
+
+      if (!valid || !criteriaChecked) {
+        formError.style.display = 'block';
+        formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Block if Formspree endpoint hasn't been configured
+      if (dealForm.action.includes('SETUP_REQUIRED')) {
+        formError.textContent = 'Form endpoint not yet configured. Please contact lynn@revglobalinc.com directly with your introduction.';
+        formError.style.display = 'block';
+        return;
+      }
+
+      dealSubmitBtn.textContent = 'Submitting...';
+      dealSubmitBtn.disabled = true;
+
+      try {
+        const data = new FormData(dealForm);
+        const response = await fetch(dealForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          dealForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch {
+        dealSubmitBtn.textContent = 'Submit for Review';
+        dealSubmitBtn.disabled = false;
+        formError.textContent = 'Something went wrong. Please try again or contact us directly.';
+        formError.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

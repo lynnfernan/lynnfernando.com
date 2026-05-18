@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GSKJ25Q4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K1GSKJ25Q4');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Resources | Lynn Fernando — AI, Investing, Empire Building</title>
+  <meta name="description" content="Free guides, tools, templates, and articles from Lynn Fernando on AI commercialization, investing, empire building, philanthropy, and speaking." />
+  <link rel="canonical" href="https://lynnfernando.com/resources/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Resources | Lynn Fernando" />
+  <meta property="og:description" content="Guides, tools, and articles on AI, investing, and building businesses that last." />
+  <meta property="og:url" content="https://lynnfernando.com/resources/" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/lf-logo.png" />
+  <link rel="apple-touch-icon" href="../images/lf-logo.png" />
+
+  <style>
+    /* ============================================
+       RESOURCE HUB — page-specific styles
+       ============================================ */
+    .hub {
+      padding: calc(var(--nav-h) + 80px) 0 40px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .hub::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.25), transparent);
+    }
+    .hub-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+    .hub-header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--off-white);
+      margin-bottom: 20px;
+    }
+    .hub-header h1 em { font-style: italic; color: var(--gold); }
+    .hub-header p {
+      font-size: 17px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* Sticky controls bar (search + filters) */
+    .hub-controls {
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 50;
+      background: rgba(17, 17, 17, 0.92);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 20px 0;
+      margin-bottom: 32px;
+    }
+    .hub-controls-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Search */
+    .hub-search {
+      position: relative;
+      max-width: 560px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hub-search__icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .hub-search__input {
+      width: 100%;
+      background: var(--black);
+      border: 1px solid var(--border-subtle);
+      border-radius: 2px;
+      color: var(--off-white);
+      font-family: var(--font-sans);
+      font-size: 16px; /* 16px+ prevents iOS focus-zoom */
+      padding: 14px 44px 14px 44px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .hub-search__input::-webkit-search-cancel-button { display: none; }
+    .hub-search__input::placeholder { color: var(--text-muted); }
+    .hub-search__input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12);
+    }
+    .hub-search__clear {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 18px;
+      cursor: pointer;
+      padding: 6px 8px;
+      line-height: 1;
+      display: none;
+      border-radius: 2px;
+    }
+    .hub-search__clear:hover { color: var(--off-white); }
+    .hub-search.has-value .hub-search__clear { display: block; }
+
+    /* Filter pills */
+    .hub-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .hub-pill {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .hub-pill:hover {
+      color: var(--off-white);
+      border-color: rgba(201, 168, 76, 0.4);
+    }
+    .hub-pill.is-active {
+      background: var(--gold);
+      color: var(--black);
+      border-color: var(--gold);
+    }
+    .hub-pill__count {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 10px;
+      opacity: 0.7;
+    }
+
+    /* Results meta */
+    .hub-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0 4px 18px;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .hub-meta__count strong {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* Category sections */
+    .hub-category {
+      padding: 0 0 32px;
+    }
+    .hub-category[hidden] { display: none !important; }
+    .hub-category__label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 16px 0 12px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+    .hub-category__label::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0;
+      width: 48px; height: 2px;
+      background: var(--gold);
+    }
+
+    /* Card grid */
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 960px) { .hub-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .hub-grid { grid-template-columns: 1fr; } }
+
+    .hub-card {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 22px;
+      background: #0e0e0e;
+      border: 1px solid var(--border-subtle);
+      border-radius: 3px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .hub-card[hidden] { display: none !important; }
+    .hub-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .hub-card:hover {
+      border-color: rgba(201, 168, 76, 0.2);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    }
+    .hub-card:hover::before { opacity: 1; }
+
+    .hub-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .hub-card__format {
+      font-family: var(--font-display);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+    .hub-card__new {
+      font-family: var(--font-display);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--gold);
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+    .hub-card__topic {
+      font-family: var(--font-display);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .hub-card__title {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      font-weight: 300;
+      color: var(--off-white);
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .hub-card__title em { font-style: italic; color: var(--gold-light); }
+    .hub-card__desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 18px;
+    }
+    .hub-card__cta {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: auto;
+    }
+
+    /* Empty state */
+    .hub-empty {
+      display: none;
+      text-align: center;
+      padding: 80px 20px;
+      border: 1px dashed var(--border-subtle);
+      border-radius: 4px;
+    }
+    .hub-empty.is-visible { display: block; }
+    .hub-empty__title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--off-white);
+      margin-bottom: 10px;
+    }
+    .hub-empty__desc {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    /* ---- Tablet (≤960px) ---- */
+    @media (max-width: 960px) {
+      .hub { padding: calc(var(--nav-h) + 56px) 0 32px; }
+      .hub-header { margin-bottom: 32px; }
+      .hub-header h1 { font-size: clamp(34px, 5.4vw, 52px); }
+      .hub-header p { font-size: 16px; }
+      .hub-controls { padding: 16px 0; margin-bottom: 24px; }
+      .hub-controls-inner { gap: 12px; }
+      .hub-card { padding: 22px 20px; }
+      .hub-card__title { font-size: 19px; }
+    }
+
+    /* ---- Mobile (≤720px) ---- */
+    @media (max-width: 720px) {
+      .hub { padding: calc(var(--nav-h) + 36px) 0 24px; }
+      .hub-header { text-align: left; margin-bottom: 24px; }
+      .hub-header h1 { font-size: clamp(30px, 8vw, 40px); margin-bottom: 14px; }
+      .hub-header p { font-size: 15px; line-height: 1.7; }
+
+      /* Compact sticky controls so they don't dominate the viewport */
+      .hub-controls { padding: 12px 0 14px; margin-bottom: 20px; }
+      .hub-controls-inner { gap: 10px; }
+      .hub-search__input { padding: 12px 40px; font-size: 16px; }
+      .hub-search__icon { left: 14px; }
+
+      /* Horizontal scrollable pill row, edge-padded so first/last pills don't kiss the edge */
+      .hub-filters {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin: 0 -20px;
+        padding: 0 20px 4px;
+      }
+      .hub-filters::-webkit-scrollbar { display: none; height: 0; }
+      .hub-pill {
+        flex-shrink: 0;
+        padding: 8px 14px;
+        font-size: 10.5px;
+        letter-spacing: 0.12em;
+      }
+      .hub-pill__count { display: none; }
+
+      /* Stacked meta line */
+      .hub-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        padding: 0 4px 14px;
+        font-size: 10px;
+      }
+
+      /* Card refinements */
+      .hub-category { padding-bottom: 24px; }
+      .hub-category__label { font-size: 9.5px; padding: 12px 0 10px; margin-bottom: 12px; }
+      .hub-grid { gap: 12px; }
+      .hub-card { padding: 20px 18px; }
+      .hub-card__meta { gap: 8px; margin-bottom: 10px; }
+      .hub-card__title { font-size: 18px; margin-bottom: 8px; }
+      .hub-card__desc { font-size: 13px; margin-bottom: 14px; }
+      .hub-empty { padding: 48px 16px; }
+    }
+
+    /* ---- Small mobile (≤420px) ---- */
+    @media (max-width: 420px) {
+      .hub-card { padding: 18px 16px; }
+      .hub-card__title { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="../images/lf-logo.png" alt="Lynn Fernando" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#advisory">Brand Architect</a></li>
+        <li><a href="/#speaking">Speaking</a></li>
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/invest.html">Invest</a></li>
+        <li><a href="/resources/" class="nav-active">Resources</a></li>
+        <li><a href="/#manifesto">Manifesto</a></li>
+        <li><a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="nav-cta" target="_blank" rel="noopener">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HUB -->
+  <section class="hub">
+    <div class="container">
+
+      <header class="hub-header">
+        <span class="label">The Library</span>
+        <h1>Resources for <em>Serious Leaders.</em></h1>
+        <p>Guides, tools, and articles on building brands, commercializing with AI, raising capital, and investing for the long game. All free. No opt-in required.</p>
+      </header>
+
+      <!-- Sticky controls -->
+      <div class="hub-controls">
+        <div class="container hub-controls-inner">
+
+          <div class="hub-search" id="hubSearch">
+            <span class="hub-search__icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </span>
+            <input
+              id="hubSearchInput"
+              type="search"
+              class="hub-search__input"
+              placeholder="Search resources by title, topic, or keyword..."
+              autocomplete="off"
+              aria-label="Search resources"
+            />
+            <button type="button" class="hub-search__clear" id="hubSearchClear" aria-label="Clear search">×</button>
+          </div>
+
+          <div class="hub-filters" id="hubFilters" role="tablist">
+            <button class="hub-pill is-active" data-filter="all" type="button">All</button>
+            <button class="hub-pill" data-filter="ai" type="button">AI & Commercialization</button>
+            <button class="hub-pill" data-filter="capital" type="button">Investing & Capital</button>
+            <button class="hub-pill" data-filter="empire" type="button">Empire Building & M&amp;A</button>
+            <button class="hub-pill" data-filter="women" type="button">Women & Philanthropy</button>
+            <button class="hub-pill" data-filter="speaking" type="button">Speaking</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Results meta -->
+      <div class="hub-meta">
+        <span class="hub-meta__count"><strong id="hubResultCount">0</strong> resources</span>
+        <span class="hub-meta__cat" id="hubActiveLabel">All categories</span>
+      </div>
+
+      <!-- Empty state -->
+      <div class="hub-empty" id="hubEmpty">
+        <div class="hub-empty__title">No matches found</div>
+        <p class="hub-empty__desc">Try a different search term or clear the filters.</p>
+        <button class="btn btn-outline" id="hubReset" type="button">Reset Filters</button>
+      </div>
+
+      <!-- ====================== CATEGORIES ====================== -->
+
+      <!-- AI & COMMERCIALIZATION -->
+      <div class="hub-category" data-category="ai">
+        <div class="hub-category__label">AI &amp; Commercialization</div>
+        <div class="hub-grid">
+
+          <a href="genai-readiness-assessment.html" class="hub-card" data-category="ai" data-format="Assessment" data-keywords="genai ai readiness maturity data talent governance">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Assessment</span>
+              <span class="hub-card__topic">AI Readiness</span>
+            </div>
+            <h3 class="hub-card__title">GenAI Readiness <em>Assessment</em></h3>
+            <p class="hub-card__desc">Evaluate preparedness across data, talent, governance, and use case maturity. Outputs your tier: Exploring, Building, or Scaling.</p>
+            <span class="hub-card__cta">Take Assessment →</span>
+          </a>
+
+          <a href="prompt-engineering-playbook.html" class="hub-card" data-category="ai" data-format="Guide" data-keywords="prompt engineering playbook business teams chatgpt claude">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Guide</span>
+              <span class="hub-card__topic">Prompt Engineering</span>
+            </div>
+            <h3 class="hub-card__title">Prompt Engineering <em>Playbook</em></h3>
+            <p class="hub-card__desc">50+ business-use-case prompts with function-specific examples and a repeatable framework for business teams.</p>
+            <span class="hub-card__cta">Download →</span>
+          </a>
+
+          <a href="use-case-prioritization-framework.html" class="hub-card" data-category="ai" data-format="Template" data-keywords="genai use case prioritization impact effort matrix">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Template</span>
+              <span class="hub-card__topic">Strategy</span>
+            </div>
+            <h3 class="hub-card__title">GenAI Use Case <em>Prioritization</em></h3>
+            <p class="hub-card__desc">2×2 impact-vs-effort matrix with scoring methodology to sequence your highest-value AI opportunities.</p>
+            <span class="hub-card__cta">Get Framework →</span>
+          </a>
+
+          <a href="vendor-evaluation-checklist.html" class="hub-card" data-category="ai" data-format="Checklist" data-keywords="ai vendor evaluation tool selection procurement">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Checklist</span>
+              <span class="hub-card__topic">Procurement</span>
+            </div>
+            <h3 class="hub-card__title">AI Vendor Evaluation <em>Checklist</em></h3>
+            <p class="hub-card__desc">40 questions across 7 categories for evaluating any GenAI tool or vendor before you commit.</p>
+            <span class="hub-card__cta">Download →</span>
+          </a>
+
+          <a href="genai-roi-business-case.html" class="hub-card" data-category="ai" data-format="Template" data-keywords="genai roi business case board proposal investment">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Template</span>
+              <span class="hub-card__topic">ROI &amp; Business Case</span>
+            </div>
+            <h3 class="hub-card__title">GenAI Business Case <em>& ROI</em></h3>
+            <p class="hub-card__desc">Build a compelling AI investment proposal with ROI calculations designed for boards and stakeholders.</p>
+            <span class="hub-card__cta">Get Template →</span>
+          </a>
+
+          <a href="executive-guide-to-genai.html" class="hub-card" data-category="ai" data-format="Article" data-keywords="executive guide generative ai c-suite primer fundamentals risk">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Executive Primer</span>
+            </div>
+            <h3 class="hub-card__title">Executive's Guide to <em>Generative AI</em></h3>
+            <p class="hub-card__desc">A practical primer on GenAI fundamentals and risk for non-technical C-suite leaders.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+          <a href="the-rise-of-ai-powered-entrepreneurship-opportunities-challenges-in-ac.html" class="hub-card" data-category="ai" data-format="Article" data-keywords="ai entrepreneurship opportunities challenges accelerated growth">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">AI Entrepreneurship</span>
+            </div>
+            <h3 class="hub-card__title">The Rise of AI-Powered <em>Entrepreneurship</em></h3>
+            <p class="hub-card__desc">Opportunities and challenges for founders building in the age of accelerated AI tooling.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- INVESTING & CAPITAL -->
+      <div class="hub-category" data-category="capital">
+        <div class="hub-category__label">Investing &amp; Capital</div>
+        <div class="hub-grid">
+
+          <a href="fundraising-resources.html" class="hub-card" data-category="capital" data-format="Guide" data-keywords="fundraising founder angel reg cf reg d reg a seed vc cap table">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Guide</span>
+              <span class="hub-card__topic">Fundraising</span>
+            </div>
+            <h3 class="hub-card__title">Founder's Fundraising <em>Guide</em></h3>
+            <p class="hub-card__desc">Angel, Reg CF, Reg D, Reg A+ &amp; Seed VC. Sequence funding paths, protect your cap table, and execute your raise.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+          <a href="startup-fundraising.html" class="hub-card" data-category="capital" data-format="Tool" data-keywords="startup fundraising simulator round modeling traction capital strategy">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Tool</span>
+              <span class="hub-card__topic">Capital Strategy</span>
+            </div>
+            <h3 class="hub-card__title">Startup Fundraising <em>Simulator</em></h3>
+            <p class="hub-card__desc">Stress-test your traction, model your round, and generate a personalized capital raising strategy, live and interactive.</p>
+            <span class="hub-card__cta">Launch Tool →</span>
+          </a>
+
+          <a href="beginners-guide-to-angel-investing.html" class="hub-card" data-category="capital" data-format="Article" data-keywords="angel investing beginner startup funding portfolio">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Angel Investing</span>
+            </div>
+            <h3 class="hub-card__title">Beginner's Guide to <em>Angel Investing</em></h3>
+            <p class="hub-card__desc">Startup funding structures and how to build a disciplined angel portfolio, for operators ready to invest.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+          <a href="strategic-capital-allocation-in-an-ai-driven-economy.html" class="hub-card" data-category="capital" data-format="Article" data-keywords="capital allocation ai economy portfolio strategy">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Capital Allocation</span>
+            </div>
+            <h3 class="hub-card__title">Strategic Capital Allocation in an <em>AI-Driven Economy</em></h3>
+            <p class="hub-card__desc">How investors and operators should think about deploying capital when technology cycles compress.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- EMPIRE BUILDING & M&A -->
+      <div class="hub-category" data-category="empire">
+        <div class="hub-category__label">Empire Building &amp; M&amp;A</div>
+        <div class="hub-grid">
+
+          <a href="how-to-buy-a-business-when-youve-never-done-it-before.html" class="hub-card" data-category="empire" data-format="Article" data-keywords="buy business first time search loi diligence close acquisition">
+            <div class="hub-card__meta">
+              <span class="hub-card__new">New</span>
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Acquisitions</span>
+            </div>
+            <h3 class="hub-card__title">How to Buy a Business When You've <em>Never Done It Before</em></h3>
+            <p class="hub-card__desc">What the search, LOI, diligence, and close actually look like, and what nobody warns you about.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+          <a href="buying-a-business.html" class="hub-card" data-category="empire" data-format="Guide" data-keywords="middle market main street business acquisition sba valuation diligence">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Guide</span>
+              <span class="hub-card__topic">M&amp;A Playbook</span>
+            </div>
+            <h3 class="hub-card__title">How to Buy a Middle Market or <em>Main Street Business</em></h3>
+            <p class="hub-card__desc">Valuation, deal sourcing, SBA financing, due diligence, and the first 90 days. The full acquisition playbook.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+          <a href="empire-building-in-corporate.html" class="hub-card" data-category="empire" data-format="Article" data-keywords="empire building corporate side hustle parallel m&a salary credibility">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Parallel Building</span>
+            </div>
+            <h3 class="hub-card__title">How to Start an Empire While <em>Working in Corporate</em></h3>
+            <p class="hub-card__desc">Use your salary, M&amp;A skills, and credibility to build in parallel, without quitting your job first.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- WOMEN & PHILANTHROPY -->
+      <div class="hub-category" data-category="women">
+        <div class="hub-category__label">Women &amp; Philanthropy</div>
+        <div class="hub-grid">
+
+          <a href="empowering-women-in-finance-through-ai-driven-solutions-driving-change.html" class="hub-card" data-category="women" data-format="Article" data-keywords="women finance ai solutions empowerment ayana foundation">
+            <div class="hub-card__meta">
+              <span class="hub-card__new">New</span>
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Women in Finance</span>
+            </div>
+            <h3 class="hub-card__title">Empowering Women in Finance Through <em>AI-Driven Solutions</em></h3>
+            <p class="hub-card__desc">How AI is reshaping access to capital, advisory, and decision-making for women in finance.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+          <a href="the-philanthropy-playbook-how-to-give-strategically-without-losing-you.html" class="hub-card" data-category="women" data-format="Article" data-keywords="philanthropy strategic giving foundation impact portfolio">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Strategic Giving</span>
+            </div>
+            <h3 class="hub-card__title">The Philanthropy Playbook: How to Give <em>Strategically</em></h3>
+            <p class="hub-card__desc">Treat your philanthropy like a portfolio: diversified, measured, and aligned with real change.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+          <a href="building-wealth-with-purpose-women-entrepreneurs-leading-social-impact.html" class="hub-card" data-category="women" data-format="Article" data-keywords="wealth purpose women entrepreneurs social impact mission">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Article</span>
+              <span class="hub-card__topic">Wealth with Purpose</span>
+            </div>
+            <h3 class="hub-card__title">Building Wealth With Purpose: Women Entrepreneurs Leading <em>Social Impact</em></h3>
+            <p class="hub-card__desc">Founders who are scaling businesses and reshaping what wealth is supposed to do.</p>
+            <span class="hub-card__cta">Read Now →</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- SPEAKING -->
+      <div class="hub-category" data-category="speaking">
+        <div class="hub-category__label">Speaking</div>
+        <div class="hub-grid">
+
+          <a href="speaking-workshop-menu.html" class="hub-card" data-category="speaking" data-format="Workshop" data-keywords="speaking workshop keynote menu conference corporate event">
+            <div class="hub-card__meta">
+              <span class="hub-card__format">Workshop</span>
+              <span class="hub-card__topic">Keynote &amp; Workshop</span>
+            </div>
+            <h3 class="hub-card__title">Speaking &amp; Workshop <em>Menu</em></h3>
+            <p class="hub-card__desc">Keynote and workshop offerings for conferences and corporate events, including AI, empire building, and more.</p>
+            <span class="hub-card__cta">View Menu →</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="text-align:center; padding: 60px 0 20px;">
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">Want these delivered when new ones drop?</p>
+        <a href="/#contact" class="btn btn-outline">Stay In Touch →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">LYNN FERNANDO</span>
+          <p>Brand &amp; Commercialization Architect · Investor · Philanthropist</p>
+          <p class="footer-tagline">Building Empires. Creating Access. Redefining Wealth.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/#platform">REV Global</a></li>
+            <li><a href="/#platform">REV Capital</a></li>
+            <li><a href="/#platform">Ayana Foundation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/#about-preview">About</a></li>
+            <li><a href="/#speaking">Speaking</a></li>
+            <li><a href="/invest.html">Investments</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lynnfernando/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/lynnfernandoofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      const searchInput   = document.getElementById('hubSearchInput');
+      const searchWrap    = document.getElementById('hubSearch');
+      const searchClear   = document.getElementById('hubSearchClear');
+      const filterBar     = document.getElementById('hubFilters');
+      const pills         = filterBar.querySelectorAll('.hub-pill');
+      const categories    = document.querySelectorAll('.hub-category');
+      const cards         = document.querySelectorAll('.hub-card');
+      const resultCount   = document.getElementById('hubResultCount');
+      const activeLabel   = document.getElementById('hubActiveLabel');
+      const emptyState    = document.getElementById('hubEmpty');
+      const resetBtn      = document.getElementById('hubReset');
+
+      let activeFilter = 'all';
+      let query = '';
+
+      // Build a searchable string per card once
+      cards.forEach(card => {
+        const title    = card.querySelector('.hub-card__title')?.textContent || '';
+        const desc     = card.querySelector('.hub-card__desc')?.textContent || '';
+        const topic    = card.querySelector('.hub-card__topic')?.textContent || '';
+        const format   = card.dataset.format || '';
+        const keywords = card.dataset.keywords || '';
+        card.dataset.search = (title + ' ' + desc + ' ' + topic + ' ' + format + ' ' + keywords).toLowerCase();
+      });
+
+      function applyFilters() {
+        let visible = 0;
+        const q = query.trim().toLowerCase();
+
+        cards.forEach(card => {
+          const catMatch  = activeFilter === 'all' || card.dataset.category === activeFilter;
+          const textMatch = !q || card.dataset.search.includes(q);
+          const show = catMatch && textMatch;
+          card.hidden = !show;
+          if (show) visible++;
+        });
+
+        // Hide empty category sections
+        categories.forEach(cat => {
+          const hasVisible = cat.querySelectorAll('.hub-card:not([hidden])').length > 0;
+          cat.hidden = !hasVisible;
+        });
+
+        resultCount.textContent = visible;
+        emptyState.classList.toggle('is-visible', visible === 0);
+
+        const labelMap = {
+          all: 'All categories',
+          ai: 'AI & Commercialization',
+          capital: 'Investing & Capital',
+          empire: 'Empire Building & M&A',
+          women: 'Women & Philanthropy',
+          speaking: 'Speaking'
+        };
+        activeLabel.textContent = q
+          ? `Search: "${query}"${activeFilter !== 'all' ? ' · ' + labelMap[activeFilter] : ''}`
+          : labelMap[activeFilter];
+      }
+
+      // Search input
+      searchInput.addEventListener('input', e => {
+        query = e.target.value;
+        searchWrap.classList.toggle('has-value', query.length > 0);
+        applyFilters();
+      });
+
+      searchClear.addEventListener('click', () => {
+        query = '';
+        searchInput.value = '';
+        searchWrap.classList.remove('has-value');
+        searchInput.focus();
+        applyFilters();
+      });
+
+      // Filter pills
+      pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          pills.forEach(p => p.classList.remove('is-active'));
+          pill.classList.add('is-active');
+          activeFilter = pill.dataset.filter;
+          applyFilters();
+        });
+      });
+
+      // Reset
+      resetBtn.addEventListener('click', () => {
+        query = '';
+        searchInput.value = '';
+        searchWrap.classList.remove('has-value');
+        activeFilter = 'all';
+        pills.forEach(p => p.classList.toggle('is-active', p.dataset.filter === 'all'));
+        applyFilters();
+      });
+
+      // Annotate pill counts
+      pills.forEach(pill => {
+        const f = pill.dataset.filter;
+        const n = f === 'all'
+          ? cards.length
+          : Array.from(cards).filter(c => c.dataset.category === f).length;
+        const span = document.createElement('span');
+        span.className = 'hub-pill__count';
+        span.textContent = '(' + n + ')';
+        pill.appendChild(span);
+      });
+
+      // Deep-link via ?cat=ai or ?q=fundraising
+      const params = new URLSearchParams(window.location.search);
+      const cat = params.get('cat');
+      const q   = params.get('q');
+      if (cat) {
+        const target = filterBar.querySelector(`[data-filter="${cat}"]`);
+        if (target) target.click();
+      }
+      if (q) {
+        searchInput.value = q;
+        searchInput.dispatchEvent(new Event('input'));
+      }
+
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>
