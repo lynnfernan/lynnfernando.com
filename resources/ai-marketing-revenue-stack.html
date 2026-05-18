@@ -27,6 +27,9 @@
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="./resources.css" />
   <style>
+    /* Wider content column for this tool-heavy article (default is 780px) */
+    .res-content { max-width: 920px; }
+
     .res-author-bio {
       margin-top: 56px;
       padding: 32px 36px;
@@ -70,18 +73,20 @@
       margin: 24px 0 0;
     }
     .res-tool-list li {
-      padding: 16px 0;
+      padding: 18px 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.75;
       color: #b8b8b8;
+      display: flex;
+      gap: 28px;
+      align-items: baseline;
     }
     .res-tool-list li:last-child { border-bottom: none; }
     .res-tool-list li strong {
       color: #c9a84c;
       font-weight: 600;
-      display: inline-block;
-      min-width: 160px;
+      flex: 0 0 200px;
     }
     .res-strategy {
       margin-top: 28px;
@@ -116,7 +121,8 @@
     @media (max-width: 640px) {
       .res-author-bio { flex-direction: column; gap: 16px; }
       .res-author-bio__dot { width: 48px; height: 4px; align-self: auto; }
-      .res-tool-list li strong { display: block; min-width: 0; margin-bottom: 4px; }
+      .res-tool-list li { flex-direction: column; gap: 6px; }
+      .res-tool-list li strong { flex: none; }
     }
   </style>
 </head>
@@ -141,7 +147,6 @@
     <div class="res-hero__inner">
       <div class="res-hero__meta">
         <span class="res-hero__tag">AI &amp; Marketing</span>
-        <span class="res-hero__access res-hero__access--free">Free</span>
       </div>
       <h1 class="res-hero__title">My AI Stack for Marketing, Sales, and <em>Revenue</em></h1>
       <p class="res-hero__desc">The tools I actually use every week to generate leads, write content, run outreach, and grow revenue. Organized by business outcome, not by category.</p>
