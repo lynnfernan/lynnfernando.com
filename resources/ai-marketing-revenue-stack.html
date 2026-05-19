@@ -30,6 +30,11 @@
     /* Wider content column for this tool-heavy article (default is 780px) */
     .res-content { max-width: 920px; }
 
+    /* Suppress the global ▸ caret bullets for tool lists; the gold tool name is the marker */
+    .res-content__section ul.res-tool-list { padding: 0; }
+    .res-content__section ul.res-tool-list li { padding-left: 0; color: #b8b8b8; line-height: 1.75; }
+    .res-content__section ul.res-tool-list li::before { content: none; display: none; }
+
     .res-author-bio {
       margin-top: 56px;
       padding: 32px 36px;
