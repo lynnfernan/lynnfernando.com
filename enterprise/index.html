@@ -80,7 +80,7 @@
     /* Credentials (re-skin of commercial-stats for text values, not metric numbers) */
     .enterprise-creds-wrap {
       padding: 80px 0;
-      background: var(--dark);
+      background: var(--black);
       border-bottom: 1px solid var(--border-subtle);
     }
     .enterprise-creds-wrap .commercial-stat__num {
@@ -163,7 +163,7 @@
     /* Initiative types (2x2 grid override of .advisory-services) */
     .enterprise-initiatives {
       padding: var(--section-pad) 0;
-      background: var(--black);
+      background: var(--dark);
       border-bottom: 1px solid var(--border-subtle);
     }
     .enterprise-initiatives .advisory-cs-header {
@@ -402,8 +402,20 @@
     }
 
     .enterprise-bottom-cta {
-      padding: var(--section-pad) 0;
+      padding: var(--section-pad-sm) 0 var(--section-pad) 0;
       background: var(--black);
+    }
+
+    /* Page-scoped: center the gold underline below the centered section
+       headers (the ::after rule on .advisory-cs-header in styles.css
+       defaults to transform-origin: left, which left-aligns the line). */
+    .enterprise-proof-wrap .advisory-cs-header::after,
+    .enterprise-initiatives .advisory-cs-header::after,
+    .enterprise-engagements .advisory-cs-header::after,
+    .enterprise-process-wrap .advisory-cs-header::after {
+      margin-left: auto;
+      margin-right: auto;
+      transform-origin: center;
     }
 
     @media (max-width: 1024px) {
@@ -433,7 +445,8 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/#advisory" class="nav-active">Brand Architect</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/enterprise/" class="nav-active">Enterprise</a></li>
         <li><a href="/#speaking">Speaking</a></li>
         <li><a href="/#platform">Platform</a></li>
         <li><a href="/invest.html">Invest</a></li>
@@ -453,130 +466,6 @@
       <div class="enterprise-hero__ctas">
         <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Start a Conversation →</a>
         <a href="#engagements" class="btn btn-outline">See Engagement Types</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CREDENTIALS -->
-  <section class="enterprise-creds-wrap">
-    <div class="container">
-      <div class="commercial-stats">
-        <div class="commercial-stat">
-          <div class="commercial-stat__num">Disney · Amazon</div>
-          <div class="commercial-stat__label">Background</div>
-        </div>
-        <div class="commercial-stat">
-          <div class="commercial-stat__num">15+ Years</div>
-          <div class="commercial-stat__label">Senior commercial leadership experience</div>
-        </div>
-        <div class="commercial-stat">
-          <div class="commercial-stat__num">Commercial Architecture</div>
-          <div class="commercial-stat__label">Specialization</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROOF -->
-  <section class="enterprise-proof-wrap" id="proof">
-    <div class="container">
-      <div class="advisory-cs-header">
-        <span class="label">Enterprise Track Record</span>
-        <h3>The work that <em>built the credential.</em></h3>
-      </div>
-      <p class="advisory-pricing__subtitle">These aren't case studies from a consulting engagement. They're the initiatives that defined commercial strategy at two of the most recognized brands in the world.</p>
-
-      <div class="advisory-cases">
-
-        <div class="advisory-case">
-          <div class="advisory-case__tag">Walt Disney World · The Walt Disney Company</div>
-          <h4 class="advisory-case__title">The 50th Anniversary: The World's Most Magical Celebration</h4>
-          <p class="advisory-case__context">Led the overarching commercial strategy for Walt Disney World's 50th anniversary, a multi-year, cross-property initiative spanning four theme parks and multiple resort properties. The mandate included new partnership development, new channels of distribution, and deliberate expansion into audiences the brand had not previously engaged at this scale. The 50th was not a campaign. It was a full commercial transformation of how the park went to market.</p>
-          <div class="advisory-case__divider"></div>
-          <div class="advisory-case__tag-row">
-            <span class="advisory-case__tag-pill">Brand Launch</span>
-            <span class="advisory-case__tag-pill">Partnership Development</span>
-            <span class="advisory-case__tag-pill">New Audience Strategy</span>
-            <span class="advisory-case__tag-pill">Channel Distribution</span>
-            <span class="advisory-case__tag-pill">Multi-Property Scale</span>
-          </div>
-        </div>
-
-        <div class="advisory-case">
-          <div class="advisory-case__tag">Amazon Fashion · Amazon</div>
-          <h4 class="advisory-case__title">Scaling Amazon Fashion: The Drop & Project Runway</h4>
-          <p class="advisory-case__context">Helped scale and expand Amazon Fashion at a pivotal moment in its commercial trajectory. Led The Drop, a first-of-its-kind curated influencer content commerce model that predated how the industry now operates. Structured and led the Amazon Fashion synergy with Project Runway, a brand partnership model that had never been executed at this intersection before. Both initiatives required building commercial infrastructure, partnership frameworks, and go-to-market systems that didn't exist inside the organization.</p>
-          <div class="advisory-case__divider"></div>
-          <div class="advisory-case__tag-row">
-            <span class="advisory-case__tag-pill">Commerce Innovation</span>
-            <span class="advisory-case__tag-pill">Influencer Strategy</span>
-            <span class="advisory-case__tag-pill">Licensing Partnership</span>
-            <span class="advisory-case__tag-pill">Go-to-Market</span>
-            <span class="advisory-case__tag-pill">First-of-Kind Execution</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LYNN QUOTE -->
-  <section class="enterprise-quote-wrap">
-    <div class="container">
-      <blockquote class="enterprise-quote">
-        <p>Most senior consultants can tell you what to do. Very few have actually done it at this scale. There is a difference between advising on a partnership and having structured one between two of the world's most recognized brands.</p>
-        <cite>Lynn Fernando · Commercial Architect</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- INITIATIVE TYPES -->
-  <section class="enterprise-initiatives" id="initiatives">
-    <div class="container">
-      <div class="advisory-cs-header">
-        <span class="label">Where I Work</span>
-        <h3>Four initiative types. <em>One common outcome.</em></h3>
-      </div>
-      <p class="advisory-pricing__subtitle">Every engagement is built around a specific mandate. The outcome is always the same: commercial infrastructure that generates revenue, market access, or organizational capability that wasn't there before.</p>
-
-      <div class="advisory-services">
-
-        <div class="advisory-service">
-          <div class="advisory-service__num">01</div>
-          <div class="advisory-service__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
-          </div>
-          <h3>Major Partnership and Licensing</h3>
-          <p>Structuring, negotiating, and closing enterprise-level partnership and licensing deals. From initial framework to signed agreement. Includes brand partnerships, co-marketing structures, licensing deal architecture, and distribution agreements.</p>
-        </div>
-
-        <div class="advisory-service">
-          <div class="advisory-service__num">02</div>
-          <div class="advisory-service__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-4 4 4 4-6 4 4"/><path d="M3 20h18"/></svg>
-          </div>
-          <h3>Brand Launches and Go-to-Market</h3>
-          <p>Leading the commercial launch of a new product, brand, or division. Includes positioning, messaging architecture, channel strategy, partnership activation, and the internal alignment required to execute at scale without losing momentum.</p>
-        </div>
-
-        <div class="advisory-service">
-          <div class="advisory-service__num">03</div>
-          <div class="advisory-service__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 12h3m12 0h3M12 3v3m0 12v3"/></svg>
-          </div>
-          <h3>Channel and Distribution Buildouts</h3>
-          <p>Building net-new channels: retail, wholesale, platform, or digital. Includes partner identification, commercial terms, integration architecture, and the operational handoff to internal teams. The work is done when the channel is generating revenue.</p>
-        </div>
-
-        <div class="advisory-service">
-          <div class="advisory-service__num">04</div>
-          <div class="advisory-service__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <h3>Marketing Transformation</h3>
-          <p>Rebuilding how a large commercial or marketing team executes: strategy, structure, vendor ecosystem, and measurement. This is not a consulting report. It is embedded leadership that changes how the organization operates and what it produces.</p>
-        </div>
-
       </div>
     </div>
   </section>
@@ -645,6 +534,77 @@
     </div>
   </section>
 
+  <!-- CREDENTIALS -->
+  <section class="enterprise-creds-wrap">
+    <div class="container">
+      <div class="commercial-stats">
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">Disney · Amazon</div>
+          <div class="commercial-stat__label">Background</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">15+ Years</div>
+          <div class="commercial-stat__label">Senior commercial leadership experience</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">Commercial Architecture</div>
+          <div class="commercial-stat__label">Specialization</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INITIATIVE TYPES -->
+  <section class="enterprise-initiatives" id="initiatives">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">Where I Work</span>
+        <h3>Four initiative types. <em>One common outcome.</em></h3>
+      </div>
+      <p class="advisory-pricing__subtitle">Every engagement is built around a specific mandate. The outcome is always the same: commercial infrastructure that generates revenue, market access, or organizational capability that wasn't there before.</p>
+
+      <div class="advisory-services">
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">01</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </div>
+          <h3>Major Partnership and Licensing</h3>
+          <p>Structuring, negotiating, and closing enterprise-level partnership and licensing deals. From initial framework to signed agreement. Includes brand partnerships, co-marketing structures, licensing deal architecture, and distribution agreements.</p>
+        </div>
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">02</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-4 4 4 4-6 4 4"/><path d="M3 20h18"/></svg>
+          </div>
+          <h3>Brand Launches and Go-to-Market</h3>
+          <p>Leading the commercial launch of a new product, brand, or division. Includes positioning, messaging architecture, channel strategy, partnership activation, and the internal alignment required to execute at scale without losing momentum.</p>
+        </div>
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">03</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 12h3m12 0h3M12 3v3m0 12v3"/></svg>
+          </div>
+          <h3>Channel and Distribution Buildouts</h3>
+          <p>Building net-new channels: retail, wholesale, platform, or digital. Includes partner identification, commercial terms, integration architecture, and the operational handoff to internal teams. The work is done when the channel is generating revenue.</p>
+        </div>
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">04</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Marketing Transformation</h3>
+          <p>Rebuilding how a large commercial or marketing team executes: strategy, structure, vendor ecosystem, and measurement. This is not a consulting report. It is embedded leadership that changes how the organization operates and what it produces.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- PROCESS -->
   <section class="enterprise-process-wrap" id="process">
     <div class="container">
@@ -683,6 +643,59 @@
             <p class="enterprise-process__body">Every engagement closes with documentation, a transition plan, and a structured handoff to your internal team. The goal is not dependency, it is capability that stays inside your organization after I leave.</p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LYNN QUOTE -->
+  <section class="enterprise-quote-wrap">
+    <div class="container">
+      <blockquote class="enterprise-quote">
+        <p>Most senior consultants can tell you what to do. Very few have actually done it at this scale. There is a difference between advising on a partnership and having structured one between two of the world's most recognized brands.</p>
+        <cite>Lynn Fernando · Commercial Architect</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="enterprise-proof-wrap" id="proof">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">Enterprise Track Record</span>
+        <h3>The work that <em>built the credential.</em></h3>
+      </div>
+      <p class="advisory-pricing__subtitle">These aren't case studies from a consulting engagement. They're the initiatives that defined commercial strategy at two of the most recognized brands in the world.</p>
+
+      <div class="advisory-cases">
+
+        <div class="advisory-case">
+          <div class="advisory-case__tag">Walt Disney World · The Walt Disney Company</div>
+          <h4 class="advisory-case__title">The 50th Anniversary: The World's Most Magical Celebration</h4>
+          <p class="advisory-case__context">Led the overarching commercial strategy for Walt Disney World's 50th anniversary, a multi-year, cross-property initiative spanning four theme parks and multiple resort properties. The mandate included new partnership development, new channels of distribution, and deliberate expansion into audiences the brand had not previously engaged at this scale. The 50th was not a campaign. It was a full commercial transformation of how the park went to market.</p>
+          <div class="advisory-case__divider"></div>
+          <div class="advisory-case__tag-row">
+            <span class="advisory-case__tag-pill">Brand Launch</span>
+            <span class="advisory-case__tag-pill">Partnership Development</span>
+            <span class="advisory-case__tag-pill">New Audience Strategy</span>
+            <span class="advisory-case__tag-pill">Channel Distribution</span>
+            <span class="advisory-case__tag-pill">Multi-Property Scale</span>
+          </div>
+        </div>
+
+        <div class="advisory-case">
+          <div class="advisory-case__tag">Amazon Fashion · Amazon</div>
+          <h4 class="advisory-case__title">Scaling Amazon Fashion: The Drop & Project Runway</h4>
+          <p class="advisory-case__context">Helped scale and expand Amazon Fashion at a pivotal moment in its commercial trajectory. Led The Drop, a first-of-its-kind curated influencer content commerce model that predated how the industry now operates. Structured and led the Amazon Fashion synergy with Project Runway, a brand partnership model that had never been executed at this intersection before. Both initiatives required building commercial infrastructure, partnership frameworks, and go-to-market systems that didn't exist inside the organization.</p>
+          <div class="advisory-case__divider"></div>
+          <div class="advisory-case__tag-row">
+            <span class="advisory-case__tag-pill">Commerce Innovation</span>
+            <span class="advisory-case__tag-pill">Influencer Strategy</span>
+            <span class="advisory-case__tag-pill">Licensing Partnership</span>
+            <span class="advisory-case__tag-pill">Go-to-Market</span>
+            <span class="advisory-case__tag-pill">First-of-Kind Execution</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
