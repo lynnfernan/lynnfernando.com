@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GSKJ25Q4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K1GSKJ25Q4');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Enterprise Commercial Architecture | Lynn Fernando</title>
+  <meta name="description" content="Commercial architecture for PE-backed portcos, founders preparing for exit, and corporate operators. Fifteen years of Disney and Amazon revenue infrastructure applied to institutional-grade businesses." />
+  <meta name="author" content="Lynn Fernando" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/enterprise" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Enterprise Commercial Architecture | Lynn Fernando" />
+  <meta property="og:description" content="Commercial architecture for PE-backed portcos, founders preparing for exit, and corporate operators." />
+  <meta property="og:url" content="https://lynnfernando.com/enterprise" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Enterprise Commercial Architecture | Lynn Fernando" />
+  <meta name="twitter:description" content="Disney and Amazon revenue infrastructure applied to PE-backed portcos and exit-bound founders." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lf-logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/lf-logo.png" />
+  <link rel="apple-touch-icon" href="/images/lf-logo.png" />
+  <meta name="msapplication-TileImage" content="/images/lf-logo.png" />
+
+  <style>
+    /* ---- ENTERPRISE PAGE ---- */
+
+    .enterprise-hero {
+      padding: 160px 0 80px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .enterprise-hero .container { max-width: 920px; }
+    .enterprise-hero .label { display: block; margin-bottom: 20px; }
+    .enterprise-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--off-white);
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+    .enterprise-hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .enterprise-hero p {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 680px;
+      line-height: 1.85;
+      margin-bottom: 32px;
+    }
+
+    .enterprise-stats-wrap {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* Institutional difference prose */
+    .enterprise-prose {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .enterprise-prose__inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .enterprise-prose .label { display: block; margin-bottom: 20px; }
+    .enterprise-prose h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3.2vw, 40px);
+      font-weight: 300;
+      color: var(--off-white);
+      line-height: 1.2;
+      margin-bottom: 28px;
+    }
+    .enterprise-prose h2 em { font-style: italic; color: var(--gold); }
+    .enterprise-prose p {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+    .enterprise-prose p:last-child { margin-bottom: 0; }
+
+    /* Engagement models */
+    .enterprise-engagements {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .engagement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .engagement-card {
+      background: var(--dark-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+    }
+    .engagement-card__num {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .engagement-card h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--off-white);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .engagement-card__desc {
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+    .engagement-card__price {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .engagement-card__terms {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .engagement-card__includes-label {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 14px;
+    }
+    .engagement-card__list {
+      list-style: none;
+      flex-grow: 1;
+    }
+    .engagement-card__list li {
+      font-size: 14px;
+      color: var(--off-white);
+      line-height: 1.7;
+      padding: 10px 0 10px 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+    .engagement-card__list li:last-child { border-bottom: none; }
+    .engagement-card__list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 22px;
+      width: 10px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .enterprise-buyers-wrap {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .enterprise-cases-wrap {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* REV Global crossover callout */
+    .enterprise-revglobal {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .revglobal-card {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--dark-2);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 4px 4px 0;
+      padding: 48px 56px;
+    }
+    .revglobal-card .label { display: block; margin-bottom: 16px; }
+    .revglobal-card h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 2.8vw, 32px);
+      font-weight: 300;
+      color: var(--off-white);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+    .revglobal-card h3 em { font-style: italic; color: var(--gold); }
+    .revglobal-card p {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-bottom: 24px;
+    }
+
+    .enterprise-bottom-cta {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+    }
+
+    @media (max-width: 1024px) {
+      .engagement-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 640px) {
+      .engagement-card { padding: 32px 24px; }
+      .revglobal-card { padding: 32px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/images/lf-logo.png" alt="Lynn Fernando" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#advisory" class="nav-active">Brand Architect</a></li>
+        <li><a href="/#speaking">Speaking</a></li>
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/invest.html">Invest</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/#manifesto">Manifesto</a></li>
+        <li><a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="nav-cta" target="_blank" rel="noopener">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="enterprise-hero">
+    <div class="container">
+      <span class="label">For PE-Backed Portcos, Boards, and Exit-Bound Founders</span>
+      <h1>Commercial architecture for <em>institutional operators.</em></h1>
+      <p>Lynn Fernando brings the Disney and Amazon commercial playbook to portfolio companies, founders preparing for exit, and operators whose boards expect institutional growth without institutional headcount.</p>
+      <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Confidential Consultation →</a>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY STATS -->
+  <section class="enterprise-stats-wrap">
+    <div class="container">
+      <div class="commercial-stats">
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">6.8×</div>
+          <div class="commercial-stat__label">Exit multiple on a $6M founder-owned company post-commercialization</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">15+</div>
+          <div class="commercial-stat__label">Years building revenue infrastructure at Disney and Amazon</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">$1.8M</div>
+          <div class="commercial-stat__label">New ARR in 9 months for a $4M B2B services company</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE INSTITUTIONAL DIFFERENCE -->
+  <section class="enterprise-prose">
+    <div class="container">
+      <div class="enterprise-prose__inner">
+        <span class="label">The Institutional Difference</span>
+        <h2>A fractional CMO can build a campaign. <em>An architect builds the rooms.</em></h2>
+        <p>Most operators at the lower middle market and PE-backed portco level don't need another marketing consultant or a fractional CMO running paid media. They need someone who has sat across from buyers at the largest companies in the world, structured the deals, and knows what an institutional commercial operation actually looks like.</p>
+        <p>The work is unglamorous and high-leverage: which channel partners actually move volume, which platform integrations create lock-in, which contract terms compound, which exec relationships unlock the next category. The asset isn't a deck. It's access to rooms most operators can't enter alone, paired with a playbook that has worked at Fortune 100 scale.</p>
+        <p>That's the work, and it's what makes a business acquirable at a premium multiple or defensible at the next stage of growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT MODELS -->
+  <section class="enterprise-engagements">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">Engagement Models</span>
+        <h3>Three ways Lynn works <em>with institutional operators.</em></h3>
+      </div>
+      <div class="engagement-grid">
+
+        <div class="engagement-card">
+          <div class="engagement-card__num">01 · Pre-Acquisition</div>
+          <h3>Pre-Acquisition Commercialization</h3>
+          <p class="engagement-card__desc">For PE firms and strategic acquirers diligencing a target. Commercial-architecture assessment of the asset, channel-expansion modeling, and the 100-day post-close revenue plan.</p>
+          <div class="engagement-card__price">Custom</div>
+          <div class="engagement-card__terms">Inquire · Engagement-based</div>
+          <div class="engagement-card__includes-label">Includes</div>
+          <ul class="engagement-card__list">
+            <li>Commercial diligence on the target's channel and partnership stack</li>
+            <li>Quantified revenue expansion model post-close</li>
+            <li>100-day commercial integration plan</li>
+            <li>Identified partnerships, lock-in plays, and category moves</li>
+            <li>Joint review with deal team and incoming operator</li>
+          </ul>
+        </div>
+
+        <div class="engagement-card">
+          <div class="engagement-card__num">02 · Portfolio Embed</div>
+          <h3>Portfolio Operator Embed</h3>
+          <p class="engagement-card__desc">Fractional Commercial Architect inside a portfolio company. Active partnership development, board-level reporting, and the institutional commercial discipline most lower-middle-market operators have never had.</p>
+          <div class="engagement-card__price">Custom</div>
+          <div class="engagement-card__terms">Inquire · Retained engagement</div>
+          <div class="engagement-card__includes-label">Includes</div>
+          <ul class="engagement-card__list">
+            <li>Active partnership identification, outreach, and deal negotiation</li>
+            <li>Direct access to Lynn's Disney, Amazon, and operator network</li>
+            <li>Monthly commercial pipeline review with the CEO and board</li>
+            <li>Quarterly strategy roadmap tied to portco growth thesis</li>
+            <li>AI-powered revenue infrastructure built and operated alongside the team</li>
+          </ul>
+        </div>
+
+        <div class="engagement-card">
+          <div class="engagement-card__num">03 · Exit Readiness</div>
+          <h3>Exit-Readiness Architecture</h3>
+          <p class="engagement-card__desc">For founders 12 to 24 months from a sale. The commercial buildout that converts a business from founder-dependent to acquirable, with the documentation and metrics buyers underwrite at a premium.</p>
+          <div class="engagement-card__price">Custom</div>
+          <div class="engagement-card__terms">Inquire · Scoped at intake</div>
+          <div class="engagement-card__includes-label">Includes</div>
+          <ul class="engagement-card__list">
+            <li>Commercial architecture audit framed for buyer diligence</li>
+            <li>Channel and partnership buildout that reduces founder dependence</li>
+            <li>Repeatable revenue motion documented for the data room</li>
+            <li>EBITDA optimization and margin expansion plan</li>
+            <li>Buyer-narrative development with banker and counsel alignment</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BUYER FIT -->
+  <section class="enterprise-buyers-wrap">
+    <div class="container">
+      <div class="commercial-buyers">
+        <div class="commercial-buyers__header">
+          <span class="label">Who Engages at the Enterprise Level</span>
+          <h4>Three operators. <em>Three engagement paths.</em></h4>
+        </div>
+        <div class="commercial-buyer-row">
+          <div>
+            <div class="commercial-buyer-row__name">PE-backed portco operator</div>
+            <div class="commercial-buyer-row__sub">Post-close, growth mandate</div>
+          </div>
+          <div class="commercial-buyer-row__detail">Board wants institutional revenue growth but the operator doesn't have enterprise-level commercial experience. They need the Fortune 100 playbook applied at portco scale, executed by someone who has actually run it.</div>
+          <div><span class="commercial-buyer-row__badge">Portfolio Embed</span></div>
+        </div>
+        <div class="commercial-buyer-row">
+          <div>
+            <div class="commercial-buyer-row__name">Founder preparing for exit</div>
+            <div class="commercial-buyer-row__sub">12–24 months out</div>
+          </div>
+          <div class="commercial-buyer-row__detail">Multiple is suppressed because the business looks founder-dependent and the commercial motion isn't documented or repeatable. Exit-readiness architecture is what closes the gap and gets the premium multiple.</div>
+          <div><span class="commercial-buyer-row__badge">Exit Readiness</span></div>
+        </div>
+        <div class="commercial-buyer-row">
+          <div>
+            <div class="commercial-buyer-row__name">PE firm or strategic acquirer</div>
+            <div class="commercial-buyer-row__sub">Pre-close, in diligence</div>
+          </div>
+          <div class="commercial-buyer-row__detail">Underwriting a thesis that requires commercial expansion post-close. Need a senior outside view on whether the channel and partnership story actually scales, and a credible 100-day plan to execute against.</div>
+          <div><span class="commercial-buyer-row__badge">Pre-Acquisition</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="enterprise-cases-wrap">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">Case Studies</span>
+        <h3>Institutional Outcomes.</h3>
+      </div>
+
+      <div class="advisory-cases">
+
+        <div class="advisory-case">
+          <div class="advisory-case__tag">Digital Transformation & Exit Value</div>
+          <h4 class="advisory-case__title">Modernizing a Legacy Business for a Premium Exit Multiple</h4>
+          <p class="advisory-case__context">A founder-owned company with $6M in revenue had strong fundamentals but an outdated tech stack, inconsistent data, and no visibility into unit economics, making it difficult to attract institutional buyers at the multiples the business deserved.</p>
+          <div class="advisory-case__divider"></div>
+          <div class="advisory-case__work">
+            <div class="advisory-case__work-label">The Work</div>
+            <p>Lynn led a full digital transformation engagement: standardized reporting infrastructure, integrated AI-driven forecasting tools, eliminated redundant systems reducing SaaS spend by 35%, and built an operations dashboard that gave buyers instant clarity into business performance. The company's story became undeniable in a buyer's diligence process.</p>
+          </div>
+          <div class="advisory-case__results">
+            <div class="advisory-case__result">
+              <span class="advisory-case__result-num">6.8×</span>
+              <span class="advisory-case__result-label">Exit Multiple Achieved</span>
+            </div>
+            <div class="advisory-case__result">
+              <span class="advisory-case__result-num">2.4×</span>
+              <span class="advisory-case__result-label">EBITDA Improvement</span>
+            </div>
+            <div class="advisory-case__result">
+              <span class="advisory-case__result-num">35%</span>
+              <span class="advisory-case__result-label">Reduction in Operating Costs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="advisory-case">
+          <div class="advisory-case__tag">Revenue & AI Automation</div>
+          <h4 class="advisory-case__title">From Manual Pipeline to AI-Powered Revenue Engine</h4>
+          <p class="advisory-case__context">A $4M services company in the B2B professional services space was running a fully manual sales operation: spreadsheets, inconsistent follow-up, and a team spending 60% of their time on administrative work instead of selling.</p>
+          <div class="advisory-case__divider"></div>
+          <div class="advisory-case__work">
+            <div class="advisory-case__work-label">The Work</div>
+            <p>Lynn mapped the full revenue cycle and deployed an AI-powered SDR system that automated prospecting, personalized outreach at scale, and maintained deal follow-up with zero human overhead. A revenue intelligence layer was layered on top to score leads, flag stalled deals, and surface upsell opportunities in real time.</p>
+          </div>
+          <div class="advisory-case__results">
+            <div class="advisory-case__result">
+              <span class="advisory-case__result-num">$1.8M</span>
+              <span class="advisory-case__result-label">New ARR in 9 Months</span>
+            </div>
+            <div class="advisory-case__result">
+              <span class="advisory-case__result-num">3×</span>
+              <span class="advisory-case__result-label">Pipeline Volume</span>
+            </div>
+            <div class="advisory-case__result">
+              <span class="advisory-case__result-num">40%</span>
+              <span class="advisory-case__result-label">Reduction in Sales Cycle</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REV GLOBAL CROSSOVER -->
+  <section class="enterprise-revglobal">
+    <div class="container">
+      <div class="revglobal-card">
+        <span class="label">REV Global Crossover</span>
+        <h3>Capital and commercial architecture <em>under one roof.</em></h3>
+        <p>REV Global is Lynn's M&A and private equity firm for lower middle market operators. Enterprise commercial architecture work is where Lynn engages directly with founders and portcos on the revenue side, before or after a transaction. For deal teams underwriting a commercial thesis or operators building toward one, the two practices reinforce each other.</p>
+        <a href="/invest.html" class="btn btn-outline">REV Capital and the Investment Mandate →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="enterprise-bottom-cta">
+    <div class="container">
+      <div class="advisory-cta">
+        <div class="advisory-cta__inner">
+          <span class="label">Confidential Inquiry</span>
+          <h3>Engagements are limited.<br /><em>Conversations are private.</em></h3>
+          <p>Enterprise work is scoped at intake and engaged selectively. Bring the thesis, the deal, or the portfolio. Conversations are held in confidence, with or without a signed NDA at your discretion.</p>
+          <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Confidential Consultation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">LYNN FERNANDO</span>
+          <p>Commercial Architect · Investor · Philanthropist</p>
+          <p class="footer-tagline">Building Empires. Creating Access. Redefining Wealth.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/#platform">REV Global</a></li>
+            <li><a href="/#platform">REV Capital</a></li>
+            <li><a href="/#platform">Maliguna</a></li>
+            <li><a href="/#platform">Ayana Foundation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/invest.html">Investments</a></li>
+            <li><a href="/#manifesto">Manifesto</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lynnfernando/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/lynnfernandoofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
