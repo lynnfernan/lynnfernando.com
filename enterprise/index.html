@@ -13,22 +13,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Enterprise Commercial Architecture | Lynn Fernando</title>
-  <meta name="description" content="Commercial architecture for PE-backed portcos, founders preparing for exit, and corporate operators. Fifteen years of Disney and Amazon revenue infrastructure applied to institutional-grade businesses." />
+  <title>Enterprise Consulting | Lynn Fernando</title>
+  <meta name="description" content="Fractional and embedded senior commercial leadership for enterprise initiatives that can't wait for a permanent hire. Fifteen years building partnerships, channels, and go-to-market at Disney and Amazon." />
   <meta name="author" content="Lynn Fernando" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lynnfernando.com/enterprise" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Enterprise Commercial Architecture | Lynn Fernando" />
-  <meta property="og:description" content="Commercial architecture for PE-backed portcos, founders preparing for exit, and corporate operators." />
+  <meta property="og:title" content="Enterprise Consulting | Lynn Fernando" />
+  <meta property="og:description" content="Fractional and embedded senior commercial leadership for enterprise initiatives that can't wait for a permanent hire." />
   <meta property="og:url" content="https://lynnfernando.com/enterprise" />
   <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
   <meta property="og:site_name" content="Lynn Fernando" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Enterprise Commercial Architecture | Lynn Fernando" />
-  <meta name="twitter:description" content="Disney and Amazon revenue infrastructure applied to PE-backed portcos and exit-bound founders." />
+  <meta name="twitter:title" content="Enterprise Consulting | Lynn Fernando" />
+  <meta name="twitter:description" content="Fractional and embedded senior commercial leadership when you need it now." />
   <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,15 +49,14 @@
       background: var(--black);
       border-bottom: 1px solid var(--border-subtle);
     }
-    .enterprise-hero .container { max-width: 920px; }
     .enterprise-hero .label { display: block; margin-bottom: 20px; }
     .enterprise-hero h1 {
       font-family: var(--font-serif);
-      font-size: clamp(40px, 5vw, 64px);
+      font-size: clamp(40px, 5vw, 68px);
       font-weight: 300;
       line-height: 1.1;
       color: var(--off-white);
-      max-width: 780px;
+      max-width: 820px;
       margin-bottom: 24px;
     }
     .enterprise-hero h1 em {
@@ -67,56 +66,145 @@
     .enterprise-hero p {
       font-size: 17px;
       color: var(--text-light);
-      max-width: 680px;
+      max-width: 640px;
       line-height: 1.85;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
+    }
+    .enterprise-hero__ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
-    .enterprise-stats-wrap {
-      padding: var(--section-pad) 0;
+    /* Credentials (re-skin of commercial-stats for text values, not metric numbers) */
+    .enterprise-creds-wrap {
+      padding: 80px 0;
       background: var(--dark);
       border-bottom: 1px solid var(--border-subtle);
     }
+    .enterprise-creds-wrap .commercial-stat__num {
+      font-size: clamp(22px, 2.4vw, 30px);
+      letter-spacing: 0.01em;
+    }
+    .enterprise-creds-wrap .commercial-stats {
+      margin-bottom: 0;
+    }
 
-    /* Institutional difference prose */
-    .enterprise-prose {
+    /* Proof section */
+    .enterprise-proof-wrap {
       padding: var(--section-pad) 0;
       background: var(--black);
       border-bottom: 1px solid var(--border-subtle);
     }
-    .enterprise-prose__inner {
+    .enterprise-proof-wrap .advisory-cs-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+    .enterprise-proof-wrap .advisory-pricing__subtitle {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 56px;
+    }
+    .enterprise-proof-wrap .advisory-cases {
+      grid-template-columns: 1fr 1fr;
+    }
+    .advisory-case__tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .advisory-case__tag-pill {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      padding: 6px 14px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    /* Lynn quote block */
+    .enterprise-quote-wrap {
+      padding: 80px 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .enterprise-quote {
       max-width: 760px;
       margin: 0 auto;
+      border-left: 3px solid var(--gold);
+      padding: 24px 0 24px 36px;
     }
-    .enterprise-prose .label { display: block; margin-bottom: 20px; }
-    .enterprise-prose h2 {
+    .enterprise-quote p {
       font-family: var(--font-serif);
-      font-size: clamp(28px, 3.2vw, 40px);
+      font-size: clamp(20px, 2.2vw, 26px);
       font-weight: 300;
+      font-style: italic;
       color: var(--off-white);
-      line-height: 1.2;
-      margin-bottom: 28px;
-    }
-    .enterprise-prose h2 em { font-style: italic; color: var(--gold); }
-    .enterprise-prose p {
-      font-size: 16px;
-      color: var(--text-light);
-      line-height: 1.85;
+      line-height: 1.55;
       margin-bottom: 20px;
     }
-    .enterprise-prose p:last-child { margin-bottom: 0; }
+    .enterprise-quote cite {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-style: normal;
+    }
 
-    /* Engagement models */
+    /* Initiative types (2x2 grid override of .advisory-services) */
+    .enterprise-initiatives {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .enterprise-initiatives .advisory-cs-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+    .enterprise-initiatives .advisory-pricing__subtitle {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 56px;
+    }
+    .enterprise-initiatives .advisory-services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+    @media (max-width: 900px) {
+      .enterprise-initiatives .advisory-services { grid-template-columns: 1fr; }
+    }
+
+    /* Engagement structures */
     .enterprise-engagements {
       padding: var(--section-pad) 0;
       background: var(--dark);
       border-bottom: 1px solid var(--border-subtle);
     }
+    .enterprise-engagements .advisory-cs-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+    .enterprise-engagements .advisory-pricing__subtitle {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 56px;
+    }
     .engagement-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
-      margin-top: 48px;
     }
     .engagement-card {
       background: var(--dark-2);
@@ -125,6 +213,25 @@
       padding: 40px 32px;
       display: flex;
       flex-direction: column;
+      position: relative;
+    }
+    .engagement-card--featured {
+      border-color: var(--gold);
+    }
+    .engagement-card__badge {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--black);
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 2px;
     }
     .engagement-card__num {
       font-family: var(--font-display);
@@ -162,12 +269,13 @@
       font-family: var(--font-display);
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-light);
       margin-bottom: 24px;
       padding-bottom: 24px;
       border-bottom: 1px solid var(--border-subtle);
+      line-height: 1.6;
     }
     .engagement-card__includes-label {
       font-family: var(--font-display);
@@ -200,22 +308,72 @@
       height: 1px;
       background: var(--gold);
     }
+    .engagement-footnote {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--text-muted, var(--text-light));
+      line-height: 1.7;
+      max-width: 620px;
+      margin: 32px auto 0;
+      text-align: center;
+      opacity: 0.85;
+    }
 
-    .enterprise-buyers-wrap {
+    /* Process section */
+    .enterprise-process-wrap {
       padding: var(--section-pad) 0;
       background: var(--black);
       border-bottom: 1px solid var(--border-subtle);
     }
-    .enterprise-cases-wrap {
-      padding: var(--section-pad) 0;
-      background: var(--dark);
+    .enterprise-process-wrap .advisory-cs-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+    .enterprise-process-wrap .advisory-pricing__subtitle {
+      text-align: center;
+      max-width: 620px;
+      margin: 0 auto 56px;
+    }
+    .enterprise-process {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .enterprise-process__item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 24px;
+      padding: 28px 0;
       border-bottom: 1px solid var(--border-subtle);
+      align-items: start;
+    }
+    .enterprise-process__item:first-child { border-top: 1px solid var(--border-subtle); }
+    .enterprise-process__step {
+      font-family: var(--font-serif);
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .enterprise-process__title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--off-white);
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+    .enterprise-process__body {
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.8;
     }
 
     /* REV Global crossover callout */
     .enterprise-revglobal {
       padding: var(--section-pad) 0;
-      background: var(--black);
+      background: var(--dark);
       border-bottom: 1px solid var(--border-subtle);
     }
     .revglobal-card {
@@ -250,10 +408,14 @@
 
     @media (max-width: 1024px) {
       .engagement-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+      .enterprise-proof-wrap .advisory-cases { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
-      .engagement-card { padding: 32px 24px; }
+      .engagement-card { padding: 36px 24px; }
       .revglobal-card { padding: 32px 28px; }
+      .enterprise-process__item { grid-template-columns: 56px 1fr; gap: 16px; }
+      .enterprise-process__step { font-size: 32px; }
+      .enterprise-quote { padding: 20px 0 20px 24px; }
     }
   </style>
 </head>
@@ -285,203 +447,242 @@
   <!-- HERO -->
   <section class="enterprise-hero">
     <div class="container">
-      <span class="label">For PE-Backed Portcos, Boards, and Exit-Bound Founders</span>
-      <h1>Commercial architecture for <em>institutional operators.</em></h1>
-      <p>Lynn Fernando brings the Disney and Amazon commercial playbook to portfolio companies, founders preparing for exit, and operators whose boards expect institutional growth without institutional headcount.</p>
-      <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Confidential Consultation →</a>
+      <span class="label">Enterprise Consulting</span>
+      <h1>Senior commercial leadership.<br /><em>When you need it now.</em></h1>
+      <p>Some initiatives can't wait six months for a permanent hire. They need a senior leader who has done this before, can step in without a ramp-up, and can drive outcomes from week one.</p>
+      <div class="enterprise-hero__ctas">
+        <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Start a Conversation →</a>
+        <a href="#engagements" class="btn btn-outline">See Engagement Types</a>
+      </div>
     </div>
   </section>
 
-  <!-- CREDIBILITY STATS -->
-  <section class="enterprise-stats-wrap">
+  <!-- CREDENTIALS -->
+  <section class="enterprise-creds-wrap">
     <div class="container">
       <div class="commercial-stats">
         <div class="commercial-stat">
-          <div class="commercial-stat__num">6.8×</div>
-          <div class="commercial-stat__label">Exit multiple on a $6M founder-owned company post-commercialization</div>
+          <div class="commercial-stat__num">Disney · Amazon</div>
+          <div class="commercial-stat__label">Background</div>
         </div>
         <div class="commercial-stat">
-          <div class="commercial-stat__num">15+</div>
-          <div class="commercial-stat__label">Years building revenue infrastructure at Disney and Amazon</div>
+          <div class="commercial-stat__num">15+ Years</div>
+          <div class="commercial-stat__label">Senior commercial leadership experience</div>
         </div>
         <div class="commercial-stat">
-          <div class="commercial-stat__num">$1.8M</div>
-          <div class="commercial-stat__label">New ARR in 9 months for a $4M B2B services company</div>
+          <div class="commercial-stat__num">Commercial Architecture</div>
+          <div class="commercial-stat__label">Specialization</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- THE INSTITUTIONAL DIFFERENCE -->
-  <section class="enterprise-prose">
-    <div class="container">
-      <div class="enterprise-prose__inner">
-        <span class="label">The Institutional Difference</span>
-        <h2>A fractional CMO can build a campaign. <em>An architect builds the rooms.</em></h2>
-        <p>Most operators at the lower middle market and PE-backed portco level don't need another marketing consultant or a fractional CMO running paid media. They need someone who has sat across from buyers at the largest companies in the world, structured the deals, and knows what an institutional commercial operation actually looks like.</p>
-        <p>The work is unglamorous and high-leverage: which channel partners actually move volume, which platform integrations create lock-in, which contract terms compound, which exec relationships unlock the next category. The asset isn't a deck. It's access to rooms most operators can't enter alone, paired with a playbook that has worked at Fortune 100 scale.</p>
-        <p>That's the work, and it's what makes a business acquirable at a premium multiple or defensible at the next stage of growth.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ENGAGEMENT MODELS -->
-  <section class="enterprise-engagements">
+  <!-- PROOF -->
+  <section class="enterprise-proof-wrap" id="proof">
     <div class="container">
       <div class="advisory-cs-header">
-        <span class="label">Engagement Models</span>
-        <h3>Three ways Lynn works <em>with institutional operators.</em></h3>
+        <span class="label">Enterprise Track Record</span>
+        <h3>The work that <em>built the credential.</em></h3>
       </div>
-      <div class="engagement-grid">
-
-        <div class="engagement-card">
-          <div class="engagement-card__num">01 · Pre-Acquisition</div>
-          <h3>Pre-Acquisition Commercialization</h3>
-          <p class="engagement-card__desc">For PE firms and strategic acquirers diligencing a target. Commercial-architecture assessment of the asset, channel-expansion modeling, and the 100-day post-close revenue plan.</p>
-          <div class="engagement-card__price">Custom</div>
-          <div class="engagement-card__terms">Inquire · Engagement-based</div>
-          <div class="engagement-card__includes-label">Includes</div>
-          <ul class="engagement-card__list">
-            <li>Commercial diligence on the target's channel and partnership stack</li>
-            <li>Quantified revenue expansion model post-close</li>
-            <li>100-day commercial integration plan</li>
-            <li>Identified partnerships, lock-in plays, and category moves</li>
-            <li>Joint review with deal team and incoming operator</li>
-          </ul>
-        </div>
-
-        <div class="engagement-card">
-          <div class="engagement-card__num">02 · Portfolio Embed</div>
-          <h3>Portfolio Operator Embed</h3>
-          <p class="engagement-card__desc">Fractional Commercial Architect inside a portfolio company. Active partnership development, board-level reporting, and the institutional commercial discipline most lower-middle-market operators have never had.</p>
-          <div class="engagement-card__price">Custom</div>
-          <div class="engagement-card__terms">Inquire · Retained engagement</div>
-          <div class="engagement-card__includes-label">Includes</div>
-          <ul class="engagement-card__list">
-            <li>Active partnership identification, outreach, and deal negotiation</li>
-            <li>Direct access to Lynn's Disney, Amazon, and operator network</li>
-            <li>Monthly commercial pipeline review with the CEO and board</li>
-            <li>Quarterly strategy roadmap tied to portco growth thesis</li>
-            <li>AI-powered revenue infrastructure built and operated alongside the team</li>
-          </ul>
-        </div>
-
-        <div class="engagement-card">
-          <div class="engagement-card__num">03 · Exit Readiness</div>
-          <h3>Exit-Readiness Architecture</h3>
-          <p class="engagement-card__desc">For founders 12 to 24 months from a sale. The commercial buildout that converts a business from founder-dependent to acquirable, with the documentation and metrics buyers underwrite at a premium.</p>
-          <div class="engagement-card__price">Custom</div>
-          <div class="engagement-card__terms">Inquire · Scoped at intake</div>
-          <div class="engagement-card__includes-label">Includes</div>
-          <ul class="engagement-card__list">
-            <li>Commercial architecture audit framed for buyer diligence</li>
-            <li>Channel and partnership buildout that reduces founder dependence</li>
-            <li>Repeatable revenue motion documented for the data room</li>
-            <li>EBITDA optimization and margin expansion plan</li>
-            <li>Buyer-narrative development with banker and counsel alignment</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- BUYER FIT -->
-  <section class="enterprise-buyers-wrap">
-    <div class="container">
-      <div class="commercial-buyers">
-        <div class="commercial-buyers__header">
-          <span class="label">Who Engages at the Enterprise Level</span>
-          <h4>Three operators. <em>Three engagement paths.</em></h4>
-        </div>
-        <div class="commercial-buyer-row">
-          <div>
-            <div class="commercial-buyer-row__name">PE-backed portco operator</div>
-            <div class="commercial-buyer-row__sub">Post-close, growth mandate</div>
-          </div>
-          <div class="commercial-buyer-row__detail">Board wants institutional revenue growth but the operator doesn't have enterprise-level commercial experience. They need the Fortune 100 playbook applied at portco scale, executed by someone who has actually run it.</div>
-          <div><span class="commercial-buyer-row__badge">Portfolio Embed</span></div>
-        </div>
-        <div class="commercial-buyer-row">
-          <div>
-            <div class="commercial-buyer-row__name">Founder preparing for exit</div>
-            <div class="commercial-buyer-row__sub">12–24 months out</div>
-          </div>
-          <div class="commercial-buyer-row__detail">Multiple is suppressed because the business looks founder-dependent and the commercial motion isn't documented or repeatable. Exit-readiness architecture is what closes the gap and gets the premium multiple.</div>
-          <div><span class="commercial-buyer-row__badge">Exit Readiness</span></div>
-        </div>
-        <div class="commercial-buyer-row">
-          <div>
-            <div class="commercial-buyer-row__name">PE firm or strategic acquirer</div>
-            <div class="commercial-buyer-row__sub">Pre-close, in diligence</div>
-          </div>
-          <div class="commercial-buyer-row__detail">Underwriting a thesis that requires commercial expansion post-close. Need a senior outside view on whether the channel and partnership story actually scales, and a credible 100-day plan to execute against.</div>
-          <div><span class="commercial-buyer-row__badge">Pre-Acquisition</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CASE STUDIES -->
-  <section class="enterprise-cases-wrap">
-    <div class="container">
-      <div class="advisory-cs-header">
-        <span class="label">Case Studies</span>
-        <h3>Institutional Outcomes.</h3>
-      </div>
+      <p class="advisory-pricing__subtitle">These aren't case studies from a consulting engagement. They're the initiatives that defined commercial strategy at two of the most recognized brands in the world.</p>
 
       <div class="advisory-cases">
 
         <div class="advisory-case">
-          <div class="advisory-case__tag">Digital Transformation & Exit Value</div>
-          <h4 class="advisory-case__title">Modernizing a Legacy Business for a Premium Exit Multiple</h4>
-          <p class="advisory-case__context">A founder-owned company with $6M in revenue had strong fundamentals but an outdated tech stack, inconsistent data, and no visibility into unit economics, making it difficult to attract institutional buyers at the multiples the business deserved.</p>
+          <div class="advisory-case__tag">Walt Disney World · The Walt Disney Company</div>
+          <h4 class="advisory-case__title">The 50th Anniversary: The World's Most Magical Celebration</h4>
+          <p class="advisory-case__context">Led the overarching commercial strategy for Walt Disney World's 50th anniversary, a multi-year, cross-property initiative spanning four theme parks and multiple resort properties. The mandate included new partnership development, new channels of distribution, and deliberate expansion into audiences the brand had not previously engaged at this scale. The 50th was not a campaign. It was a full commercial transformation of how the park went to market.</p>
           <div class="advisory-case__divider"></div>
-          <div class="advisory-case__work">
-            <div class="advisory-case__work-label">The Work</div>
-            <p>Lynn led a full digital transformation engagement: standardized reporting infrastructure, integrated AI-driven forecasting tools, eliminated redundant systems reducing SaaS spend by 35%, and built an operations dashboard that gave buyers instant clarity into business performance. The company's story became undeniable in a buyer's diligence process.</p>
-          </div>
-          <div class="advisory-case__results">
-            <div class="advisory-case__result">
-              <span class="advisory-case__result-num">6.8×</span>
-              <span class="advisory-case__result-label">Exit Multiple Achieved</span>
-            </div>
-            <div class="advisory-case__result">
-              <span class="advisory-case__result-num">2.4×</span>
-              <span class="advisory-case__result-label">EBITDA Improvement</span>
-            </div>
-            <div class="advisory-case__result">
-              <span class="advisory-case__result-num">35%</span>
-              <span class="advisory-case__result-label">Reduction in Operating Costs</span>
-            </div>
+          <div class="advisory-case__tag-row">
+            <span class="advisory-case__tag-pill">Brand Launch</span>
+            <span class="advisory-case__tag-pill">Partnership Development</span>
+            <span class="advisory-case__tag-pill">New Audience Strategy</span>
+            <span class="advisory-case__tag-pill">Channel Distribution</span>
+            <span class="advisory-case__tag-pill">Multi-Property Scale</span>
           </div>
         </div>
 
         <div class="advisory-case">
-          <div class="advisory-case__tag">Revenue & AI Automation</div>
-          <h4 class="advisory-case__title">From Manual Pipeline to AI-Powered Revenue Engine</h4>
-          <p class="advisory-case__context">A $4M services company in the B2B professional services space was running a fully manual sales operation: spreadsheets, inconsistent follow-up, and a team spending 60% of their time on administrative work instead of selling.</p>
+          <div class="advisory-case__tag">Amazon Fashion · Amazon</div>
+          <h4 class="advisory-case__title">Scaling Amazon Fashion: The Drop & Project Runway</h4>
+          <p class="advisory-case__context">Helped scale and expand Amazon Fashion at a pivotal moment in its commercial trajectory. Led The Drop, a first-of-its-kind curated influencer content commerce model that predated how the industry now operates. Structured and led the Amazon Fashion synergy with Project Runway, a brand partnership model that had never been executed at this intersection before. Both initiatives required building commercial infrastructure, partnership frameworks, and go-to-market systems that didn't exist inside the organization.</p>
           <div class="advisory-case__divider"></div>
-          <div class="advisory-case__work">
-            <div class="advisory-case__work-label">The Work</div>
-            <p>Lynn mapped the full revenue cycle and deployed an AI-powered SDR system that automated prospecting, personalized outreach at scale, and maintained deal follow-up with zero human overhead. A revenue intelligence layer was layered on top to score leads, flag stalled deals, and surface upsell opportunities in real time.</p>
-          </div>
-          <div class="advisory-case__results">
-            <div class="advisory-case__result">
-              <span class="advisory-case__result-num">$1.8M</span>
-              <span class="advisory-case__result-label">New ARR in 9 Months</span>
-            </div>
-            <div class="advisory-case__result">
-              <span class="advisory-case__result-num">3×</span>
-              <span class="advisory-case__result-label">Pipeline Volume</span>
-            </div>
-            <div class="advisory-case__result">
-              <span class="advisory-case__result-num">40%</span>
-              <span class="advisory-case__result-label">Reduction in Sales Cycle</span>
-            </div>
+          <div class="advisory-case__tag-row">
+            <span class="advisory-case__tag-pill">Commerce Innovation</span>
+            <span class="advisory-case__tag-pill">Influencer Strategy</span>
+            <span class="advisory-case__tag-pill">Licensing Partnership</span>
+            <span class="advisory-case__tag-pill">Go-to-Market</span>
+            <span class="advisory-case__tag-pill">First-of-Kind Execution</span>
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- LYNN QUOTE -->
+  <section class="enterprise-quote-wrap">
+    <div class="container">
+      <blockquote class="enterprise-quote">
+        <p>Most senior consultants can tell you what to do. Very few have actually done it at this scale. There is a difference between advising on a partnership and having structured one between two of the world's most recognized brands.</p>
+        <cite>Lynn Fernando · Commercial Architect</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- INITIATIVE TYPES -->
+  <section class="enterprise-initiatives" id="initiatives">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">Where I Work</span>
+        <h3>Four initiative types. <em>One common outcome.</em></h3>
+      </div>
+      <p class="advisory-pricing__subtitle">Every engagement is built around a specific mandate. The outcome is always the same: commercial infrastructure that generates revenue, market access, or organizational capability that wasn't there before.</p>
+
+      <div class="advisory-services">
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">01</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </div>
+          <h3>Major Partnership and Licensing</h3>
+          <p>Structuring, negotiating, and closing enterprise-level partnership and licensing deals. From initial framework to signed agreement. Includes brand partnerships, co-marketing structures, licensing deal architecture, and distribution agreements.</p>
+        </div>
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">02</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-4 4 4 4-6 4 4"/><path d="M3 20h18"/></svg>
+          </div>
+          <h3>Brand Launches and Go-to-Market</h3>
+          <p>Leading the commercial launch of a new product, brand, or division. Includes positioning, messaging architecture, channel strategy, partnership activation, and the internal alignment required to execute at scale without losing momentum.</p>
+        </div>
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">03</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M3 12h3m12 0h3M12 3v3m0 12v3"/></svg>
+          </div>
+          <h3>Channel and Distribution Buildouts</h3>
+          <p>Building net-new channels: retail, wholesale, platform, or digital. Includes partner identification, commercial terms, integration architecture, and the operational handoff to internal teams. The work is done when the channel is generating revenue.</p>
+        </div>
+
+        <div class="advisory-service">
+          <div class="advisory-service__num">04</div>
+          <div class="advisory-service__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Marketing Transformation</h3>
+          <p>Rebuilding how a large commercial or marketing team executes: strategy, structure, vendor ecosystem, and measurement. This is not a consulting report. It is embedded leadership that changes how the organization operates and what it produces.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT STRUCTURES -->
+  <section class="enterprise-engagements" id="engagements">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">Engagement Structure</span>
+        <h3>Three ways to <em>bring me in.</em></h3>
+      </div>
+      <p class="advisory-pricing__subtitle">Every engagement is scoped to a specific mandate. These are starting frameworks. Scope, duration, and structure are always tailored to what the initiative actually requires.</p>
+
+      <div class="engagement-grid">
+
+        <div class="engagement-card">
+          <div class="engagement-card__num">01 · Advisory</div>
+          <h3>Strategic Advisor</h3>
+          <p class="engagement-card__desc">Senior advisory on a specific initiative. You retain execution ownership. I provide the strategic architecture, partnership frameworks, and commercial judgment that most internal teams don't have access to at this level.</p>
+          <div class="engagement-card__price">Custom</div>
+          <div class="engagement-card__terms">Inquire · 2-month minimum · 1–2 days per week</div>
+          <div class="engagement-card__includes-label">Includes</div>
+          <ul class="engagement-card__list">
+            <li>Weekly strategy sessions with senior stakeholders</li>
+            <li>Commercial and partnership framework development</li>
+            <li>Initiative-specific roadmap and decision support</li>
+            <li>Async advisory access between sessions</li>
+          </ul>
+        </div>
+
+        <div class="engagement-card engagement-card--featured">
+          <div class="engagement-card__badge">Most Requested</div>
+          <div class="engagement-card__num">02 · Embedded</div>
+          <h3>Fractional VP / CMO</h3>
+          <p class="engagement-card__desc">I step into a VP or CMO-equivalent seat for 30 to 90 days. Leading teams, driving the initiative, and delivering outcomes as if I am on payroll. Without the six-month search and the permanent headcount cost.</p>
+          <div class="engagement-card__price">Custom</div>
+          <div class="engagement-card__terms">Inquire · 30-day minimum · 3–4 days per week, on-site or remote</div>
+          <div class="engagement-card__includes-label">Includes</div>
+          <ul class="engagement-card__list">
+            <li>Embedded leadership of the commercial or marketing function</li>
+            <li>Direct team management and cross-functional alignment</li>
+            <li>Full initiative ownership from strategy through execution</li>
+            <li>Weekly executive reporting and stakeholder management</li>
+            <li>Transition plan and knowledge transfer at close</li>
+          </ul>
+        </div>
+
+        <div class="engagement-card">
+          <div class="engagement-card__num">03 · Full Embedded</div>
+          <h3>Executive-in-Residence</h3>
+          <p class="engagement-card__desc">A full-time equivalent engagement for a major transformation, launch, or leadership gap. Suitable for board-driven mandates, significant organizational transitions, or multi-market launches that require dedicated executive focus.</p>
+          <div class="engagement-card__price">Custom</div>
+          <div class="engagement-card__terms">Inquire · 90-day minimum · Full-time equivalent</div>
+          <div class="engagement-card__includes-label">Includes</div>
+          <ul class="engagement-card__list">
+            <li>Full executive function ownership</li>
+            <li>P&L or budget accountability where applicable</li>
+            <li>Board and C-suite reporting and alignment</li>
+            <li>Team hiring, restructuring, or capability building</li>
+            <li>Post-engagement transition and successor onboarding</li>
+          </ul>
+        </div>
+
+      </div>
+      <p class="engagement-footnote">All engagements are formalized via a Statement of Work. Retainer structures and project-based pricing are available for specific mandates. Start with a conversation.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="enterprise-process-wrap" id="process">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">How It Works</span>
+        <h3>From first conversation <em>to week one.</em></h3>
+      </div>
+      <p class="advisory-pricing__subtitle">No RFP. No procurement gauntlet. A direct conversation with someone who can make the decision, followed by a scoped SOW and a start date.</p>
+
+      <div class="enterprise-process">
+        <div class="enterprise-process__item">
+          <span class="enterprise-process__step">01</span>
+          <div>
+            <div class="enterprise-process__title">A direct conversation</div>
+            <p class="enterprise-process__body">We talk about the initiative, the timeline, and what success looks like. I ask the questions a senior internal leader would ask. You get a clear sense of whether this is the right fit before any paperwork is involved.</p>
+          </div>
+        </div>
+        <div class="enterprise-process__item">
+          <span class="enterprise-process__step">02</span>
+          <div>
+            <div class="enterprise-process__title">A scoped Statement of Work</div>
+            <p class="enterprise-process__body">I send a one-page SOW tailored to what came out of the conversation: scope, deliverables, timeline, rate, and payment terms. It is designed to move through your internal approval process cleanly.</p>
+          </div>
+        </div>
+        <div class="enterprise-process__item">
+          <span class="enterprise-process__step">03</span>
+          <div>
+            <div class="enterprise-process__title">Onboarding in 48 hours</div>
+            <p class="enterprise-process__body">I don't need a three-week onboarding. I ask for access to the people and information that matter, and I'm contributing by the end of the first week. The ramp-up period that most senior hires require is not something your initiative has time for.</p>
+          </div>
+        </div>
+        <div class="enterprise-process__item">
+          <span class="enterprise-process__step">04</span>
+          <div>
+            <div class="enterprise-process__title">Delivery with a clean handoff</div>
+            <p class="enterprise-process__body">Every engagement closes with documentation, a transition plan, and a structured handoff to your internal team. The goal is not dependency, it is capability that stays inside your organization after I leave.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -491,8 +692,8 @@
     <div class="container">
       <div class="revglobal-card">
         <span class="label">REV Global Crossover</span>
-        <h3>Capital and commercial architecture <em>under one roof.</em></h3>
-        <p>REV Global is Lynn's M&A and private equity firm for lower middle market operators. Enterprise commercial architecture work is where Lynn engages directly with founders and portcos on the revenue side, before or after a transaction. For deal teams underwriting a commercial thesis or operators building toward one, the two practices reinforce each other.</p>
+        <h3>Capital and commercial leadership <em>under one roof.</em></h3>
+        <p>REV Global is Lynn's M&A and private equity firm for lower middle market operators. Enterprise commercial work is where Lynn engages directly with founders, portcos, and corporate operators on the revenue side, before or after a transaction. For deal teams underwriting a commercial thesis or operators building toward one, the two practices reinforce each other.</p>
         <a href="/invest.html" class="btn btn-outline">REV Capital and the Investment Mandate →</a>
       </div>
     </div>
@@ -504,9 +705,9 @@
       <div class="advisory-cta">
         <div class="advisory-cta__inner">
           <span class="label">Confidential Inquiry</span>
-          <h3>Engagements are limited.<br /><em>Conversations are private.</em></h3>
-          <p>Enterprise work is scoped at intake and engaged selectively. Bring the thesis, the deal, or the portfolio. Conversations are held in confidence, with or without a signed NDA at your discretion.</p>
-          <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Schedule a Confidential Consultation →</a>
+          <h3>The right initiative.<br /><em>The right resource.</em></h3>
+          <p>If you have a mandate that needs senior commercial leadership now, start with a conversation. No deck required.</p>
+          <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Book a Conversation →</a>
         </div>
       </div>
     </div>
