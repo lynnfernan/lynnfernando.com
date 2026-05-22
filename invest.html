@@ -356,6 +356,14 @@
       color: #e07070;
       line-height: 1.6;
     }
+    .form-group input.invalid,
+    .form-group select.invalid,
+    .form-group textarea.invalid {
+      border-color: rgba(201, 76, 76, 0.6);
+    }
+    .form-checkbox.invalid {
+      border-color: rgba(201, 76, 76, 0.6);
+    }
     .form-success {
       display: none;
       background: rgba(76, 201, 130, 0.08);
@@ -786,21 +794,49 @@
     const formSuccess = document.getElementById('formSuccess');
     const formError = document.getElementById('formError');
 
+    const fieldLabels = {
+      fullName: 'Full Name',
+      email: 'Email Address',
+      organization: 'Organization / Fund Name',
+      introduction: 'Who introduced you?',
+      dealCategory: 'Deal Category',
+      raiseStatus: 'Stage / Raise Status',
+      trackRecord: 'Sponsor or Founder Track Record',
+      whatYouNeed: 'What are you looking for from Lynn?'
+    };
+
     dealForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       formError.style.display = 'none';
 
-      // Validate required fields
-      const required = ['fullName', 'email', 'organization', 'introduction', 'dealCategory', 'raiseStatus', 'trackRecord', 'whatYouNeed'];
-      const criteriaChecked = document.getElementById('criteriaReviewed').checked;
-      let valid = true;
+      // Clear prior invalid state
+      Object.keys(fieldLabels).forEach(id => document.getElementById(id).classList.remove('invalid'));
+      document.querySelector('.form-checkbox').classList.remove('invalid');
 
-      required.forEach(id => {
+      const criteriaChecked = document.getElementById('criteriaReviewed').checked;
+      const missing = [];
+
+      Object.keys(fieldLabels).forEach(id => {
         const el = document.getElementById(id);
-        if (!el.value.trim()) valid = false;
+        if (!el.value.trim()) {
+          el.classList.add('invalid');
+          missing.push(fieldLabels[id]);
+        }
       });
 
-      if (!valid || !criteriaChecked) {
+      if (!criteriaChecked) {
+        document.querySelector('.form-checkbox').classList.add('invalid');
+      }
+
+      if (missing.length || !criteriaChecked) {
+        const parts = [];
+        if (missing.length) {
+          parts.push(`Missing: ${missing.join(', ')}.`);
+        }
+        if (!criteriaChecked) {
+          parts.push('You must confirm you have reviewed the investment criteria.');
+        }
+        formError.textContent = parts.join(' ');
         formError.style.display = 'block';
         formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;

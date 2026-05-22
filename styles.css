@@ -2921,12 +2921,12 @@ body {
   background: var(--dark-2);
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
-  padding: 8px 32px;
+  padding: 40px 40px 32px;
   margin-bottom: 64px;
 }
 .commercial-buyers__header {
   text-align: center;
-  padding: 32px 0 16px;
+  padding: 0 0 24px;
   border-bottom: 1px solid var(--border-subtle);
   margin-bottom: 8px;
 }
@@ -2943,8 +2943,8 @@ body {
 }
 .commercial-buyer-row {
   display: grid;
-  grid-template-columns: 200px 1fr 160px;
-  gap: 24px;
+  grid-template-columns: 220px 1fr 210px;
+  gap: 32px;
   align-items: center;
   padding: 24px 0;
   border-bottom: 1px solid var(--border-subtle);
@@ -2990,6 +2990,6 @@ body {
   .commercial-buyer-row__badge { justify-self: start; }
 }
 @media (max-width: 640px) {
-  .commercial-buyers { padding: 8px 20px; }
+  .commercial-buyers { padding: 28px 20px 24px; }
   .commercial-stat { padding: 24px 20px; }
 }
