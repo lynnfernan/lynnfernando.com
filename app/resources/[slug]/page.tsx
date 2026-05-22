@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { getResourceBySlug, resources } from "@/lib/resources";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import AssessmentTool from "@/components/AssessmentTool";
+import ConsultingDiagnostic from "@/components/ConsultingDiagnostic";
 import Link from "next/link";
 
 // Import all MDX content
@@ -14,6 +15,7 @@ import VendorChecklist from "@/content/resources/vendor-evaluation-checklist.mdx
 import ROITemplate from "@/content/resources/genai-roi-business-case.mdx";
 import SpeakingMenu from "@/content/resources/speaking-workshop-menu.mdx";
 import AngelInvesting from "@/content/resources/beginners-guide-to-angel-investing.mdx";
+import ConsultingDiagnosticMDX from "@/content/resources/consulting-diagnostic.mdx";
 
 const contentMap: Record<string, React.ComponentType> = {
   "executive-guide-to-genai": ExecutiveGuide,
@@ -24,6 +26,7 @@ const contentMap: Record<string, React.ComponentType> = {
   "genai-roi-business-case": ROITemplate,
   "speaking-workshop-menu": SpeakingMenu,
   "beginners-guide-to-angel-investing": AngelInvesting,
+  "consulting-diagnostic": ConsultingDiagnosticMDX,
 };
 
 export async function generateStaticParams() {
@@ -57,6 +60,7 @@ export default async function ResourcePage({
   if (!Content) notFound();
 
   const isAssessment = slug === "genai-readiness-assessment";
+  const isConsultingDiagnostic = slug === "consulting-diagnostic";
   const isDownload =
     (resource.format === "Download" || resource.format === "Template") &&
     resource.downloadPath;
@@ -74,7 +78,7 @@ export default async function ResourcePage({
 
       <div
         className={`grid gap-10 ${
-          isAssessment || isDownload ? "lg:grid-cols-[1fr_380px]" : "max-w-3xl"
+          isAssessment || isConsultingDiagnostic || isDownload ? "lg:grid-cols-[1fr_380px]" : "max-w-3xl"
         }`}
       >
         {/* Main content */}
@@ -88,7 +92,12 @@ export default async function ResourcePage({
             <AssessmentTool />
           </aside>
         )}
-        {!isAssessment && isDownload && resource.downloadPath && (
+        {isConsultingDiagnostic && (
+          <aside className="lg:sticky lg:top-24 h-fit">
+            <ConsultingDiagnostic />
+          </aside>
+        )}
+        {!isAssessment && !isConsultingDiagnostic && isDownload && resource.downloadPath && (
           <aside className="lg:sticky lg:top-24 h-fit">
             {resource.gated ? (
               <LeadCaptureForm

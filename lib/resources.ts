@@ -95,6 +95,17 @@ export const resources: Resource[] = [
     ctaHref: "mailto:lynn@revglobalinc.com?subject=Angel Investing Inquiry",
   },
   {
+    slug: "consulting-diagnostic",
+    title: "What Kind of Consultant Are You?",
+    description:
+      "Three questions to identify your consulting archetype — and translate your experience, passions, and strengths into a focused offer clients will actually pay for.",
+    format: "Tool",
+    audience: "Consultants & Executives",
+    gated: true,
+    ctaLabel: "Take the Diagnostic",
+    ctaHref: "/resources/consulting-diagnostic",
+  },
+  {
     slug: "speaking-workshop-menu",
     title: "Speaking & Workshop Menu",
     description:
