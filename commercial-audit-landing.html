@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GSKJ25Q4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K1GSKJ25Q4');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Commercial Audit | Lynn Fernando</title>
+  <meta name="description" content="A structured diagnostic that tells you exactly where your partnerships, channels, and go-to-market are leaving money on the table. $2,000. Delivered in 3–5 days. Four slots per month." />
+  <meta name="author" content="Lynn Fernando" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/commercial-audit-landing.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Commercial Audit | Lynn Fernando" />
+  <meta property="og:description" content="A structured diagnostic of your revenue gaps. $2,000. Delivered in 3–5 days. Four slots per month." />
+  <meta property="og:url" content="https://lynnfernando.com/commercial-audit-landing.html" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Commercial Audit | Lynn Fernando" />
+  <meta name="twitter:description" content="A structured diagnostic of your revenue gaps. $2,000. Delivered in 3–5 days." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lf-logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/lf-logo.png" />
+  <link rel="apple-touch-icon" href="/images/lf-logo.png" />
+  <meta name="msapplication-TileImage" content="/images/lf-logo.png" />
+
+  <style>
+    /* ---- COMMERCIAL AUDIT LANDING: page-scoped styles ---- */
+
+    .audit-hero {
+      padding: 160px 0 80px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .audit-hero .label { display: block; margin-bottom: 20px; }
+    .audit-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--off-white);
+      max-width: 880px;
+      margin-bottom: 14px;
+    }
+    .audit-hero h1 em { font-style: italic; color: var(--gold); }
+    .audit-hero__price {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--gold-dark);
+      margin-bottom: 28px;
+    }
+    .audit-hero__sub {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 620px;
+      line-height: 1.85;
+      margin-bottom: 36px;
+    }
+    .audit-hero__ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+
+    .audit-section {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .audit-section--black {
+      background: var(--black);
+    }
+    .audit-section__intro {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+    .audit-section__intro p {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-top: 12px;
+    }
+
+    /* Deliverables grid */
+    .deliverables {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+    }
+    .deliverable {
+      background: var(--dark-2);
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+    .deliverable::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .deliverable:hover { background: var(--dark-3); }
+    .deliverable:hover::after { opacity: 1; }
+    .del-num {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 300;
+      color: rgba(201, 168, 76, 0.22);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .del-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      margin-bottom: 10px;
+    }
+    .del-body {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* Proof block */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .proof-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.4vw, 28px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--off-white);
+      border-left: 2px solid var(--gold);
+      padding-left: 28px;
+      margin-bottom: 18px;
+    }
+    .proof-attr {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding-left: 30px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 800px) {
+      .proof-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* Fit list */
+    .fit-list {
+      list-style: none;
+      max-width: 760px;
+      padding: 0;
+      margin: 0;
+    }
+    .fit-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .fit-item:last-child { border-bottom: none; }
+    .fit-dash {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 14px;
+    }
+    .fit-text {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* Process steps */
+    .process-steps {
+      max-width: 760px;
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      align-items: start;
+    }
+    .process-step:last-child { border-bottom: none; }
+    .ps-num {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .ps-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      margin-bottom: 8px;
+    }
+    .ps-body {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/images/lf-logo.png" alt="Lynn Fernando" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/enterprise/">Enterprise</a></li>
+        <li><a href="/#speaking">Speaking</a></li>
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/invest.html">Invest</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/#manifesto">Manifesto</a></li>
+        <li><a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="nav-cta" target="_blank" rel="noopener">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="audit-hero">
+    <div class="container">
+      <span class="label">The Commercial Audit</span>
+      <h1>Where is your revenue <em>ceiling?</em></h1>
+      <p class="audit-hero__price">$2,000 &nbsp;·&nbsp; Delivered in 3&ndash;5 days &nbsp;·&nbsp; Four slots per month</p>
+      <p class="audit-hero__sub">A structured diagnostic that tells you exactly where your partnerships, channels, and go-to-market are leaving money on the table, and a ranked roadmap for what to fix first.</p>
+      <div class="audit-hero__ctas">
+        <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="btn btn-primary" target="_blank" rel="noopener">Book Your Audit →</a>
+        <a href="#what-you-get" class="btn btn-ghost">See What You Get</a>
+      </div>
+
+      <div class="commercial-stats">
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">$1.8M</div>
+          <div class="commercial-stat__label">New ARR in 9 months for a $4M B2B services company</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">6.8×</div>
+          <div class="commercial-stat__label">Exit multiple on a $6M founder-owned business</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">15+</div>
+          <div class="commercial-stat__label">Years at Disney and Amazon building commercial infrastructure</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">$50M+</div>
+          <div class="commercial-stat__label">In partnership and media value negotiated and closed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="audit-section" id="what-you-get">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">What You Get</span>
+        <h2>Five deliverables.<br /><em>Three to five days.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>This is not a strategy session or a sales call. It is a structured diagnostic, the same methodology used to identify commercial gaps at Fortune 100 scale, applied to your business.</p>
+      </div>
+
+      <div class="deliverables reveal">
+        <div class="deliverable">
+          <div class="del-num">01</div>
+          <div class="del-title">90-Minute Deep Dive</div>
+          <div class="del-body">A structured session covering your revenue model, current channels, partnership landscape, and go-to-market approach. The questions a senior commercial executive would ask on day one inside your business.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">02</div>
+          <div class="del-title">Commercial Systems Audit</div>
+          <div class="del-body">A review of your current marketing, sales, and pipeline infrastructure: what is working, what is broken, and what is missing entirely. No assumptions. Based on what you actually have in place.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">03</div>
+          <div class="del-title">Revenue Opportunity Map</div>
+          <div class="del-body">A ranked list of your top 3 to 5 highest-ROI commercial opportunities: partnerships you are not pursuing, channels you are leaving untapped, and positioning gaps that are compressing your revenue.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">04</div>
+          <div class="del-title">Written Strategic Roadmap</div>
+          <div class="del-body">A clear implementation sequence: what to fix first, what to build next, and what to defer. Written so your team can execute it, not a slide deck that sits in a folder.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">05</div>
+          <div class="del-title">Debrief Call</div>
+          <div class="del-body">A 30-minute walkthrough of findings with Lynn directly. Questions answered, priorities confirmed, and the path forward clear before the engagement closes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="audit-section audit-section--black">
+    <div class="container">
+      <div class="proof-grid reveal">
+        <div>
+          <p class="proof-quote">Most operators know their revenue has plateaued. Very few know exactly where the ceiling is or what is holding it in place. The audit answers that question in 72 hours.</p>
+          <p class="proof-attr">Lynn Fernando · Commercial Architect</p>
+        </div>
+        <div class="commercial-stats">
+          <div class="commercial-stat">
+            <div class="commercial-stat__num">$1.8M</div>
+            <div class="commercial-stat__label">New ARR generated within 9 months for a $4M B2B services company following a Commercial Audit and Revenue Architecture engagement</div>
+          </div>
+          <div class="commercial-stat">
+            <div class="commercial-stat__num">6.8×</div>
+            <div class="commercial-stat__label">Exit multiple achieved by a $6M founder-owned business after commercial infrastructure was built ahead of sale</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IS THIS RIGHT FOR YOU -->
+  <section class="audit-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Is This Right For You</span>
+        <h2>The audit is built for operators<br /><em>at a specific inflection point.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>Not every business needs this right now. The ones that do will recognize themselves in this list immediately.</p>
+      </div>
+
+      <ul class="fit-list reveal">
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">Your revenue has plateaued and you are not sure what is holding it back. Marketing is active, the product works, but growth has stalled.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You know partnerships and new channels are the answer but you do not have a framework for identifying, approaching, or closing them.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You are preparing for an exit and want to know what is compressing your multiple and what commercial infrastructure would change it.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">Your sales and marketing are generating activity but not producing revenue at the level the effort should justify.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You need a clear, prioritized commercial plan before committing to a larger engagement or investment in growth infrastructure.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="audit-section audit-section--black">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">How It Works</span>
+        <h2>From booking to roadmap<br /><em>in under a week.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>No intake forms. No week-long onboarding. A direct conversation and a written deliverable, fast.</p>
+      </div>
+
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <span class="ps-num">01</span>
+          <div>
+            <p class="ps-title">Book a 15-Minute Scoping Call</p>
+            <p class="ps-body">A brief call to confirm fit, scope the engagement, and schedule the 90-minute deep dive. If the audit is not the right tool for your situation, I will tell you that on this call.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">02</span>
+          <div>
+            <p class="ps-title">The 90-Minute Deep Dive</p>
+            <p class="ps-body">A structured session covering your revenue model, channels, partnerships, team, and commercial infrastructure. Conducted via video. No preparation required on your end beyond showing up and being honest.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">03</span>
+          <div>
+            <p class="ps-title">Audit and Roadmap Delivered in 3 to 5 Days</p>
+            <p class="ps-body">Your written commercial audit, opportunity map, and implementation roadmap are delivered within 3 to 5 business days of the deep dive session. No templates. Written specifically for your business.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">04</span>
+          <div>
+            <p class="ps-title">30-Minute Debrief Call</p>
+            <p class="ps-body">A walkthrough of findings, answers to your questions, and confirmation of priorities. The engagement closes with clarity on exactly what to do next, whether that involves continued work with me or not.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="advisory-cta">
+    <div class="container">
+      <div class="advisory-cta__inner reveal">
+        <span class="label">Four Slots This Month</span>
+        <h3>Four slots.<br /><em>This month.</em></h3>
+        <p>The audit is limited to four clients per month to protect quality and my direct involvement in every engagement. If you are ready, the next step is a 15-minute scoping call.</p>
+        <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Book Your Audit →</a>
+        <p style="margin-top: 24px; font-size: 13px; color: var(--text-muted); letter-spacing: 0.04em;">$2,000 &nbsp;·&nbsp; Delivered in 3&ndash;5 days &nbsp;·&nbsp; No long-term commitment required</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">LYNN FERNANDO</span>
+          <p>Brand & Commercialization Architect · Investor · Philanthropist</p>
+          <p class="footer-tagline">Building Empires. Creating Access. Redefining Wealth.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/#platform">REV Global</a></li>
+            <li><a href="/#platform">REV Capital</a></li>
+            <li><a href="/#platform">Maliguna</a></li>
+            <li><a href="/#platform">Ayana Foundation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#speaking">Speaking</a></li>
+            <li><a href="/invest.html">Investments</a></li>
+            <li><a href="/#manifesto">Manifesto</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lynnfernando/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/lynnfernandoofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script>
+    // Scroll reveal
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>
