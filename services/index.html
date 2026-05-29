@@ -149,17 +149,76 @@
        underline sits below centered text instead of left-aligned. */
     .services-faq-wrap .advisory-cs-header,
     .services-buyers-wrap .commercial-buyers__header,
-    .services-cases-wrap .advisory-cs-header {
+    .services-cases-wrap .advisory-cs-header,
+    .services-quotes-wrap .advisory-cs-header {
       text-align: center;
       max-width: 720px;
       margin-left: auto;
       margin-right: auto;
     }
     .services-faq-wrap .advisory-cs-header::after,
-    .services-cases-wrap .advisory-cs-header::after {
+    .services-cases-wrap .advisory-cs-header::after,
+    .services-quotes-wrap .advisory-cs-header::after {
       margin-left: auto;
       margin-right: auto;
       transform-origin: center;
+    }
+
+    /* PARTNER / LEADER QUOTES */
+    .services-quotes-wrap {
+      padding: var(--section-pad) 0;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .services-quotes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 56px;
+      max-width: 1080px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .services-quote {
+      margin: 0;
+      padding: 32px;
+      background: var(--dark);
+      border: 1px solid var(--border-subtle);
+      border-left: 2px solid var(--gold);
+      border-radius: 0 4px 4px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .services-quote blockquote {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--off-white);
+    }
+    .services-quote figcaption {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .services-quote__name {
+      font-family: var(--font-display);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .services-quote__role {
+      font-size: 13px;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+    @media (max-width: 900px) {
+      .services-quotes { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -196,6 +255,35 @@
       <h1>Stop leaving revenue <em>on the table.</em></h1>
       <p>Three engagements. Each one builds the commercial infrastructure: partnerships, channels, and the AI-powered revenue systems most operators can't access alone.</p>
       <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Book a Discovery Call →</a>
+    </div>
+  </section>
+
+  <!-- LOGO SLIDER -->
+  <section class="logo-slider-section">
+    <div class="container">
+      <span class="label">Experience</span>
+      <p class="logo-slider-label">Companies &amp; Partners</p>
+    </div>
+    <div class="logo-track-wrapper">
+      <div class="logo-track">
+        <div class="logo-item"><img src="/logos/amazon.svg" alt="Amazon" /></div>
+        <div class="logo-item"><img src="/logos/disney.svg" alt="Disney" /></div>
+        <div class="logo-item"><img src="/logos/oracle.svg" alt="Oracle" /></div>
+        <div class="logo-item"><img src="/logos/visa.svg" alt="Visa" /></div>
+        <div class="logo-item"><img src="/logos/nestle.svg" alt="Nestlé" /></div>
+        <div class="logo-item"><img src="/logos/fisher-price.svg" alt="Fisher-Price" /></div>
+        <!-- Partner logo placeholders: drop SVGs into /logos/ and uncomment.
+             Remember to duplicate any new items into the second set below for the seamless loop. -->
+        <!-- <div class="logo-item"><img src="/logos/PARTNER-1.svg" alt="Partner 1" /></div> -->
+        <!-- <div class="logo-item"><img src="/logos/PARTNER-2.svg" alt="Partner 2" /></div> -->
+        <!-- Duplicated for seamless loop -->
+        <div class="logo-item"><img src="/logos/amazon.svg" alt="Amazon" /></div>
+        <div class="logo-item"><img src="/logos/disney.svg" alt="Disney" /></div>
+        <div class="logo-item"><img src="/logos/oracle.svg" alt="Oracle" /></div>
+        <div class="logo-item"><img src="/logos/visa.svg" alt="Visa" /></div>
+        <div class="logo-item"><img src="/logos/nestle.svg" alt="Nestlé" /></div>
+        <div class="logo-item"><img src="/logos/fisher-price.svg" alt="Fisher-Price" /></div>
+      </div>
     </div>
   </section>
 
@@ -440,6 +528,51 @@
             </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER / LEADER QUOTES -->
+  <section class="services-quotes-wrap">
+    <div class="container">
+      <div class="advisory-cs-header">
+        <span class="label">In Their Words</span>
+        <h3>What partners and leaders <em>say.</em></h3>
+      </div>
+      <div class="services-quotes">
+
+        <figure class="services-quote">
+          <blockquote>"Lynn ran the Synergy, Partnerships & Promotions team for Walt Disney World like a system, not a campaign. She unlocked partners we had been chasing for years and tied every conversation back to revenue. The team learned how to think differently because she was in the room."</blockquote>
+          <figcaption>
+            <span class="services-quote__name">Jodie Resnick</span>
+            <span class="services-quote__role">VP, Synergy & Partnership Marketing, Disney Experiences</span>
+          </figcaption>
+        </figure>
+
+        <figure class="services-quote">
+          <blockquote>"Lynn doesn't just build campaigns, she builds channels. The Drop and the Project Runway partnership existed because she designed the commercial architecture around them. Conversion, repeat purchase, and brand lift all moved because the system worked."</blockquote>
+          <figcaption>
+            <span class="services-quote__name">Samira Amin</span>
+            <span class="services-quote__role">Amazon Retail</span>
+          </figcaption>
+        </figure>
+
+        <figure class="services-quote">
+          <blockquote>"We had a sales team but not a sales engine. Lynn installed the partnerships, the AI, and the pipeline discipline in under a quarter. Nine months later we had closed almost two million in new ARR without adding a single rep."</blockquote>
+          <figcaption>
+            <span class="services-quote__name">Greg Fortner</span>
+            <span class="services-quote__role">CEO and Founder</span>
+          </figcaption>
+        </figure>
+
+        <figure class="services-quote">
+          <blockquote>"We had the technology and the government contracts. What we did not have was a commercial motion that could carry us into the next decade. Lynn built the partnership map, opened the right doors with primes and adjacent platforms, and gave us a revenue architecture that finally matched the ambition of the product."</blockquote>
+          <figcaption>
+            <span class="services-quote__name">Chief Revenue Officer</span>
+            <span class="services-quote__role">Late-stage defense technology company (confidential)</span>
+          </figcaption>
+        </figure>
 
       </div>
     </div>
