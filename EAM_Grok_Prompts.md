@@ -34,7 +34,7 @@ Person 4: 44-year-old man, light skin, red hair, green eyes, sad expression, inn
 **Frame 1 — Neutral**
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
-Person 1: 31-year-old man, dark brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 1: 31-year-old man, light brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 2: 27-year-old woman, olive skin, black hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 48-year-old man, light skin, gray hair, blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 35-year-old woman, medium brown skin, dark brown hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
@@ -43,7 +43,7 @@ Person 4: 35-year-old woman, medium brown skin, dark brown hair, brown eyes, com
 **Frame 2 — Emotions**
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
-Person 1: 31-year-old man, dark brown skin, black hair, dark eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
+Person 1: 31-year-old man, light brown skin, black hair, dark eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 2: 27-year-old woman, olive skin, black hair, brown eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 3: 48-year-old man, light skin, gray hair, blue eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 4: 35-year-old woman, medium brown skin, dark brown hair, brown eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
@@ -57,7 +57,7 @@ Person 4: 35-year-old woman, medium brown skin, dark brown hair, brown eyes, ang
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 29-year-old woman, medium skin, auburn hair, hazel eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 2: 50-year-old man, dark brown skin, black hair, dark brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 2: 50-year-old man, light brown skin, black hair, dark brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 33-year-old woman, light skin, black hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 42-year-old man, medium skin, brown hair, gray eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
@@ -66,7 +66,7 @@ Person 4: 42-year-old man, medium skin, brown hair, gray eyes, completely neutra
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 29-year-old woman, medium skin, auburn hair, hazel eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
-Person 2: 50-year-old man, dark brown skin, black hair, dark brown eyes, disgusted expression, nose wrinkled, upper lip curled upward, brows slightly lowered
+Person 2: 50-year-old man, light brown skin, black hair, dark brown eyes, disgusted expression, nose wrinkled, upper lip curled upward, brows slightly lowered
 Person 3: 33-year-old woman, light skin, black hair, brown eyes, disgusted expression, nose wrinkled, upper lip curled upward, brows slightly lowered
 Person 4: 42-year-old man, medium skin, brown hair, gray eyes, disgusted expression, nose wrinkled, upper lip curled upward, brows slightly lowered
 ```
@@ -101,7 +101,7 @@ Person 4: 31-year-old woman, East Asian features, black straight hair, dark eyes
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 36-year-old man, olive skin, dark brown wavy hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 2: 26-year-old woman, dark brown skin, black natural hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 2: 26-year-old woman, light brown skin, black natural hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 48-year-old woman, medium skin, dark brown straight hair, green eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 62-year-old man, light skin, silver hair, blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
@@ -110,7 +110,7 @@ Person 4: 62-year-old man, light skin, silver hair, blue eyes, completely neutra
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 36-year-old man, olive skin, dark brown wavy hair, brown eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
-Person 2: 26-year-old woman, dark brown skin, black natural hair, dark eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
+Person 2: 26-year-old woman, light brown skin, black natural hair, dark eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
 Person 3: 48-year-old woman, medium skin, dark brown straight hair, green eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
 Person 4: 62-year-old man, light skin, silver hair, blue eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
 ```
@@ -167,7 +167,7 @@ Person 4: 53-year-old man, medium skin, salt-and-pepper hair, brown eyes, angry 
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 32-year-old woman, light skin, blonde wavy hair, green eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 2: 46-year-old man, dark brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 2: 46-year-old man, light brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 38-year-old woman, medium skin, dark brown hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 60-year-old man, light skin, white hair, gray eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
@@ -176,7 +176,7 @@ Person 4: 60-year-old man, light skin, white hair, gray eyes, completely neutral
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 32-year-old woman, light skin, blonde wavy hair, green eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
-Person 2: 46-year-old man, dark brown skin, black hair, dark eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
+Person 2: 46-year-old man, light brown skin, black hair, dark eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 3: 38-year-old woman, medium skin, dark brown hair, brown eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 4: 60-year-old man, light skin, white hair, gray eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 ```
@@ -232,7 +232,7 @@ Person 4: 37-year-old man, East Asian features, black hair, dark eyes, genuine s
 **Frame 1 — Neutral**
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
-Person 1: 26-year-old woman, dark brown skin, black coily hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 1: 26-year-old woman, light brown skin, black coily hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 2: 49-year-old man, light skin, blond hair, blue-gray eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 33-year-old man, medium skin, dark brown hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 44-year-old woman, light skin, auburn hair, green eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
@@ -241,7 +241,7 @@ Person 4: 44-year-old woman, light skin, auburn hair, green eyes, completely neu
 **Frame 2 — Emotions**
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
-Person 1: 26-year-old woman, dark brown skin, black coily hair, dark eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
+Person 1: 26-year-old woman, light brown skin, black coily hair, dark eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 2: 49-year-old man, light skin, blond hair, blue-gray eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 3: 33-year-old man, medium skin, dark brown hair, brown eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 4: 44-year-old woman, light skin, auburn hair, green eyes, disgusted expression, nose wrinkled, upper lip curled upward, brows slightly lowered
@@ -254,7 +254,7 @@ Person 4: 44-year-old woman, light skin, auburn hair, green eyes, disgusted expr
 **Frame 1 — Neutral**
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
-Person 1: 38-year-old man, dark brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 1: 38-year-old man, light brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 2: 25-year-old woman, light skin, brown curly hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 52-year-old man, olive skin, dark hair with gray, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 31-year-old woman, East Asian features, black straight hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
@@ -263,7 +263,7 @@ Person 4: 31-year-old woman, East Asian features, black straight hair, dark eyes
 **Frame 2 — Emotions**
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
-Person 1: 38-year-old man, dark brown skin, black hair, dark eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
+Person 1: 38-year-old man, light brown skin, black hair, dark eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
 Person 2: 25-year-old woman, light skin, brown curly hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 52-year-old man, olive skin, dark hair with gray, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 31-year-old woman, East Asian features, black straight hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
@@ -277,7 +277,7 @@ Person 4: 31-year-old woman, East Asian features, black straight hair, dark eyes
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 45-year-old woman, medium-light skin, chestnut hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 2: 28-year-old man, dark brown skin, black hair, dark brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 2: 28-year-old man, light brown skin, black hair, dark brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 60-year-old man, light skin, gray hair, blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 34-year-old woman, medium-dark skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
@@ -286,7 +286,7 @@ Person 4: 34-year-old woman, medium-dark skin, black hair, dark eyes, completely
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 45-year-old woman, medium-light skin, chestnut hair, brown eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
-Person 2: 28-year-old man, dark brown skin, black hair, dark brown eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
+Person 2: 28-year-old man, light brown skin, black hair, dark brown eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 3: 60-year-old man, light skin, gray hair, blue eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 4: 34-year-old woman, medium-dark skin, black hair, dark eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 ```
@@ -322,7 +322,7 @@ Person 4: 31-year-old woman, East Asian features, black bob hair, dark eyes, com
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 36-year-old woman, medium skin, brown curly hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 2: 50-year-old man, light skin, gray hair, blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 3: 27-year-old man, dark brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 3: 27-year-old man, light brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 44-year-old woman, olive skin, dark brown hair, green eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
 
@@ -331,7 +331,7 @@ Person 4: 44-year-old woman, olive skin, dark brown hair, green eyes, completely
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 36-year-old woman, medium skin, brown curly hair, brown eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 2: 50-year-old man, light skin, gray hair, blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 3: 27-year-old man, dark brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 3: 27-year-old man, light brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 44-year-old woman, olive skin, dark brown hair, green eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
 
@@ -344,7 +344,7 @@ Person 4: 44-year-old woman, olive skin, dark brown hair, green eyes, completely
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 29-year-old woman, medium-light skin, black straight hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 2: 47-year-old man, light skin, brown hair, hazel eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 3: 35-year-old woman, dark brown skin, black natural hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 3: 35-year-old woman, light brown skin, black natural hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 63-year-old man, medium skin, white hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
 
@@ -353,7 +353,7 @@ Person 4: 63-year-old man, medium skin, white hair, brown eyes, completely neutr
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 29-year-old woman, medium-light skin, black straight hair, brown eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
 Person 2: 47-year-old man, light skin, brown hair, hazel eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
-Person 3: 35-year-old woman, dark brown skin, black natural hair, dark eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
+Person 3: 35-year-old woman, light brown skin, black natural hair, dark eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
 Person 4: 63-year-old man, medium skin, white hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
 
@@ -366,7 +366,7 @@ Person 4: 63-year-old man, medium skin, white hair, brown eyes, completely neutr
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 32-year-old man, medium skin, dark brown hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 2: 26-year-old woman, light skin, red hair, blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 3: 55-year-old woman, dark brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 3: 55-year-old woman, light brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 41-year-old man, East Asian features, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
 
@@ -375,7 +375,7 @@ Person 4: 41-year-old man, East Asian features, black hair, dark eyes, completel
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 32-year-old man, medium skin, dark brown hair, brown eyes, fearful expression, eyes wide open, brows raised and drawn together at center, mouth slightly open
 Person 2: 26-year-old woman, light skin, red hair, blue eyes, disgusted expression, nose wrinkled, upper lip curled upward, brows slightly lowered
-Person 3: 55-year-old woman, dark brown skin, black hair, dark eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
+Person 3: 55-year-old woman, light brown skin, black hair, dark eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 4: 41-year-old man, East Asian features, black hair, dark eyes, sad expression, inner brows raised and drawn together, corners of mouth pulled down
 ```
 
@@ -388,7 +388,7 @@ Person 4: 41-year-old man, East Asian features, black hair, dark eyes, sad expre
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 48-year-old woman, medium-light skin, dark brown hair with gray, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 2: 33-year-old man, olive skin, dark hair, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 3: 24-year-old woman, dark brown skin, black coily hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 3: 24-year-old woman, light brown skin, black coily hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 59-year-old man, light skin, silver hair, gray-blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
 
@@ -397,7 +397,7 @@ Person 4: 59-year-old man, light skin, silver hair, gray-blue eyes, completely n
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 48-year-old woman, medium-light skin, dark brown hair with gray, brown eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 2: 33-year-old man, olive skin, dark hair, brown eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
-Person 3: 24-year-old woman, dark brown skin, black coily hair, dark eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
+Person 3: 24-year-old woman, light brown skin, black coily hair, dark eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 Person 4: 59-year-old man, light skin, silver hair, gray-blue eyes, angry expression, brows firmly furrowed and lowered, lips pressed tightly together, jaw tense
 ```
 
@@ -409,7 +409,7 @@ Person 4: 59-year-old man, light skin, silver hair, gray-blue eyes, angry expres
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 27-year-old woman, medium skin, brown wavy hair, hazel eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
-Person 2: 43-year-old man, dark brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
+Person 2: 43-year-old man, light brown skin, black hair, dark eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 3: 36-year-old woman, light skin, blonde hair, blue eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 Person 4: 52-year-old man, medium-dark skin, black hair going gray, brown eyes, completely neutral expression, fully relaxed facial muscles, mouth gently closed
 ```
@@ -418,7 +418,7 @@ Person 4: 52-year-old man, medium-dark skin, black hair going gray, brown eyes, 
 ```
 A row of four professional headshots side by side on a plain light gray background, soft even studio lighting, photorealistic, all wearing plain white crew-neck tops, shoulders and upper chest visible, equal sizing, no gaps:
 Person 1: 27-year-old woman, medium skin, brown wavy hair, hazel eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
-Person 2: 43-year-old man, dark brown skin, black hair, dark eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
+Person 2: 43-year-old man, light brown skin, black hair, dark eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 3: 36-year-old woman, light skin, blonde hair, blue eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 Person 4: 52-year-old man, medium-dark skin, black hair going gray, brown eyes, genuine smile, cheeks raised, eyes crinkled at outer corners, teeth slightly visible
 ```
