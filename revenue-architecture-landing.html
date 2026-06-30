@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GSKJ25Q4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K1GSKJ25Q4');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Revenue Architecture | Lynn Fernando</title>
+  <meta name="description" content="Full commercial buildout: partnership strategy, channel development, and AI-powered revenue systems. Your brand is the foundation. We architect it. Three to six month engagement." />
+  <meta name="author" content="Lynn Fernando" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/revenue-architecture-landing.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Revenue Architecture | Lynn Fernando" />
+  <meta property="og:description" content="Full commercial buildout: partnership strategy, channel development, and AI-powered revenue systems." />
+  <meta property="og:url" content="https://lynnfernando.com/revenue-architecture-landing.html" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Revenue Architecture | Lynn Fernando" />
+  <meta name="twitter:description" content="Full commercial buildout: partnership strategy, channel development, and AI-powered revenue systems." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lf-logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/lf-logo.png" />
+  <link rel="apple-touch-icon" href="/images/lf-logo.png" />
+  <meta name="msapplication-TileImage" content="/images/lf-logo.png" />
+
+  <style>
+    /* ---- REVENUE ARCHITECTURE LANDING: page-scoped styles ---- */
+
+    .audit-hero {
+      padding: 160px 0 80px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .audit-hero .label { display: block; margin-bottom: 20px; }
+    .audit-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--off-white);
+      max-width: 880px;
+      margin-bottom: 14px;
+    }
+    .audit-hero h1 em { font-style: italic; color: var(--gold); }
+    .audit-hero__price {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--gold-dark);
+      margin-bottom: 28px;
+    }
+    .audit-hero__sub {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 620px;
+      line-height: 1.85;
+      margin-bottom: 36px;
+    }
+    .audit-hero__ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+
+    .audit-section {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .audit-section--black {
+      background: var(--black);
+    }
+    .audit-section__intro {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+    .audit-section__intro p {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-top: 12px;
+    }
+
+    /* Deliverables grid */
+    .deliverables {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+    }
+    .deliverable {
+      background: var(--dark-2);
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+    .deliverable::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .deliverable:hover { background: var(--dark-3); }
+    .deliverable:hover::after { opacity: 1; }
+    .del-num {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 300;
+      color: rgba(201, 168, 76, 0.22);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .del-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      margin-bottom: 10px;
+    }
+    .del-body {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* Proof block */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .proof-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.4vw, 28px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--off-white);
+      border-left: 2px solid var(--gold);
+      padding-left: 28px;
+      margin-bottom: 18px;
+    }
+    .proof-attr {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding-left: 30px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 800px) {
+      .proof-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* Fit list */
+    .fit-list {
+      list-style: none;
+      max-width: 760px;
+      padding: 0;
+      margin: 0;
+    }
+    .fit-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .fit-item:last-child { border-bottom: none; }
+    .fit-dash {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 14px;
+    }
+    .fit-text {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* Process steps */
+    .process-steps {
+      max-width: 760px;
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      align-items: start;
+    }
+    .process-step:last-child { border-bottom: none; }
+    .ps-num {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .ps-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      margin-bottom: 8px;
+    }
+    .ps-body {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/images/lf-logo.png" alt="Lynn Fernando" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/enterprise/">Enterprise</a></li>
+        <li><a href="/#speaking">Speaking</a></li>
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/invest.html">Invest</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/#manifesto">Manifesto</a></li>
+        <li><a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="nav-cta" target="_blank" rel="noopener">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="audit-hero">
+    <div class="container">
+      <span class="label">The Revenue Architecture</span>
+      <h1>Build the infrastructure<br /><em>most competitors can't access.</em></h1>
+      <p class="audit-hero__price">$25K–$75K &nbsp;·&nbsp; 3–6 month engagement &nbsp;·&nbsp; One client at a time</p>
+      <p class="audit-hero__sub">Full commercial buildout: partnership strategy, channel development, AI-powered revenue systems, and brand positioning that positions you as the category leader.</p>
+      <div class="audit-hero__ctas">
+        <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="btn btn-primary" target="_blank" rel="noopener">Book Your Strategy Call →</a>
+        <a href="#what-you-get" class="btn btn-ghost">See What You Get</a>
+      </div>
+
+      <div class="commercial-stats">
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">$1.8M</div>
+          <div class="commercial-stat__label">New ARR generated in 9 months following a Revenue Architecture build</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">3–5</div>
+          <div class="commercial-stat__label">Highest-ROI revenue channels identified and activated in a single engagement</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">15+</div>
+          <div class="commercial-stat__label">Years of Fortune 100 commercial playbook built into every engagement</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">6.8×</div>
+          <div class="commercial-stat__label">Exit multiple achieved when commercial infrastructure precedes sale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="audit-section" id="what-you-get">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">What You Get</span>
+        <h2>Eight workstreams.<br /><em>Built in parallel.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>This is full commercial architecture: the same systems Disney and Amazon use to scale revenue, applied to your business. We build it together, with your team executing and me architecting from the outside.</p>
+      </div>
+
+      <div class="deliverables reveal">
+        <div class="deliverable">
+          <div class="del-num">01</div>
+          <div class="del-title">Brand Positioning Architecture</div>
+          <div class="del-body">Category positioning, messaging system, proof points, and differentiation that anchors all downstream commercial activity. What you own that competitors cannot copy.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">02</div>
+          <div class="del-title">Partnership Strategy & Channel Map</div>
+          <div class="del-body">Identify, prioritize, and sequence partnerships that will reach customers for you. Build the approach frameworks, targeting criteria, and pitch sequences that turn them from theory into signed agreements.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">03</div>
+          <div class="del-title">Pricing Architecture & Expansion Revenue</div>
+          <div class="del-body">Pricing strategy tied to your positioning, upsell sequences, and expansion revenue models. What to charge, when to negotiate, and how to systematize customer lifetime value.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">04</div>
+          <div class="del-title">Go-to-Market Strategy & Roadmap</div>
+          <div class="del-body">The full commercialization roadmap: channel sequencing, team structure, measurement, milestones. Written so your team executes it quarter by quarter.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">05</div>
+          <div class="del-title">Sales Infrastructure & AI Pipeline</div>
+          <div class="del-body">Deal velocity systems, customer data architecture, and AI-powered pipeline management. How to compress sales cycles and increase deal size without adding headcount.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">06</div>
+          <div class="del-title">Marketing & Demand Gen Foundation</div>
+          <div class="del-body">Content strategy, channel sequencing, personalization framework. Building high-quality demand at scale, from brand awareness through closed-won customer.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">07</div>
+          <div class="del-title">Team & Ops Alignment</div>
+          <div class="del-body">Clear roles, decision rights, and accountability frameworks. Your team knows exactly what to build and why, with quarterly reviews locked into the strategy.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">08</div>
+          <div class="del-title">Quarterly Execution & Optimization</div>
+          <div class="del-body">Live partnership negotiations, channel launches, and revenue campaigns. I am embedded in the execution, coaching your team and course-correcting as market signal arrives.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="audit-section audit-section--black">
+    <div class="container">
+      <div class="proof-grid reveal">
+        <div>
+          <p class="proof-quote">Building a revenue architecture is not strategy work that lives in a deck. It is infrastructure that your team executes every quarter. That is what changes multiples.</p>
+          <p class="proof-attr">Lynn Fernando · Commercial Architect</p>
+        </div>
+        <div class="commercial-stats">
+          <div class="commercial-stat">
+            <div class="commercial-stat__num">$1.8M</div>
+            <div class="commercial-stat__label">New ARR for a $4M B2B services company after Revenue Architecture + Embedded Architect (9 months)</div>
+          </div>
+          <div class="commercial-stat">
+            <div class="commercial-stat__num">6.8×</div>
+            <div class="commercial-stat__label">Exit multiple for a $6M founder-owned business with commercial infrastructure in place</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IS THIS RIGHT FOR YOU -->
+  <section class="audit-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Is This Right For You</span>
+        <h2>Built for founders who are ready<br /><em>to move the needle on revenue.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>The Revenue Architecture is not a small commitment. The return requires full execution. These are the signals you are ready.</p>
+      </div>
+
+      <ul class="fit-list reveal">
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You have product-market fit but revenue is being left on the table due to go-to-market gaps, not product deficiency.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You are serious about an exit or Series A and know that commercial infrastructure is what investors value most.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You have a team that can execute if given clear strategy and accountability, and you want to avoid the learning curve of building this yourself.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You recognize that what separates 10X businesses from 3X businesses is the quality of their commercial infrastructure, not their product.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You want the Fortune 100 playbook without the Fortune 100 payroll cost, and you are ready to invest in the architecture that will get you there.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="audit-section audit-section--black">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">How It Works</span>
+        <h2>From alignment to execution<br /><em>over six months.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>This is a partnership, not a deliverable project. We start with alignment, architect in parallel with your team, and stay embedded through launch.</p>
+      </div>
+
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <span class="ps-num">01</span>
+          <div>
+            <p class="ps-title">Discovery & Alignment (Week 1–2)</p>
+            <p class="ps-body">Deep audit of your current commercial state, team capabilities, market positioning, and revenue opportunity. Scope the engagement and align on the 6-month roadmap.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">02</span>
+          <div>
+            <p class="ps-title">Architecture Phase (Month 1–2)</p>
+            <p class="ps-body">Parallel workstreams: brand positioning, partnership strategy, pricing architecture, GTM roadmap. Weekly team sessions to ensure your team understands and can own the strategy.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">03</span>
+          <div>
+            <p class="ps-title">Build & Launch (Month 3–4)</p>
+            <p class="ps-body">Activate partnerships, launch channels, implement sales infrastructure. I am embedded, driving negotiations and co-leading critical launches with your team.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">04</span>
+          <div>
+            <p class="ps-title">Optimization & Handoff (Month 5–6)</p>
+            <p class="ps-body">Measure, optimize, and systematize. Your team is now running the commercial machine. I coach and course-correct as market signal arrives before engagement close.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="advisory-cta">
+    <div class="container">
+      <div class="advisory-cta__inner reveal">
+        <span class="label">One Client At A Time</span>
+        <h3>One engagement.<br /><em>Full focus.</em></h3>
+        <p>The Revenue Architecture requires my full attention for six months. I take one client at a time to protect the quality of execution and ensure your team gets what they need. If you are ready to move, the next step is a strategy call.</p>
+        <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Book Your Strategy Call →</a>
+        <p style="margin-top: 24px; font-size: 13px; color: var(--text-muted); letter-spacing: 0.04em;">$25K–$75K &nbsp;·&nbsp; 3–6 month engagement &nbsp;·&nbsp; Execution-based pricing available</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">LYNN FERNANDO</span>
+          <p>Brand & Commercialization Architect · Investor · Philanthropist</p>
+          <p class="footer-tagline">Building Empires. Creating Access. Redefining Wealth.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/#platform">REV Global</a></li>
+            <li><a href="/#platform">REV Capital</a></li>
+            <li><a href="/#platform">Maliguna</a></li>
+            <li><a href="/#platform">Ayana Foundation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#speaking">Speaking</a></li>
+            <li><a href="/invest.html">Investments</a></li>
+            <li><a href="/#manifesto">Manifesto</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lynnfernando/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/lynnfernandoofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script>
+    // Scroll reveal
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>

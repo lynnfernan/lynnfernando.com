@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K1GSKJ25Q4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K1GSKJ25Q4');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Embedded Architect | Lynn Fernando</title>
+  <meta name="description" content="Lynn in your corner every month: opening doors, negotiating deals, building the commercial relationships that create revenue. No part-time advisors. Seat at the table." />
+  <meta name="author" content="Lynn Fernando" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://lynnfernando.com/embedded-architect-landing.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The Embedded Architect | Lynn Fernando" />
+  <meta property="og:description" content="Lynn in your corner every month: opening doors, negotiating deals, building commercial infrastructure." />
+  <meta property="og:url" content="https://lynnfernando.com/embedded-architect-landing.html" />
+  <meta property="og:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+  <meta property="og:site_name" content="Lynn Fernando" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Embedded Architect | Lynn Fernando" />
+  <meta name="twitter:description" content="Lynn in your corner every month: opening doors, negotiating deals, building commercial infrastructure." />
+  <meta name="twitter:image" content="https://lynnfernando.com/images/lynn-fernando.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lf-logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/lf-logo.png" />
+  <link rel="apple-touch-icon" href="/images/lf-logo.png" />
+  <meta name="msapplication-TileImage" content="/images/lf-logo.png" />
+
+  <style>
+    /* ---- EMBEDDED ARCHITECT LANDING: page-scoped styles ---- */
+
+    .audit-hero {
+      padding: 160px 0 80px;
+      background: var(--black);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .audit-hero .label { display: block; margin-bottom: 20px; }
+    .audit-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--off-white);
+      max-width: 880px;
+      margin-bottom: 14px;
+    }
+    .audit-hero h1 em { font-style: italic; color: var(--gold); }
+    .audit-hero__price {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: var(--gold-dark);
+      margin-bottom: 28px;
+    }
+    .audit-hero__sub {
+      font-size: 17px;
+      color: var(--text-light);
+      max-width: 620px;
+      line-height: 1.85;
+      margin-bottom: 36px;
+    }
+    .audit-hero__ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+
+    .audit-section {
+      padding: var(--section-pad) 0;
+      background: var(--dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .audit-section--black {
+      background: var(--black);
+    }
+    .audit-section__intro {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+    .audit-section__intro p {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.85;
+      margin-top: 12px;
+    }
+
+    /* Deliverables grid */
+    .deliverables {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border-subtle);
+      border: 1px solid var(--border-subtle);
+    }
+    .deliverable {
+      background: var(--dark-2);
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s ease;
+    }
+    .deliverable::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .deliverable:hover { background: var(--dark-3); }
+    .deliverable:hover::after { opacity: 1; }
+    .del-num {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 300;
+      color: rgba(201, 168, 76, 0.22);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .del-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      margin-bottom: 10px;
+    }
+    .del-body {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* Proof block */
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .proof-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(20px, 2.4vw, 28px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--off-white);
+      border-left: 2px solid var(--gold);
+      padding-left: 28px;
+      margin-bottom: 18px;
+    }
+    .proof-attr {
+      font-family: var(--font-sans);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding-left: 30px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 800px) {
+      .proof-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* Fit list */
+    .fit-list {
+      list-style: none;
+      max-width: 760px;
+      padding: 0;
+      margin: 0;
+    }
+    .fit-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .fit-item:last-child { border-bottom: none; }
+    .fit-dash {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+      margin-top: 14px;
+    }
+    .fit-text {
+      font-family: var(--font-sans);
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    /* Process steps */
+    .process-steps {
+      max-width: 760px;
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      align-items: start;
+    }
+    .process-step:last-child { border-bottom: none; }
+    .ps-num {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .ps-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      margin-bottom: 8px;
+    }
+    .ps-body {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="/images/lf-logo.png" alt="Lynn Fernando" class="nav-logo-img" />
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/enterprise/">Enterprise</a></li>
+        <li><a href="/#speaking">Speaking</a></li>
+        <li><a href="/#platform">Platform</a></li>
+        <li><a href="/invest.html">Invest</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/#manifesto">Manifesto</a></li>
+        <li><a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="nav-cta" target="_blank" rel="noopener">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="audit-hero">
+    <div class="container">
+      <span class="label">The Embedded Architect</span>
+      <h1>A seat at your table<br /><em>every month.</em></h1>
+      <p class="audit-hero__price">$15K–$35K per month &nbsp;·&nbsp; 12+ month commitment &nbsp;·&nbsp; Two clients maximum</p>
+      <p class="audit-hero__sub">Lynn in your corner: opening commercial doors that capital alone cannot, negotiating partnership and customer agreements, and building the infrastructure that separates 10X businesses from the rest.</p>
+      <div class="audit-hero__ctas">
+        <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" class="btn btn-primary" target="_blank" rel="noopener">Schedule Your Conversation →</a>
+        <a href="#what-you-get" class="btn btn-ghost">How It Works</a>
+      </div>
+
+      <div class="commercial-stats">
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">$1.8M</div>
+          <div class="commercial-stat__label">New ARR generated in 9 months (from combined Architecture + Embedded engagement)</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">6.8×</div>
+          <div class="commercial-stat__label">Exit multiple when commercial relationships precede transaction</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">$50M+</div>
+          <div class="commercial-stat__label">In partnership and media value negotiated and closed across career</div>
+        </div>
+        <div class="commercial-stat">
+          <div class="commercial-stat__num">15+</div>
+          <div class="commercial-stat__label">Years of relationship capital in enterprise, distribution, and capital</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="audit-section" id="what-you-get">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">What You Get</span>
+        <h2>One day per week.<br /><em>On your priorities.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>Not a fractional executive or part-time advisor. A seat at your table where commercial decisions are made. One day per week, every week, for as long as you need the leverage.</p>
+      </div>
+
+      <div class="deliverables reveal">
+        <div class="deliverable">
+          <div class="del-num">01</div>
+          <div class="del-title">Monthly Strategic Sessions</div>
+          <div class="del-body">Weekly (often ad-hoc) meetings: strategy sessions, team coaching, customer/partner call participation. I operate as your internal Chief Commercial Officer.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">02</div>
+          <div class="del-title">Partnership Opening & Negotiation</div>
+          <div class="del-body">Identify, approach, and negotiate partnership, distribution, and strategic alliance opportunities. Direct outreach and relationship leverage based on 15+ years of capital and enterprise relationships.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">03</div>
+          <div class="del-title">Customer Deal Structuring</div>
+          <div class="del-body">I sit on your biggest customer calls. Help structure deals, negotiate terms, and ensure pricing and expansion architecture is being executed in every conversation.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">04</div>
+          <div class="del-title">Capital & Investor Relations</div>
+          <div class="del-body">Advise on fundraising strategy, investor introductions, and deal structure. When capital is the limiting variable, I bring relationship and expertise to compress the process.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">05</div>
+          <div class="del-title">Revenue Optimization Roadmap</div>
+          <div class="del-body">Quarterly roadmap: what to sell, who to sell to, what price, and by when. Updates monthly as market signal and execution metrics arrive.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">06</div>
+          <div class="del-title">Team Coaching & Accountability</div>
+          <div class="del-body">Direct coaching for your CFO, VP Sales, VP Marketing, and operations. Clear accountability for commercial and operational metrics. Weekly or bi-weekly coaching sessions.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">07</div>
+          <div class="del-title">Board-Level Perspective</div>
+          <div class="del-body">Strategic advice on positioning, market, competitive threats. The perspective of someone who has built and scaled businesses across multiple industries and capital structures.</div>
+        </div>
+        <div class="deliverable">
+          <div class="del-num">08</div>
+          <div class="del-title">Exit Preparation & Strategy</div>
+          <div class="del-body">When you are ready, advise on exit timing, buyer strategy, and deal maximization. Work with legal, banking, and your equity holders to optimize the transaction.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="audit-section audit-section--black">
+    <div class="container">
+      <div class="proof-grid reveal">
+        <div>
+          <p class="proof-quote">The difference between a $10M exit and a $40M exit is not product. It is the commercial relationships in place when the buyer arrives. That is what Embedded is for.</p>
+          <p class="proof-attr">Lynn Fernando · Commercial Architect</p>
+        </div>
+        <div class="commercial-stats">
+          <div class="commercial-stat">
+            <div class="commercial-stat__num">6.8×</div>
+            <div class="commercial-stat__label">Exit multiple for a $6M founder-owned business with Embedded support</div>
+          </div>
+          <div class="commercial-stat">
+            <div class="commercial-stat__num">$1.8M</div>
+            <div class="commercial-stat__label">ARR impact over 12 months for a growth-stage SaaS company</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IS THIS RIGHT FOR YOU -->
+  <section class="audit-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Is This Right For You</span>
+        <h2>For founders who are serious<br /><em>about 10X outcomes.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>Embedded is high commitment on both sides. If you recognize yourself here, you are ready.</p>
+      </div>
+
+      <ul class="fit-list reveal">
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You know that the limiting variable to your growth is not product or engineering, it is go-to-market and commercial infrastructure.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You have or plan to raise capital and want a seasoned operator at the table for every major decision before and after the capital arrives.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You recognize the value of a relationship advantage: partnerships, investor access, and strategic clarity that your competitors do not have.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You are 3 to 5 years from exit and know that the commercial infrastructure built today will determine your exit multiple in that timeframe.</p>
+        </li>
+        <li class="fit-item">
+          <div class="fit-dash"></div>
+          <p class="fit-text">You want a revenue partner who has skin in the game: invested in your success, accountable for results, and committed to the journey.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="audit-section audit-section--black">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">How It Works</span>
+        <h2>One day per week.<br /><em>Twelve months minimum.</em></h2>
+      </div>
+      <div class="audit-section__intro reveal">
+        <p>This is not a service, it is a partnership. We start aligned on outcomes and stay committed to achieving them.</p>
+      </div>
+
+      <div class="process-steps reveal">
+        <div class="process-step">
+          <span class="ps-num">01</span>
+          <div>
+            <p class="ps-title">Alignment Call & Scoping (Week 1)</p>
+            <p class="ps-body">Deep conversation about your vision, commercial challenges, team, and where you need the leverage most. Define the success metrics and monthly priorities.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">02</span>
+          <div>
+            <p class="ps-title">Operational Kickoff (Month 1)</p>
+            <p class="ps-body">First month embedded with your team: stand-ups, customer calls, strategy sessions. Establish rhythm and build trust. Roadmap the major initiatives for the year.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">03</span>
+          <div>
+            <p class="ps-title">Active Engagement (Month 2–12)</p>
+            <p class="ps-body">One day per week: strategy sessions, partnership negotiations, customer calls, team coaching. As needed: investor meetings, board updates, transaction advisory. Results tracked monthly.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="ps-num">04</span>
+          <div>
+            <p class="ps-title">12-Month Milestone & Decision Point</p>
+            <p class="ps-body">At month 12, evaluate progress against success metrics. Decide whether to continue, graduate from the engagement, or shift focus based on market and company needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="advisory-cta">
+    <div class="container">
+      <div class="advisory-cta__inner reveal">
+        <span class="label">Two Clients Maximum</span>
+        <h3>Two engagements.<br /><em>Full commitment.</em></h3>
+        <p>I take on a maximum of two Embedded clients to ensure your engagement gets the focus it deserves. If you are ready to move from strategy into execution with a partner who has been in the room, the next step is a conversation.</p>
+        <a href="https://calendar.app.google/b2CjMMHJAjoiyUkZ6" target="_blank" rel="noopener" class="btn btn-primary">Schedule Your Conversation →</a>
+        <p style="margin-top: 24px; font-size: 13px; color: var(--text-muted); letter-spacing: 0.04em;">$15K–$35K per month &nbsp;·&nbsp; 12+ month commitment &nbsp;·&nbsp; Flexible pricing available</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">LYNN FERNANDO</span>
+          <p>Brand & Commercialization Architect · Investor · Philanthropist</p>
+          <p class="footer-tagline">Building Empires. Creating Access. Redefining Wealth.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Platform</h4>
+          <ul>
+            <li><a href="/#platform">REV Global</a></li>
+            <li><a href="/#platform">REV Capital</a></li>
+            <li><a href="/#platform">Maliguna</a></li>
+            <li><a href="/#platform">Ayana Foundation</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#speaking">Speaking</a></li>
+            <li><a href="/invest.html">Investments</a></li>
+            <li><a href="/#manifesto">Manifesto</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lynnfernando/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/lynnfernandoofficial" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Lynn Fernando. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+  <script>
+    // Scroll reveal
+    (function () {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>
