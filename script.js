@@ -77,3 +77,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// --- ADVISORY PRICING TIERS (collapse/expand) ---
+document.querySelectorAll('.advisory-tier__summary').forEach(summary => {
+  summary.addEventListener('click', () => {
+    const tier = summary.closest('.advisory-tier');
+    const isExpanded = tier.classList.contains('advisory-tier--expanded');
+    tier.classList.toggle('advisory-tier--expanded', !isExpanded);
+    tier.classList.toggle('advisory-tier--collapsed', isExpanded);
+  });
+});
