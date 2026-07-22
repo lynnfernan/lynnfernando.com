@@ -1,0 +1,94 @@
+# Personal Brand — Weekly Advisory Arc email (cloud replacement for the old,
+# now-broken Thursday cron). Sends the next week of the 16-week arc via
+# send-arc-week-auto.mjs, which tracks progress in output/arc-week-state.json
+# and advances the counter after each send. Per-recipient open/click tracking is
+# built into send-arc-week-gmail.js.
+#
+# BEFORE enabling: verify output/arc-week-state.json points at the correct next
+# week, then add secrets. Run a manual dry-run (workflow_dispatch → mode=dry-run)
+# to preview before the first scheduled live send.
+#
+# Required secrets (github.com/lynnfernan/lynnfernando.com → Settings → Secrets):
+#   GMAIL_ADDRESS, GMAIL_APP_PASSWORD
+#   CONTACTS_JSON_B64  (base64 of content-agent/contacts.json — the contact list
+#                       is PII and is NOT committed to git; it's injected here)
+# Optional: TRACK_BASE_URL (defaults to https://lynnfernando.com/track)
+#
+# To make CONTACTS_JSON_B64:  base64 -i content-agent/contacts.json | pbcopy
+name: PB Advisory Arc (weekly)
+
+on:
+  schedule:
+    # Runs every Thursday ~8am PT (15:00 UTC), but send-arc-week-auto.mjs enforces
+    # a 14-day gap, so it actually sends every OTHER Thursday (biweekly cadence).
+    - cron: '0 15 * * 4'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'dry-run (preview only) or send (live)'
+        required: true
+        default: 'dry-run'
+        type: choice
+        options: [dry-run, send]
+
+jobs:
+  arc-week:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout PB repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install content-agent dependencies
+        working-directory: content-agent
+        run: npm install --no-audit --no-fund
+
+      - name: Restore contact list (PII, not in git)
+        working-directory: content-agent
+        env:
+          CONTACTS_JSON_B64: ${{ secrets.CONTACTS_JSON_B64 }}
+        run: |
+          if [ -n "$CONTACTS_JSON_B64" ]; then
+            echo "$CONTACTS_JSON_B64" | base64 -d > contacts.json
+            echo "Wrote contacts.json ($(wc -c < contacts.json) bytes)"
+          else
+            echo "::error::CONTACTS_JSON_B64 secret not set — cannot load recipients."; exit 1
+          fi
+
+      - name: Send next arc week
+        working-directory: content-agent
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          TRACK_BASE_URL: ${{ secrets.TRACK_BASE_URL }}
+        run: |
+          # Scheduled runs send live; manual runs honor the chosen mode.
+          MODE="${{ github.event.inputs.mode }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then MODE="send"; fi
+          if [ "$MODE" = "send" ]; then
+            node send-arc-week-auto.mjs --send
+          else
+            node send-arc-week-auto.mjs --dry-run
+          fi
+
+      - name: Commit arc week counter back to repo
+        if: always()
+        run: |
+          git config user.name "Personal Brand Agent"
+          git config user.email "lynn@lynnfernando.com"
+          # Only the counter (no PII). The send log (personal-emails.json) holds
+          # recipient addresses and is intentionally NOT committed.
+          git add content-agent/output/arc-week-state.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "pb-arc: advance week counter [skip ci]"
+            git push
+          fi

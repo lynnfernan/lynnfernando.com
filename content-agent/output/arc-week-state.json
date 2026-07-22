@@ -1,0 +1,6 @@
+{
+  "nextWeek": 4,
+  "lastSentWeek": 3,
+  "lastSentAt": "2026-07-14T00:00:00.000Z",
+  "_note": "Tracks the next advisory-arc week to send. Initialized 2026-07-21 assuming Week 3 went out 2026-07-14 (per memory). Confirm before enabling live sends."
+}
