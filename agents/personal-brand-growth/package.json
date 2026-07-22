@@ -1,0 +1,14 @@
+{
+  "name": "personal-brand-growth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weekly personal-brand growth loop: builds next week's calendar, drafts platform-native copy, renders on-brand IG graphics (@napi-rs/canvas), and schedules to Buffer (LinkedIn + Instagram). Self-contained deps so cloud CI can run it.",
+  "scripts": {
+    "start": "node personalBrandGrowthLoop.cjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.100",
+    "dotenv": "^17.4.1",
+    "nodemailer": "^8.0.10"
+  }
+}
