@@ -14,7 +14,8 @@
 #                       is PII and is NOT committed to git; it's injected here)
 # Optional: TRACK_BASE_URL (defaults to https://lynnfernando.com/track)
 #
-# To make CONTACTS_JSON_B64:  base64 -i content-agent/contacts.json | pbcopy
+# To make CONTACTS_JSON_B64:  gzip -c content-agent/contacts.json | base64 | pbcopy
+# (gzip keeps it under GitHub's 64 KB secret limit; the workflow gunzips it below)
 name: PB Advisory Arc (weekly)
 
 on:
@@ -56,7 +57,7 @@ jobs:
           CONTACTS_JSON_B64: ${{ secrets.CONTACTS_JSON_B64 }}
         run: |
           if [ -n "$CONTACTS_JSON_B64" ]; then
-            echo "$CONTACTS_JSON_B64" | base64 -d > contacts.json
+            echo "$CONTACTS_JSON_B64" | base64 -d | gunzip > contacts.json
             echo "Wrote contacts.json ($(wc -c < contacts.json) bytes)"
           else
             echo "::error::CONTACTS_JSON_B64 secret not set — cannot load recipients."; exit 1
