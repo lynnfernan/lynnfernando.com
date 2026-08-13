@@ -1,0 +1,71 @@
+/* ═══════════════════════════════════════════════════════
+   LYNN FERNANDO · AI ADVISORY CONTENT SYSTEM
+   Brand Design Tokens
+   REV Global × LynnFernando.com
+═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Core Brand Colors ── */
+  --gold:          #C9A84C;
+  --gold-light:    #F0D080;
+  --gold-dim:      rgba(201, 168, 76, 0.15);
+  --gold-border:   rgba(201, 168, 76, 0.3);
+
+  --navy:          #0A1628;
+  --navy-mid:      #142240;
+  --navy-light:    #1B2E4A;
+
+  --blue:          #1B3A6B;
+  --blue-bright:   #2D5BE3;
+  --blue-dim:      rgba(45, 91, 227, 0.1);
+
+  --cream:         #FAF6EE;
+  --cream-dark:    #F0EBE0;
+
+  /* ── Text Colors ── */
+  --text-primary:  #0A1628;
+  --text-secondary:#3D4F6E;
+  --text-muted:    #7A8BA8;
+  --text-inverse:  #FFFFFF;
+  --text-gold:     #C9A84C;
+
+  /* ── Semantic Colors ── */
+  --success:       #2ECC71;
+  --success-dim:   rgba(46, 204, 113, 0.12);
+  --warning:       #F39C12;
+  --warning-dim:   rgba(243, 156, 18, 0.12);
+  --danger:        #E74C3C;
+  --danger-dim:    rgba(231, 76, 60, 0.12);
+  --purple:        #9B59B6;
+  --purple-dim:    rgba(155, 89, 182, 0.12);
+
+  /* ── Typography ── */
+  --font-display:  'Playfair Display', Georgia, serif;
+  --font-body:     'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono:     'Space Mono', 'Courier New', monospace;
+
+  /* ── Spacing ── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+
+  /* ── Border Radius ── */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill: 50px;
+
+  /* ── Shadows ── */
+  --shadow-card:   0 20px 60px rgba(0, 0, 0, 0.4);
+  --shadow-soft:   0 4px 20px rgba(0, 0, 0, 0.15);
+  --shadow-gold:   0 8px 32px rgba(201, 168, 76, 0.2);
+
+  /* ── Transitions ── */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow:   0.4s ease;
+}

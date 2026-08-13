@@ -1,0 +1,102 @@
+{
+  "meta": {
+    "name": "Income OS",
+    "owner": "Lynn Fernando",
+    "updated": "2026-08-08",
+    "purpose": "Daily goals, tips, milestones toward $20k cash/month by Sep 30 2026"
+  },
+  "north_star": {
+    "target_cash_month_usd": 20000,
+    "deadline": "2026-09-30",
+    "baseline_monthly_cash_usd": 0,
+    "income_green": false,
+    "income_green_rule": "true when calendar-month cash collected >= 20000 OR (contracted MRR >= 20000 AND first invoice paid)"
+  },
+  "positioning": {
+    "title": "Brand & Commercialization Architect",
+    "roles": [
+      "Fractional CMO",
+      "Fractional CRO",
+      "VP Partnerships",
+      "VP / Head of Revenue",
+      "Commercial Advisor",
+      "Marketing Director"
+    ],
+    "industry": "consumer",
+    "geo": [
+      "Los Angeles metro",
+      "Remote"
+    ],
+    "proof_order": [
+      "ARR / pipeline commercialization wins",
+      "Acquisition / exit at 6.8x multiple after commercial transformation",
+      "Disney multi-property systems + Amazon Fashion CAC/conversion (secondary)"
+    ]
+  },
+  "pricing_floors": {
+    "retainer_monthly_usd": 10000,
+    "project_min_usd": 7500,
+    "project_max_usd": 15000
+  },
+  "doors": {
+    "A": {
+      "label": "Fractional / enterprise seat",
+      "buyers": [
+        "Corporate CRO",
+        "PE principal / operating partner",
+        "Hiring manager (interim seat)"
+      ],
+      "weekly_hours": 12
+    },
+    "B": {
+      "label": "Full-time + recruiters",
+      "buyers": [
+        "Executive recruiters",
+        "Hiring managers"
+      ],
+      "weekly_hours": 10,
+      "equal_weight_with_A": true
+    },
+    "C": {
+      "label": "Bridge project \u2192 retainer",
+      "weekly_hours": 0,
+      "note": "Activate when seat not ready; still counts toward cash"
+    }
+  },
+  "mine_first": [
+    "REV intros (warm network already in REV / personal graph)",
+    "Recruiters already in inbox"
+  ],
+  "weekly_hours_total": 40,
+  "aura_maliguna_hours_while_not_green": 0,
+  "email": {
+    "enabled": true,
+    "to": [
+      "lynn.fernando@gmail.com",
+      "lynn@revglobalinc.com"
+    ],
+    "from_display": "Income OS",
+    "subject_prefix": "Income OS"
+  },
+  "cron": {
+    "timezone": "America/Los_Angeles",
+    "schedule": "30 6 * * 1-5",
+    "note": "Weekdays 6:30 AM PT \u2014 after job aggregator 6:00 AM"
+  },
+  "env_paths": [
+    "/Users/lynnfernan/Lynn Priorities/.agents/.env",
+    "/Users/lynnfernan/Lynn Priorities/REV Global/AI Programs/agents/revglobal-agents/.env"
+  ],
+  "paths": {
+    "pipeline": "data/pipeline.json",
+    "milestones": "data/milestones.json",
+    "tips": "data/tips.json",
+    "digests": "digests",
+    "strategy": "/Users/lynnfernan/Lynn Priorities/Personal Brand/INCOME-OS-STRATEGY-2026.md"
+  },
+  "related": {
+    "job_search_agent": "/Users/lynnfernan/.grok/skills/job-search-agent/SKILL.md",
+    "pe_fractional_strategy": "/Users/lynnfernan/Lynn Priorities/Personal Brand/agents/income-os/wellness-pe-fractional-cmo-strategy.md",
+    "brand_guidelines": "/Users/lynnfernan/Lynn Priorities/Personal Brand/brand-guidelines.md"
+  }
+}

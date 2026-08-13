@@ -1,0 +1,78 @@
+SUBJECT: GraphQL API - createPost Mutation Returns UnexpectedError
+
+---
+
+Hi Buffer Support,
+
+I'm working on automating Instagram post scheduling using your GraphQL API, and I'm getting an UnexpectedError when trying to create posts. I have detailed documentation of the issue and would appreciate help troubleshooting.
+
+## The Problem
+
+I'm trying to use the `createPost` mutation to schedule posts to my Instagram channel (@lynnfernandoofficial), but the API returns `UnexpectedError` with no error details.
+
+**Account Details:**
+- Organization ID: 69fbc91cc661baec3b91599f
+- Instagram Channel ID: 69fbca275c4c051afa1a83f9
+- API Token: Personal Key (from Buffer settings)
+
+## What's Working
+
+- Authentication via Bearer token is successful
+- Account queries work correctly
+- Channel queries return the right Instagram profile
+- All GraphQL connectivity is functional
+
+## The Failing Request
+
+**Mutation:**
+```
+mutation {
+  createPost(input: {
+    channelId: "69fbca275c4c051afa1a83f9"
+    text: "Test post content"
+    schedulingType: automatic
+    mode: customScheduled
+    dueAt: "2026-05-07T17:00:00Z"
+  }) {
+    ... on PostActionSuccess {
+      post {
+        id
+      }
+    }
+    __typename
+  }
+}
+```
+
+**Response:**
+```
+{
+  "data": {
+    "createPost": {
+      "__typename": "UnexpectedError"
+    }
+  }
+}
+```
+
+## Questions
+
+1. Are there account-level settings or permissions required to enable API post creation?
+2. Is `createPost` the correct mutation for scheduling posts, or should I use a different endpoint?
+3. What could cause `UnexpectedError` without details? Are there logs I can check?
+4. Are there any known issues with the GraphQL API (currently in beta)?
+5. Is there documentation on the exact input parameters and valid combinations for `createPost`?
+
+## Context
+
+This is part of an automation system to schedule 8 posts across 4 content categories starting May 7, 2026. I have everything else working — I just need to resolve this API issue.
+
+I've attached detailed documentation with all the technical details. Please let me know if you need any additional information.
+
+Thank you,
+Lynn Fernando
+lynn@revglobalinc.com
+
+---
+
+**Attachment:** BUFFER_API_SUPPORT_REQUEST.md
