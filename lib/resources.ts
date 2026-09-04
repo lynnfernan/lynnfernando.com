@@ -25,6 +25,50 @@ export const resources: Resource[] = [
     ctaHref: "mailto:lynn@revglobalinc.com?subject=Executive Briefing Inquiry",
   },
   {
+    slug: "commercial-audit-for-growth-stage-operators",
+    title: "The Commercial Audit: What Growth-Stage Operators Should Check First",
+    description:
+      "What a Commercial Audit covers, what ready looks like, and the gaps that usually cap revenue before more spend does. Built for founders and operators who want a clear picture before they scale.",
+    format: "Article",
+    audience: "Founders & Growth-Stage Operators",
+    gated: false,
+    ctaLabel: "Book a Commercial Audit",
+    ctaHref: "mailto:lynn@revglobalinc.com?subject=Commercial Audit Inquiry",
+  },
+  {
+    slug: "growth-stage-revenue-infrastructure",
+    title: "What Actually Moves Revenue at Growth Stage",
+    description:
+      "Beyond hustle. The GTM systems, retention loops, and commercial operating rhythm that turn a founder-led book of business into a repeatable revenue engine.",
+    format: "Article",
+    audience: "Founders, CEOs & Revenue Leaders",
+    gated: false,
+    ctaLabel: "Talk Revenue Infrastructure",
+    ctaHref: "mailto:lynn@revglobalinc.com?subject=Revenue Infrastructure Inquiry",
+  },
+  {
+    slug: "founder-exit-readiness-checklist",
+    title: "Exit Readiness for Founders: An Operational Checklist",
+    description:
+      "Buyers do not buy your hustle. They buy transferable operations, a documented revenue engine, and a company that can run without you. A practical checklist for founders who want options.",
+    format: "Article",
+    audience: "Founders & Operator-CEOs",
+    gated: false,
+    ctaLabel: "Discuss Exit Readiness",
+    ctaHref: "mailto:lynn@revglobalinc.com?subject=Exit Readiness Inquiry",
+  },
+  {
+    slug: "ai-for-commercial-diligence",
+    title: "AI as a Commercial Diligence Edge",
+    description:
+      "How operators and advisors can use Generative AI to pressure-test revenue quality, GTM durability, and integration risk before a deal. Connects commercial judgment to the existing GenAI library.",
+    format: "Article",
+    audience: "Founders, Operators & Corporate Development",
+    gated: false,
+    ctaLabel: "Discuss Deal Readiness",
+    ctaHref: "mailto:lynn@revglobalinc.com?subject=Commercial Diligence Inquiry",
+  },
+  {
     slug: "genai-readiness-assessment",
     title: "GenAI Readiness Assessment",
     description:

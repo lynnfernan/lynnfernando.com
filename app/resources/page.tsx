@@ -3,9 +3,9 @@ import ResourceCard from "@/components/ResourceCard";
 import { resources } from "@/lib/resources";
 
 export const metadata: Metadata = {
-  title: "Free AI Resources | Lynn Fernan",
+  title: "Resources | Lynn Fernan",
   description:
-    "Practical Generative AI tools, guides, templates, and assessments — free from Lynn Fernan to help your organization navigate AI with confidence.",
+    "Practical guides for growth-stage operators and leadership teams: commercial audits, revenue infrastructure, exit readiness, and Generative AI.",
 };
 
 export default function ResourcesPage() {
@@ -18,11 +18,12 @@ export default function ResourcesPage() {
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
-          Free AI Resources
+          Resources
         </h1>
         <p className="text-slate-600 text-lg max-w-2xl">
-          Practical tools, guides, and frameworks to help your organization navigate
-          Generative AI — from exploration to implementation. All free, no fluff.
+          Practical guides for growth-stage operators and leadership teams.
+          Commercial infrastructure, exit readiness, and Generative AI. All free,
+          no fluff.
         </p>
       </div>
 
@@ -85,17 +86,17 @@ export default function ResourcesPage() {
       {/* Bottom CTA */}
       <div className="mt-10 bg-blue-50 border border-blue-200 rounded-xl p-8 text-center">
         <h3 className="font-bold text-slate-900 text-xl mb-2">
-          Want a Custom AI Workshop for Your Team?
+          Want a Commercial Audit or a working session?
         </h3>
         <p className="text-slate-600 mb-5 text-sm max-w-xl mx-auto">
-          These resources are a starting point. For hands-on workshops, advisory engagements,
-          or a tailored AI strategy — let&apos;s talk.
+          These resources are a starting point. For a Commercial Audit, revenue
+          infrastructure work, or a tailored AI session, write me.
         </p>
         <a
-          href="mailto:lynn@revglobalinc.com?subject=Consulting Inquiry"
+          href="mailto:lynn@revglobalinc.com?subject=Commercial Audit Inquiry"
           className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
         >
-          Contact Lynn
+          Book a Commercial Audit
         </a>
       </div>
     </div>

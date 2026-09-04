@@ -9,7 +9,7 @@ export default function Footer() {
         </div>
         <nav className="flex gap-6">
           <Link href="/resources" className="hover:text-slate-800 transition-colors">
-            AI Resources
+            Resources
           </Link>
           <Link href="/resources/speaking-workshop-menu" className="hover:text-slate-800 transition-colors">
             Speaking
