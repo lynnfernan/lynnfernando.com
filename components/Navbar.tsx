@@ -9,14 +9,14 @@ export default function Navbar() {
   return (
     <header className="border-b border-slate-200 bg-white sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <Link href="/" className="font-bold text-xl text-slate-900 tracking-tight">
+        <Link href="/resources" className="font-bold text-xl text-slate-900 tracking-tight">
           Lynn Fernan
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
           <Link href="/resources" className="hover:text-slate-900 transition-colors">
-            AI Resources
+            Resources
           </Link>
           <Link href="/resources/speaking-workshop-menu" className="hover:text-slate-900 transition-colors">
             Speaking
@@ -49,7 +49,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-slate-200 bg-white px-4 py-4 flex flex-col gap-4 text-sm font-medium">
           <Link href="/resources" onClick={() => setOpen(false)} className="text-slate-700">
-            AI Resources
+            Resources
           </Link>
           <Link href="/resources/speaking-workshop-menu" onClick={() => setOpen(false)} className="text-slate-700">
             Speaking

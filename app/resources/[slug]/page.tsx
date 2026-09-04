@@ -14,9 +14,17 @@ import VendorChecklist from "@/content/resources/vendor-evaluation-checklist.mdx
 import ROITemplate from "@/content/resources/genai-roi-business-case.mdx";
 import SpeakingMenu from "@/content/resources/speaking-workshop-menu.mdx";
 import AngelInvesting from "@/content/resources/beginners-guide-to-angel-investing.mdx";
+import CommercialAudit from "@/content/resources/commercial-audit-for-growth-stage-operators.mdx";
+import RevenueInfrastructure from "@/content/resources/growth-stage-revenue-infrastructure.mdx";
+import ExitReadiness from "@/content/resources/founder-exit-readiness-checklist.mdx";
+import AICommercialDiligence from "@/content/resources/ai-for-commercial-diligence.mdx";
 
 const contentMap: Record<string, React.ComponentType> = {
   "executive-guide-to-genai": ExecutiveGuide,
+  "commercial-audit-for-growth-stage-operators": CommercialAudit,
+  "growth-stage-revenue-infrastructure": RevenueInfrastructure,
+  "founder-exit-readiness-checklist": ExitReadiness,
+  "ai-for-commercial-diligence": AICommercialDiligence,
   "genai-readiness-assessment": GenAIReadiness,
   "prompt-engineering-playbook": PromptPlaybook,
   "use-case-prioritization-framework": UseCaseFramework,

@@ -1,0 +1,146 @@
+# AI as a Commercial Diligence Edge
+
+**For:** Founders, operators, and corporate development teams
+**Reading time:** 12 minutes
+
+---
+
+Diligence has always been a time problem. The questions are known. The files are messy. The people who know the truth are busy running the company.
+
+Generative AI does not change what a good commercial question is. It changes how fast a careful team can assemble the picture: revenue quality, GTM durability, concentration, contract shape, and the story the numbers refuse to support.
+
+Used well, it is an edge for operators who want to walk into a deal conversation (or a board conversation that feels like one) with fewer surprises. Used carelessly, it is a fluent intern who invents footnotes.
+
+This article is the bridge between the [GenAI library](/resources/executive-guide-to-genai) on this site and the commercial work in the [Commercial Audit](/resources/commercial-audit-for-growth-stage-operators) and [exit-readiness checklist](/resources/founder-exit-readiness-checklist). It is industry analysis and operating practice. It is not investment advice, not a promise about deal outcomes, and not a way to raise capital.
+
+---
+
+## What Commercial Diligence Is Asking
+
+Strip the theater and you are left with a short list.
+
+1. **Is the revenue real, recurring, and quality-checked?** Bookings vs. cash, one-time vs. repeating, pull-forward, and channel stuffing by any other name.
+2. **Can the motion run without the people who invented it?** Founder gravity, key-person risk, and whether a new owner could staff the same GTM.
+3. **Where does the number hide?** Concentration, custom contracts, discounting, and segments that only work in the average.
+4. **What breaks after a change of control or a leadership change?** Customer consent, vendor terms, culture, and the first 180 days of integration.
+5. **Does the data deserve trust?** If the CRM, the ledger, and the slide do not tie, everything else is a story.
+
+AI helps you get to those questions faster. It does not answer them for you.
+
+---
+
+## Where GenAI Helps (and Where It Must Not)
+
+### Strong uses
+
+| Task | How to use it | Human gate |
+|------|----------------|------------|
+| Contract and clause sweep | Ask for unusual SLAs, termination, MFN, and nonstandard liability across a folder | Counsel reviews anything that would change a term |
+| Customer and cohort synthesis | Summarize churn reasons, expansion notes, and support themes | Operators confirm the themes against the files |
+| Call and email pattern review | Cluster objections, discount triggers, and "we promised" language | A seller or CSM validates the cluster |
+| Model vs. narrative check | Compare the deck's claims to the backup exhibits | Finance owns the reconciling items |
+| Integration question list | Generate a first-pass Day 1–180 list from the org and vendor map | The operator who has to live it edits the list |
+| Interview prep | Brief a diligence interview from public materials plus your own notes | You still do the interview |
+
+### Weak or dangerous uses
+
+**Inventing missing files.** If the data room does not have it, the model should say so. "Helpful" completion is how fake citations get into memos.
+
+**Valuation or "what this should trade at."** That is not what this site is for, and it is not what a general model is good at.
+
+**Legal conclusions.** Models can flag language. They cannot give you an opinion.
+
+**Customer-identifiable dumps into a public tool.** Treat diligence files as sensitive. Use an environment your counsel and security team have actually approved. See the data questions in the [AI Vendor Evaluation Checklist](/resources/vendor-evaluation-checklist).
+
+**Replacing a Commercial Audit with a chat thread.** A transcript is not a scored system. If you need the constraint map, run the audit.
+
+---
+
+## A Practical Diligence Workflow
+
+Keep the human structure. Put AI in the assembly step.
+
+### 1. Freeze the question list
+
+Write the ten commercial questions you will actually decide on. Examples: concentration, net retention, motion durability, pricing leakage, delivery load, key-person risk. If you cannot name the questions, you are not ready for a tool. You are ready for a scoping conversation.
+
+### 2. Stage the files
+
+Put source documents in a controlled workspace: financials, pipeline exports, contract samples, org chart, customer lists, and the current board or leadership pack. Label what is source vs. what is commentary.
+
+Do not paste regulated or personally sensitive material into a consumer chatbot. If you do not know where the data goes, stop and read the [executive GenAI guide](/resources/executive-guide-to-genai) section on sensitive data.
+
+### 3. Extract, then reconcile
+
+Ask the model to extract facts into a table: customer, ARR, term, renewal, owner, custom terms. Then reconcile that table to finance. The value is the mismatch list, not the first table.
+
+A useful prompt pattern (RCOF, from the [prompt playbook](/resources/prompt-engineering-playbook)):
+
+- **Role:** commercial diligence analyst, extract only
+- **Context:** these files, this date range, this definition of recurring
+- **Output:** a table plus a "not found" list
+- **Format:** columns you define in advance
+
+If the model cannot fill a cell, it must say `NOT FOUND`. That instruction is the difference between a tool and a liability.
+
+### 4. Pressure-test the narrative
+
+Take the company's own story (deck, memo, verbal) and ask for contradictions against the extract. You want a list of claims that are unsupported, not a rewrite that makes the story prettier.
+
+Then do the reverse: ask what important facts in the files never appear in the narrative. Silence is a finding.
+
+### 5. Build the working session, not the verdict
+
+Turn the mismatch list into a meeting agenda. Owners, dates, and the two or three issues that would change your mind. AI can draft the agenda. People have the conversation.
+
+---
+
+## Deal Readiness for the Company Being Examined
+
+If you are the operator, not the examiner, the same workflow is how you stop being the bottleneck in your own process.
+
+Prepare a commercial pack a stranger can use:
+
+- One-page motion (see the [revenue infrastructure playbook](/resources/growth-stage-revenue-infrastructure))
+- Pipeline and retention snapshot that ties to finance
+- Top accounts, concentration, and relationship owners
+- Pricing and exception log
+- Known issues, written without spin
+
+Then run an internal "red team" with AI as the junior analyst: give it only the pack, ask it to list holes, and fix the holes before a real outsider does.
+
+This is also how you get [exit-ready](/resources/founder-exit-readiness-checklist) without waiting for a process. The pack is the product.
+
+---
+
+## Governance You Should Not Skip
+
+Commercial files are a gift to a competitor and a problem for a regulator if they leak.
+
+**Minimum bar**
+
+- Approved tool, written data-handling rule, and a named owner
+- No training on your inputs unless counsel has accepted that risk
+- A human reviewer for anything that leaves the building
+- A record of what was uploaded and when it was deleted
+- The same skepticism you would bring to a first-year analyst: check the cites
+
+If you are building a longer AI investment case inside the company, use the [ROI template](/resources/genai-roi-business-case) so the tool spend has a job. Diligence is a use case with a start and an end. Do not turn it into an unbounded subscription.
+
+---
+
+## How This Ties to the Rest of the Library
+
+| If you need | Start here |
+|-------------|------------|
+| What GenAI is and is not, in plain language | [The Executive's Guide to Generative AI](/resources/executive-guide-to-genai) |
+| Whether the commercial system can carry more load | [The Commercial Audit](/resources/commercial-audit-for-growth-stage-operators) |
+| How to build the engine the diligence will test | [What Actually Moves Revenue at Growth Stage](/resources/growth-stage-revenue-infrastructure) |
+| Transferability and founder bottleneck | [Exit Readiness for Founders](/resources/founder-exit-readiness-checklist) |
+| Whether a vendor is safe enough for sensitive files | [AI Vendor Evaluation Checklist](/resources/vendor-evaluation-checklist) |
+
+The edge is not "we used AI." The edge is a cleaner commercial picture, faster, with fewer invented facts.
+
+If you want help installing that workflow against a live pack, or you want the commercial system scored before anyone else reads it, write me.
+
+**[Discuss Deal Readiness →](mailto:lynn@revglobalinc.com?subject=Commercial%20Diligence%20Inquiry)**

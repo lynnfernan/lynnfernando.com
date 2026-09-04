@@ -20,3 +20,20 @@ h1, h2, h3, h4, h5 {
   font-family: var(--font-bebas), "Bebas Neue", sans-serif;
   letter-spacing: 0.02em;
 }
+
+.resources-surface {
+  background: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.resources-surface h1,
+.resources-surface h2,
+.resources-surface h3,
+.resources-surface h4,
+.resources-surface h5 {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  letter-spacing: normal;
+}
